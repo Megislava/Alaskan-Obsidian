@@ -1,1 +1,0 @@
-- shows OS, where does it run

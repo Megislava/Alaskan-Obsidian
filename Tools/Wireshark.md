@@ -1,5 +1,3 @@
-#networking
-
 - tool to capture and analyze network packet capture files
 - common extension: .pcap
 - 2 modes:

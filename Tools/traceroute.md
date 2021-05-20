@@ -1,6 +1,3 @@
-#networking
-
-
 - shows the route that the packet went to in order to reach the intended destination
 - syntax:
 	- `tracert <destination>` - for Windows (works on ICMP)

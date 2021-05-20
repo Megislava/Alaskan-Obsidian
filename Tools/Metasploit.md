@@ -5,3 +5,5 @@
 - `show options` and set them up
 - `run`
 - from meterpreter => shell
+
+Practised in [[CTF/TryHackMe/Metasploit]]

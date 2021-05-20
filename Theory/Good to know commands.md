@@ -8,5 +8,3 @@
 - `python -m SimpleHTTPServer 8000` (for Python 2.7) vs `python3 -m http.server <PORT>` (Python3) - host a webserver, eg. for FTP services
 	- run this on directry you want to share
 	- get the files by `wget http://<IP>:<PORT>/path_to_file`
-
-- 

@@ -1,4 +1,3 @@
-#networking
 - CSMA/CD
 	- carrier sense multiple access with collision detection
 	- +5/-5/0 Volts - creates pulse of ones and zeros

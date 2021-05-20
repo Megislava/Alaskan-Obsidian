@@ -1,3 +1,3 @@
 - used for static analysis of malware
-- similar results to [[binwalk]]
+- similar to binwalk
 - `exiftool <path_to_file>`

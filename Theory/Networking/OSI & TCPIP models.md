@@ -1,4 +1,3 @@
-#networking
 1. ### OSI model
 - Open System Interconnection
 - to have universal communication in internet

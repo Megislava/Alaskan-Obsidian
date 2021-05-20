@@ -1,4 +1,3 @@
-#networking
 1. ### Transfer data
 - HTTP/HTTPS
 	- HyperText Transfer Protocol (Secure)
