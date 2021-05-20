@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CTF/HackTheBox/Shield.md",
+            "file": "Methodology/Privilege Escalation.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 193
+    "width": 433
   },
   "right": {
     "id": "823d0aee69516acb",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/HackTheBox/Shield.md",
+                "file": "Methodology/Privilege Escalation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,15 +99,15 @@
   },
   "active": "f4e830aff5966be5",
   "lastOpenFiles": [
-    "CTF/HackTheBox/Shield.md",
-    "CTF/HackTheBox/Vaccine.md",
-    "Tools/mimikatz.md",
-    "CTF/HackTheBox/Untitled.md",
-    "CTF/HackTheBox/Archetype.md",
-    "CTF/HackTheBox/Oopsie.md",
-    "CTF/TryHackMe-CTFs/Mr. Robot CTF.md",
-    "Tools/Untitled.md",
-    "Tools/Gobuster.md",
-    "CTF/HackTheBox/Ooopsi.md"
+    "Methodology/Privilege Escalation.md",
+    "Tools/LinEnum.md",
+    "Methodology/Methodology.md",
+    "Methodology/Enumeration.md",
+    "Theory/Networking/Exploiting.md",
+    "Theory/Networking/Ports and Protocols.md",
+    "Methodology/Password Cracking.md",
+    "Methodology/Scanning.md",
+    "Methodology/Good to know commands.md",
+    "Methodology/Post-Exploitation.md"
   ]
 }

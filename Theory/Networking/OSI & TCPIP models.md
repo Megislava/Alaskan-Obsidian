@@ -21,7 +21,7 @@
 		- Policy-based DNS load balancing - requests are resolved by a DNS nameserver on the basis of policies defined
 		- Dedicated Load Balancing - sits in-line between the client resolver and the nameserver, enables you to deploy and configure one or more custom load-balancers within a VPC
 - See how it’s done here: https://www.youtube.com/watch?v=hl2xa7Ahy0E
-- Please Do Not Throw Sausage Pizza Away ![[1.png]]
+- Please Do Not Throw Sausage Pizza Away ![[1.PNG]]
 
 1. #### Physical Layer
 - moves bites between device

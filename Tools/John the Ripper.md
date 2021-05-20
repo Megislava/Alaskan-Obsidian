@@ -40,3 +40,10 @@
 			- `[a]` - include only a
 			- `[!@#$%^]` - include symbols !@#$%^
 	- running the rule: `john --wordlist=[path_to_wordlist] --rule=[name_of_rule] [path_to_file]`
+
+- cracking ZIP, RAR, SSH
+	- run `<zip/rar/ssh/...>2john [options] <path_to_file> > <output_file>`
+	- you get hash of the original file
+	- run the hash through john
+		- `john --wordlist=<wordlist> <path_to_file>`
+		- -> password
