@@ -1,0 +1,6 @@
+- tool for automatic static analysis of malware sample file
+- `binwalk <option> <path_to_file>`
+- `-B`: scanning for common signatures
+- `-3`: 3D analysis
+- `-A`: look for opcodes
+	- No Operation codes - frequently used in exploits to land shellcde into the stack 

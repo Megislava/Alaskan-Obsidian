@@ -1,0 +1,7 @@
+- to start: msfconsole
+- search for exploit: `search <search phraze>`
+- u’ll get list of all founded things (auxiliaries, exploits, post exploits,...)
+- `use <number from previous list> or use <tool name>`
+- `show options` and set them up
+- `run`
+- from meterpreter => shell

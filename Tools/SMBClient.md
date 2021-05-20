@@ -1,0 +1,4 @@
+- part of Samba default suite
+- `smbclient //[IP]/[SHARE]`
+- `-U [name]`: specify the user
+- `-p [port]`: specify the port
