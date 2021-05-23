@@ -1,3 +1,0 @@
-- queries who a domain name is registered
-- sometimes not preinstalled:
-	- `sudo apt update && sudo apt-get install whois` (Debian based)

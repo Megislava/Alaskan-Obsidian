@@ -7,8 +7,11 @@
         "id": "377e2eb187596e66",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Tools/Nessus.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -60,7 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433
+    "width": 270
   },
   "right": {
     "id": "823d0aee69516acb",
@@ -76,6 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Tools/Nessus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,15 +110,15 @@
   },
   "active": "377e2eb187596e66",
   "lastOpenFiles": [
-    "Tools/whois.md",
-    "BASE_TREE/Scanning.md",
-    "BASE_TREE/Ethical Hacking.md",
-    "BASE_TREE/Untitled.md",
-    "BASE_TREE/Privilege Escalation.md",
-    "Tools/LinPEAS.md",
-    "Tools/LinEnum.md",
-    "Tools/John the Ripper.md",
-    "Tools/Hydra.md",
-    "Tools/hashcat.md"
+    "Tools/Nessus.md",
+    "BASE_TREE/DFIR.md",
+    "BASE_TREE/Two ways.md",
+    "Tools/traceroute.md",
+    "Tools/NFS-Common.md",
+    "Tools/OWASP Zap.md",
+    "Tools/nikto.md",
+    "Tools/ping.md",
+    "Tools/Shodan.md",
+    "Tools/whois.md"
   ]
 }

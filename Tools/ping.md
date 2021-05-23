@@ -1,6 +1,0 @@
-- testing whether connection to some website on the Internet/local network is possible
-- uses ICMP protocol - works on Network layer
-- syntax:
-	- `ping <target>`
-	- `-c` - number of request
-	- `-i` - set up interval between each ping

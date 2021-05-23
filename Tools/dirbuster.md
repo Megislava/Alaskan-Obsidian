@@ -1,3 +1,0 @@
-- goes through dir structure of site
-- can reveal "hidden" PHP login page
-- sometimes sensitive info can be in Robots.txt
