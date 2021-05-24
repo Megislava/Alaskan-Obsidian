@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tools/Nessus.md",
+            "file": "Tools/MITRE.md",
             "mode": "source"
           }
         }
@@ -63,7 +63,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 270
+    "width": 433,
+    "collapsed": true
   },
   "right": {
     "id": "823d0aee69516acb",
@@ -79,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Nessus.md",
+                "file": "Tools/MITRE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,15 +111,15 @@
   },
   "active": "377e2eb187596e66",
   "lastOpenFiles": [
-    "Tools/Nessus.md",
+    "Tools/MITRE.md",
     "BASE_TREE/DFIR.md",
-    "BASE_TREE/Two ways.md",
-    "Tools/traceroute.md",
-    "Tools/NFS-Common.md",
-    "Tools/OWASP Zap.md",
-    "Tools/nikto.md",
-    "Tools/ping.md",
-    "Tools/Shodan.md",
-    "Tools/whois.md"
+    "BASE_TREE/Untitled.md",
+    "Tools/Untitled.md",
+    "Tools/Nessus.md",
+    "Tools/whois.md",
+    "BASE_TREE/Scanning.md",
+    "BASE_TREE/Ethical Hacking.md",
+    "BASE_TREE/Privilege Escalation.md",
+    "Tools/LinPEAS.md"
   ]
 }
