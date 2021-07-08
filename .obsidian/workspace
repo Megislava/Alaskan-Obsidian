@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tools/MITRE.md",
+            "file": "BASE_TREE/User Activity Analysis.md",
             "mode": "source"
           }
         }
@@ -80,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/MITRE.md",
+                "file": "BASE_TREE/User Activity Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,15 +111,15 @@
   },
   "active": "377e2eb187596e66",
   "lastOpenFiles": [
-    "Tools/MITRE.md",
+    "BASE_TREE/User Activity Analysis.md",
     "BASE_TREE/DFIR.md",
+    "OS Configuration Changes.md",
+    "User Activity Analysis.md",
+    "BASE_TREE/Memory Analysis.md",
+    "Tools/MITRE.md",
     "BASE_TREE/Untitled.md",
     "Tools/Untitled.md",
     "Tools/Nessus.md",
-    "Tools/whois.md",
-    "BASE_TREE/Scanning.md",
-    "BASE_TREE/Ethical Hacking.md",
-    "BASE_TREE/Privilege Escalation.md",
-    "Tools/LinPEAS.md"
+    "Tools/whois.md"
   ]
 }
