@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BASE_TREE/User Activity Analysis.md",
+            "file": "BASE_TREE/Malware.md",
             "mode": "source"
           }
         }
@@ -63,8 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433,
-    "collapsed": true
+    "width": 433
   },
   "right": {
     "id": "823d0aee69516acb",
@@ -80,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BASE_TREE/User Activity Analysis.md",
+                "file": "BASE_TREE/Malware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,6 +110,7 @@
   },
   "active": "377e2eb187596e66",
   "lastOpenFiles": [
+    "BASE_TREE/Malware.md",
     "BASE_TREE/User Activity Analysis.md",
     "BASE_TREE/DFIR.md",
     "OS Configuration Changes.md",
@@ -119,7 +119,6 @@
     "Tools/MITRE.md",
     "BASE_TREE/Untitled.md",
     "Tools/Untitled.md",
-    "Tools/Nessus.md",
-    "Tools/whois.md"
+    "Tools/Nessus.md"
   ]
 }
