@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BASE_TREE/Malware.md",
+            "file": "BASE_TREE/Reverse Engineering.md",
             "mode": "source"
           }
         }
@@ -63,7 +63,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433
+    "width": 306,
+    "collapsed": true
   },
   "right": {
     "id": "823d0aee69516acb",
@@ -79,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BASE_TREE/Malware.md",
+                "file": "BASE_TREE/Reverse Engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,15 +111,15 @@
   },
   "active": "377e2eb187596e66",
   "lastOpenFiles": [
-    "BASE_TREE/Malware.md",
-    "BASE_TREE/User Activity Analysis.md",
+    "BASE_TREE/Reverse Engineering.md",
+    "BASE_TREE/Lateral Movement.md",
+    "Lateral Movement.md",
+    "BASE_TREE/Ethical Hacking.md",
+    "Social Engineering Toolkit.md",
+    "Social Engineering.md",
+    "BASE_TREE/Two ways.md",
     "BASE_TREE/DFIR.md",
-    "OS Configuration Changes.md",
-    "User Activity Analysis.md",
-    "BASE_TREE/Memory Analysis.md",
-    "Tools/MITRE.md",
-    "BASE_TREE/Untitled.md",
-    "Tools/Untitled.md",
-    "Tools/Nessus.md"
+    "1Images/16.PNG",
+    "Reverse Engineering.md"
   ]
 }

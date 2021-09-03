@@ -1,6 +1,8 @@
 ## Red Team/Penetration Testing/Ethical Hacking
-1. [[Scanning]]
-2. [[Enumerating]]
-3. [[Exploiting]]
-4. [[Privilege Escalation]]
-5. [[Post_exploitation]]
+1. [[Social Engineering]]
+2.  [[Scanning]]
+3. [[Enumerating]]
+4. [[Exploiting]]
+5. [[Lateral Movement]]
+6. [[Privilege Escalation]]
+7. [[Post_exploitation]]
