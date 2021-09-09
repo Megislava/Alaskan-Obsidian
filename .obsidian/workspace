@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BASE_TREE/Reverse Engineering.md",
+            "file": "Theory/x86.md",
             "mode": "source"
           }
         }
@@ -80,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BASE_TREE/Reverse Engineering.md",
+                "file": "Theory/x86.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,15 +111,15 @@
   },
   "active": "377e2eb187596e66",
   "lastOpenFiles": [
+    "Theory/x86.md",
     "BASE_TREE/Reverse Engineering.md",
+    "x86.md",
     "BASE_TREE/Lateral Movement.md",
     "Lateral Movement.md",
     "BASE_TREE/Ethical Hacking.md",
     "Social Engineering Toolkit.md",
     "Social Engineering.md",
     "BASE_TREE/Two ways.md",
-    "BASE_TREE/DFIR.md",
-    "1Images/16.PNG",
-    "Reverse Engineering.md"
+    "BASE_TREE/DFIR.md"
   ]
 }
