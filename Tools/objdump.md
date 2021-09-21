@@ -1,0 +1,5 @@
+- getting assembly from executable
+- `objdump`
+- `-d` - disassemble the contect of all sections
+- `-Mintel` - display in Intel syntaz
+- 

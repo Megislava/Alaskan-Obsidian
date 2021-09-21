@@ -24,3 +24,6 @@
 	- no standart syntax
 		- in world of x86 syntax 2 main branches - AT&T (used by GCC) and Intel (used by Intel) -> we will be using Intel
 	- [[x86]]
+4. Debugging
+	- [[GDB]]
+	- [[objdump]]
