@@ -1,5 +1,4 @@
-## Digital Forensics + Incident Response
-
+## Digital Forensics 
 - investigating computers that have been compromise by an attacker
 
 - Digital Investigation
@@ -26,3 +25,13 @@
 5. [[Network Analysis]]
 6. [[Thread Management]]
 7. [[Reverse Engineering]]
+
+## Incident Response
+1. Prepare for inevitable incident
+2. Incident detection and characterisation
+3. Data collection
+4. Data analysis
+5. Remediation
+
+- checklists and forms on [ir3e.com](ir3e.com)
+- 
