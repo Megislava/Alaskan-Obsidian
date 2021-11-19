@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BASE_TREE/Ethical Hacking.md",
+            "file": "CTF/HackTheBox/Oopsie.md",
             "mode": "source"
           }
         }
@@ -18,81 +18,104 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b5e30e9e5748b944",
-    "type": "mobile-drawer",
+    "id": "e1f261a450fe59bf",
+    "type": "split",
     "children": [
       {
-        "id": "84f39101ea05d2a7",
-        "type": "leaf",
-        "state": {
-          "type": "file-explorer",
-          "state": {}
-        }
-      },
-      {
-        "id": "914cfbbf6e487d3d",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
+        "id": "30d969151dbe4e8d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "030a70b30387f3d1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "763aabbaeb7f444e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "smb",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f4e830aff5966be5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        }
-      },
-      {
-        "id": "fdc857c1222a8eba",
-        "type": "leaf",
-        "state": {
-          "type": "tag",
-          "state": {
-            "sortOrder": "frequency",
-            "useHierarchy": true
-          }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 306
   },
   "right": {
-    "id": "53d6d72127aff19b",
-    "type": "mobile-drawer",
+    "id": "823d0aee69516acb",
+    "type": "split",
     "children": [
       {
-        "id": "7beb54518683eef8",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "file": "BASE_TREE/Ethical Hacking.md",
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
+        "id": "bef07047d5c4bd19",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b54cef7b93e41d5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CTF/HackTheBox/Oopsie.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1f457378088a2313",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
           }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 100,
+    "collapsed": true
   },
   "active": "a67a016047c0593d",
   "lastOpenFiles": [
-    "BASE_TREE/Ethical Hacking.md",
-    "BASE_TREE/Two ways.md",
-    "BASE_TREE/DFIR.md",
-    "BASE_TREE/EH/Enumerating.md",
-    "BASE_TREE/EH/Social Engineering.md",
-    "BASE_TREE/DF/User Activity Analysis.md",
-    "BASE_TREE/DF/OS Configuration Changes.md",
-    "BASE_TREE/DF/Memory Analysis.md",
-    "BASE_TREE/DF/Reverse Engineering.md",
-    "Theory/x86.md"
+    "CTF/HackTheBox/Oopsie.md",
+    "CTF/HackTheBox/Archetype.md",
+    "CTF/HackTheBox/Shield.md",
+    "Tools/Impacket.md",
+    "Tools/SMBClient.md",
+    "Theory/Exploitation/MySQL.md",
+    "Theory/Vulnerabilities/SQL injection.md",
+    "Theory/Linux Shell.md",
+    "BASE_TREE/Exploiting.md",
+    "CTF/TryHackMe/Christmas 2020.md"
   ]
 }
