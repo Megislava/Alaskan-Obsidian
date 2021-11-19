@@ -21,7 +21,7 @@
 - `T0-5`: paranoid | sneaky | polite | normal | aggressive | insane
 - `-A`: aggressive scan
 - `-p`: looks for specific ports
-	- `-` : all ports (0-65535?)
+	- `-` : all ports (0-65535)
 	- `3, 42, 211`: these ports
 	- `233-532`: there ports - range
 - `--open`: returns only opens ports
