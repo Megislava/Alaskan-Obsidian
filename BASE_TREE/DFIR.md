@@ -22,8 +22,8 @@
 2. [[Malware]]
 3. [[OS Configuration Changes]]
 4. [[User Activity Analysis]]
-5. [[Network Analysis]]
-6. [[Thread Management]]
+5. [[Network Forensics]]
+6. [[Thread and Vulnerability Management]]
 7. [[Reverse Engineering]]
 
 ## Incident Response
