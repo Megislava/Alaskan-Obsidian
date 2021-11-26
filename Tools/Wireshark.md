@@ -6,6 +6,8 @@
 		- you can stop the capturing with red square and begin analysis
 	- analysis
 		- load a PCAP file
+	
+#### Packets
 - each packet includes: packet number, time, source, destination, protocol, length, packet info 
 - packet info has 5 pieces of information:
 	- Frame 1
@@ -21,6 +23,19 @@
 
 - packets that are seen as a dangerous (are somehow anomalious) are colored
 
+#### Traffic Capture
+- capture options
+	- Input
+		- Enable promiscuous mode on all interfaces
+	- Output
+		- capture to a permanent file
+		- what is the output file format - pcapng/pcap
+		- use ring buffer! - overriding currect file is coloring... is involved 
+	- Options
+		- resolve MAC address - give us the manufacturer 
+		- resolve transport names - with that application is the network flow from
+		- resolve network names - hiding a DNS server a lot, time consuming, don;t really worth it
+		- stop capture automatically after - packets, files, kB, seconds
 - methods of packet collection:
 	- network tap:
 		- physical device which is physically tap between a cable
@@ -33,9 +48,18 @@
 		- active packet sniffing
 		- redirecting the traffic from the host(s) to the monitored machine
 
+#### Filtering
+- capture filter
+	- before the capture is started, only the filtered value is captures
+- display filter
+	- everything is captured and later displayed is only what is filtered
+	- have shortcuts - with rightclick
 - packet filtering:
 
 Expression | Meaning
 ------------  | ------------ 
 ip | IPv4 only
 tcp | TCP only
+
+#### TShark
+- Wireshark in CMD
