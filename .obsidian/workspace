@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BASE_TREE/DF/OS Configuration Changes.md",
+            "file": "BASE_TREE/DF/Thread and Vulnerability Management.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BASE_TREE/DF/OS Configuration Changes.md",
+                "file": "BASE_TREE/DF/Thread and Vulnerability Management.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,15 +107,15 @@
   },
   "active": "a67a016047c0593d",
   "lastOpenFiles": [
+    "BASE_TREE/DF/Thread and Vulnerability Management.md",
+    "BASE_TREE/Thread and Vulnerability Management.md",
+    "BASE_TREE/DF/Network Forensics.md",
+    "BASE_TREE/Network Forensics.md",
     "BASE_TREE/DF/OS Configuration Changes.md",
     "BASE_TREE/Operating System Forensics.md",
     "BASE_TREE/DFIR.md",
-    "BASE_TREE/DF/Network Forensics.md",
     "BASE_TREE/DF/Network Analysis.md",
-    "BASE_TREE/DF/Thread and Vulnerability Management.md",
     "BASE_TREE/DF/Thread Management.md",
-    "Tools/Untitled.md",
-    "Tools/Metasploit.md",
-    "Theory/Linux Shell.md"
+    "Tools/Untitled.md"
   ]
 }
