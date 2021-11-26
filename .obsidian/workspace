@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CTF/HackTheBox/Oopsie.md",
+            "file": "BASE_TREE/DFIR.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "smb",
+                "query": "tag:#networking",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/HackTheBox/Oopsie.md",
+                "file": "BASE_TREE/DFIR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,15 +107,15 @@
   },
   "active": "a67a016047c0593d",
   "lastOpenFiles": [
-    "CTF/HackTheBox/Oopsie.md",
-    "CTF/HackTheBox/Archetype.md",
-    "CTF/HackTheBox/Shield.md",
-    "Tools/Impacket.md",
-    "Tools/SMBClient.md",
-    "Theory/Exploitation/MySQL.md",
-    "Theory/Vulnerabilities/SQL injection.md",
+    "BASE_TREE/DFIR.md",
+    "Tools/Untitled.md",
+    "Tools/Metasploit.md",
     "Theory/Linux Shell.md",
-    "BASE_TREE/Exploiting.md",
-    "CTF/TryHackMe/Christmas 2020.md"
+    "BASE_TREE/Network Analysis.md",
+    "BASE_TREE/OS Configuration Changes.md",
+    "Tools/Nessus.md",
+    "Tools/CIS-CAT Lite.md",
+    "Lynis.md",
+    "BASE_TREE/Thread and Vulnerability Management.md"
   ]
 }
