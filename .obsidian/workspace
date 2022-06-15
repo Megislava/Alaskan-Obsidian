@@ -1,16 +1,17 @@
 {
   "main": {
-    "id": "ca6063c2a79c19c6",
+    "id": "3dd53b8250467576",
     "type": "split",
     "children": [
       {
-        "id": "a67a016047c0593d",
+        "id": "3532d9fff7d4eb0f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "MissingSemester/3. Vim.md",
-            "mode": "source"
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -18,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "e1f261a450fe59bf",
+    "id": "faf2db552574aca6",
     "type": "split",
     "children": [
       {
-        "id": "30d969151dbe4e8d",
+        "id": "a95cd082976af948",
         "type": "tabs",
         "children": [
           {
-            "id": "030a70b30387f3d1",
+            "id": "737d055bac789dfd",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -34,12 +35,12 @@
             }
           },
           {
-            "id": "763aabbaeb7f444e",
+            "id": "7b2d1357535fcfe0",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#networking",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -47,31 +48,23 @@
                 "sortOrder": "alphabetical"
               }
             }
-          },
-          {
-            "id": "f4e830aff5966be5",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 306
+    "width": 300
   },
   "right": {
-    "id": "823d0aee69516acb",
+    "id": "01559e3f5c72e717",
     "type": "split",
     "children": [
       {
-        "id": "bef07047d5c4bd19",
+        "id": "1091127899661cbc",
         "type": "tabs",
         "children": [
           {
-            "id": "0b54cef7b93e41d5",
+            "id": "35e89a38c4f7682a",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -88,7 +81,7 @@
             }
           },
           {
-            "id": "1f457378088a2313",
+            "id": "57c72239ac8c5673",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -102,20 +95,13 @@
       }
     ],
     "direction": "horizontal",
-    "width": 100,
+    "width": 300,
     "collapsed": true
   },
-  "active": "a67a016047c0593d",
+  "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
     "MissingSemester/3. Vim.md",
     "MissingSemester/1. Shell intro.md",
-    "MissingSemester/2. Scripting in bash and Shell Tools.md",
-    "CyberSec/0Template/#Exploit_Temp.md",
-    "BASE_TREE/DFIR.md",
-    "BASE_TREE/Ethical Hacking.md",
-    "BASE_TREE/Two ways.md",
-    "BASE_TREE/DF/Network Forensics.md",
-    "BASE_TREE/DF/Thread and Vulnerability Management.md",
-    "BASE_TREE/Thread and Vulnerability Management.md"
+    "Intro to Math Thinking/Assignment-1.pdf"
   ]
 }

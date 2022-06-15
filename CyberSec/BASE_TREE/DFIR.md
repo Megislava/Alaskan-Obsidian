@@ -16,15 +16,31 @@
 	- Are there malicious programs? (backdoors, keystroke loggers, ...)
 	- Is there malicious user activity? (account takeover, insider thread,...)
 
-- tools -> collections/analysis
+- hardware tools
+	- portable, powerful,...
+	- antistatic bags, screwdrivers,...
+- SF tools -> collections/analysis
 
-1. [[Memory Analysis]]
-2. [[Malware]]
-3. [[Operating System Forensics]]
-4. [[User Activity Analysis]]
-5. [[Network Forensics]]
-6. [[Thread and Vulnerability Management]]
-7. [[Reverse Engineering]]
+1. Preserving data
+	- RULE N.1 - DON'T CHANGE YOUR EVIDENCE -> preserving data
+	- write blocker
+		- use when copying data from target
+		- prevents accidental write
+		- SF (in regedit in `HKLM/SYSTEM/CurrentControlSet/Control` -> new key `StorageDevicePolicies` -> new DWORD `WriteProtect` `1` ) or HW
+	- hashing before and after copying
+	- mounting
+2. Acquiring data
+	- static acquisition
+		- [[dd]], [[dcfldd]], [[FTK Imager 1]] or [[Volatility]]
+	- live acquisitions
+		- encryption
+		- volatile data source - RAM
+	- remote acquisition
+		- network connection
+		- client-server architecture
+	3. Analysing data
+		 - indexing, searching, reporting
+		 - [[Autopsy]], [[Hex Workshop 1]], [[OpenStego]]
 
 ## Incident Response
 1. Prepare for inevitable incident
@@ -35,6 +51,15 @@
 
 - checklists and forms on [ir3e.com](ir3e.com)
 
+
+## Links
+
+1. [[Memory Analysis]]
+2. [[Malware]]
+3. [[Operating System Forensics]]
+4. [[User Activity Analysis]]
 5. [[Network Forensics]]
 6. [[Thread and Vulnerability Management]]
 7. [[Reverse Engineering]]
+8. [[Autopsy]]
+9. [[SIFT]]
