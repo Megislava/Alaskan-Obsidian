@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "MissingSemester/3. Vim.md",
+            "file": "CyberSec/Theory/Exploitation/Telnet.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MissingSemester/3. Vim.md",
+                "file": "CyberSec/Theory/Exploitation/Telnet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,8 +100,15 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
-    "MissingSemester/3. Vim.md",
-    "MissingSemester/1. Shell intro.md",
-    "Intro to Math Thinking/Assignment-1.pdf"
+    "CyberSec/Theory/Exploitation/Telnet.md",
+    "CyberSec/Theory/Exploitation/SSH.md",
+    "CyberSec/Theory/Exploitation/SMTP.md",
+    "CyberSec/Theory/Exploitation/SMB.md",
+    "CyberSec/Theory/Exploitation/NFS.md",
+    "CyberSec/Theory/Exploitation/MySQL.md",
+    "CyberSec/Theory/Exploitation/HTTP,HTTPS.md",
+    "CyberSec/Theory/Exploitation/FTP.md",
+    "CyberSec/Theory/Networking/Ports and Protocols.md",
+    "CyberSec/CTF/GoogleCTF - BeginnerQuest/1. Chemical Plant.md"
   ]
 }
