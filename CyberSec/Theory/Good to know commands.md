@@ -1,6 +1,3 @@
-- `lsof -l` - show running services
-- `kill -9 <PID>` - kill service with PID
-
 - `rdesktop -g 90% <IP>` - remote desktop with screen area set to 90%
 - Remmina - remote desktop client
 - `xfreerdp` - remote desktop tool

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CyberSec/Theory/Exploitation/Telnet.md",
+            "file": "CyberSec/Theory/Linux Command Line.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CyberSec/Theory/Exploitation/Telnet.md",
+                "file": "CyberSec/Theory/Linux Command Line.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,15 +101,15 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
-    "CyberSec/Theory/Exploitation/Telnet.md",
-    "CyberSec/Theory/Exploitation/SSH.md",
-    "CyberSec/Theory/Exploitation/SMTP.md",
-    "CyberSec/Theory/Exploitation/SMB.md",
-    "CyberSec/Theory/Exploitation/NFS.md",
-    "CyberSec/Theory/Exploitation/MySQL.md",
-    "CyberSec/Theory/Exploitation/HTTP,HTTPS.md",
-    "CyberSec/Theory/Exploitation/FTP.md",
-    "CyberSec/Theory/Networking/Ports and Protocols.md",
-    "CyberSec/CTF/GoogleCTF - BeginnerQuest/1. Chemical Plant.md"
+    "MissingSemester/2. Scripting in bash and Shell Tools.md",
+    "CyberSec/Theory/Linux Command Line.md",
+    "MissingSemester/1. Shell intro.md",
+    "Shell Prakticky.md",
+    "Programovani v Shellu.md",
+    "CyberSec/Tools/Latex.md",
+    "CyberSec/Theory/Google Dorking.md",
+    "CyberSec/Theory/Good to know commands.md",
+    "CyberSec/Theory/x86.md",
+    "CyberSec/Theory/Networking/Routing and Switching.md"
   ]
 }
