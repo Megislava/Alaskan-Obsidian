@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CyberSec/Theory/Linux Command Line.md",
+            "file": "CyberSec/Tools/git.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "git",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CyberSec/Theory/Linux Command Line.md",
+                "file": "CyberSec/Tools/git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,15 +100,15 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
-    "MissingSemester/2. Scripting in bash and Shell Tools.md",
-    "CyberSec/Theory/Linux Command Line.md",
-    "MissingSemester/1. Shell intro.md",
-    "Shell Prakticky.md",
     "Programovani v Shellu.md",
+    "Shell Prakticky.md",
+    "CyberSec/Theory/Linux Command Line.md",
+    "CyberSec/Tools/git.md",
+    "MissingSemester/2. Scripting in bash and Shell Tools.md",
+    "MissingSemester/1. Shell intro.md",
     "CyberSec/Tools/Latex.md",
     "CyberSec/Theory/Google Dorking.md",
     "CyberSec/Theory/Good to know commands.md",
-    "CyberSec/Theory/x86.md",
-    "CyberSec/Theory/Networking/Routing and Switching.md"
+    "CyberSec/Theory/x86.md"
   ]
 }

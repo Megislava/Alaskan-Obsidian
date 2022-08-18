@@ -1,4 +1,4 @@
-- CASE SENSITIVE
+2- CASE SENSITIVE
 
 
 ### General, Folders and Paths
@@ -8,6 +8,11 @@
 - `echo` - vypise do console 
 	- vytvori soubor s nejakym obsahem `echo “Hello world!” > hello.txt`
 	- pri pouziti `>>` se prida string na posledni radek
+
+- `printf` - more possibilities how to print stuff to console
+	- does not have `\n` by default
+	- `printf '%s\n' "$ENVVAR"` - print the value of `ENVVAR` 
+
 
 - `history` - shows bash history
 	- when used with `|`, eg. `history | grep ping` -> will find how the specific command was used
@@ -213,6 +218,9 @@ supports regular expression!
 find lines that do NOT have that symbol: `-v`
 case insensitive: `-i`
 
+- `tr` - "translate" / replace
+	- `tr : '\n' `-  replaces `:` for `\n`
+
 ### Network
 `wget *cesta*` - stahne cestu tam kde zrovna je
 
@@ -294,8 +302,9 @@ That file can be written to and read
 7
 That file can be read, written to, and executed
 
-`chown user:group file` - changing the ownership of file to user/group
+- `chown user:group file` - changing the ownership of file to user/group
 
+- `getent passwd <username>` - get info about your account
 
 ### Installing, updating
 `apt-get install *X*` - installs *X* package
