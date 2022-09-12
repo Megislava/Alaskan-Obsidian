@@ -133,3 +133,8 @@ Others
 	- NonCommercial (NC) = allows to distribute, display, perform and modify for any purpose then commercially
 	- NoDerivatives (ND) = allows to distribute, display, perform pnly the original coppies of the work; the creator's permission is a must
 	- 6 main licences: Attribution (CC BY), Attribution ShareAlike (CC BY-AS), Attribution NoDerivs (CC BY-ND), Attribution-NonCommercial (CC BY-NC), Attribution-NonCommercial-ShareAlike (CC BY-NC-SA), Attribution-NonCommercial-NoDerivs (CC BY-NC-ND), No Rights Reserved (CC0 - public domain)
+
+
+
+
+

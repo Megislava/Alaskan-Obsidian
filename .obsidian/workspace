@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CyberSec/Theory/Linux/Intro to the OS.md",
+            "file": "CyberSec/Theory/Linux/Linux Command Line.md",
             "mode": "source",
             "source": false
           }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CyberSec/Theory/Linux/Intro to the OS.md",
+                "file": "CyberSec/Theory/Linux/Linux Command Line.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,11 +100,11 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
+    "CyberSec/Theory/Linux/Intro to the OS.md",
     "CyberSec/Tools/dd.md",
     "CyberSec/Tools/git.md",
     "CyberSec/Tools/hashcat.md",
     "CyberSec/1Images/Pasted image 20220818151106.png",
-    "CyberSec/Theory/Linux/Intro to the OS.md",
     "Programovani v Shellu.md",
     "Shell Prakticky.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
