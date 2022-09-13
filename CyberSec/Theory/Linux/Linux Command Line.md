@@ -1,4 +1,4 @@
-2- CASE SENSITIVE
+- CASE SENSITIVE
 
 
 ### General, Folders and Paths
@@ -47,12 +47,23 @@
 
 - `&&` - and, eg. `echo hey >> file2 && cat file2` -> `hey`
 
-`$` - denotes environment variables, eg. echo $USER -> prints current user
+- `$` - denotes environment variables, eg. echo $USER -> prints current user
 
-`|` - pipe - take the output of previous command and uses it in the next
+- `|` - pipe - take the output of previous command and uses it in the next
 
-`;` - similar to pipe but it does not require the first command to execute successfully, eg. ./somebullshitthatdontexit ; ls (ls will still list)
-
+- `;` - similar to pipe but it does not require the first command to execute successfully, eg. ./somebullshitthatdontexit ; ls (ls will still list)
+- `*` -wildcard
+	- `echo /etc/r.conf` - will return `echo/resolv.conf` and `/etc/rsyslog.conf`
+- `?` - ? character
+	- represents each character
+		- `echo /etc/t???????` - will tprint `etc/timezone` and `etc/terminfo`
+- `[]` - matching chars inside the brackets
+	- `echo /etc/[gu]*` - prints files from etc starting with g or u
+	- `echo /ect/[a-d]*` - prints files from etc starting with a, b, c, d
+	- `echo /etc/*[0-9]*` - prints files from etc that contains number
+- `!` - used together with `[]` and negates the range
+	- `echo /etc/[!a-t]*` - prints files NOT starting with a-t characters
+ 
 - `pwd` - "Path to a Working Directory" print working path = find yourself
 	- `pwd > absolute_path `- saving absolute path into a file absolute_path
 
@@ -63,16 +74,23 @@
 	- `-a` - including hidden ones
 	- `-R` - recursive
 	- `-d` - information about spefied folder (don't care about insides)
+	- `-h` - print size in human readable form (must be used with `-l`)
+	- `-S` - sorting by size (big->small); reversed sorting w/ `-r`
+	- `-t` - sort by last modified
+	- `--full-time` - full time of last modification
 	- `?????` - prints all 5-characters long files in folder
 		- of course can be used with different lenghts of filenames
 	- `-w <number>` - "width" print only `<number>` of chars per line
 	- certain folder can be specified
 		- `ls -laR /dev /tmp` - will print EVERYTHING and recursively from `/dev` and `/tmp`
+	- File Types -> Permissions -> Hard Link count -> User Owner -> Group Owner -> File Size -> Time Stamp -> File Name
+		- `d` (directory), `-` (regular file), `l` (symbolic link), `s` (socket), `p` (pipe), `b` (block file), `c` (character file)
     
 - `mkdir` - create a folder 
 	- `-p` - with parent folder (`mkdir -p a/c/d/v/` )
 
 - `rmdir` - delete a folder
+	- only if the directory is empty
 
 - `tree` - prints the current file system tree
 
@@ -88,6 +106,11 @@ list of all system processes: `-ef`
 	- can be found out by `type`
 - `help`
 - `man`
+	- `-k` - searches both the name and the description
+		- `man -k copy` - will print all commands that have keywords copy, or have copy in came
+		- `apropos` have the same functionality as `man -k`
+	- `-f` - same as `whatis`
+		- returns in what section a man page is stored in
 - `info`
 
 ### Variables, Paths, Programs
@@ -97,16 +120,23 @@ list of all system processes: `-ef`
 	- around `=` cannot be spaces
 	- without type
 	- in case of special characters, use `''`
+	- if hyphens are not used, it's interepreted on call ad a command
 	- in case of using space, the word after 1. space is taken as command
 		- `runsomething=hey passwd random_user` ; `declare -p runsomething` will run `passwd`
 - `$key` get the value of variable
+- `unset` - remove a variable
 
 - `declare` 
 	-  `-p <variable>` - printing list of variables
 
 - `type` - gives you type of a utility/program/executable
-	- `type type` -> `type is a shell builtdin`
-	- `type date` -> `date is hashed (<home of date>)`
+	- `-a` - prints all info (home, type, hashed/nonhashed)
+	- internal build-in command
+		- `type type` -> `type is a shell builtdin`
+		- `type`, `cd`, `echo
+	- external commands
+		- `type date` -> `date is hashed (<home of date>)`
+		- also `which` can give you its home
 	- `type passwrd` -> `passwd is <home of password>`
 	- `hashed` vs `<non-hashed>`
 		- `hashed` program was previously ran in shell and the address is being remembered
@@ -121,15 +151,22 @@ list of all system processes: `-ef`
 	- using **relative** path when you are already partially in the path
 		- `user@machine:/usr > bin/date` - without `/`
 	
+- `$PATH` - Stores all the binaries you're able to run
+- `export -p` - prints all exported variables
 
+- `alias` - creates a shortcut
+	- `alias lsa=ls -la`
 
 ### Finding stuff in file structure
 - `locate *filename*` - searches for a filename in the whole system directory
 	- is indexed search, indexed by daily cron job
 	- but uses/searched by name only
+	- `-c` - how many result it has
+	- `-b` - limits that the searched filename is the whole filename or other limitations
+		- `locate -b "\passwd"`
 
 - `whereis *filename*` - finding binaries in the whole system directory
-returns PATH to the file as well as man page (if it has)
+	- returns PATH to the file as well as man page (if it has)
 
 - `which *filename*` - return PATH of *filename*
 
@@ -170,33 +207,42 @@ returns PATH to the file as well as man page (if it has)
 
 - `more` - prints first page of a document and then can be moved and "revelaed" more
 
+- `nl` - number of line
+	- prins line numbers - can be used when piping results and testing
+
 - `cat` - reading file
 	- `-n` - prints a number of line on start of a line
 
 - `file` - what is the type of the file
 
-- `rm` - delete a file
-   ` -r` - recursive
-   ` -f` - force
-   ` -v` - verbouse
-   ` -i `- inform; bude ptat jestli to myslim vazne
+- `rm` - delete a file or directory
+  -  `-r` - recursive
+  -  `-f` - force
+  -  `-v` - verbouse
+  -  `-i` - interactive mode, confirm the choice for each file
 
-`mv *path to current* *part to destination*` - move *current* *to where* 
-can be used for renaming as well
-=> MOVING + RENAMING
+- `mv *path to current* *part to destination*` - move *current* *to where* 
+	- can be used for renaming as well -> MOVING + RENAMING
+	- `-v` - verbous - will print the change in path for the file
+	- `-i` - interactive mode - will ask to confirm change for every file
+	- `-n` - to answer n (no) to each prompt automatically -> do not override
 
-`cp *path to current* *path to destination*` - copy a file 
--r = including its content
+- `cp *path to current* *path to destination*` - copy a file 
+	- `-r` - including its content
+	- `-v` - verbous - will print the change in path for the file
+	- `-i` - interactive mode - will ask to confirm change for every file
+	- `-n` - to answer n (no) to each prompt automatically -> do not override
 
-`head`/`tail` - prints first/last line of file
+- `head`/`tail` - prints first/last line of file
 
-`unzip`/`zip` - zip/unzip a file
+- `wc` - number of lines, words and chars
 
-`wc` - number of lines, words and chars
-
-`sort` - sorts theinside of a file
-   ` -r` reverse
-   ` -u` - remove duplicite lines
+- `sort` - sorts the text inside of a file
+  -  `-r` reverse
+  -  `-u` - remove duplicite lines
+  - `-t` - field delimeter (how the result will be splitted)
+  - `-k` - field number (sort by field)
+  - `-n` - sort type (numerical sort)
 
 `uniq *parametry* *soubor*` - odstraneni unikatnich radku
 
@@ -316,6 +362,20 @@ That file can be read, written to, and executed
 `apt purge *X*` - uninstall/remove a *X* package
 
 
+### Archiving and Compression
+- archiving
+	- combine multiple files eliminating overhead in individual files and makes the files easier to transport
+	- [[tar]]
+- compression
+	- makes the files smaller by removing redundant information
+	- lossless
+		- no information is removed from the file
+	- lossy
+		- information is removed from the file
+		- if the files is compresed and then decompressed, it is different then the original one
+	- [[gzip]]
+
+
 ### Generic and common places
 `/etc/passwd` - Stores user information - Often used to see all the users on a system
 
@@ -337,5 +397,32 @@ The equivalent on Windows is C:\Users\Administrator
 
 `/var` - The Linux miscellaneous directory, a myriad of processes store data in /var
 
-`$PATH` - Stores all the binaries you're able to run
-`export -p` - prints all exported variables
+
+### Scripting
+1. Functions
+	- can be declared in shell
+	- `function_name () {}`
+	- in shell it looks weird:
+	```
+	my_function () {
+	> ls /home
+	> cal 2022
+	> echo "No interesting function"
+	> }
+	```
+	- by default created with `+x` so it can run without `./`
+
+
+##### Quotes
+- double quotes `""
+	- stop the shell fro minterpreting some metachars including glob characters (wild cards)
+	- still allow command and variable susbtitution
+		- `echo "The path is $PATH" - will print the path
+- single quotes `''`
+	- orevent the shell from dooing any inty interpreting of special chars, including globs, variables, command substitutions and other metachars
+- backlash `\`
+	- escaping special chars
+		- `echo The service costs \$1 and the path is $PATH` -> prints dollar 1 and PATH
+- backquotes
+	- "treat as command"
+		- `echo Today is `date`

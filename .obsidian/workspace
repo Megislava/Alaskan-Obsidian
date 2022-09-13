@@ -9,9 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CyberSec/Theory/Linux/Linux Command Line.md",
+            "file": "CyberSec/Tools/RegEx.md",
             "mode": "source",
-            "source": false
+            "source": true
           }
         }
       }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "sort",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -58,57 +58,22 @@
   "right": {
     "id": "01559e3f5c72e717",
     "type": "split",
-    "children": [
-      {
-        "id": "1091127899661cbc",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "35e89a38c4f7682a",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "CyberSec/Theory/Linux/Linux Command Line.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "57c72239ac8c5673",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          }
-        ]
-      }
-    ],
+    "children": [],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
+    "CyberSec/Theory/Linux/Linux Command Line.md",
+    "CyberSec/Tools/zip.md",
+    "CyberSec/Tools/tar.md",
+    "CyberSec/Tools/gzip.md",
+    "CyberSec/Theory/Programming Languages/Intro.md",
     "CyberSec/Theory/Linux/Intro to the OS.md",
+    "CyberSec/Theory/Programming Languages/C.md",
     "CyberSec/Tools/dd.md",
     "CyberSec/Tools/git.md",
-    "CyberSec/Tools/hashcat.md",
-    "CyberSec/1Images/Pasted image 20220818151106.png",
-    "Programovani v Shellu.md",
-    "Shell Prakticky.md",
-    "CyberSec/Theory/Linux/Linux Command Line.md",
-    "MissingSemester/2. Scripting in bash and Shell Tools.md",
-    "MissingSemester/1. Shell intro.md"
+    "CyberSec/Tools/hashcat.md"
   ]
 }
