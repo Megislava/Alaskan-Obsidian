@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CyberSec/Tools/RegEx.md",
+            "file": "CyberSec/Theory/Linux/Linux Command Line.md",
             "mode": "source",
+            "backlinks": false,
             "source": true
           }
         }
@@ -40,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sort",
+                "query": "vim",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,14 +67,14 @@
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
     "CyberSec/Theory/Linux/Linux Command Line.md",
+    "MissingSemester/2. Scripting in bash and Shell Tools.md",
+    "MissingSemester/1. Shell intro.md",
+    "MissingSemester/3. Vim.md",
+    "CyberSec/Tools/RegEx.md",
     "CyberSec/Tools/zip.md",
     "CyberSec/Tools/tar.md",
     "CyberSec/Tools/gzip.md",
     "CyberSec/Theory/Programming Languages/Intro.md",
-    "CyberSec/Theory/Linux/Intro to the OS.md",
-    "CyberSec/Theory/Programming Languages/C.md",
-    "CyberSec/Tools/dd.md",
-    "CyberSec/Tools/git.md",
-    "CyberSec/Tools/hashcat.md"
+    "CyberSec/Theory/Linux/Intro to the OS.md"
   ]
 }

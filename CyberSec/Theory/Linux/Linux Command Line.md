@@ -45,13 +45,16 @@
 	-  `echo nood >> file` => `cat file -> hello \n nood`
 	- if the "receiving" file does not exist, will be created
 
-- `&&` - and, eg. `echo hey >> file2 && cat file2` -> `hey`
+- `&&` - and
+	- eg. `echo hey >> file2 && cat file2` -> `hey`
 
-- `$` - denotes environment variables, eg. echo $USER -> prints current user
+- `$` - denotes environment variables
+	- eg. `echo $USER` -> prints current user
 
 - `|` - pipe - take the output of previous command and uses it in the next
 
-- `;` - similar to pipe but it does not require the first command to execute successfully, eg. ./somebullshitthatdontexit ; ls (ls will still list)
+- `;` - similar to pipe but it does not require the first command to execute successfully
+	- eg. `./somebullshitthatdontexit ; ls` - ls will still list
 - `*` -wildcard
 	- `echo /etc/r.conf` - will return `echo/resolv.conf` and `/etc/rsyslog.conf`
 - `?` - ? character
@@ -101,7 +104,8 @@ list of all system processes: `-ef`
 
 - `lsof -l` - "List open files" show running services
 
-##### Documentation
+
+### Documentation
 - `man` vs `help` - if the command is internal or external
 	- can be found out by `type`
 - `help`
@@ -177,7 +181,8 @@ list of all system processes: `-ef`
 	- `-type` - file, folder,...
 	- `-user` - user owning it
 	- `-perm` - permissions
-	-  ```# Find all directories named src
+	-  ```
+		# Find all directories named src
 		find . -name src -type d
 		# Find all python files that have a folder named test in their path
 		find . -path '*/test/*.py' -type f
@@ -244,50 +249,65 @@ list of all system processes: `-ef`
   - `-k` - field number (sort by field)
   - `-n` - sort type (numerical sort)
 
-`uniq *parametry* *soubor*` - odstraneni unikatnich radku
+- `uniq *parametry* *soubor*` - odstraneni unikatnich radku
 
 - `vim` - text editor
 	- enter INSERT mode : `i`
 	- enter VIEWING mode: `ESC`
 	- save and exit: `wq`
 
-`diff` - differentiate between files
+- `diff` - differentiate between files
 
-`cut` - cut chosen file parts
+- `cut` - cut chosen file parts
 
-`sed` - stream editor
-line length: `-l <number>`
+- `sed` - stream editor
+	- line length: `-l <number>`
 
-`grep <string> <file>` - find data inside of data
-you can search through multiple files: `… <file1> <file2> …`
-supports regular expression!
-find lines that do NOT have that symbol: `-v`
-case insensitive: `-i`
+- `grep <string> <file>` 
+	- find data inside of data
+	- you can search through multiple files: `… <file1> <file2> …`
+	- supports regular expression!
+	- `-v` - find lines that do NOT have that symbol
+	- `-i` - case insensitive
+	- alternatives: `ack`, `ag`, `rg`
+
+- `rp` - ripgrep
+	```
+	# Find all python files where I used the requests library
+	rg -t py 'import requests'
+	# Find all files (including hidden files) without a shebang line
+	rg -u --files-without-match "^#!"
+	# Find all matches of foo and print the following 5 lines
+	rg foo -A 5
+	# Print statistics of matches (# of matched lines and files )
+	rg --stats PATTERN
+	```
 
 - `tr` - "translate" / replace
 	- `tr : '\n' `-  replaces `:` for `\n`
 
+
 ### Network
-`wget *cesta*` - stahne cestu tam kde zrovna je
+- `wget *cesta*` - stahne cestu tam kde zrovna je
 
-`netstat -ano` - all ports that are open and what is connected to those ports
+- `netstat -ano` - all ports that are open and what is connected to those ports
 
-`route` - shows routing table
+- `route` - shows routing table
 
-`ifconfig` - get and display IP address
+- `ifconfig` - get and display IP address
 
-`service *X* start` - start a *X* on your IP address
-apache2 - server
-ssh - 
-postgresql - DB
+- `service *X* start` - start a *X* on your IP address
+	- apache2 - server
+	- ssh
+	- postgresql - DB
 
-`ip a` - jako `ifconfig` ale pro jinou dist
+- `ip a` - jako `ifconfig` ale pro jinou dist
 
-`traceroute` - hops that traffic take to get to target
+- `traceroute` - hops that traffic take to get to target
 
-`ssh <username>@<target>` - remote connection to target
+- `ssh <username>@<target>` - remote connection to target
 
-`ssh-keygen` - utility for generating SSH keys
+- `ssh-keygen` - utility for generating SSH keys
 	- SSH key
 		- fingerprint of server (to check if we trust it)
 		- privite part and public part (`.pub`)
@@ -295,7 +315,7 @@ postgresql - DB
 		- privite, public key
 		- known hosts
 
-`ssh-copy-id <username>@<target>` - add SSH key to a server
+- `ssh-copy-id <username>@<target>` - add SSH key to a server
 
 
 
@@ -411,6 +431,47 @@ The equivalent on Windows is C:\Users\Administrator
 	> }
 	```
 	- by default created with `+x` so it can run without `./`
+	-  ```
+			mcd () {
+				mkdir -p "$1"
+				cd "$1"
+			}
+		- creates a new folder with name given from parametr and enters it
+		- 	- arguments and special characters:
+		- `$0` - Name of the script
+		-   `$1` to `$9` - Arguments to the script. `$1` is the first argument and so on.
+		-   `$@` - All the arguments
+		-   `$#` - Number of arguments
+		-   `$?` - Return code of the previous command
+		-   `$$` - Process identification number (PID) for the current script
+		-   `!!` - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing `sudo !!`
+		-   `$_` - Last argument from the last command. If you are in an interactive shell, you can also quickly get this value by typing `Esc` followed by `.` or `Alt+.`
+		-   [some more special chars](https://tldp.org/LDP/abs/html/special-chars.html)
+	-   binary decidions:
+		-   `||` - or
+			-   `false || echo "Oops, fail"` => `Oops, fail`
+			-   `true || echo "Always true"` => ``
+		- `&&` - and
+			- `true && echo "Is true"` => `Is true`
+			- `false && echo "False"` => ``
+		- `;` - just a division of commands - both will execute
+			- `true ; echo "Will print"` => `Will print`
+			- `false ; echo "Will print"` => `Will print`
+	- running command in command ~ command substition:
+		- the inner command will run first
+			- `diff <(ls bar) <(ls foo)` - difference between ls of bar and foo
+			- `for file in $(ls)` - do something with each file in ls of some dir
+	- standart output and error:
+		- `grep foobar "$file" > /dev/null 2>dev/null` - moving STDOUT and STDERR to /dev/null
+	- comparissons:
+		- using double brackets `[[ ]]`
+		- [more info](http://mywiki.wooledge.org/BashFAQ/031)
+	- globbing
+		- wildcards, curly braces
+			- `foo*` - match foo-something
+			- `foo*.{php,html,js}` - matches foo-something with extenstions php/html/js
+			- `mv *.{sh,py} folder` - will move all sh and py to folder
+	- [spellcheck shellcheck tool](https://github.com/koalaman/shellcheck)
 
 
 ##### Quotes
@@ -420,6 +481,8 @@ The equivalent on Windows is C:\Users\Administrator
 		- `echo "The path is $PATH" - will print the path
 - single quotes `''`
 	- orevent the shell from dooing any inty interpreting of special chars, including globs, variables, command substitutions and other metachars
+	- `echo "$foo"` -> `bar`
+	- `echo '$foo'` -> `foo` ~ literal strings
 - backlash `\`
 	- escaping special chars
 		- `echo The service costs \$1 and the path is $PATH` -> prints dollar 1 and PATH
