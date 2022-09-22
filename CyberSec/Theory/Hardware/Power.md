@@ -1,0 +1,2 @@
+- converting alternating 120V/240V into direct current 3.3V/5V/12V
+- also protect devices from surges

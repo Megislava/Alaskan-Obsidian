@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "vim",
+                "query": "free",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -66,15 +67,15 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
+    "CyberSec/Tools/dig.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
-    "MissingSemester/2. Scripting in bash and Shell Tools.md",
-    "MissingSemester/1. Shell intro.md",
-    "MissingSemester/3. Vim.md",
-    "CyberSec/Tools/RegEx.md",
-    "CyberSec/Tools/zip.md",
-    "CyberSec/Tools/tar.md",
-    "CyberSec/Tools/gzip.md",
-    "CyberSec/Theory/Programming Languages/Intro.md",
-    "CyberSec/Theory/Linux/Intro to the OS.md"
+    "CyberSec/Theory/Linux/File System.md",
+    "CyberSec/Theory/Hardware/Memory.md",
+    "CyberSec/Theory/Linux/Intro to the OS.md",
+    "CyberSec/Theory/Hardware/Power.md",
+    "CyberSec/Theory/Hardware/Graphics.md",
+    "CyberSec/Theory/Hardware/BUSes.md",
+    "CyberSec/Theory/Hardware/Intro.md",
+    "CyberSec/Theory/Hardware/Processors.md"
   ]
 }

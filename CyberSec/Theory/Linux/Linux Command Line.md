@@ -22,7 +22,10 @@
 		- `HISTCONTROL=ignorespace`
 	
 - directory navigation
-	- symlinks `ln -s`
+	- `ln` - create a hardlink
+		- `-s` - symbolic link (symlink, soft link)
+		- hardlinks don't have a single point for failure
+		- soft links are easier to see and can link to directory
 	- `fasd` (frequency + recency), `autojump`
 	- `tree` - get tree view of directories
 	- `nnn`, `ranger`
@@ -32,7 +35,8 @@
 	- if the "receiving" file does not exist, will be created
 
 - `<` - rewiring output like with `>` but the other way round
-	- ```missing:~$ echo hello > hello.txt
+	```sh
+	missing:~$ echo hello > hello.txt
 	missing:~$ cat hello.txt
 	hello
 	missing:~$ cat < hello.txt
@@ -40,7 +44,7 @@
 	missing:~$ cat < hello.txt > hello2.txt
 	missing:~$ cat hello2.txt
 	hello
-
+	```
 - `>>` - output redirection - appends to the end of file
 	-  `echo nood >> file` => `cat file -> hello \n nood`
 	- if the "receiving" file does not exist, will be created
@@ -81,6 +85,7 @@
 	- `-S` - sorting by size (big->small); reversed sorting w/ `-r`
 	- `-t` - sort by last modified
 	- `--full-time` - full time of last modification
+	- `-i` - display the inode number of a file 
 	- `?????` - prints all 5-characters long files in folder
 		- of course can be used with different lenghts of filenames
 	- `-w <number>` - "width" print only `<number>` of chars per line
@@ -97,8 +102,17 @@
 
 - `tree` - prints the current file system tree
 
+- `pstree` - prints family tree of processes
+
 - `ps` - shows list of running tasks with their PID (process ID), PPID (parent process ID)
-list of all system processes: `-ef`
+	- list of all system processes: `-ef`
+	- `--forest` - similar to `pstree` prints parent-child relationship
+
+- `top` - viewing processes in real time
+	- together with CPU utilization
+	- is interactive:
+		- `K` - terminate a process
+		- `R` - adjust the priority of a process
 
 - `kill <PID>` - kill running task/process
 
@@ -181,19 +195,20 @@ list of all system processes: `-ef`
 	- `-type` - file, folder,...
 	- `-user` - user owning it
 	- `-perm` - permissions
-	-  ```
-		# Find all directories named src
-		find . -name src -type d
-		# Find all python files that have a folder named test in their path
-		find . -path '*/test/*.py' -type f
-		# Find all files modified in the last day
-		find . -mtime -1
-		# Find all zip files with size in range 500k to 10M
-		find . -size +500k -size -10M -name '*.tar.gz'
-		# Delete all files with .tmp extension
-		find . -name '*.tmp' -exec rm {} \;
-		# Find all PNG files and convert them to JPG
-		find . -name '*.png' -exec convert {} {}.jpg \;
+	```sh
+	# Find all directories named src
+	find . -name src -type d
+	# Find all python files that have a folder named test in their path
+	find . -path '*/test/*.py' -type f
+	# Find all files modified in the last day
+	find . -mtime -1
+	# Find all zip files with size in range 500k to 10M
+	find . -size +500k -size -10M -name '*.tar.gz'
+	# Delete all files with .tmp extension
+	find . -name '*.tmp' -exec rm {} \;
+	# Find all PNG files and convert them to JPG
+	find . -name '*.png' -exec convert {} {}.jpg \;
+	```
 	- alternative to `find`: [fd](https://github.com/sharkdp/fd)
 	- find and fd are not indexed searched
 
@@ -201,7 +216,8 @@ list of all system processes: `-ef`
 - `touch` - create an empty file
 
 - `less` - newer then more
-	- can move forward (arrow down) AND back (arrow up)
+	- can move forward `\n` AND back (arrow up)
+	- window forward ` ` or window back `B`
 	- searched values are highlighted
 	- can open multiple files (jumping with `n` and `N`)
 	- `q` - quit; `h` - help
@@ -272,7 +288,7 @@ list of all system processes: `-ef`
 	- alternatives: `ack`, `ag`, `rg`
 
 - `rp` - ripgrep
-	```
+	```sh
 	# Find all python files where I used the requests library
 	rg -t py 'import requests'
 	# Find all files (including hidden files) without a shebang line
@@ -288,24 +304,60 @@ list of all system processes: `-ef`
 
 
 ### Network
-- `wget *cesta*` - stahne cestu tam kde zrovna je
-
-- `netstat -ano` - all ports that are open and what is connected to those ports
-
-- `route` - shows routing table
+- specific files to network config are dependant on distro used
+	- CentOS - `/etc/sysconfig/network-scripts/ifcfg-eth0`
 
 - `ifconfig` - get and display IP address
+
+- `ip a` - like `ifconfig`
+
+- `route` - shows routing table
+	- `-n` - prefer numberic info (default = 0.0.0.0)
+	- obsolete -> replaced with `ip route show`
+
+- `ping` - test if host is reachable
+	- `-c` - limits how many pings will be sent
+	- test only if ICMP is open
+
+- `netstat` - large amout of information about network
+	- `-i` - display statistics regarding network traffic
+	- `-r` - display routing info
+	- `-t` - TCP
+	- `-l` - lists ports that are listening (open)
+	- `-n` - show numbers (not names)
+	- `-a` - all info (?)
+	- `-o` - show open ports
+
+- `ss` - show socket statistics
+	- supports all major packet and sock type
+	- a possible replacement for `netstat`
+	- data displayed in collumns:
+		- Netid - socket type and transport protocol
+		- State - connected/unconnected (depends on protocol)
+		- Recv-Q - amount of data queued up for being processed having been received
+		- Send-Q - amount of data queued up for being sent to another host
+		- Local Address - address and port of the local host's portion of the connection
+		- Peer Address - address and port of the remote host's portion of the connection
+	- `-s` - displayes mostly types of sockets, statistics
+
+- `dig` - manual querying of recursive DNS server of our choice
+	- useful tool for network troubleshooting - testing the functionality if the DNS server that the host is using
+	- syntax: `dig <domain @<dns-server-ip>>`
+
+- `host` - works with DNS to associate a hostname with IP
+	- `-t` - use CNAME/SOA -> `host -t CNAME/SOA example.com`
+	- `-a` - all options
+
+- `ssh <username>@<target>` - remote connection to target
+
+- `wget *cesta*` - display the route taken to target
 
 - `service *X* start` - start a *X* on your IP address
 	- apache2 - server
 	- ssh
 	- postgresql - DB
 
-- `ip a` - jako `ifconfig` ale pro jinou dist
-
 - `traceroute` - hops that traffic take to get to target
-
-- `ssh <username>@<target>` - remote connection to target
 
 - `ssh-keygen` - utility for generating SSH keys
 	- SSH key
@@ -319,8 +371,16 @@ list of all system processes: `-ef`
 
 
 
-### Users and permissions
-- `id` - prints info about user
+### Users and groups
+
+- `su` - allows you rto run a shell as a different iser
+	- `su *X*` - change user to *X*
+	- `su -`/`su -l`/`su --login` - login shell
+	- `su -` = `su - root`- by default if username is not defined, `su` opens new shell as root
+
+- `sudo [options] command` - allows users to execute commands as another user
+
+- `id [options] username` - prints info about user
 	- id and name of user and id and name of its group(s)
 
 - `uname` - prints info about host machine
@@ -335,42 +395,74 @@ list of all system processes: `-ef`
 - `tty` - "TeleTYpe"
 	- whole route to file representing your connection to the machine
 
-- `sudo su` - change to sudo
+- `useradd` - creates a user
+	- `-D` - view or change some values
+	- `-g` - change primary group
+	- `-G` - change supplementary group
+	- `-b` - change base directory
+	- `-d` - allows to specify existing directory or new home directory to create for the user
+	- `-f` - allows you to use a different INACTIVE value than the default one
+	- `-e` - set up EXPIRE
+	- `-s` - change default shell/bash/zhs/fsh
+	- `-k` - change SKEL (skeleton) directory
+	- `-u` - specify user id (UID)
+	- `-m` and `-M` - defines if home directory is created or not
 
-- `su *X*` - change user to *X*
+- `usermod` - modify a user
+	- `-c` - set a COMMENT
+	- basically same options as with `useradd`
+		- `-d <HOME_DIR>`, `-e <EXPIRE_DATE>`, `-f INACTIVE`, `-g GROUP`, `-G GROUPS`, `-s SHELL`, `-u NEW_UID`
+	- `-L` and `-U` - lock and unlock
+	- `-a` - append additional groups
 
-- `adduser X` - creates a new user X
+- `userdel` - delete a user
 
-- `addgroup X` - creates a new group X
+- `groupadd` - creates a new group
+	- `-g` - specify the group id
+	- `-r` - assigns the new group a GID that is less then the lowest standart GIDy
+
+- `groupmod` - modifying a existing group
+	- `-n` - change name of group
+	- `-g` - change a group id (GID)
+
+- `groupdel` - delete a group
+
+*- `addgroup X` - creates a new group X*
+*- `adduser X` - creates a new user X*
 
 - `passwd X` - changes password for X user
 
+- `chage` - options for managing the password aging info in `/etc/shadow`
+	- `-l` - list account aging info
+	- `-d <LAST_DAY>` - set the date of the last password change to `<LAST_DAY>`
+	- `-E <EXPIRE_DATE>` - set account to expire on `<EXPIRE_DATE>`
+	- `-I` - set account to permit login for INACTIVE days after password expires
+	- `-m <MIN_DAYS>`/ `-M <MAX_DAYS>` - sets minimum/maximum number of days before the password can be changed
+	- `-W <WARN_DAYS>` - days before it starts warning user
+
+
+### Permissions
+
 - `chmod <permission> <file>` - allows set permission to read/write/execute files and folders to various users and groups
-one digit for each group from: user and group and everyone else
-eg.: 
-341 = user that owns the file can X+W, group that owns it can R, everyone else can X
-777 = everyone can do anything
-    
-Digit
-Meaning
-1
-That file can be executed (X)
-2
-That file can be written to (W)
-3
-That file can be executed and written to
-4
-That file can be read (R)
-5
-That file can be read and executed
-6
-That file can be written to and read
-7
-That file can be read, written to, and executed
+	- one digit for each group from: user and group and everyone else
+	- eg. 
+		- 341 = user that owns the file can X+W, group that owns it can R, everyone else can X
+		- 777 = everyone can do anything    
+Digit | Meaning
+--------- | --------
+1 | That file can be executed (X)
+2 | That file can be written to (W)
+3 | That file can be executed and written to
+4 | That file can be read (R)
+5 | That file can be read and executed
+6 | That file can be written to and read
+7 | That file can be read, written to, and executed
 
 - `chown user:group file` - changing the ownership of file to user/group
 
 - `getent passwd <username>` - get info about your account
+
+
 
 ### Installing, updating
 `apt-get install *X*` - installs *X* package
@@ -396,34 +488,14 @@ That file can be read, written to, and executed
 	- [[gzip]]
 
 
-### Generic and common places
-`/etc/passwd` - Stores user information - Often used to see all the users on a system
-
-`/etc/shadow` - Has all the passwords of these users
-
-`/tmp` - Every file inside it gets deleted upon shutdown - used for temporary files
-
-`/etc/sudoers` - Used to control the sudo permissions of every user on the system    
-  
-`/home` - The directory where all your downloads, documents etc are. 
-The equivalent on Windows is C:\Users\<user>
-
-`/root` - The root user's home directory 
-The equivalent on Windows is C:\Users\Administrator
-
-`/usr` - Where all your software is installed 
-
-`/bin` and `/sbin` - Used for system critical files - DO NOT DELETE
-
-`/var` - The Linux miscellaneous directory, a myriad of processes store data in /var
-
-
 ### Scripting
+- define type of code
+	- `#!/bin/bash` - bash
 1. Functions
 	- can be declared in shell
 	- `function_name () {}`
 	- in shell it looks weird:
-	```
+	```sh
 	my_function () {
 	> ls /home
 	> cal 2022
@@ -472,9 +544,68 @@ The equivalent on Windows is C:\Users\Administrator
 			- `foo*.{php,html,js}` - matches foo-something with extenstions php/html/js
 			- `mv *.{sh,py} folder` - will move all sh and py to folder
 	- [spellcheck shellcheck tool](https://github.com/koalaman/shellcheck)
+2. Conditions
+	1. If
+		- must start with `if` and end with `fi`
+		```sh
+		if somecommand; then
+			# do something
+		fi
+		```
+		- often used command [[CyberSec/Tools/test]] 
+		- also `else`  and `elif` can be added
+		```sh
+		#!/bin/bash
+		if [ "$1" = "hello" ]; then
+			echo "hello yourself"
+		elif [ "$1" = "goodbuy" ]; then
+			echo "nice to have met you"
+			echo "hope to see you again"
+		else
+			echo "didn't understand"
+		fi	
+		```
+	2. Case
+		- makes sense for more conditions
+		```sh
+		#!/bin/bash
 
+		case "$1" in
+		hello|hi)
+		  echo "hello yourself"
+		  ;;
+		goodbye)
+		  echo "nice to have met you"
+		  echo "I hope to see you again"
+		  ;;
+		*)
+		  echo "I didn't understand that"
+		esac
+```
+3. Loops
+	- `for` and `while`
+	- for:
+	```sh
+	#!/bin/bash
 
-##### Quotes
+	SERVERS="servera serverb serverc"
+	for S in $SERVERS; do
+	  echo "Doing something to $S"
+	done
+```
+	- while:
+	```sh
+	#!/bin/bash
+
+	i=0
+	while [ $i -lt 10 ]; do
+	  echo $i
+	  i=$(( $i + 1))
+	done
+	echo “Done counting”
+```
+
+### Quotes
 - double quotes `""
 	- stop the shell fro minterpreting some metachars including glob characters (wild cards)
 	- still allow command and variable susbtitution
