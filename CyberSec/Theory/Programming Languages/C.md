@@ -156,6 +156,47 @@ int main(void)
 - without static: 1\n2\n3\n
 	- the variable is still statically allocated from previous compile
 
+```c
+#include 
+
+void foo(void) 
+{
+	int a; 
+	printf("%d\n", a); 
+}
+
+void bar(void) 
+{ 
+	int a = 42;
+}
+
+int main(void)
+{
+	bar();
+	foo(); 
+}
+```
+- can print different values, depends on optimizer
+
+```c
+#include 
+
+void foo(void) 
+{
+	int a = 41;
+	a = a++; 
+	printf("%d\n", a); 
+}
+
+int main(void)
+{
+	bar();
+	foo(); 
+}
+```
+- prints: 42 on low warning levels
+	- but the code is undefined (on higher level of warning)
+		- because `a = a++` - you cannot increase variable twice in same line
 
 - declarative language
 - `%f` - float
