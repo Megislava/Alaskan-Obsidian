@@ -1,4 +1,3 @@
-
 ### UNIX
 - OS developed by AT&T Bell Labs in 1970s
 - written in C

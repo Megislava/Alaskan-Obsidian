@@ -21,3 +21,5 @@
 	- ![[Pasted image 20220818151106.png]]
 	- ostatni - seznamy zmen
 - => 1.3.3
+
+#### Data model

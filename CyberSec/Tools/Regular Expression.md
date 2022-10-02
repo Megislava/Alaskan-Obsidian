@@ -1,8 +1,4 @@
-- regular expression
-
-
-
-- `.` - any sngle character
+- `.` - any single character
 - `[]` - list or range of characters to match
 - `*` - previous character repeated zero or more times
 - `^` - if the first char in the pattern the patter must be at the beginning of the line to match

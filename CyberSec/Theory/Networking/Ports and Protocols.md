@@ -1,10 +1,10 @@
-1. ### Transfer data
+### Transfer data
 - HTTP/HTTPS
 	- HyperText Transfer Protocol (Secure)
 	- http :80 (port from transfer layer)
 	- https :443 (-||-)
 
-2. ### File transfer
+### File transfer
 - FTP/sFTP
 	- (secure) File Transfer Protocol)
 	- FTP :20 / :21
@@ -17,7 +17,7 @@
 	- SMB :445
 	- SMB => treba Network tab na woknech (vytvori lokalni server?)
 
-3. ### Email
+### Email
 - POP3, IMAP
 	- take email from server and transfer to client
 	- POP3 :110/ :995 (non-encrypted / encrypted)
@@ -26,13 +26,13 @@
 	- simple mail transfer protocol, send to server
 	- SMTP :25 / :465 (-||-) (/ :587)
 
-4. ### Authentication
+### Authentication
 - LDAP(s)
 	- Lightweight Directory Access Protocol (secure)
 	- LDAP :389
 	- LDAPs :636
 
-5. ### Network services ~ transferring data
+### Network services ~ transferring data
 - DHCP
 	- throws back to client: IP address, subnet mask, default gateway, DNS server, other info
 	- IP config with DHCP:

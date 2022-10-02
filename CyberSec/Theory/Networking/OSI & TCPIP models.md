@@ -1,4 +1,4 @@
-1. ### OSI model
+### OSI model
 - Open System Interconnection
 - to have universal communication in internet
 - particular layer “knows” only layer one up or one down from it = sibling dependence
@@ -22,7 +22,7 @@
 - See how it’s done here: https://www.youtube.com/watch?v=hl2xa7Ahy0E
 - Please Do Not Throw Sausage Pizza Away ![[1.PNG]]
 
-1. #### Physical Layer
+#### Physical Layer
 - moves bites between device
 - specifies voltage, wire speed and pin-out cables
 - binary, decimal and hexadecimal
@@ -34,7 +34,7 @@
 - 1000BASE-T, DSL, DOCSIS, 802.11a/b/g/n
 - cables + wireless connection + hub + switch + twisted pair, coaxial, fiber optic cabel, ...
 
-2. #### Data Link Layer
+#### Data Link Layer
 - combines packets into bytes and bytes into frames
 - prived access to media using MAC address
 - performs error detection NOT CORRECTION
@@ -44,7 +44,7 @@
 - speed - different (from 10Mbps to 40Gbps but 1G, 10G, 40G,... required full duplex)
 - different topologies
 
-	###### Ethernet
+###### Ethernet
 - internal network
 - ethernet packet (layer 1) include ethernet frame (layer 2)
 - Ethernet frame
@@ -55,12 +55,12 @@
 - different network protocols (communication) 
 - ethernet, DOCSIS-3, ARP
 
-3. #### Network Layer
+#### Network Layer
 - provides logical addressing, which routers use for path determination
 - moving traffic to one to other device - must have unique identifier
 - MAC address - network interface card (HW) - its manufacturer ID and serial number of given network interface card = HW address
 
-	###### IP addressing
+##### IP addressing
 - IPv4 (32-bit address), IPv6
 - 4 number ~ 203.0.113.10, every 0-255 => cca 4 million possible IPs
 - 0, 10, and 127 are blocks that are entirely reserved.
@@ -123,7 +123,7 @@ __IPv6__
 - IP (addressing + routing) + ICMP
 ![[4.PNG]]
 
-4. #### Transport Layer
+#### Transport Layer
 - provides reliable/unreliable connection
 - performs error correction before transit
 - segments and reassembles data into a data stream
@@ -134,7 +134,7 @@ __IPv6__
 - __UDP__ = user datagram protocol
 	- w/o 3 way handshake - more like shouting to the world
 
-5. #### Session Layer
+#### Session Layer
 - setting up, managing and tearing down session between the presentation layer entities 
 - provides dialog control between devices/nodes
 - coordinates communication between systems and serves to organize their communication by offering 3 modes: 
@@ -144,18 +144,18 @@ __IPv6__
 => keeps different applications data separate
 - sockets
 
-6. #### Presentation Layer
+#### Presentation Layer
 - presents data to the application layer
 - handles processing = encrypting/decrypting, compressing/decompressing, data translation, code formatting
 - SSL + TSL (ASCII => hexadecimal)
 
-7. #### Application Layer
+#### Application Layer
 - provides a user interface
 - http/https; DNS
 
 ![[5.png]]
 
-2. ### TCP/IP
+### TCP/IP
 - Transmission Control Protocol / Internet Protocol
 - similar to OSI
 - older

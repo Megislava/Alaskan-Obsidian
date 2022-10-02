@@ -282,7 +282,7 @@
 - `grep <string> <file>` 
 	- find data inside of data
 	- you can search through multiple files: `… <file1> <file2> …`
-	- supports regular expression!
+	- supports [[Regular Expression]]!
 	- `-v` - find lines that do NOT have that symbol
 	- `-i` - case insensitive
 	- alternatives: `ack`, `ag`, `rg`

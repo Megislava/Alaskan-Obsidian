@@ -6,7 +6,7 @@
 	- if two devices at the same time send a impulse the impulses gets added to each other - +10 Volts signal become - other computes know that 10 == collision => stop the communication, wait a random amount of time and start again
 	- **collision domain** = a group of networked devices that will simultaneously detect a voltage spike
 
-1. ###### Routing
+###### Routing
 - connecting switches (LANs)
 - they are “just” deciding where to forward packets - reads destination IP address to decide how to handle the packet => route lookup
 - route lookup - looking for suitable destination and route to it, if no route is found, the packet is dropped and error message is send to the message sender
@@ -16,7 +16,7 @@
 		- network address translation (NAT, home network with x’s of devices can hide behind single public IP)
 		- IPv6
 		
-2. ###### Switching
+###### Switching
 - single geography, no router, Local Area Network
 - on layer-2
 - uses MAC address as addressing
