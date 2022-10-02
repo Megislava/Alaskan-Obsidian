@@ -1,4 +1,4 @@
-- Filesystem Hierarchy Standart
+- Filesystem Hierarchy Standard
 	- provides guideline for distributions on how to organize files
 
 - `/bin` and `/sbin` - Used for system critical files - DO NOT DELETE
