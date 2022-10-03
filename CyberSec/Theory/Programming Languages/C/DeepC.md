@@ -198,6 +198,8 @@ int main(void)
 	- but the code is undefined (on higher level of warning)
 		- because `a = a++` - you cannot increase variable twice in same line
 
-- declarative language
-- `%f` - float
-- `$.2f` - float with 2 points rounded
+
+
+
+
+

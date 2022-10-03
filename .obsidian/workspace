@@ -7,13 +7,8 @@
         "id": "3532d9fff7d4eb0f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "CyberSec/Theory/Programming Languages/C.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -66,6 +61,7 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
+    "CyberSec/Theory/Programming Languages/C.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
     "CyberSec/Tools/dig.md",
     "CyberSec/Theory/Linux/File System.md",
@@ -74,7 +70,6 @@
     "CyberSec/Theory/Hardware/Power.md",
     "CyberSec/Theory/Hardware/Graphics.md",
     "CyberSec/Theory/Hardware/BUSes.md",
-    "CyberSec/Theory/Hardware/Intro.md",
-    "CyberSec/Theory/Hardware/Processors.md"
+    "CyberSec/Theory/Hardware/Intro.md"
   ]
 }
