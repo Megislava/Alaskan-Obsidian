@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tmu",
+                "query": "free",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,15 +66,15 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
-    "CyberSec/Theory/Linux/Linux Command Line.md",
-    "CyberSec/Theory/Linux/Intro to the OS.md",
-    "CyberSec/Theory/Linux/File System.md",
-    "CyberSec/Theory/Hardware/BUSes.md",
-    "CyberSec/Theory/Networking/Routing and Switching.md",
-    "CyberSec/Theory/Networking/Ports and Protocols.md",
-    "CyberSec/Theory/Networking/OSI & TCPIP models.md",
     "CyberSec/Theory/Programming Languages/C.md",
+    "CyberSec/Tools/git.md",
+    "CyberSec/Theory/Programming Languages/C/Intro.md",
+    "CyberSec/Theory/Programming Languages/C/DeepC.md",
     "CyberSec/Theory/Programming Languages/Intro.md",
-    "CyberSec/Tools/CIS-CAT Lite.md"
+    "CyberSec/Theory/Linux/Linux Command Line.md",
+    "CyberSec/Tools/dig.md",
+    "CyberSec/Theory/Linux/File System.md",
+    "CyberSec/Theory/Hardware/Memory.md",
+    "CyberSec/Theory/Linux/Intro to the OS.md"
   ]
 }
