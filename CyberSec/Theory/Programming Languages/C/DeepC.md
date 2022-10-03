@@ -190,7 +190,6 @@ void foo(void)
 
 int main(void)
 {
-	bar();
 	foo(); 
 }
 ```
@@ -200,6 +199,104 @@ int main(void)
 
 
 
+```c
+#include <stdio.h>
+
+int b(void) {puts("3"); return 3; }
+int c(void) {puts("4)"; return 4; }
+int main(void)
+{
+	int a = b() + c();
+	printf("%d\n", a);
+}
+```
+
+- evaluation order in most expressions in C and C++ are unspecified
+	- compiler decides in what order to evaluate them
+	- code will print: 3,4,7 or 4,3,7
 
 
+- what code snippets will prints?
+	- `int a=41; a++; printf("%d\n", a);` -> 42
+	- `int a=41; a++ & print("%d\n", a);` -> undefined
+	- `int a=41; a++ && printf("%d\n", a);` -> 42
+	- `int a=41; if (a++ < 42) printf("%d\n", a);` -> 42
+	- `int a=41; a=a++; printf("%d\n", a);` ->undefined
 
+- when do side-effects take place?
+	- sequence points
+		- sequence point is a point in the program's execution sequence where all previous side-effects have taken place and where all subsequent side-effects shall not have taken place
+		- rule I.
+			- between the previous and the next sequence pint an object shall have its  tored value modified at most once by the evaluation of an expression
+			- `a=a++` UNDEFINED
+		- rule II.
+			- the prior value shall be read only to determine the value to be stored 
+			- `a=a++` UNDEFINED
+
+```c
+#include <stdio.h>
+
+struct X {int a; char b; int c; };
+
+int main (void)
+{
+	printf("%d\n", sizeof(int));
+	printf("%d\n", sizeof(char));
+	printf("%d\n", sizeof(struct X));
+}
+```
+fix to:
+```c
+#include <stdio.h>
+
+struct X {int a; char b; int c; };
+
+int main (void)
+{
+	printf("%zu\n", sizeof(int));
+	printf("%zu\n", sizeof(char));
+	printf("%zu\n", sizeof(struct X));
+}
+```
+- correct type specification `%d` to `%zu`
+- sizeof - number of bytes
+	- what it prints also depends how many bit is the machine running on
+		- 64-bit vs 32-bit
+- code prints: 4,1,12
+	- but it als odepends on compilation flags
+		- if used `-fpack-struc` in `gcc` it can print 4,1,9
+		- it is expensive to work on subword datta types - compiler will optimize the code
+- memory model
+	- static storage
+		- object whose identifier is declared with external or internal link or with storage-class specifier `static` has static storage duration
+		```c
+		int * immortal (void)
+		{
+			static int storage = 42;
+			return &storage;
+		}
+		```
+	- automatic storage
+		- object whose identifier is declared with no linkage and w/o the storage-class specifier `static` has automatic storage duration
+		- lifetime extends from entry into the block with which it is associated until execution of that block ends in any way
+		```c
+		int * zombie(void)
+		{
+			auto int storage = 42;
+			return &storage;
+		}
+		```
+	- allocated storage
+		- storage allocated by calloc, malloc and realloc
+		- lifetime extends from the alllocation to the dealocation
+		```c
+		int *(void)
+		{
+			int * ptr = malloc(sizeof *ptr);
+			*ptr = 42;
+			return ptr;
+		}
+		```
+- optimization
+	- by defualt the compiler shuld compile with optimization on
+	- forcing it helps find more potentional issues
