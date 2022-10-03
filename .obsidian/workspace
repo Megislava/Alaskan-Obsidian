@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CyberSec/Tools/git.md",
+            "file": "CyberSec/Theory/Programming Languages/C/Data representation.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "free",
+                "query": "tmu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,13 +68,13 @@
   "lastOpenFiles": [
     "CyberSec/Theory/Programming Languages/C/Intro.md",
     "CyberSec/Theory/Programming Languages/C/DeepC.md",
-    "CyberSec/Tools/gzip.md",
-    "CyberSec/Tools/git.md",
-    "CyberSec/Theory/Programming Languages/C.md",
     "CyberSec/Theory/Programming Languages/Intro.md",
+    "CyberSec/Tools/git.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
-    "CyberSec/Tools/dig.md",
+    "CyberSec/Theory/Linux/Intro to the OS.md",
     "CyberSec/Theory/Linux/File System.md",
-    "CyberSec/Theory/Hardware/Memory.md"
+    "CyberSec/Theory/Hardware/BUSes.md",
+    "CyberSec/Theory/Networking/Routing and Switching.md",
+    "CyberSec/Theory/Networking/Ports and Protocols.md"
   ]
 }
