@@ -66,15 +66,15 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
-    "CyberSec/Theory/Programming Languages/C.md",
-    "CyberSec/Tools/git.md",
     "CyberSec/Theory/Programming Languages/C/Intro.md",
     "CyberSec/Theory/Programming Languages/C/DeepC.md",
+    "CyberSec/Tools/gzip.md",
+    "CyberSec/Tools/git.md",
+    "CyberSec/Theory/Programming Languages/C.md",
     "CyberSec/Theory/Programming Languages/Intro.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
     "CyberSec/Tools/dig.md",
     "CyberSec/Theory/Linux/File System.md",
-    "CyberSec/Theory/Hardware/Memory.md",
-    "CyberSec/Theory/Linux/Intro to the OS.md"
+    "CyberSec/Theory/Hardware/Memory.md"
   ]
 }

@@ -1,3 +1,0 @@
-- declarative language
-- `%f` - float
-- `$.2f` - float with 2 points rounded
