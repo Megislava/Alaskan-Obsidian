@@ -9,8 +9,7 @@
 
 
 - declarative language
-- `%f` - float
-- `$.2f` - float with 2 points rounded
+
 
 ### Keywords
 - `auto`
@@ -256,6 +255,7 @@
 	long long x = 1234567890123456789LL;
 	```
 	- `+`/`-`/no sign - interpreeted as `int`
+	- `int` - 32-bi t(biggest number is: 4 294 967 296)
 	- suffixes:
 		- `l`/`L` -> `long int`
 		- `LL` -> `long long`
@@ -270,6 +270,8 @@
 	- `double` - numbers with decimal point
 	- `float` - has to be declared with `f`/`F` at the end (suffix)
 		- `205.F`
+		- `%f` - float
+		- `$.2f` - float with 2 points rounded
 	- science notation also possible
 		- `1E2` = 1 * 10^2 =100
 		- `1.45E4` = 1.45 * 10^4 = 14500

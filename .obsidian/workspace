@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tmu",
+                "query": "⇒",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,11 +50,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -67,14 +69,14 @@
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
     "CyberSec/Theory/Programming Languages/C/Intro.md",
-    "CyberSec/Theory/Programming Languages/C/DeepC.md",
-    "CyberSec/Theory/Programming Languages/Intro.md",
+    "CyberSec/Theory/Good to know commands.md",
+    "CyberSec/Theory/Programming Languages/C/Data representation.md",
     "CyberSec/Tools/git.md",
+    "CyberSec/Theory/Programming Languages/C/DeepC.md",
+    "CyberSec/Tools/gzip.md",
+    "CyberSec/Theory/Programming Languages/C.md",
+    "CyberSec/Theory/Programming Languages/Intro.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
-    "CyberSec/Theory/Linux/Intro to the OS.md",
-    "CyberSec/Theory/Linux/File System.md",
-    "CyberSec/Theory/Hardware/BUSes.md",
-    "CyberSec/Theory/Networking/Routing and Switching.md",
-    "CyberSec/Theory/Networking/Ports and Protocols.md"
+    "CyberSec/Tools/dig.md"
   ]
 }
