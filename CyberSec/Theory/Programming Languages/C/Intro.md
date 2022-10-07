@@ -244,6 +244,7 @@
 
 
 ### Literals/constants
+- more in [[Variables]]
 1. `int`, `short`, `long`
 	```c
 	int i = -27;
@@ -255,7 +256,7 @@
 	long long x = 1234567890123456789LL;
 	```
 	- `+`/`-`/no sign - interpreeted as `int`
-	- `int` - 32-bi t(biggest number is: 4 294 967 296)
+	- `int` - 32-bit (biggest number is: 4 294 967 296)
 	- suffixes:
 		- `l`/`L` -> `long int`
 		- `LL` -> `long long`
@@ -287,6 +288,7 @@
 
 
 ### Operator's
+- more in [[Expressions]]
 - `[]`
 	- with arrays
 		- for defining array dimension

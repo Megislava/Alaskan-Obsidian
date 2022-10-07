@@ -1,5 +1,3 @@
-
-
 - bite - two states in a memory cell - `0` (off) or `1` (on)
 - 1 byte = 8 bites
 	- compromise between speed (performance) and waisting
@@ -116,7 +114,7 @@
 		- the reminders (0.8, 0.6, 0.4, 0.2) repeat infinitely
 
 
-#### Floating point arithmetic
+#### Floating point
 - representation of number with bigger size before/after decimal point or are approximated
 	- will be inaccurate by design
 	- eg approximation of the weight of electron `9.1 * 10^-31 kg`
@@ -172,7 +170,18 @@ double | 64 | 11 | 52 | 1 | 15 | ~10308
 		    = 1111010010111000100000010 (bin)
 		    = 32076034 (dec)
 		```
-
+- special numbers
+	- `0`
+		- zero has mantiss 0 (special case)
+		- lowest exponent value
+	- `inf`
+		- infinity, eg from divination by 0
+		- highest exponent value and mantiss is ?
+	- `NaN` 
+		- Not a Number
+		- result of operation is not defined in real numbers
+		- highest exponent value and mantiss value is ? 
+- accuracy is dicated by size of a mantiss
 
 
 ## Octal and Hexadecimal
@@ -298,3 +307,58 @@ Number of bytes | Number of bites | Min | Max in binary | Max in BCD | Max in AS
 - aditive code
 - to coded values is added a value (usually `2^ (n-1)`)
 - is not good for division and multiplying
+
+
+## Characters
+- computes are primary working with numbers
+- each character has a correspondin number
+- from the view of CPU there is no difference between number and character
+- most difference is when displaying and loading
+- characters are in strings
+	- length of string is necessary for processing
+	- length is stored/saved explicitely (integer with number if chars) or implicitely (special char at the end of the string)
+
+### ASCII
+- American Standart Code for Informaton Interchange
+- standart of character coding
+- originaly 128 characters, nowdays 256 possibilities
+- different codings with some special characters
+	- `ISO-8859-1`, `Win-1252` - USA, western Europe
+	- `ISO-8859-2`, `Win-1250` - eastern Europe
+	- `ISO-8859-5`, `Win-1251` - azbuka
+	- ...
+
+### UNICODE
+- `0` to `1114111`
+	- => at least 21 bits (~ 4 bytes)
+- less "expensive" => `UTF-2`, `UTF-8`, ... (number is number of bites)
+- `UTF-8`
+	- chars coded with 1 to 4 bytes
+	- from `0` to `127 ~0x7f`
+		- chars from original ASCII
+	- from `128 ~0x80` to `2047 ~0x7ff`
+		- special characters (diacritics, greek alphabet, azbuka,...)
+		- 2 bytes `110xxxxx 10xxxxxxx`
+			- first: combination of highes bits on `110` = the character is made by two bytes
+			- second: two highest bits on`10`
+	- from `2048 ~0x800` to `65535 ~0xfff`
+		- chinese, japanese, korean signs and idiograms
+		- in 3 bytes: `1110xxxx 10xxxxxx 10xxxxxx`
+			- similar reasoning
+	- from `6536 ~0x10000` to `1114111 ~0x10fff`
+		- rest of chinese characters and signs of dead languages
+
+
+### Little-endien, Big-endien
+- when saving byte value is it necessary to fill in neighbourgh values
+- 2 possibilies how to sort the bytes
+	- start with the highest byte = big-endien
+	- srat with the lowest byte = little=endien
+- coding is set by processor
+	- Intel x86/x64, AMD, Atmel AVR and Dec Alpha – little-endien
+	- Motorola, Sparc, IBM Power – big-endien
+	- ARM, PowerPRM, new Spark CPUs – bi-endien
+- each variant has its own advanatages and disadvantages
+	- big-endien is easier to read by human
+	- little-endien is easier for harware to convert
+	- 

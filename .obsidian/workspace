@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "⇒",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -55,8 +55,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -69,14 +68,14 @@
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
     "CyberSec/Theory/Programming Languages/C/Intro.md",
-    "CyberSec/Theory/Good to know commands.md",
+    "CyberSec/Theory/Programming Languages/C/Expressions.md",
+    "CyberSec/Theory/Programming Languages/C/Variables.md",
     "CyberSec/Theory/Programming Languages/C/Data representation.md",
+    "CyberSec/Theory/Good to know commands.md",
     "CyberSec/Tools/git.md",
     "CyberSec/Theory/Programming Languages/C/DeepC.md",
     "CyberSec/Tools/gzip.md",
     "CyberSec/Theory/Programming Languages/C.md",
-    "CyberSec/Theory/Programming Languages/Intro.md",
-    "CyberSec/Theory/Linux/Linux Command Line.md",
-    "CyberSec/Tools/dig.md"
+    "CyberSec/Theory/Programming Languages/Intro.md"
   ]
 }
