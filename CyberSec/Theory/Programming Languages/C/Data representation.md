@@ -361,4 +361,3 @@ Number of bytes | Number of bites | Min | Max in binary | Max in BCD | Max in AS
 - each variant has its own advanatages and disadvantages
 	- big-endien is easier to read by human
 	- little-endien is easier for harware to convert
-	- 

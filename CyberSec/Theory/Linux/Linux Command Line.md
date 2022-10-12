@@ -24,15 +24,19 @@
 - directory navigation
 	- `ln` - create a hardlink
 		- `-s` - symbolic link (symlink, soft link)
-		- hardlinks don't have a single point for failure
-		- soft links are easier to see and can link to directory
+		- hardlinks - files will share an inode
+			- inode = keeps metadata of file (perms, owner, etc)
+			- don't have a single point for failure
+		- symlink
+			- do not link via inodes but with names
+			- easier to see and can link to directory
 	- `fasd` (frequency + recency), `autojump`
 	- `tree` - get tree view of directories
 	- `nnn`, `ranger`
 
 - `>` - output redirection
 	- `echo hello > file`; `cat file` -> `hello`
-	- if the "receiving" file does not exist, will be created
+	- if the “receiving” file does not exist, will be created
 
 - `<` - rewiring output like with `>` but the other way round
 	```sh
@@ -107,6 +111,7 @@
 - `ps` - shows list of running tasks with their PID (process ID), PPID (parent process ID)
 	- list of all system processes: `-ef`
 	- `--forest` - similar to `pstree` prints parent-child relationship
+	- `-u` - shows processes runing under specific user
 
 - `top` - viewing processes in real time
 	- together with CPU utilization
@@ -133,8 +138,8 @@
 
 ### Variables, Paths, Programs
 
-- `key=value` variable definition
-	- will persist only until Term is closed
+- `key=value` - variable definition
+	- will persist only until term is closed
 	- around `=` cannot be spaces
 	- without type
 	- in case of special characters, use `''`
@@ -145,9 +150,11 @@
 - `unset` - remove a variable
 
 - `declare` 
-	-  `-p <variable>` - printing list of variables
+	- set a new variable
+		- `declare KEY VALUE`
+	- `-p <variable>` - printing list of variables
 
-- `type` - gives you type of a utility/program/executable
+- `type` - gives you type of utility/program/executable
 	- `-a` - prints all info (home, type, hashed/nonhashed)
 	- internal build-in command
 		- `type type` -> `type is a shell builtdin`
@@ -179,7 +186,7 @@
 - `locate *filename*` - searches for a filename in the whole system directory
 	- is indexed search, indexed by daily cron job
 	- but uses/searched by name only
-	- `-c` - how many result it has
+	- `-c` - how many results it has
 	- `-b` - limits that the searched filename is the whole filename or other limitations
 		- `locate -b "\passwd"`
 
@@ -189,10 +196,10 @@
 - `which *filename*` - return PATH of *filename*
 
 - `find *filename* `- more powerfull search
-	- path can be added =>  find /… *filename*
+	- path can be added → find /… *filename*
 	- `-name`
-	- `-size `- bitsize,...
-	- `-type` - file, folder,...
+	- `-size `- bitsize, ...
+	- `-type` - file, folder, ...
 	- `-user` - user owning it
 	- `-perm` - permissions
 	```sh
@@ -215,7 +222,7 @@
 ### Viewing, creating and editing files
 - `touch` - create an empty file
 
-- `less` - newer then more
+- `less` - newer than more
 	- can move forward `\n` AND back (arrow up)
 	- window forward ` ` or window back `B`
 	- searched values are highlighted
@@ -243,29 +250,29 @@
   -  `-i` - interactive mode, confirm the choice for each file
 
 - `mv *path to current* *part to destination*` - move *current* *to where* 
-	- can be used for renaming as well -> MOVING + RENAMING
+	- can be used for renaming as well → MOVING + RENAMING
 	- `-v` - verbous - will print the change in path for the file
 	- `-i` - interactive mode - will ask to confirm change for every file
-	- `-n` - to answer n (no) to each prompt automatically -> do not override
+	- `-n` - to answer n (no) to each prompt automatically → do not override
 
 - `cp *path to current* *path to destination*` - copy a file 
 	- `-r` - including its content
 	- `-v` - verbous - will print the change in path for the file
 	- `-i` - interactive mode - will ask to confirm change for every file
-	- `-n` - to answer n (no) to each prompt automatically -> do not override
+	- `-n` - to answer n (no) to each prompt automatically → do not override
 
 - `head`/`tail` - prints first/last line of file
 
 - `wc` - number of lines, words and chars
 
-- `sort` - sorts the text inside of a file
-  -  `-r` reverse
+- `sort` - sorts the text inside a file
+  -  `-r` - reverse
   -  `-u` - remove duplicite lines
-  - `-t` - field delimeter (how the result will be splitted)
+  - `-t` - field delimeter (how the result will be separated)
   - `-k` - field number (sort by field)
   - `-n` - sort type (numerical sort)
 
-- `uniq *parametry* *soubor*` - odstraneni unikatnich radku
+- `uniq *parametry* *soubor*` - remove unique lines
 
 - `vim` - text editor
 	- enter INSERT mode : `i`
@@ -284,7 +291,7 @@
 	- you can search through multiple files: `… <file1> <file2> …`
 	- supports [[Regular Expression]]!
 	- `-v` - find lines that do NOT have that symbol
-	- `-i` - case insensitive
+	- `-i` - case-insensitive
 	- alternatives: `ack`, `ag`, `rg`
 
 - `rp` - ripgrep
@@ -300,11 +307,11 @@
 	```
 
 - `tr` - "translate" / replace
-	- `tr : '\n' `-  replaces `:` for `\n`
+	- `tr : '\n' `- replaces `:` for `\n`
 
 
 ### Network
-- specific files to network config are dependant on distro used
+- specific files to network config are dependent on distro used
 	- CentOS - `/etc/sysconfig/network-scripts/ifcfg-eth0`
 
 - `ifconfig` - get and display IP address
@@ -313,7 +320,7 @@
 
 - `route` - shows routing table
 	- `-n` - prefer numberic info (default = 0.0.0.0)
-	- obsolete -> replaced with `ip route show`
+	- obsolete → replaced with `ip route show`
 
 - `ping` - test if host is reachable
 	- `-c` - limits how many pings will be sent
@@ -335,7 +342,7 @@
 		- Netid - socket type and transport protocol
 		- State - connected/unconnected (depends on protocol)
 		- Recv-Q - amount of data queued up for being processed having been received
-		- Send-Q - amount of data queued up for being sent to another host
+		- Send-Q – amountof data queued up for being sent to another host
 		- Local Address - address and port of the local host's portion of the connection
 		- Peer Address - address and port of the remote host's portion of the connection
 	- `-s` - displayes mostly types of sockets, statistics
@@ -373,7 +380,7 @@
 
 ### Users and groups
 
-- `su` - allows you rto run a shell as a different iser
+- `su` - allows you to run a shell as a different iser
 	- `su *X*` - change user to *X*
 	- `su -`/`su -l`/`su --login` - login shell
 	- `su -` = `su - root`- by default if username is not defined, `su` opens new shell as root

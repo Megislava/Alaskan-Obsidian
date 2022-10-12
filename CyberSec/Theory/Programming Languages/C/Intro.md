@@ -4,7 +4,7 @@
 	- provide only one way to do an operation
 	- make it fast
 		- even if it is not guranteed to be portable
-	- maintain conceptual simplicity
+	- to maintain conceptual simplicity
 	- don't prevent the programmed from doing what needs to be done
 
 
@@ -15,9 +15,11 @@
 - `auto`
 	- defining that the following has local lifetime
 	- `auto int au;`
-	- not used often
+	- not often used
+	- no implicit initialization
+	- stored in `zasobnik`
 	- has different meaning from c++11
-		- variable which type is derived from typr inference
+		-variable, which type is derived from typr inference
 - `break`
 	- quits running other commands - `while`, `do while`, `for`, `switch`
 - `case`
@@ -27,7 +29,7 @@
 - `const`
 	- following variable or pointer is immutable - constant
 	- `const int max = 20;`
-	- similalry is defined `#define MAX 20`
+	- similalry is defined, `#define MAX 20`
 	- often used in function parameters
 - `continue`
 	- quits running the most inner part of function `while`, `do while` and `for`
@@ -81,6 +83,10 @@
 		- `enum Mocniny x, y; ` is valid
 - `extern`
 	- variable is stored and initialized somewhere else then the function definition
+	- used for global variables
+	- stored in static part of the program
+	- visible in declated module and the ones with `extern`
+	- lifes the whole program life
 		```c
 		extern int sum;
 		extern void factorial(int n);
@@ -157,7 +163,7 @@
 	- modifier for integer data types
 		- they are implicitely `signed` - the usage is therefore voluntary
 - `sizeof`
-	- returns the size of size of allocated memory for data type or other parameter
+	- returns the size of allocated memory for data type or other parameter
 		```c
 		printf(" %zd, ", sizeof(int));
 		printf(" %zd, ", sizeof 12);
@@ -167,6 +173,8 @@
 		```
 		- prints: 4, 4, 8, 3.6000000, 8
 - `static`
+	- local or global variable
+	- stored in the program memory
 	- can be used while defining functions or variables
 		- changing the visibility of a function
 		- specifies how variable behaves in between functions
@@ -229,7 +237,7 @@
 
 
 
-### Identifiers
+### Identifiers (variable, function names)
 - used for naming entities like variables, function, structures, used-defined data types etc
 - naming conventions
 	- only letters of english alphabet, numbers and underscore
@@ -244,48 +252,7 @@
 
 
 ### Literals/constants
-- more in [[Variables]]
-1. `int`, `short`, `long`
-	```c
-	int i = -27;
-	long l = 123456789012345678L;
-	short s = 500;
-	int ii = 0xFF;
-	int iii = +007;
-	unsigned int ui = 3000000000u;
-	long long x = 1234567890123456789LL;
-	```
-	- `+`/`-`/no sign - interpreeted as `int`
-	- `int` - 32-bit (biggest number is: 4 294 967 296)
-	- suffixes:
-		- `l`/`L` -> `long int`
-		- `LL` -> `long long`
-		- `u` - no sign number
-	- prefixes:
-		- `0` - octal number
-		- `0x`/`0X` - hexadecimal number
-	-  often don't warn when the lenght is exceeded!
-		- if it overflows it sets the variable value to the literal limit
-			- `unsigned int i = -27` - `unsigned` cannot be negativ; `i` will be set to `4294967269`
-2. `float`, `double`
-	- `double` - numbers with decimal point
-	- `float` - has to be declared with `f`/`F` at the end (suffix)
-		- `205.F`
-		- `%f` - float
-		- `$.2f` - float with 2 points rounded
-	- science notation also possible
-		- `1E2` = 1 * 10^2 =100
-		- `1.45E4` = 1.45 * 10^4 = 14500
-		- `45e-4` = 45 * 10^-4 = 0.0045
-		- `.0e2` = 0
-3. `char`
-	- characters
-	- escape sequence
-		- `' '` (space), `'\\'` (`\`), `'\"'` (single `"`), `'\''` (single `'`), `\n` (new line), `\r` (carriage return), `\b` (backspace), `\t` (horizontal TAB), `\f` (form feed), `\a` (buzzer/alarm), `\v` (vertical TAB), `\?` (question mark), `\nnn` (char with ocal code `nnn`), `\xhh` (hexa char `hh`)
-4. `string`
-	- defined with `char` and lenght
-	- `char string[30] = "string o delce max 30";`
-
+- more in [[Data Type & Variables]]
 
 ### Operator's
 - more in [[Expressions]]

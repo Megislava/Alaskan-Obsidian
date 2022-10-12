@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CyberSec/Theory/Programming Languages/C/Data representation.md",
+            "file": "CyberSec/Theory/Programming Languages/C/Expressions.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -50,8 +50,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -69,13 +68,13 @@
   "lastOpenFiles": [
     "CyberSec/Theory/Programming Languages/C/Intro.md",
     "CyberSec/Theory/Programming Languages/C/Expressions.md",
-    "CyberSec/Theory/Programming Languages/C/Variables.md",
+    "CyberSec/Theory/Programming Languages/C/Data Type & Variables.md",
+    "CyberSec/Theory/Linux/Linux Command Line.md",
+    "CyberSec/Tools/tmux.md",
     "CyberSec/Theory/Programming Languages/C/Data representation.md",
     "CyberSec/Theory/Good to know commands.md",
     "CyberSec/Tools/git.md",
     "CyberSec/Theory/Programming Languages/C/DeepC.md",
-    "CyberSec/Tools/gzip.md",
-    "CyberSec/Theory/Programming Languages/C.md",
-    "CyberSec/Theory/Programming Languages/Intro.md"
+    "CyberSec/Tools/gzip.md"
   ]
 }
