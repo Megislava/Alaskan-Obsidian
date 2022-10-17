@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CyberSec/Theory/Programming Languages/C/Expressions.md",
+            "file": "CyberSec/Theory/Programming Languages/C/Data representation.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "2's",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,7 +50,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -66,12 +67,12 @@
   },
   "active": "3532d9fff7d4eb0f",
   "lastOpenFiles": [
+    "CyberSec/Theory/Programming Languages/C/Data Type & Variables.md",
+    "CyberSec/Theory/Programming Languages/C/Data representation.md",
     "CyberSec/Theory/Programming Languages/C/Intro.md",
     "CyberSec/Theory/Programming Languages/C/Expressions.md",
-    "CyberSec/Theory/Programming Languages/C/Data Type & Variables.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
     "CyberSec/Tools/tmux.md",
-    "CyberSec/Theory/Programming Languages/C/Data representation.md",
     "CyberSec/Theory/Good to know commands.md",
     "CyberSec/Tools/git.md",
     "CyberSec/Theory/Programming Languages/C/DeepC.md",

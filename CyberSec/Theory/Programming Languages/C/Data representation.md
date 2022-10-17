@@ -281,12 +281,12 @@ Number of bytes | Number of bites | Min | Max in binary | Max in BCD | Max in AS
 
 ### Signed integers
 
-**1. Signed bit**
+**1. Signed bit** (primy kod)
 - before the binary representation there is `0` for positive and `1` for negative numbers
 - signed bit is the most significant bit (MSB) usually the highest position (most front)
 - range is `-127` to `+127` (instead of `0 - 255`) ~ 256 possibilities
 
-**2. 2's complement**
+**2. 2's complement** (doplnkovy kod)
 - most used for displaying signed integers
 - fast arithmetic operations
 - coding is not as direct as with signed bit option
