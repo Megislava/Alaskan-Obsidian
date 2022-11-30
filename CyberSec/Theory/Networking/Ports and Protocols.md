@@ -15,7 +15,7 @@
 - SMB
 	- Server Message Board
 	- SMB :445
-	- SMB => treba Network tab na woknech (vytvori lokalni server?)
+	- SMB → treba Network tab na woknech (vytvori lokalni server?)
 
 ### Email
 - POP3, IMAP
@@ -36,11 +36,11 @@
 - DHCP
 	- throws back to client: IP address, subnet mask, default gateway, DNS server, other info
 	- IP config with DHCP:
-			- DHCP: cmd => ipcofig
+			- DHCP: cmd → ipcofig
 			- ipconfig /release + ipconfig /renew freeing our IP address and receiving a new one 
 - DNS
 	- domain main system ~ FQDN (Fully Qualified Domain Name) 
-	=> using simple names instead of IP addresses = phonebook of the internet
+	→ using simple names instead of IP addresses = phonebook of the internet
 	- application layer because applications need to use host name
 	- hierarchy:
 		- root level
@@ -50,19 +50,19 @@
 		- hosts
 		- ![[6.PNG]]
 	- if we don’t know “udacity.com”: ![[7.PNG]]
-	- _ipconfig /all => show entire IP config_
-	- _nslookup URL => gives back IP address of URL inc ip6_
-	- _if nslookup => local IP could be changed with: > server 8.8.8.8 => pak proste muzu psat jenom URL_
+	- _ipconfig /all → show entire IP config_
+	- _nslookup URL → gives back IP address of URL inc ip6_
+	- _if nslookup → local IP could be changed with: > server 8.8.8.8 → pak proste muzu psat jenom URL_
 	- webapp can have more than one IP address ~ hosting at more places ~ more stable
 - NTP
 	- network time protocol - automaticaly configure all the times on client to be the same
-	=> UTC = coordinated universal time 
+	→ UTC = coordinated universal time 
 - telnet + SSH
 	- network management
 	- telnet - clear text, SSH - crypted
 	- telnet :23
 	- SSH :22
-	- SSH => Putty - client - put in IP address => opens session
+	- SSH → Putty - client - put in IP address → opens session
 - SNMP
 	- gets info about device on our network and save them into SNMP server
 - RDP
@@ -70,7 +70,7 @@
 	- RDP :3389
 - audio/visual protocol
 	- H.323 :1720 - video conferences
-	- SIP :5060 / 5061 - voice over IP communication => telephones 
+	- SIP :5060 / 5061 - voice over IP communication → telephones 
 
 - port numbers: 0 - 65 535
 - server port numbers: 

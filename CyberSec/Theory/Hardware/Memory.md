@@ -7,7 +7,7 @@
 	- when system is low on RAM, memory is virualized by swap space
 		- temporaty store data 
 	- `free`  - information about RAM
-		- running w/o any options -> snapshot of the memory being used at the moment
+		- running w/o any options → snapshot of the memory being used at the moment
 		- `-s 10` - memory usage over time (in seconds)
 		- `-m`/`/g` - output in MB/GB
 
@@ -20,8 +20,8 @@
 	- `parted`, `gparted` - supported by both
 	- device file name is stored in `/dev`, containing:
 		- file type - `hd` (IDE = Intelligent Drive Electronics), `sd` (SATA = Serial Advanced Technology Attachement; or SCSI = Small Computer System Interface)
-		- device order - alfphabetical -> first: `/dev/hda`, second: `/dev/hdb`
-		- partitions - numerical value -> first: `/dev/hda1`, second: `/dev/hda2`
+		- device order - alfphabetical → first: `/dev/hda`, second: `/dev/hdb`
+		- partitions - numerical value → first: `/dev/hda1`, second: `/dev/hda2`
 3. SSD = solid state drive
 	 - basically bigger USBs 
 4. Optical Drives

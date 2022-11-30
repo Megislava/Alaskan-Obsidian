@@ -43,7 +43,7 @@
 			2. inline network tap - plant between or 'inline' two network devices, tap will replicate packtes as they pass the tap
 	- MAC floods
 		- active packet sniffing
-		- stressing the switch and filling the CAM table => the CAM table is filled (the switch will no longer accept new MAC addresses) => the switch will send out packets to all ports of the switch (in order to keep the network alive)
+		- stressing the switch and filling the CAM table → the CAM table is filled (the switch will no longer accept new MAC addresses) → the switch will send out packets to all ports of the switch (in order to keep the network alive)
 	- ARP poisoning
 		- active packet sniffing
 		- redirecting the traffic from the host(s) to the monitored machine

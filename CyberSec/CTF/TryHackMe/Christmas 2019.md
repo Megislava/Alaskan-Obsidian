@@ -82,7 +82,7 @@
 ### RECON
 ###### Scanning
  * <code> nmap X.X.X.X </code>
-* 4567: tram (? -> SSH)
+* 4567: tram (? → SSH)
  
 ### COMPROMISE
 * crack password for user sam through SSH

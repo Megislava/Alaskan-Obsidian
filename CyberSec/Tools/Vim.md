@@ -22,6 +22,7 @@
 
 
 ##### Operating modes
+![[Pasted image 20221130145344.png]]
 - possible to switch between them with `ESC`
 1. Normal (`ESC`)
 	- default the one where vim is opened in
@@ -34,10 +35,10 @@
 		- `3w` - move 3 words forward
 		- `5j` - move 5 lines down
 		- `7dw` - delete 7 words
-1. Replace mode (`r`)
+3. Replace mode (`r`)
 	- 
-2. Visual mode (`v`)
-3. Command-line (`:`)
+4. Visual mode (`v`)
+5. Command-line (`:`)
 	- executing commands
 	- `:ls` - show open buffers
 	- `:e <name_of_file>` - open file for editing

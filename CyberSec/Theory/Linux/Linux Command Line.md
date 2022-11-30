@@ -15,7 +15,7 @@
 
 
 - `history` - shows bash history
-	- when used with `|`, eg. `history | grep ping` -> will find how the specific command was used
+	- when used with `|`, eg. `history | grep ping` → will find how the specific command was used
 	- history based suggestion tool: [fish](https://fishshell.com/)
 	- can be enabled in zsh
 	- history behaviour can be changed in `.bashrc`
@@ -35,7 +35,7 @@
 	- `nnn`, `ranger`
 
 - `>` - output redirection
-	- `echo hello > file`; `cat file` -> `hello`
+	- `echo hello > file`; `cat file` → `hello`
 	- if the “receiving” file does not exist, will be created
 
 - `<` - rewiring output like with `>` but the other way round
@@ -50,19 +50,20 @@
 	hello
 	```
 - `>>` - output redirection - appends to the end of file
-	-  `echo nood >> file` => `cat file -> hello \n nood`
+	-  `echo nood >> file` → `cat file → hello \n nood`
 	- if the "receiving" file does not exist, will be created
 
 - `&&` - and
-	- eg. `echo hey >> file2 && cat file2` -> `hey`
+	- eg. `echo hey >> file2 && cat file2` → `hey`
 
 - `$` - denotes environment variables
-	- eg. `echo $USER` -> prints current user
+	- eg. `echo $USER` → prints current user
 
 - `|` - pipe - take the output of previous command and uses it in the next
 
 - `;` - similar to pipe but it does not require the first command to execute successfully
 	- eg. `./somebullshitthatdontexit ; ls` - ls will still list
+- `&` - command will run in the background
 - `*` -wildcard
 	- `echo /etc/r.conf` - will return `echo/resolv.conf` and `/etc/rsyslog.conf`
 - `?` - ? character
@@ -85,8 +86,8 @@
 	- `-a` - including hidden ones
 	- `-R` - recursive
 	- `-d` - information about spefied folder (don't care about insides)
-	- `-h` - print size in human readable form (must be used with `-l`)
-	- `-S` - sorting by size (big->small); reversed sorting w/ `-r`
+	- `-h` - print size in human-readable form (must be used with `-l`)
+	- `-S` - sorting by size (big→small); reversed sorting w/ `-r`
 	- `-t` - sort by last modified
 	- `--full-time` - full time of last modification
 	- `-i` - display the inode number of a file 
@@ -95,8 +96,9 @@
 	- `-w <number>` - "width" print only `<number>` of chars per line
 	- certain folder can be specified
 		- `ls -laR /dev /tmp` - will print EVERYTHING and recursively from `/dev` and `/tmp`
-	- File Types -> Permissions -> Hard Link count -> User Owner -> Group Owner -> File Size -> Time Stamp -> File Name
+	- File Types → Permissions → Hard Link count → User Owner → Group Owner → File Size → Time Stamp → File Name
 		- `d` (directory), `-` (regular file), `l` (symbolic link), `s` (socket), `p` (pipe), `b` (block file), `c` (character file)
+	- `-1` - print one info on one line
     
 - `mkdir` - create a folder 
 	- `-p` - with parent folder (`mkdir -p a/c/d/v/` )
@@ -123,17 +125,21 @@
 
 - `lsof -l` - "List open files" show running services
 
+- `bind` - manages key-bindings
+	- `-l` - lists what keyboard shortcuts are bind to specific action
+		- `ESC+.` - fills in last used argument
 
 ### Documentation
 - `man` vs `help` - if the command is internal or external
 	- can be found out by `type`
-- `help`
 - `man`
 	- `-k` - searches both the name and the description
 		- `man -k copy` - will print all commands that have keywords copy, or have copy in came
 		- `apropos` have the same functionality as `man -k`
 	- `-f` - same as `whatis`
 		- returns in what section a man page is stored in
+	- it read manual pages and then displays it
+- `help`
 - `info`
 
 ### Variables, Paths, Programs
@@ -157,12 +163,12 @@
 - `type` - gives you type of utility/program/executable
 	- `-a` - prints all info (home, type, hashed/nonhashed)
 	- internal build-in command
-		- `type type` -> `type is a shell builtdin`
+		- `type type` → `type is a shell builtdin`
 		- `type`, `cd`, `echo
 	- external commands
-		- `type date` -> `date is hashed (<home of date>)`
+		- `type date` → `date is hashed (<home of date>)`
 		- also `which` can give you its home
-	- `type passwrd` -> `passwd is <home of password>`
+	- `type passwrd` → `passwd is <home of password>`
 	- `hashed` vs `<non-hashed>`
 		- `hashed` program was previously ran in shell and the address is being remembered
 		- `<it's not written there>`  not run
@@ -220,7 +226,11 @@
 	- find and fd are not indexed searched
 
 ### Viewing, creating and editing files
+
 - `touch` - create an empty file
+
+- `cat` - reading file
+	- `-n` - prints a number of line on start of a line
 
 - `less` - newer than more
 	- can move forward `\n` AND back (arrow up)
@@ -238,12 +248,13 @@
 - `nl` - number of line
 	- prins line numbers - can be used when piping results and testing
 
-- `cat` - reading file
-	- `-n` - prints a number of line on start of a line
+- `wc` - number of lines, words and chars
+	- can take multiple files
+	- `-l` - print only number of lines
 
 - `file` - what is the type of the file
 
-- `rm` - delete a file or directory
+- `rm` - delete a file(s) or directory
   -  `-r` - recursive
   -  `-f` - force
   -  `-v` - verbouse
@@ -261,27 +272,83 @@
 	- `-i` - interactive mode - will ask to confirm change for every file
 	- `-n` - to answer n (no) to each prompt automatically → do not override
 
-- `head`/`tail` - prints first/last line of file
+- `vim` -[[Vim]] 
+	- text editor
+	- enter INSERT mode : `i`
+	- enter VIEWING mode: `ESC`
+	- save and exit: `wq`
 
-- `wc` - number of lines, words and chars
+- `tr` - "translate" / replace
+	- `tr : '\n' `- replaces `:` for `\n`
 
-- `sort` - sorts the text inside a file
+### Filtering
+- "vertical" splitting and joining
+	- `head`, `tail`, `split`, `cat`
+- "horizontal" splitting and joining
+	- `cut`, `paste`
+- joining based on value - `join`
+- ![[Pasted image 20221130151251.png]]
+
+- `patch` - files versing
+
+- `head` - prints first (10) lines of file
+	- `-n 20` - 20 lines will be printed
+		- can be written as `-20`
+	- `-n -20` - whole document except last 20 lines will be printed
+	- `-c 20` - number of characters ~ prints first 20 characters
+
+- `tail` - prints last (10) lines of file
+	- `-n 20` - last 20 lines will be printed
+	- `-n +20` - prints from number of line to the end
+	- `-f` - prints changes in file end overtime
+
+- get only one line from a file
+	- `cat <file> | head -n 25 | tail -n 1`
+		- or the other way round
+
+- `cat <file> | split` - splits file by value
+	- `-l 100` - will create files with insides of parameter file splitted every 100 lines
+		- files created have alphabetical names
+	- `-d` - files created will have numerical names
+	- `-a 3` - file name will have lenght of x+3
+
+- `cat x* > y` - joins all `x` files to `y` file
+
+- `cut` - cut chosen file parts by columns
+	- `-d :` - delimiter is `:`
+	- `-f 1` - field is 1
+		- can be also interval `3-5`
+	- `-c 1` - take one character
+
+- `paste` - pas
+	- `-d:` - delimiter
+
+- `tr` - translate from a to b
+	- `-s` - squeez
+		- `-s ' '` - from `   ` to ` `
+	- `-c` - complement
+	- `-d` - delete
+		- `-cd 'a-zA-Z'` - delete everything alphabetical
+	- class names - `[:alpha:]` (alphabetic)
+
+- `join` - joins lines from 2 files based on a value
+	- `-t` - delimiter
+
+- `sort` - sorting by one or more criterieas 
   -  `-r` - reverse
   -  `-u` - remove duplicite lines
   - `-t` - field delimeter (how the result will be separated)
   - `-k` - field number (sort by field)
   - `-n` - sort type (numerical sort)
 
-- `uniq *parametry* *soubor*` - remove unique lines
+- `uniq *params* *file*` - removes unique lines
+	- `-c` - counting duplicites
 
-- `vim` - text editor
-	- enter INSERT mode : `i`
-	- enter VIEWING mode: `ESC`
-	- save and exit: `wq`
+- `comm` - common lines
+	- prints 3 columns - what is only in first file, what is only in second file and what is both
 
 - `diff` - differentiate between files
-
-- `cut` - cut chosen file parts
+	- also `cmp`
 
 - `sed` - stream editor
 	- line length: `-l <number>`
@@ -305,9 +372,6 @@
 	# Print statistics of matches (# of matched lines and files )
 	rg --stats PATTERN
 	```
-
-- `tr` - "translate" / replace
-	- `tr : '\n' `- replaces `:` for `\n`
 
 
 ### Network
@@ -352,10 +416,21 @@
 	- syntax: `dig <domain @<dns-server-ip>>`
 
 - `host` - works with DNS to associate a hostname with IP
-	- `-t` - use CNAME/SOA -> `host -t CNAME/SOA example.com`
+	- `-t` - use CNAME/SOA → `host -t CNAME/SOA example.com`
 	- `-a` - all options
 
 - `ssh <username>@<target>` - remote connection to target
+- `ssh-keygen` - generate an SSH key
+	- stored in `/home/<user>/.ssh`
+		- fingerprint of server (to check if we trust it)
+		- two files `id_rsa` (privite) and `id_rsa.pub` (public)
+		- known hosts
+	- `-R <hostname>` - remove SSH key of hostname
+
+- `ssh-copy-id <username>@<target>` - add SSH key to a server
+
+- `scp` - for copying files from one machine to another
+	- 
 
 - `wget *cesta*` - display the route taken to target
 
@@ -365,18 +440,6 @@
 	- postgresql - DB
 
 - `traceroute` - hops that traffic take to get to target
-
-- `ssh-keygen` - utility for generating SSH keys
-	- SSH key
-		- fingerprint of server (to check if we trust it)
-		- privite part and public part (`.pub`)
-	- in `.ssh` folder there is:
-		- privite, public key
-		- known hosts
-
-- `ssh-copy-id <username>@<target>` - add SSH key to a server
-
-
 
 ### Users and groups
 
@@ -528,14 +591,14 @@ Digit | Meaning
 		-   [some more special chars](https://tldp.org/LDP/abs/html/special-chars.html)
 	-   binary decidions:
 		-   `||` - or
-			-   `false || echo "Oops, fail"` => `Oops, fail`
-			-   `true || echo "Always true"` => ``
+			-   `false || echo "Oops, fail"` → `Oops, fail`
+			-   `true || echo "Always true"` → ``
 		- `&&` - and
-			- `true && echo "Is true"` => `Is true`
-			- `false && echo "False"` => ``
+			- `true && echo "Is true"` → `Is true`
+			- `false && echo "False"` → ``
 		- `;` - just a division of commands - both will execute
-			- `true ; echo "Will print"` => `Will print`
-			- `false ; echo "Will print"` => `Will print`
+			- `true ; echo "Will print"` → `Will print`
+			- `false ; echo "Will print"` → `Will print`
 	- running command in command ~ command substition:
 		- the inner command will run first
 			- `diff <(ls bar) <(ls foo)` - difference between ls of bar and foo
@@ -619,11 +682,11 @@ Digit | Meaning
 		- `echo "The path is $PATH" - will print the path
 - single quotes `''`
 	- orevent the shell from dooing any inty interpreting of special chars, including globs, variables, command substitutions and other metachars
-	- `echo "$foo"` -> `bar`
-	- `echo '$foo'` -> `foo` ~ literal strings
+	- `echo "$foo"` → `bar`
+	- `echo '$foo'` → `foo` ~ literal strings
 - backlash `\`
 	- escaping special chars
-		- `echo The service costs \$1 and the path is $PATH` -> prints dollar 1 and PATH
+		- `echo The service costs \$1 and the path is $PATH` → prints dollar 1 and PATH
 - backquotes
 	- "treat as command"
 		- `echo Today is `date`

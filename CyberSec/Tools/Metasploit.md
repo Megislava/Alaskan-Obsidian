@@ -4,7 +4,7 @@
 - `use <number from previous list> or use <tool name>`
 - `show options` and set them up
 - `run`/`exploit` - to run the exploit
-- from meterpreter => shell
+- from meterpreter → shell
 
 
 - `sessions` - list sessions

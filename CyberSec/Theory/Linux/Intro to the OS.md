@@ -4,13 +4,13 @@
 - now owned by Open Group
 
 ### Linux
-- = combination of softwares GNU/Linux => OS
+- = combination of softwares GNU/Linux → OS
 	- GNU = free SW providing common UNIX commands
 	- Linux - Linux kernel (core of the OS) loaded at boot time and stays running to manage the system
 - 1991 - Linus Torvalds
 - before  - GNU Project - Richard Stallman (1983)
 - open source (duh)
-- different flavors  => distributions
+- different flavors  → distributions
 	- combination of diffrent kernel, tools a apps
 - CLI and GNU
 
@@ -20,16 +20,16 @@
 ##### Distributions
 RedHat
 - started as RedHat Package Manager (RPM)
-- later shift to server apps => Red Hat Enterprise Linux (RHEL)
+- later shift to server apps → Red Hat Enterprise Linux (RHEL)
 	- paid, released on a long release cycle 
-	- recompiled RHEL packages => CentOS
+	- recompiled RHEL packages → CentOS
 		- compatible with RHEL, newer SW, for free
-- for shorter release cycle => Fedora Project
+- for shorter release cycle → Fedora Project
 - Scientific Linux
 
 SUSE
 - originally derived from Slackware
-- contains proprietary code => paid
+- contains proprietary code → paid
 	- openSUSE - open, free, desktop packages similar to CentOS and LinuxMint
 
 Debian
@@ -75,7 +75,7 @@ Others
 		- Mail Delivery Agent- Local Delivery Agent = takes care of storing user's emails
 		- POP/IMAP Server - Post Office Protocol and Internet Message Access Protocol; eg. Dovecot, Cyrus IMAP, Microsoft Exchange
 	- file sharing
-		- Samba (allows Linux machine to look and behave like Windows so it can join Windows domain), Netatalk (Linux => Apple Macintosh file server), NFS (Network File System, native file sharing in Linux)
+		- Samba (allows Linux machine to look and behave like Windows so it can join Windows domain), Netatalk (Linux → Apple Macintosh file server), NFS (Network File System, native file sharing in Linux)
 - desktop apps
 	- web browser, text editors, .... - apps interacting with user
 	- email - Thunderbild, Evolution, KMail; creative - Blender, GIMP, Audacity; productivity - Libre Office, ...; browsers - Opera, Chrome, Firefox,...
@@ -125,7 +125,7 @@ Others
 	- founded by Bruce Perens and Eric Raymond
 	- they believed that FSF was too politicaly charged
 	- alternative licence - BSD (Berkeley Software Distribution) - simpler then GPL, basically saying "do what you want with this code just don't say you wrote it"
-	- became **Free and Open Source Software** (FOSS) - "free as in speech" =>libre => Free/Libre/Open Source Software (FLOSS)
+	- became **Free and Open Source Software** (FOSS) - "free as in speech" →libre → Free/Libre/Open Source Software (FLOSS)
 - Creative Commons
 	- Attribution (BY) = require that reator must be given credit, w/o implying that the creator endorces the use
 	- ShareAlike (SA) = allows others to copy, distribute, perform and modify the work but under SOME terms

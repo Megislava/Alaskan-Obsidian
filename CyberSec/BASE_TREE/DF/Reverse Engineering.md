@@ -22,7 +22,7 @@
 	= shorthand, more legible version of machine code
 	- eg. "sub" (subtract) ~ 0x83, "add" (add) ~ 0x81
 	- no standart syntax
-		- in world of x86 syntax 2 main branches - AT&T (used by GCC) and Intel (used by Intel) -> we will be using Intel
+		- in world of x86 syntax 2 main branches - AT&T (used by GCC) and Intel (used by Intel) → we will be using Intel
 	- [[x86]]
 4. Debugging
 	- [[GDB]]

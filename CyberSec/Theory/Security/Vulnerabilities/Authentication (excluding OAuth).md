@@ -15,8 +15,8 @@
 	1. Password-based login
 		1. Brute force
 			- trial and error, typicaly automated using wordlists
-			- usernames: recognisable pattern -> usually easy to guess
-			- passwords: based on password policy, can be make "stronger" (mypassword ==> MyPa\$\$w0rd)
+			- usernames: recognisable pattern → usually easy to guess
+			- passwords: based on password policy, can be make "stronger" (mypassword =→ MyPa\$\$w0rd)
 		2. Username enumeration
 			- pay closer attenction to returned status codes, error messages and response times 
 		3. Flawed brute-force protection
@@ -39,7 +39,7 @@
 		- changing cookies - sign in as you and change username in cookies to sign in as different user
 		- brute-forcing the verification key
 	3. Other authentication methods
-		- reset/change password -> more vulnerabilities
+		- reset/change password → more vulnerabilities
 		1. Keeping users logged in
 			- usually "remember me" token generated and stored as persistent cookie
 			- the token can be created:
@@ -57,7 +57,7 @@
 					- expire short after the password is resetted
 					- link has some expiration
 		3. Changing user passwords
-			- similar to login page - check username and password combo => similar vulnerabilities
+			- similar to login page - check username and password combo → similar vulnerabilities
 			- can be exploited by enumerating possible usernames and brute-forcing their passwords
 
 

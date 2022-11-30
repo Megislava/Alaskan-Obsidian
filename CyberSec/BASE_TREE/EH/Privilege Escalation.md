@@ -1,5 +1,5 @@
 1. `sudo -l` - lists sudo right on folders, files (binaries)
-2.  `find / -perm -o=s 2>/dev/null` => SUID files
+2.  `find / -perm -o=s 2>/dev/null` → SUID files
 3. [[enum4linux]]
 4. [[LinEnum]]
 5. LinPEAS

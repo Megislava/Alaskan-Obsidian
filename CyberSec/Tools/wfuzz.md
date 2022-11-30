@@ -10,4 +10,4 @@
 - `--hl`: don't show for a certain amount of lines in response
 - `--hh`: don't show for a certain amount of words
 
-=> `wfuzz -c -z file,muwordlist.txt -d "username=FUZZ&password=FUZZ" -u http://shibes.thm/login.php`
+→ `wfuzz -c -z file,muwordlist.txt -d "username=FUZZ&password=FUZZ" -u http://shibes.thm/login.php`

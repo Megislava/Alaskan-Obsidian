@@ -12,7 +12,7 @@
 - binary to decimal transfer
 	- `10110110` = `1*2^7 + 0*2^6 + 1*2^5 + 1*2^4 + 0*2^3 + 1*2^2 + 1*2^1 + 0*2^0` = `182`
 - decimal to binary
-	- `9` -> `9 % 2 = 1` -> `1`;  `9/2=4`; `4 % 2 = 0` -> `01` (is stacked from the end); `4 / 2 = 2`; `2 % 2 = 0` -> `001`; `2 / 2 = 1`; `1 % 2 = 1` -> `1001`
+	- `9` → `9 % 2 = 1` → `1`;  `9/2=4`; `4 % 2 = 0` → `01` (is stacked from the end); `4 / 2 = 2`; `2 % 2 = 0` → `001`; `2 / 2 = 1`; `1 % 2 = 1` → `1001`
 
 ### Aritmetic operation on non-signed integers
 - addition - 4 possibilities (0+0, 0+1, 1+0, 1+1) and overflow from lower position
@@ -41,11 +41,11 @@
 	- something I cannot use words to describe
 	```
 	y *            x
-	0 *            1 1 0 1 1 ->           0 0 0 0 0
-	1 *          1 1 0 1 1   ->         1 1 0 1 1
-	0 *        1 1 0 1 1     ->       0 0 0 0 0
-	0 *      1 1 0 1 1       ->     0 0 0 0 0
-	1 *    1 1 0 1 1         ->   1 1 0 1 1
+	0 *            1 1 0 1 1 →           0 0 0 0 0
+	1 *          1 1 0 1 1   →         1 1 0 1 1
+	0 *        1 1 0 1 1     →       0 0 0 0 0
+	0 *      1 1 0 1 1       →     0 0 0 0 0
+	1 *    1 1 0 1 1         →   1 1 0 1 1
                             --------------------
                               1 1 1 1 0 0 1 1 0
 	```
@@ -91,7 +91,7 @@
 		0
 		```
 		- `0.796875` = `110011`
-	- => `10001000.110011`
+	- → `10001000.110011`
 - transfer from the other side is simpler
 	- each bit is multiplied by its corresponding `2^X`
 	```
@@ -220,7 +220,7 @@ Transfer from binary to | octal(0-7)/hexa(0-f)
 - from decimal to any other
 	- modulos/reminders after dividing with number of desired base
 	- `x = 1234` from decimal to base 25
-		- `1234 : 25 = 49 (reminder 9)`, `49 :  25 = 1 (reminder 24=o)`, `1 : 25 = 0 (reminder 1)` => `1o9`
+		- `1234 : 25 = 49 (reminder 9)`, `49 :  25 = 1 (reminder 24=o)`, `1 : 25 = 0 (reminder 1)` → `1o9`
 
 ## Integers
 - if number would be kept in memory in decimal base
@@ -240,7 +240,7 @@ Transfer from binary to | octal(0-7)/hexa(0-f)
 	- 4 * 4 = 16 - (decimal ~) 10 = 6 combinations not used
 	- combination 1010 to 1111 are unused
 - more memory needed then storing numbers in binary
-- `x = 1658` => `0001` (1) + `0110` (6) + `0101` (5) + `1000` (8) => `001011001011000`
+- `x = 1658` → `0001` (1) + `0110` (6) + `0101` (5) + `1000` (8) → `001011001011000`
 	- it is not the same as the same number but in decimal!!!!
 
 Cifra | Code | Cifra | Code
@@ -258,7 +258,7 @@ Cifra | Code | Cifra | Code
 	- 256 possibilities, rest is unused (we are talking ONLY about numbers)
 - information is kept only in the smallest 4 bits (lower nibble)
 	- higher nibble is set for `0` to mean 0 and `1` to mean 1
-- `x = 15` => `00110001` (1) + `00110101` (5) => `0011000100110101`
+- `x = 15` → `00110001` (1) + `00110101` (5) → `0011000100110101`
 	- again not the same as the same number in 
 
 Cifra | Code | Cifra | Code
@@ -330,8 +330,8 @@ Number of bytes | Number of bites | Min | Max in binary | Max in BCD | Max in AS
 
 ### UNICODE
 - `0` to `1114111`
-	- => at least 21 bits (~ 4 bytes)
-- less "expensive" => `UTF-2`, `UTF-8`, ... (number is number of bites)
+	- → at least 21 bits (~ 4 bytes)
+- less "expensive" → `UTF-2`, `UTF-8`, ... (number is number of bites)
 - `UTF-8`
 	- chars coded with 1 to 4 bytes
 	- from `0` to `127 ~0x7f`

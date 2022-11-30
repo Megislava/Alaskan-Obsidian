@@ -1,0 +1,91 @@
+{
+  "main": {
+    "id": "3dd53b8250467576",
+    "type": "split",
+    "children": [
+      {
+        "id": "1027f26d392ce013",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6b5b04b0fbafd1dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CyberSec/Theory/Linux/Linux Command Line.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "faf2db552574aca6",
+    "type": "split",
+    "children": [
+      {
+        "id": "a95cd082976af948",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "737d055bac789dfd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7b2d1357535fcfe0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "ssh",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "01559e3f5c72e717",
+    "type": "split",
+    "children": [],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "6b5b04b0fbafd1dc",
+  "lastOpenFiles": [
+    "CyberSec/Tools/Vim.md",
+    "CyberSec/Theory/Linux/Linux Command Line.md",
+    "CyberSec/Theory/Linux/How does shell work.md",
+    "CyberSec/Theory/Linux/Intro to the OS.md",
+    "CyberSec/Theory/Security/Exploitation/SSH.md",
+    "CyberSec/BASE_TREE/EH/Exploiting.md",
+    "CyberSec/CTF/TryHackMe/Agent Sudo.md",
+    "CyberSec/CTF/GoogleCTF - BeginnerQuest/1. Chemical Plant.md",
+    "CyberSec/BASE_TREE/Two ways.md",
+    "CyberSec/Theory/Security/Exploitation/NFS.md"
+  ]
+}

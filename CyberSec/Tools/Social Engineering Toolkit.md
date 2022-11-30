@@ -6,7 +6,7 @@
 - `settoolkit` run SET
 
 1. (Spear)phishing
-	- choose option 1 Social Engineering attack -> choose opt 1 Spearphishing
+	- choose option 1 Social Engineering attack → choose opt 1 Spearphishing
 	- a lot built-in payloads and other possibilities
 2. Harvesting credentials
 	- by clonning website

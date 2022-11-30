@@ -13,7 +13,7 @@
 	- SQL command `SELECT * FROM products WHERE category = 'Gifts' AND released = 1` to retrieve:
 		- all details `*` from the `products` table where the category is `Gifts` and released is `1`
 	- add double-dash sequence: `https://insecure-website.com/products?category=Gifts'--`
-		- double-dash sequence == comment => it removes `released` category 
+		- double-dash sequence == comment → it removes `released` category 
 	- `https://insecure-website.com/products?category=Gifts'+OR+1=1--`
 		- `'` ends `Gifts` string 
 		- `+OR+1=1--` is all time true and rest of the command is comment
@@ -32,8 +32,8 @@
 - for UNION attack to work 2 requirements must be met:
 	- individual queries must return the same number of columns
 	- data type in each column must be compatible between the individual queries
-	- => _How many columns are being return from the original query?_
-	- => _Which columns returned from the original query are suitable to hold the data types from injected query?_
+	- → _How many columns are being return from the original query?_
+	- → _Which columns returned from the original query are suitable to hold the data types from injected query?_
 - __determining the number of columns__
 	1. series of `ORDER BY`
 		- start with `' ORDER BY 1--` and increase the column index until error occures
@@ -53,7 +53,7 @@
 	-  `' UNION SELECT username || '~' || password FROM users--`
 	-  double pipe `||` is string concatenation (Oracle)
 	-  separated by `'~'` - it's separator
-	-  => ...;administrator~s3cure; wiener~peter;...
+	-  → ...;administrator~s3cure; wiener~peter;...
 
 4. __Examining the database__
 - extracting information about the version and structure of the database

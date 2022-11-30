@@ -1,7 +1,7 @@
 - hash cracker
 
 - wordlists in: `/usr/share/wordlists`
-	- SecLists -> /Passwords/Leaked-Databases
+	- SecLists → /Passwords/Leaked-Databases
 
 - `john [options] [path-to_file_to_crack]`
 
@@ -17,7 +17,7 @@
 
 - single crack mode
 	- taking info about the username and creating possible passwords heuristically from it
-	- Markus -> Markus1, Markus2, MArkus, MARkuS, Markus!, Markus@,....
+	- Markus → Markus1, Markus2, MArkus, MARkuS, Markus!, Markus@,....
 	- the flag is: `--single`
 
 - custom rules
@@ -46,4 +46,4 @@
 	- you get hash of the original file
 	- run the hash through john
 		- `john --wordlist=<wordlist> <path_to_file>`
-		- -> password
+		- → password

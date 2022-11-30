@@ -73,7 +73,7 @@
 	- `branch <name>` - creates a branch
 		- `branch --set-upstream-to=<remote>/<rmemote branch>` - set up "talking" path between remote and local branch
 - `checkout -b <name>` - creates a branch a switches to it
-	- => same as `git branch <name>; git checkout <name>`
+	- → same as `git branch <name>; git checkout <name>`
 	- `checkout -- <file>` - discard changes
 - `merge <revision>` - merges into current branch
 	- `merge mergetool` - use a tool to help resolve merge conflicts

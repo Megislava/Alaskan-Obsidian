@@ -6,7 +6,7 @@
 -  solution:
 	1. Break into Smaller Questions
 	2. Artifact Categories
-	-> the question that needs to be answered - Is it specific enough to completely answer with a single artifact category? if not -> break it down and repeat on each of those new questions 
+	→ the question that needs to be answered - Is it specific enough to completely answer with a single artifact category? if not → break it down and repeat on each of those new questions 
 [[14.PNG]]
 - plus prioritization
 [[15.PNG]]
@@ -19,14 +19,14 @@
 - hardware tools
 	- portable, powerful,...
 	- antistatic bags, screwdrivers,...
-- SF tools -> collections/analysis
+- SF tools → collections/analysis
 
 1. Preserving data
-	- RULE N.1 - DON'T CHANGE YOUR EVIDENCE -> preserving data
+	- RULE N.1 - DON'T CHANGE YOUR EVIDENCE → preserving data
 	- write blocker
 		- use when copying data from target
 		- prevents accidental write
-		- SF (in regedit in `HKLM/SYSTEM/CurrentControlSet/Control` -> new key `StorageDevicePolicies` -> new DWORD `WriteProtect` `1` ) or HW
+		- SF (in regedit in `HKLM/SYSTEM/CurrentControlSet/Control` → new key `StorageDevicePolicies` → new DWORD `WriteProtect` `1` ) or HW
 	- hashing before and after copying
 	- mounting
 2. Acquiring data
