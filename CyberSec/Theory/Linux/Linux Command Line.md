@@ -245,13 +245,6 @@
 
 - `more` - prints first page of a document and then can be moved and "revelaed" more
 
-- `nl` - number of line
-	- prins line numbers - can be used when piping results and testing
-
-- `wc` - number of lines, words and chars
-	- can take multiple files
-	- `-l` - print only number of lines
-
 - `file` - what is the type of the file
 
 - `rm` - delete a file(s) or directory
@@ -278,9 +271,6 @@
 	- enter VIEWING mode: `ESC`
 	- save and exit: `wq`
 
-- `tr` - "translate" / replace
-	- `tr : '\n' `- replaces `:` for `\n`
-
 ### Filtering
 - "vertical" splitting and joining
 	- `head`, `tail`, `split`, `cat`
@@ -289,7 +279,19 @@
 - joining based on value - `join`
 - ![[Pasted image 20221130151251.png]]
 
-- `patch` - files versing
+- `tee <files>` - duplicates stdout to file/s
+	- `-a` - append to file
+
+- `nl` - number of line
+	- prins line numbers - can be used when piping results and testing
+	- `-s΄<string>΄` - splitting text from line of text with `<string>`
+	- `bp΄<string>΄` - returns only number of lines containg `<string>`
+
+- `wc` - number of lines, words and chars
+	- can take multiple files
+	- `-l` - prints only number of lines
+	- `-c` - prints only number of characters
+	- `-w` - prints only number of words
 
 - `head` - prints first (10) lines of file
 	- `-n 20` - 20 lines will be printed
@@ -301,54 +303,77 @@
 	- `-n 20` - last 20 lines will be printed
 	- `-n +20` - prints from number of line to the end
 	- `-f` - prints changes in file end overtime
+	- `-r` - prints in reverse
 
 - get only one line from a file
 	- `cat <file> | head -n 25 | tail -n 1`
 		- or the other way round
 
-- `cat <file> | split` - splits file by value
+- `split [flags] <file> [name]` - splits file by value
 	- `-l 100` - will create files with insides of parameter file splitted every 100 lines
 		- files created have alphabetical names
 	- `-d` - files created will have numerical names
 	- `-a 3` - file name will have lenght of x+3
+	- `-b` - defines size of outputted files
 
 - `cat x* > y` - joins all `x` files to `y` file
 
 - `cut` - cut chosen file parts by columns
-	- `-d :` - delimiter is `:`
-	- `-f 1` - field is 1
-		- can be also interval `3-5`
-	- `-c 1` - take one character
+	- `-d<char>` - delimiter is `:`
+	- `-f<int>`-> `-f1` - field is 1
+		- can be also interval `3-5` or splitted by `,` (`3, 4, 9`)
+	- `-c<char>` -> `-c1` - take one character
 
-- `paste` - pas
+- `paste <files>` - joins same lines from one or more files to one file
 	- `-d:` - delimiter
+	- `-f<int>` - number of field
 
 - `tr` - translate from a to b
-	- `-s` - squeez
+	- `-s` - squeez - repeating characters are replaced with one symbol/char
 		- `-s ' '` - from `   ` to ` `
 	- `-c` - complement
 	- `-d` - delete
 		- `-cd 'a-zA-Z'` - delete everything alphabetical
-	- class names - `[:alpha:]` (alphabetic)
+	- class names - `[:alpha:]` (alphabetic), `[:lower:]`, `[:upper:]`
+	- `tr : '\n' `- replaces `:` for `\n`
 
 - `join` - joins lines from 2 files based on a value
 	- `-t` - delimiter
+	- `-a<number>` - adds lines even if they don't exist in the second file
 
-- `sort` - sorting by one or more criterieas 
+- `sort` - sorting by one or more criterieas (by default alphanumericaly)
   -  `-r` - reverse
-  -  `-u` - remove duplicite lines
-  - `-t` - field delimeter (how the result will be separated)
-  - `-k` - field number (sort by field)
+  - `-f` - ignores upper/lower case
+  -  `-u` - removes duplicite lines
+  - `-M` - first 3 letters are months (sorting by month)
+  - `-t` - table delimeter (how the result will be separated)
+  - `-k<start_column>[type][end_column]` - key - defines by which columns the sort will go
   - `-n` - sort type (numerical sort)
 
-- `uniq *params* *file*` - removes unique lines
+- `uniq [flags] <files>` - removes unique lines
 	- `-c` - counting duplicites
+	- `-d` - returns only duplicities
+	- `-u` - returns only uniques
 
-- `comm` - common lines
+- `comm [-123] <file1> <file2>` - common lines
 	- prints 3 columns - what is only in first file, what is only in second file and what is both
+	- `-[123]` - prints everything EXCEPT 1st, 2nd, or 3rd column
 
-- `diff` - differentiate between files
-	- also `cmp`
+- `diff [flags] <file1> <file2>` - differentiate between files
+	- returns:
+		- `3c3` - **c**hange in 3. line in the first and second file
+		- `5d4` - **d**elete character on 5.line first file and 4. line of second file
+		- `6a6,7` - **a**ddition of char to 6. and 7. line in second file
+	- `-u[char]` - what changes (in 1st, missing in 2nd (`-`), in 2nd not in 1st (`-`)) happen in files
+		- returns nicer changes (looks like git changes)
+	- `-c[char]` - `[char]` can be `+-!` different return
+	- `vimdiff` - shows the changes in two panels in vim
+
+- `cmp [flags] <file1> <file2>` - compare two files and returns first diff
+	- works also with binary files
+	- `-s` - silent (prints nothing only return code)
+
+- `patch` - files versing
 
 - `sed` - stream editor
 	- line length: `-l <number>`
@@ -357,8 +382,15 @@
 	- find data inside of data
 	- you can search through multiple files: `… <file1> <file2> …`
 	- supports [[Regular Expression]]!
-	- `-v` - find lines that do NOT have that symbol
+	- `-E` - egrep, extended use
+	- `-F` - for normal strings (fixed string)
+	- `-o` - returns only matching parts of line
+	- `-v` - find lines that do NOT have that symbol (vise versa)
+	- `-w` - contained as a word (not part of word )
 	- `-i` - case-insensitive
+	- `-c` - count, how many results it found in each file
+	- `-n` - number of line where the match is
+	- `-l` - for more files: if match is in file, filename is returned
 	- alternatives: `ack`, `ag`, `rg`
 
 - `rp` - ripgrep
