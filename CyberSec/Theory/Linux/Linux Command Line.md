@@ -323,6 +323,7 @@
 	- `-f<int>`-> `-f1` - field is 1
 		- can be also interval `3-5` or splitted by `,` (`3, 4, 9`)
 	- `-c<char>` -> `-c1` - take one character
+		- number of bytes taken
 
 - `paste <files>` - joins same lines from one or more files to one file
 	- `-d:` - delimiter
@@ -375,14 +376,15 @@
 
 - `patch` - files versing
 
-- `sed` - stream editor
-	- line length: `-l <number>`
-
 - `grep <string> <file>` 
 	- find data inside of data
 	- you can search through multiple files: `… <file1> <file2> …`
 	- supports [[Regular Expression]]!
 	- `-E` - egrep, extended use
+	- `-e` - expression, usually a regex
+		- `grep -E` vs `grep -e -E` - `-E` is not an argument
+		- can be used multiple times, if more it is used as OR
+	- `-f` - file - list of regex templates
 	- `-F` - for normal strings (fixed string)
 	- `-o` - returns only matching parts of line
 	- `-v` - find lines that do NOT have that symbol (vise versa)
@@ -391,6 +393,9 @@
 	- `-c` - count, how many results it found in each file
 	- `-n` - number of line where the match is
 	- `-l` - for more files: if match is in file, filename is returned
+	- `--color` - will color matched parts
+		- can be setup as `--color=always`
+		- `A<int>` (after), `B<int>` (before), `C<int>` (context = A+B) - number of lines that will be printed after/before/around the matches
 	- alternatives: `ack`, `ag`, `rg`
 
 - `rp` - ripgrep
@@ -405,6 +410,7 @@
 	rg --stats PATTERN
 	```
 
+- `sed` - [[sed]]
 
 ### Network
 - specific files to network config are dependent on distro used
