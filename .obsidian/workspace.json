@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5dcb24cbb2a862ba",
+            "id": "6b5b04b0fbafd1dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CyberSec/Tools/sed.md",
+                "file": "CyberSec/Theory/Programming Languages/Bash/Intro.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -21,32 +21,20 @@
             }
           },
           {
-            "id": "67b2a164d6ed515a",
+            "id": "1d6d17e4b555bd9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CyberSec/Tools/Regular Expression.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "e22cf2f3381176cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CyberSec/Theory/Linux/Linux Command Line.md",
+                "file": "CyberSec/Tools/awk.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -88,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -99,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "5dcb24cbb2a862ba",
+  "active": "1d6d17e4b555bd9e",
   "lastOpenFiles": [
+    "CyberSec/Theory/Programming Languages/Bash/Intro.md",
+    "CyberSec/Tools/awk.md",
+    "CyberSec/Theory/Programming Languages/Intro.md",
+    "CyberSec/Theory/Programming Languages/Bash/Loops.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
-    "CyberSec/Tools/Regular Expression.md",
-    "CyberSec/Tools/sed.md",
+    "CyberSec/Theory/Programming Languages/Bash/Conditions.md",
+    "CyberSec/Theory/Programming Languages/Bash/Functions.md",
     "CyberSec/Tools/Vim.md",
     "CyberSec/Theory/Linux/How does shell work.md",
-    "CyberSec/Theory/Linux/Intro to the OS.md",
-    "CyberSec/Theory/Security/Exploitation/SSH.md",
-    "CyberSec/BASE_TREE/EH/Exploiting.md",
-    "CyberSec/CTF/TryHackMe/Agent Sudo.md",
-    "CyberSec/CTF/GoogleCTF - BeginnerQuest/1. Chemical Plant.md"
+    "CyberSec/Theory/Linux/Intro to the OS.md"
   ]
 }

@@ -13,7 +13,6 @@
 	- does not have `\n` by default
 	- `printf '%s\n' "$ENVVAR"` - print the value of `ENVVAR` 
 
-
 - `history` - shows bash history
 	- when used with `|`, eg. `history | grep ping` → will find how the specific command was used
 	- history based suggestion tool: [fish](https://fishshell.com/)
@@ -411,6 +410,7 @@
 	```
 
 - `sed` - [[sed]]
+- `awk` - [[awk]]
 
 ### Network
 - specific files to network config are dependent on distro used
@@ -597,121 +597,7 @@ Digit | Meaning
 
 
 ### Scripting
-- define type of code
-	- `#!/bin/bash` - bash
-1. Functions
-	- can be declared in shell
-	- `function_name () {}`
-	- in shell it looks weird:
-	```sh
-	my_function () {
-	> ls /home
-	> cal 2022
-	> echo "No interesting function"
-	> }
-	```
-	- by default created with `+x` so it can run without `./`
-	-  ```
-			mcd () {
-				mkdir -p "$1"
-				cd "$1"
-			}
-		- creates a new folder with name given from parametr and enters it
-		- 	- arguments and special characters:
-		- `$0` - Name of the script
-		-   `$1` to `$9` - Arguments to the script. `$1` is the first argument and so on.
-		-   `$@` - All the arguments
-		-   `$#` - Number of arguments
-		-   `$?` - Return code of the previous command
-		-   `$$` - Process identification number (PID) for the current script
-		-   `!!` - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing `sudo !!`
-		-   `$_` - Last argument from the last command. If you are in an interactive shell, you can also quickly get this value by typing `Esc` followed by `.` or `Alt+.`
-		-   [some more special chars](https://tldp.org/LDP/abs/html/special-chars.html)
-	-   binary decidions:
-		-   `||` - or
-			-   `false || echo "Oops, fail"` → `Oops, fail`
-			-   `true || echo "Always true"` → ``
-		- `&&` - and
-			- `true && echo "Is true"` → `Is true`
-			- `false && echo "False"` → ``
-		- `;` - just a division of commands - both will execute
-			- `true ; echo "Will print"` → `Will print`
-			- `false ; echo "Will print"` → `Will print`
-	- running command in command ~ command substition:
-		- the inner command will run first
-			- `diff <(ls bar) <(ls foo)` - difference between ls of bar and foo
-			- `for file in $(ls)` - do something with each file in ls of some dir
-	- standart output and error:
-		- `grep foobar "$file" > /dev/null 2>dev/null` - moving STDOUT and STDERR to /dev/null
-	- comparissons:
-		- using double brackets `[[ ]]`
-		- [more info](http://mywiki.wooledge.org/BashFAQ/031)
-	- globbing
-		- wildcards, curly braces
-			- `foo*` - match foo-something
-			- `foo*.{php,html,js}` - matches foo-something with extenstions php/html/js
-			- `mv *.{sh,py} folder` - will move all sh and py to folder
-	- [spellcheck shellcheck tool](https://github.com/koalaman/shellcheck)
-2. Conditions
-	1. If
-		- must start with `if` and end with `fi`
-		```sh
-		if somecommand; then
-			# do something
-		fi
-		```
-		- often used command [[CyberSec/Tools/test]] 
-		- also `else`  and `elif` can be added
-		```sh
-		#!/bin/bash
-		if [ "$1" = "hello" ]; then
-			echo "hello yourself"
-		elif [ "$1" = "goodbuy" ]; then
-			echo "nice to have met you"
-			echo "hope to see you again"
-		else
-			echo "didn't understand"
-		fi	
-		```
-	2. Case
-		- makes sense for more conditions
-		```sh
-		#!/bin/bash
-
-		case "$1" in
-		hello|hi)
-		  echo "hello yourself"
-		  ;;
-		goodbye)
-		  echo "nice to have met you"
-		  echo "I hope to see you again"
-		  ;;
-		*)
-		  echo "I didn't understand that"
-		esac
-```
-3. Loops
-	- `for` and `while`
-	- for:
-	```sh
-	#!/bin/bash
-
-	SERVERS="servera serverb serverc"
-	for S in $SERVERS; do
-	  echo "Doing something to $S"
-	done
-```
-	- while:
-	```sh
-	#!/bin/bash
-
-	i=0
-	while [ $i -lt 10 ]; do
-	  echo $i
-	  i=$(( $i + 1))
-	done
-	echo “Done counting”
-```
+- [[CyberSec/Theory/Programming Languages/Bash/Intro]]
 
 ### Quotes
 - double quotes `""
