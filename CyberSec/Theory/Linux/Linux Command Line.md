@@ -187,43 +187,6 @@
 - `alias` - creates a shortcut
 	- `alias lsa=ls -la`
 
-### Finding stuff in file structure
-- `locate *filename*` - searches for a filename in the whole system directory
-	- is indexed search, indexed by daily cron job
-	- but uses/searched by name only
-	- `-c` - how many results it has
-	- `-b` - limits that the searched filename is the whole filename or other limitations
-		- `locate -b "\passwd"`
-
-- `whereis *filename*` - finding binaries in the whole system directory
-	- returns PATH to the file as well as man page (if it has)
-
-- `which *filename*` - return PATH of *filename*
-
-- `find *filename* `- more powerfull search
-	- path can be added → find /… *filename*
-	- `-name`
-	- `-size `- bitsize, ...
-	- `-type` - file, folder, ...
-	- `-user` - user owning it
-	- `-perm` - permissions
-	```sh
-	# Find all directories named src
-	find . -name src -type d
-	# Find all python files that have a folder named test in their path
-	find . -path '*/test/*.py' -type f
-	# Find all files modified in the last day
-	find . -mtime -1
-	# Find all zip files with size in range 500k to 10M
-	find . -size +500k -size -10M -name '*.tar.gz'
-	# Delete all files with .tmp extension
-	find . -name '*.tmp' -exec rm {} \;
-	# Find all PNG files and convert them to JPG
-	find . -name '*.png' -exec convert {} {}.jpg \;
-	```
-	- alternative to `find`: [fd](https://github.com/sharkdp/fd)
-	- find and fd are not indexed searched
-
 ### Viewing, creating and editing files
 
 - `touch` - create an empty file
@@ -412,72 +375,102 @@
 - `sed` - [[sed]]
 - `awk` - [[awk]]
 
-### Network
-- specific files to network config are dependent on distro used
-	- CentOS - `/etc/sysconfig/network-scripts/ifcfg-eth0`
+### Scripting
+- [[CyberSec/Theory/Programming Languages/Bash/Intro]]
 
-- `ifconfig` - get and display IP address
+#### Blocks of commands
+- `{ <command1>; <command2> }` - block in current shell
+- `( <command1>; <command2> )` - block of code in **subshell**
 
-- `ip a` - like `ifconfig`
+#### Quotes
+- double quotes `""
+	- stop the shell from misinterpreting some metachars including glob characters (wild cards)
+	- still allow command and variable susbtitution
+		- `echo "The path is $PATH" - will print the path
+- single quotes `''`
+	- prevent the shell from dooing any inty interpreting of special chars, including globs, variables, command substitutions and other metachars
+	- `echo "$foo"` → `bar`
+	- `echo '$foo'` → `foo` ~ literal strings
+- backlash `\`
+	- escaping special chars
+		- `echo The service costs \$1 and the path is $PATH` → prints dollar 1 and PATH
+- backquotes
+	- "treat as command"
+		- `echo Today is `date`
 
-- `route` - shows routing table
-	- `-n` - prefer numberic info (default = 0.0.0.0)
-	- obsolete → replaced with `ip route show`
+### Finding stuff in file structure
+- `locate *filename*` - searches for a filename in the whole system directory
+	- is indexed search, indexed by daily cron job
+	- but uses/searched by name only
+	- `-c` - how many results it has
+	- `-b` - limits that the searched filename is the whole filename or other limitations
+		- `locate -b "\passwd"`
 
-- `ping` - test if host is reachable
-	- `-c` - limits how many pings will be sent
-	- test only if ICMP is open
+- `whereis *filename*` - finding binaries in the whole system directory
+	- returns PATH to the file as well as man page (if it has)
 
-- `netstat` - large amout of information about network
-	- `-i` - display statistics regarding network traffic
-	- `-r` - display routing info
-	- `-t` - TCP
-	- `-l` - lists ports that are listening (open)
-	- `-n` - show numbers (not names)
-	- `-a` - all info (?)
-	- `-o` - show open ports
+- `which *filename*` - return PATH of *filename*
 
-- `ss` - show socket statistics
-	- supports all major packet and sock type
-	- a possible replacement for `netstat`
-	- data displayed in collumns:
-		- Netid - socket type and transport protocol
-		- State - connected/unconnected (depends on protocol)
-		- Recv-Q - amount of data queued up for being processed having been received
-		- Send-Q – amountof data queued up for being sent to another host
-		- Local Address - address and port of the local host's portion of the connection
-		- Peer Address - address and port of the remote host's portion of the connection
-	- `-s` - displayes mostly types of sockets, statistics
+- `find *filename* `- more powerfull search
+	- path can be added → find /… *filename*
+	- `-name`
+	- `-size `- bitsize, ...
+	- `-type` - file, folder, ...
+	- `-user` - user owning it
+	- `-perm` - permissions
+	```sh
+	# Find all directories named src
+	find . -name src -type d
+	# Find all python files that have a folder named test in their path
+	find . -path '*/test/*.py' -type f
+	# Find all files modified in the last day
+	find . -mtime -1
+	# Find all zip files with size in range 500k to 10M
+	find . -size +500k -size -10M -name '*.tar.gz'
+	# Delete all files with .tmp extension
+	find . -name '*.tmp' -exec rm {} \;
+	# Find all PNG files and convert them to JPG
+	find . -name '*.png' -exec convert {} {}.jpg \;
+	```
+	- alternative to `find`: [fd](https://github.com/sharkdp/fd)
+	- find and fd are not indexed searched
 
-- `dig` - manual querying of recursive DNS server of our choice
-	- useful tool for network troubleshooting - testing the functionality if the DNS server that the host is using
-	- syntax: `dig <domain @<dns-server-ip>>`
+### Archiving and Compression
+- archiving
+	- combine multiple files eliminating overhead in individual files and makes the files easier to transport
+	- [[tar]]
+- compression
+	- makes the files smaller by removing redundant information
+	- lossless
+		- no information is removed from the file
+	- lossy
+		- information is removed from the file
+		- if the files is compresed and then decompressed, it is different then the original one
+	- [[gzip]]
 
-- `host` - works with DNS to associate a hostname with IP
-	- `-t` - use CNAME/SOA → `host -t CNAME/SOA example.com`
-	- `-a` - all options
 
-- `ssh <username>@<target>` - remote connection to target
-- `ssh-keygen` - generate an SSH key
-	- stored in `/home/<user>/.ssh`
-		- fingerprint of server (to check if we trust it)
-		- two files `id_rsa` (privite) and `id_rsa.pub` (public)
-		- known hosts
-	- `-R <hostname>` - remove SSH key of hostname
+### Permissions
 
-- `ssh-copy-id <username>@<target>` - add SSH key to a server
+- `chmod <permission> <file>` - allows set permission to read/write/execute files and folders to various users and groups
+	- one digit for each group from: user and group and everyone else
+	- eg. 
+		- 341 = user that owns the file can X+W, group that owns it can R, everyone else can X
+		- 777 = everyone can do anything    
+Digit | Meaning
+--------- | --------
+1 | That file can be executed (X)
+2 | That file can be written to (W)
+3 | That file can be executed and written to
+4 | That file can be read (R)
+5 | That file can be read and executed
+6 | That file can be written to and read
+7 | That file can be read, written to, and executed
 
-- `scp` - for copying files from one machine to another
-	- 
+- `chown user:group file` - changing the ownership of file to user/group
 
-- `wget *cesta*` - display the route taken to target
+- `getent passwd <username>` - get info about your account
 
-- `service *X* start` - start a *X* on your IP address
-	- apache2 - server
-	- ssh
-	- postgresql - DB
 
-- `traceroute` - hops that traffic take to get to target
 
 ### Users and groups
 
@@ -549,28 +542,72 @@
 	- `-W <WARN_DAYS>` - days before it starts warning user
 
 
-### Permissions
+### Network
+- specific files to network config are dependent on distro used
+	- CentOS - `/etc/sysconfig/network-scripts/ifcfg-eth0`
 
-- `chmod <permission> <file>` - allows set permission to read/write/execute files and folders to various users and groups
-	- one digit for each group from: user and group and everyone else
-	- eg. 
-		- 341 = user that owns the file can X+W, group that owns it can R, everyone else can X
-		- 777 = everyone can do anything    
-Digit | Meaning
---------- | --------
-1 | That file can be executed (X)
-2 | That file can be written to (W)
-3 | That file can be executed and written to
-4 | That file can be read (R)
-5 | That file can be read and executed
-6 | That file can be written to and read
-7 | That file can be read, written to, and executed
+- `ifconfig` - get and display IP address
 
-- `chown user:group file` - changing the ownership of file to user/group
+- `ip a` - like `ifconfig`
 
-- `getent passwd <username>` - get info about your account
+- `route` - shows routing table
+	- `-n` - prefer numberic info (default = 0.0.0.0)
+	- obsolete → replaced with `ip route show`
 
+- `ping` - test if host is reachable
+	- `-c` - limits how many pings will be sent
+	- test only if ICMP is open
 
+- `netstat` - large amout of information about network
+	- `-i` - display statistics regarding network traffic
+	- `-r` - display routing info
+	- `-t` - TCP
+	- `-l` - lists ports that are listening (open)
+	- `-n` - show numbers (not names)
+	- `-a` - all info (?)
+	- `-o` - show open ports
+
+- `ss` - show socket statistics
+	- supports all major packet and sock type
+	- a possible replacement for `netstat`
+	- data displayed in collumns:
+		- Netid - socket type and transport protocol
+		- State - connected/unconnected (depends on protocol)
+		- Recv-Q - amount of data queued up for being processed having been received
+		- Send-Q – amountof data queued up for being sent to another host
+		- Local Address - address and port of the local host's portion of the connection
+		- Peer Address - address and port of the remote host's portion of the connection
+	- `-s` - displayes mostly types of sockets, statistics
+
+- `dig` - manual querying of recursive DNS server of our choice
+	- useful tool for network troubleshooting - testing the functionality if the DNS server that the host is using
+	- syntax: `dig <domain @<dns-server-ip>>`
+
+- `host` - works with DNS to associate a hostname with IP
+	- `-t` - use CNAME/SOA → `host -t CNAME/SOA example.com`
+	- `-a` - all options
+
+- `ssh <username>@<target>` - remote connection to target
+- `ssh-keygen` - generate an SSH key
+	- stored in `/home/<user>/.ssh`
+		- fingerprint of server (to check if we trust it)
+		- two files `id_rsa` (privite) and `id_rsa.pub` (public)
+		- known hosts
+	- `-R <hostname>` - remove SSH key of hostname
+
+- `ssh-copy-id <username>@<target>` - add SSH key to a server
+
+- `scp` - for copying files from one machine to another
+	- 
+
+- `wget *cesta*` - display the route taken to target
+
+- `service *X* start` - start a *X* on your IP address
+	- apache2 - server
+	- ssh
+	- postgresql - DB
+
+- `traceroute` - hops that traffic take to get to target
 
 ### Installing, updating
 `apt-get install *X*` - installs *X* package
@@ -582,35 +619,3 @@ Digit | Meaning
 `apt purge *X*` - uninstall/remove a *X* package
 
 
-### Archiving and Compression
-- archiving
-	- combine multiple files eliminating overhead in individual files and makes the files easier to transport
-	- [[tar]]
-- compression
-	- makes the files smaller by removing redundant information
-	- lossless
-		- no information is removed from the file
-	- lossy
-		- information is removed from the file
-		- if the files is compresed and then decompressed, it is different then the original one
-	- [[gzip]]
-
-
-### Scripting
-- [[CyberSec/Theory/Programming Languages/Bash/Intro]]
-
-### Quotes
-- double quotes `""
-	- stop the shell fro minterpreting some metachars including glob characters (wild cards)
-	- still allow command and variable susbtitution
-		- `echo "The path is $PATH" - will print the path
-- single quotes `''`
-	- orevent the shell from dooing any inty interpreting of special chars, including globs, variables, command substitutions and other metachars
-	- `echo "$foo"` → `bar`
-	- `echo '$foo'` → `foo` ~ literal strings
-- backlash `\`
-	- escaping special chars
-		- `echo The service costs \$1 and the path is $PATH` → prints dollar 1 and PATH
-- backquotes
-	- "treat as command"
-		- `echo Today is `date`

@@ -7,6 +7,8 @@
 	- `%4d` - max 4 spaces before the number
 	- `\n` - after first 10 numbers (9 commas), new line
 
+- often used with [[test]]
+
 1. [[Functions]]
 2. [[Conditions]]
 3. [[Loops]]
