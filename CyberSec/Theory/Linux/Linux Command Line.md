@@ -379,8 +379,18 @@
 - [[CyberSec/Theory/Programming Languages/Bash/Intro]]
 
 #### Blocks of commands
-- `{ <command1>; <command2> }` - block in current shell
+- `{ <command1>; <command2>; }` - block in current shell
+	- list of commands ends with `;` or new line
+	- if directory is non-existent, create it (if successful print message), go into it, if it will not suceed print "Wasn't successful"
+	```bash
+	D=/tmp/foo
+	cd "$D" || { mkdir "$D" && echo "Adresar '$D' je vytvoren"; cd "$D"; } || echo "Wasn't successful"
+```
+	- 
 - `( <command1>; <command2> )` - block of code in **subshell**
+	- runs in different thread
+	- if used with `$( <command> )` we want the output
+	- `echo $BASH_SUBSHELL` - testing if user is in subshell ( is subshell)
 
 #### Quotes
 - double quotes `""
@@ -397,6 +407,52 @@
 - backquotes
 	- "treat as command"
 		- `echo Today is `date`
+l
+### Permissions
+- read, write, execute
+	- for folders also `t` = sticky bit + execute
+		- `T` - have sticky bit, cannot execute
+		- sticky bit modifies write permissions to file in folder
+	- without execute permission, no right to change content of folder
+	- write permission for others is highly risky
+		- RWX permission to folder with a wanted file (file permission is only read)
+		- -> create a new file in the folder and copy the file content into the new file
+	- even without the R permission you can try to list SPECIFIC names of files
+		- with permission X
+		- `ls x-only/file{1,2,3}`
+- 3 types of users -> 3x3 permissions
+	- owner, group, others
+
+- `stat` - information about a file
+	- `-L` - follow links (only permission at the end of link interests us)
+	- `-c` - format - will print according to format
+	- `%a`, `%A` - permissions in octal, in human readable form
+	- `%i` - inode number
+	- `%n` - file name
+	- `%s` - total size, in bytes
+	- `%u`/`%U` - user ID/name of owner
+	- `%w`, `%x`, `%z` - last access, data modification, status change
+
+- `chmod <permission> <file>` - allows set permission to read/write/execute files and folders to various users and groups
+	- one digit for each group from: user and group and everyone else
+	- eg. 
+		- 341 = user that owns the file can X+W, group that owns it can R, everyone else can X
+		- 777 = everyone can do anything    
+Digit | Meaning
+--------- | --------
+1 | That file can be executed (X)
+2 | That file can be written to (W)
+3 | That file can be executed and written to
+4 | That file can be read (R)
+5 | That file can be read and executed
+6 | That file can be written to and read
+7 | That file can be read, written to, and executed
+
+- `chown user:group file` - changing the ownership of file to user/group
+
+- `getent passwd <username>` - get info about your account
+
+
 
 ### Finding stuff in file structure
 - `locate *filename*` - searches for a filename in the whole system directory
@@ -447,29 +503,6 @@
 		- information is removed from the file
 		- if the files is compresed and then decompressed, it is different then the original one
 	- [[gzip]]
-
-
-### Permissions
-
-- `chmod <permission> <file>` - allows set permission to read/write/execute files and folders to various users and groups
-	- one digit for each group from: user and group and everyone else
-	- eg. 
-		- 341 = user that owns the file can X+W, group that owns it can R, everyone else can X
-		- 777 = everyone can do anything    
-Digit | Meaning
---------- | --------
-1 | That file can be executed (X)
-2 | That file can be written to (W)
-3 | That file can be executed and written to
-4 | That file can be read (R)
-5 | That file can be read and executed
-6 | That file can be written to and read
-7 | That file can be read, written to, and executed
-
-- `chown user:group file` - changing the ownership of file to user/group
-
-- `getent passwd <username>` - get info about your account
-
 
 
 ### Users and groups
