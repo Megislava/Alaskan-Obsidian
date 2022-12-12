@@ -385,7 +385,7 @@
 	```bash
 	D=/tmp/foo
 	cd "$D" || { mkdir "$D" && echo "Adresar '$D' je vytvoren"; cd "$D"; } || echo "Wasn't successful"
-```
+	```
 	- 
 - `( <command1>; <command2> )` - block of code in **subshell**
 	- runs in different thread
@@ -420,6 +420,9 @@ l
 	- even without the R permission you can try to list SPECIFIC names of files
 		- with permission X
 		- `ls x-only/file{1,2,3}`
+	- `1`- X; `2` - W; `4` - R; `3` - X+W; `5` - X+R; `6` - W+R; `7` - R+W+X
+		- 341 = user that owns the file can X+W, group that owns it can R, everyone else can X
+		- 777 = everyone can do anything
 - 3 types of users -> 3x3 permissions
 	- owner, group, others
 
@@ -433,20 +436,30 @@ l
 	- `%u`/`%U` - user ID/name of owner
 	- `%w`, `%x`, `%z` - last access, data modification, status change
 
-- `chmod <permission> <file>` - allows set permission to read/write/execute files and folders to various users and groups
-	- one digit for each group from: user and group and everyone else
-	- eg. 
-		- 341 = user that owns the file can X+W, group that owns it can R, everyone else can X
-		- 777 = everyone can do anything    
-Digit | Meaning
---------- | --------
-1 | That file can be executed (X)
-2 | That file can be written to (W)
-3 | That file can be executed and written to
-4 | That file can be read (R)
-5 | That file can be read and executed
-6 | That file can be written to and read
-7 | That file can be read, written to, and executed
+- `chmod <permission> <file/s>` - allows set permission to read/write/execute files and folders to various users and groups
+	- `-R` - recursive
+		- `chmod -R =rwX dir` - for all content in "dir" set permissions to read, write and execute for folders
+	- absolute
+		- octal (one digit for each group from: user and group and everyone else) or symbolic
+	- relative
+		- symbolic (generally plus/minus permission)
+		- to whom | how | what
+		- if to whom is empty is goes to all
+		- if `=` is empty is will remove all permissions
+		- `+r` (plus read), `-w` (minus write), `=x` (just execute for file and for folder), `X` (execute for folder only)
+		- `s` and `t` - set and sticky bit
+		- `u/g/o` - set same rights as user/group/others
+		- `u` (user), `g` (group), `o` (others), `a` (all), `<empty>`
+
+- `umask` - removes set of permissions for newly created files and folders
+	- `-S` - prints permissions in symbolic representation
+		- `chmod $( umask -S | tr x X ) file dir` - changes `x` for `X` for "file" and "dir"
+	- different build-in security levels
+		- Permissive: umask lvl 022; effective permission 755; `rwxr-xr-x`
+		- Moderate: 026; 751; `rwxr-x--x`
+		- Moderate: 027; 750; `rwxr-x---`
+		- Severe: 077; 700; `rwx------`
+	- 
 
 - `chown user:group file` - changing the ownership of file to user/group
 
