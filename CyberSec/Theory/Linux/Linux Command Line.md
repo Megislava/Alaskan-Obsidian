@@ -480,27 +480,7 @@ l
 
 - `which *filename*` - return PATH of *filename*
 
-- `find *filename* `- more powerfull search
-	- path can be added → find /… *filename*
-	- `-name`
-	- `-size `- bitsize, ...
-	- `-type` - file, folder, ...
-	- `-user` - user owning it
-	- `-perm` - permissions
-	```sh
-	# Find all directories named src
-	find . -name src -type d
-	# Find all python files that have a folder named test in their path
-	find . -path '*/test/*.py' -type f
-	# Find all files modified in the last day
-	find . -mtime -1
-	# Find all zip files with size in range 500k to 10M
-	find . -size +500k -size -10M -name '*.tar.gz'
-	# Delete all files with .tmp extension
-	find . -name '*.tmp' -exec rm {} \;
-	# Find all PNG files and convert them to JPG
-	find . -name '*.png' -exec convert {} {}.jpg \;
-	```
+- `find *filename* `- [[find]]
 	- alternative to `find`: [fd](https://github.com/sharkdp/fd)
 	- find and fd are not indexed searched
 

@@ -8,7 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6b5b04b0fbafd1dc",
+            "id": "8bc4182c6a58c610",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CyberSec/Tools/tar.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "989f51102a90458a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CyberSec/Tools/gzip.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "4e1da8914a637ae5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -62,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -73,17 +99,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "6b5b04b0fbafd1dc",
+  "active": "4e1da8914a637ae5",
   "lastOpenFiles": [
+    "CyberSec/Tools/gzip.md",
+    "CyberSec/Tools/tar.md",
+    "CyberSec/Tools/find.md",
+    "CyberSec/Theory/Linux/Linux Command Line.md",
     "CyberSec/Theory/Programming Languages/Bash/Intro.md",
     "CyberSec/Tools/awk.md",
     "CyberSec/Theory/Programming Languages/Intro.md",
     "CyberSec/Theory/Programming Languages/Bash/Loops.md",
-    "CyberSec/Theory/Linux/Linux Command Line.md",
     "CyberSec/Theory/Programming Languages/Bash/Conditions.md",
-    "CyberSec/Theory/Programming Languages/Bash/Functions.md",
-    "CyberSec/Tools/Vim.md",
-    "CyberSec/Theory/Linux/How does shell work.md",
-    "CyberSec/Theory/Linux/Intro to the OS.md"
+    "CyberSec/Theory/Programming Languages/Bash/Functions.md"
   ]
 }
