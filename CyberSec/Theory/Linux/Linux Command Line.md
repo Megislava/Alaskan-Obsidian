@@ -107,23 +107,6 @@
 
 - `tree` - prints the current file system tree
 
-- `pstree` - prints family tree of processes
-
-- `ps` - shows list of running tasks with their PID (process ID), PPID (parent process ID)
-	- list of all system processes: `-ef`
-	- `--forest` - similar to `pstree` prints parent-child relationship
-	- `-u` - shows processes runing under specific user
-
-- `top` - viewing processes in real time
-	- together with CPU utilization
-	- is interactive:
-		- `K` - terminate a process
-		- `R` - adjust the priority of a process
-
-- `kill <PID>` - kill running task/process
-
-- `lsof -l` - "List open files" show running services
-
 - `bind` - manages key-bindings
 	- `-l` - lists what keyboard shortcuts are bind to specific action
 		- `ESC+.` - fills in last used argument
@@ -497,6 +480,55 @@ l
 		- if the files is compresed and then decompressed, it is different then the original one
 	- [[gzip]]
 
+
+### Processes (unix) and jobs (shell)
+- Process ID = PID
+- processes are made/created from another process
+	- parent-child relationship
+- `ps` - process status
+	- shows current running processes
+	- `-f` - more info
+	- `-o` - what specific information I want
+	- `--forest` - similar to `pstree` prints parent-child relationship
+	- `-u` - shows processes runing under specific user
+		- or to use `ps -eo user,pid,args | grep "^ *$USER "`
+- `pstree` - tree of all running processes
+	- prints family tree of processes
+- `pgrep` - effective searching for processes
+	- `-l`
+	- `-x`
+	- `-U` - username
+	- `ps -o pid,ppid,user,args -p "$(pgrep -U "$USER" sleep)"` - find all processes "sleep" running under my current user
+
+- `top` - viewing processes in real time
+	- together with CPU utilization
+	- is interactive:
+		- `K` - terminate a process
+		- `R` - adjust the priority of a process
+
+- `prstat` - process statistics
+
+- it's possible to control processes with signals
+	
+- `kill <PID>` - kill running task/process
+	- by default SIGTERM (terminate)
+	- `-s`, `-n` - signal name/number
+	- `-l` - list signal numbers
+	- SIGKILL and SIGSTOP cannot be ignored
+		- others have programmable response
+
+- `pkill` - sending signal to multiple processes
+	- `pkill -U "$USER" sleep` - kill all speeps running under current user
+	- have almost the same syntax as `pgrep`
+
+- `lsof -l` - "List open files" show running services
+
+- processes vs jobs:
+	- ![[Pasted image 20221214211119.png]]
+
+- `fg` - move job to foreground
+- `bg` - more job to background
+- `jobs` - running jobs
 
 ### Users and groups
 
