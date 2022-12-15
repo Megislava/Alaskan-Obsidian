@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3bc30495c35349bf",
+        "id": "1027f26d392ce013",
         "type": "tabs",
         "children": [
           {
-            "id": "b73fa017015afea1",
+            "id": "4e1da8914a637ae5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -72,17 +72,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "b73fa017015afea1",
+  "active": "4e1da8914a637ae5",
   "lastOpenFiles": [
-    "CyberSec/Tools/awk.md",
+    "CyberSec/Theory/Linux/Intro to the OS.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
+    "CyberSec/Tools/gzip.md",
+    "CyberSec/Tools/tar.md",
+    "CyberSec/Tools/find.md",
     "CyberSec/Theory/Programming Languages/Bash/Intro.md",
+    "CyberSec/Tools/awk.md",
     "CyberSec/Theory/Programming Languages/Intro.md",
     "CyberSec/Theory/Programming Languages/Bash/Loops.md",
-    "CyberSec/Theory/Programming Languages/Bash/Conditions.md",
-    "CyberSec/Theory/Programming Languages/Bash/Functions.md",
-    "CyberSec/Tools/Vim.md",
-    "CyberSec/Theory/Linux/How does shell work.md",
-    "CyberSec/Theory/Linux/Intro to the OS.md"
+    "CyberSec/Theory/Programming Languages/Bash/Conditions.md"
   ]
 }

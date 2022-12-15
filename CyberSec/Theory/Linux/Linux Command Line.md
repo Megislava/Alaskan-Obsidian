@@ -396,6 +396,7 @@ l
 	- for folders also `t` = sticky bit + execute
 		- `T` - have sticky bit, cannot execute
 		- sticky bit modifies write permissions to file in folder
+		- ![[Pasted image 20221215163359.png]]
 	- without execute permission, no right to change content of folder
 	- write permission for others is highly risky
 		- RWX permission to folder with a wanted file (file permission is only read)
@@ -408,6 +409,14 @@ l
 		- 777 = everyone can do anything
 - 3 types of users -> 3x3 permissions
 	- owner, group, others
+- together 12 bits/ 4 octal digits:
+	- specials + user/owner + group + others
+	- = BASIC MODEL
+
+##### Access Control List
+- expansion of basic model
+- there can be more users and groups on one object
+- `getfacl`, `setfacl`
 
 - `stat` - information about a file
 	- `-L` - follow links (only permission at the end of link interests us)
