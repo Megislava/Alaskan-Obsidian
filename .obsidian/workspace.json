@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CyberSec/Theory/Linux/Linux Command Line.md",
+                "file": "CyberSec/Theory/Programming Languages/C/Expressions.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -74,15 +74,15 @@
   },
   "active": "4e1da8914a637ae5",
   "lastOpenFiles": [
-    "CyberSec/Theory/Linux/Intro to the OS.md",
+    "CyberSec/Theory/Programming Languages/C/Data Type & Variables.md",
+    "CyberSec/Theory/Programming Languages/C/Data representation.md",
     "CyberSec/Theory/Linux/Linux Command Line.md",
+    "CyberSec/Theory/Linux/Intro to the OS.md",
     "CyberSec/Tools/gzip.md",
     "CyberSec/Tools/tar.md",
     "CyberSec/Tools/find.md",
     "CyberSec/Theory/Programming Languages/Bash/Intro.md",
     "CyberSec/Tools/awk.md",
-    "CyberSec/Theory/Programming Languages/Intro.md",
-    "CyberSec/Theory/Programming Languages/Bash/Loops.md",
-    "CyberSec/Theory/Programming Languages/Bash/Conditions.md"
+    "CyberSec/Theory/Programming Languages/Intro.md"
   ]
 }
