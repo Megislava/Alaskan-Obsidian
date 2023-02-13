@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "$#"
+if [ "$#" -eq 3 ]; then
+	let result=($1+$2)*$3
+	echo "$result"
+	(exit 0)
+else
+	echo "spatne"
+	(exit 1)
+fi
+

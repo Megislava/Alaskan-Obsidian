@@ -11,12 +11,9 @@
             "id": "f5976730bb24fb69",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "School/2nd semestr/DBS/2. Relacni model, relacni algebra.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": true
+                "file": "School/2nd semestr/DBS/souvislosti-temat.png"
               }
             }
           }
@@ -79,15 +76,15 @@
   },
   "active": "f5976730bb24fb69",
   "lastOpenFiles": [
+    "School/2nd semestr/DBS/relacnialgebradotazy.pdf",
+    "School/2nd semestr/DBS/dbs_tabulka-spojeni-3.pdf",
+    "School/2nd semestr/DBS/Relacni algebra/01.jpg",
+    "Untitled.canvas",
+    "Untitled 1.canvas",
+    "School/2nd semestr/DBS/2. Relacni model, relacni algebra.md",
     "School/2nd semestr/DBS/1. Konceptualni modelovani.md",
     "School/2nd semestr/DBS/souvislosti-temat.png",
     "School/2nd semestr/DBS/Lectures/Images/architektura_dbms.png",
-    "School/2nd semestr/DBS/Lectures/hand-les01-uvod.pdf",
-    "School/2nd semestr/DBS/Lectures/Images/Pasted image 20230213162950.png",
-    "CyberSec/Theory/x86.md",
-    "School/1st semester/PA1 (C)/DeepC.md",
-    "School/1st semester/PA1 (C)/Expressions.md",
-    "School/1st semester/PA1 (C)/Data Type & Variables.md",
-    "School/1st semester/PA1 (C)/Data representation.md"
+    "School/2nd semestr/DBS/Lectures/hand-les01-uvod.pdf"
   ]
 }
