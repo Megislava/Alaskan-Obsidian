@@ -25,7 +25,7 @@
 			- `sed '1,/^$/d'` - prints only body without header (line one to empty line)
 		- `q`, `Q` - print line and quit
 			- `q` - prints one line/pattern and then quits
-			- `Q` - immidiate quitting of the script/when it hits the target line (prints w/o the line)
+			- `Q` - immediate quitting of the script/when it hits the target line (prints w/o the line)
 				- only in GNU
 		- `=` - line number
 		- `s/<RegEx>/<ToSubs>/[flags]` - substitution

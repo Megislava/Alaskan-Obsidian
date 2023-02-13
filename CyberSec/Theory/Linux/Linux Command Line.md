@@ -290,7 +290,7 @@
 - `sort` - sorting by one or more criterieas (by default alphanumericaly)
   -  `-r` - reverse
   - `-f` - ignores upper/lower case
-  -  `-u` - removes duplicite lines
+  - `-u` - removes duplicite lines
   - `-M` - first 3 letters are months (sorting by month)
   - `-t` - table delimeter (how the result will be separated)
   - `-k<start_column>[type][end_column]` - key - defines by which columns the sort will go
