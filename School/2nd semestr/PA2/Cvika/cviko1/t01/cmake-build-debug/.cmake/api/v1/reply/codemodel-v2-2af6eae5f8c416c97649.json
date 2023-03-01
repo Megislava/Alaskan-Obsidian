@@ -1,0 +1,74 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Tutorial 01",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "t01::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-t01-Debug-fe10aef0b03fd7807469.json",
+					"name" : "t01",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "t01-example::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-t01-example-Debug-1bf4d56c6f4226421a6f.json",
+					"name" : "t01-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "t01-main_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-t01-main_c-Debug-16ef624e722926ec1ca0.json",
+					"name" : "t01-main_c",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/ajung/Desktop/Alaskan-Obsidian/School/2nd semestr/PA2/Cvika/cviko1/t01/cmake-build-debug",
+		"source" : "C:/Users/ajung/Desktop/Alaskan-Obsidian/School/2nd semestr/PA2/Cvika/cviko1/t01"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

@@ -1,0 +1,137 @@
+= 1. cvičení
+:basedir: https://courses.fit.cvut.cz/BI-PA2
+:filedir: {basedir}/media/teacher/bernhdav/tutorials
+:toc:
+
+Toto cvičení slouží jako úvod do rozdílů mezi C a C++. Na cvičení můžete pracovat dle této osnovy nebo si sami programujte, dle svého uvážení.
+
+. Pokud jste *začátečníci*, začněte od 1. úkolu a pokračujte dále.
+. Pokud jste *pokročilí*, můžete se vrhnout rovnou na první bodovanou bonusovou úlohu.
+
+NOTE: Všechny úkoly si doma pečlivě dopracujte. Na rozdíl od předmětu BI-PA1 na sebe jednotlivá cvičení úzce navazují. Nepochopení jednoho tématu implikuje nepochopení tématu následujícího. V případě, že vám přijde, že se ztrácíte, kontaktujte svého cvičícího.
+
+== Úkoly na cvičení
+
+. Stáhněte si zdrojový kód z archivu link:{filedir}/t01.zip[t01.zip] a v souboru `main.c` s pomocí již vytvořené struktury `array_t`, funkcí `array_scan`, `array_print`, `array_sort` a `array_free` dokončete funkci `main`. Cílem je vytvořit program, který načte ze vstupu počet čísel a následně desetinná čísla. Ty pak vypíše, následně seřadí a vypíše znovu.
+- Funkce jsou již implementované, stačí je jen vhodně použít.
+- Funkce jsou okomentované, využijte komentáře k pochopení, co funkce dělá.
+- Nezapomeňte uvolnit paměť.
+- V přiloženém archivu najdete i testovací data.
++
+NOTE: *První úloha je opakovací.* V tomto případě opakování struktur a funkcí z předmětu BI-PA1, pokud tuto úlohu nejste schopni samostatně vypracovat, zvažte intenzivní doučování či případné posunutí BI-PA2 o rok. Pochopení a použití struktur a funkcí je základním předpokladem pro tento předmět. BI-PA2 je povinný předmět, případný neúspěch znamená, že se připravíte zbytečně o jeden pokus.
+. Program je napsaný v jazyku C, přepište jej s pomocí konstruktů jazyka C++ (nezapomeňte jej přejmenovat s příponou `.cpp`). Využijte především:
+- C++ hlavičkové soubory + `using namespace std;`,
+- konstanty místo direktivy preprocesoru,
+- zjednodušený zápis struktur bez `typedef`,
+- datový typ `bool` (a správné návratové hodnoty `true` a `false`),
+- referencí místo ukazatelů (_pointers_),
+- dynamickou alokaci paměti (`new []` a `delete []`),
+- streamy pro načtení vstupu (`cin >> variable`),
+- streamy pro vypsání obsahu proměnné (`cout << variable`),
+- knihovní funkci https://en.cppreference.com/w/cpp/algorithm/sort[`std::sort`].
++
+NOTE: Implementujte jednotlivé změny postupně, každou změnu řádně otestujte, že funguje.
+. Implementujte funkci `array_save`, která bere dva argumenty (pole `arr` a řetězec `filename`). Funkce uloží velikost a obsah pole `arr` do textového souboru s názvem `filename`. Upravte funkci `main`, aby ukládala seřazené pole do souboru. Ověřte, že v souboru je skutečně velikost pole a jeho seřazený obsah.
+. Implementujte funkci `array_load`, která bere dva argumenty (pole `arr` a řetězec `filename`). Ta načte ze souboru `filename` do proměnné `arr` hodnoty pole. Upravte funkci `main` a vyzkoušejte na vámi vytvořených souborech z minulého kroku.
+. Nezapomeňte ošetřit nesprávné vstupy. Problém může nastat i u zápisu. Co by se stalo, kdybyste zapisovali na USB disk a někdo jej vytáhl v průběhu zápisu?
++
+NOTE: V úlohách 3 až 5 nestačí jen použít přesměrování vstupu a výstupu, cílem je skutečně použít přímo načítání ze (resp. zápis do) souboru.
+. Implementujte funkci `array_write`, ta funguje podobně jako `array_save`, ale formát souboru je binární. Tedy prvních `sizeof(size_t)` bytů je pro číslo `n` (počet čísel v poli) a dalších `n * sizeof(double)` bytů je pro obsah pole. Na obsah binárního souboru se můžete podívat pomocí nástroje `xxd <filename>` (tedy například `xxd 0000_out.bin`).
+. Implementujte funkci `array_read`, ta funguje podobně jako `array_read`, ale formát souboru je binární (stejně jako v bodu 6).
+. Máte hotovo? Zkuste bonusovou úlohu nebo příklady z xref:{basedir}/tutorials/01/index#[Cvičebnice pro 1. cvičení].
+
+=== Bonusová úloha
+
+Program načte z binárního souboru matici. První 4 byty jsou vyhrazeny pro `R` počet řádků matice, další 4 byty jsou vyhrazeny pro `C` počet sloupců matice. Následuje `R * C * sizeof(double)` bytů reprezentující matici zapsanou po řádcích. Tuto matici transponuje (prohodí řádky a sloupce) a transponovanou matici zapíše opět do binárního souboru ve stejném formátu.
+
+Pro získání bonusových bodů, program:
+
+- musí fungovat (mít ošetřené vstupy),
+- musí být členěn na struktury a funkce _(nebo třídy)_,
+- musí využívat konstruktů jazyka C++ _(reference, IO streams)_,
+- musí řádně uvolňovat paměť,
+- musí být rozumně formátovaný.
+
+NOTE: Lze odevzdávat pouze na svém cvičení.
+
+== Co dělat, když si nevím rady?
+
+. Zachovej klid.
+. Projdi si materiály:
+    - xref:{basedir}/lectures/index#[1. přednáška],
+    - xref:{basedir}/seminars/index#[1. proseminář],
+    - Praktický přehled xref:{basedir}/tutorials/texts/c_vs_cpp#[Jazyk C vs. C++],
+    - Praktický přehled xref:{basedir}/tutorials/texts/fstream#[Souborové proudy].
+. Zformuluj dotaz, co tě trápí.
+. Zvedni ruku (přijdeme).
+
+== Často kladené dotazy
+
+Jak zkompiluji {cpp} program?::
+Velice podobně jako v PA1, přidáme navíc pouze informaci o standardu {cpp}, který budeme používat. Jen nesmíme zapomenout u souboru na příponu `.cpp`.
++
+[source,bash]
+----
+g++ -Wall -pedantic -std=c++14 main.cpp
+----
+
+Mám chybu `error: ‘_something_’ was not declared in this scope`::
+Pravděpodobně ti chybí hned za hlavičkami `using namespace std`. Aby programátoři mohli pojmenovávat věci v {cpp} stejně, rozhodli se je rozdělovat do složek (tzv. _namespace_). Tímto příkazem říkáme, že když neuvedeme jinak, tak chceme používat věci z _namespace_ `std`. Tam jsou všechny standardní funkce a třídy. Mělo by to tedy vypadat následovně.
++
+[source,cpp]
+----
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+----
+
+Mám velmi dlouhou chybu a objevuje se tam `ostream`, `istream`, `operator>>` nebo `operator<<`::
+Pravděpodobně si pleteš, zda chceš vypisovat nebo načítat. Pro vypisování na standardní výstup slouží objekt `cout`. A abychom na něj něco mohli vypsat, tak použijeme `<<`, tedy `cout << "Hello" << " " << "world!" << endl`. Všimni si, že řetězce můžeme za sebou řetězit a šipky vždy směřují do `cout`. Ano! Ten text chceme dostat na výstup. Naopak pokud načítám data ze standardního vstupu, použijeme objekt `cin` a naopak `>>`. Ze vstupu chceme něco uložit do proměnné, tedy `cin >> radek >> sloupec`. Opět můžeme řetězit a tentokrát data taháme ze streamu do proměnné.
+
+Jak se ošetřuje vstup v {cpp}?::
+Je to mnohem jednoduší než v jazyce C. Později si řekneme, co jsou to třídy, objekty a metody, a že se mohou řetězit nebo tvářit jako proměnné jiného typu, třeba `bool`. To umí i streamy, takže ověření je pak jednoduché.
++
+[source,cpp]
+----
+// Pokud se mi nepodarilo nacist cislo (vsimnete si, ze nemusim uvadet typ) nebo je mensi rovno nule
+if ( !( cin >> number ) || number <= 0 ) {
+    // Vypis "Nespravny vstup." a ukonci
+    cout << "Nespravny vstup." << endl;
+    return 1;
+}
+----
+
+Jak otevřu soubor v {cpp}?::
+Pro podrobnosti doporučuji se kouknout do proseminářů, ale uvedu tady takový rychlý kód, pro rychlý vhled do problému.
++
+[source,cpp]
+----
+// Tady otevirame soubor (a interně ho pojmenujeme "fin")
+ifstream fin( "data/0000_in.txt" );
+// Nazev "fin" je pro nas, muzeme ho pojmenovat treba "fileinput"
+if ( !fin ) {
+    cout << "Nepodarilo se otevrit soubor." << endl;
+    return 1;
+}
+
+// A tady pracujeme klasicky jako s "cin", ale misto toho pouzijeme nas "fin".
+if ( !( fin >> number ) || number <= 0 ) {
+    cout << "Nepodarilo se nacist cislo." << endl;
+    return 2;
+}
+
+cout << "Cislo 'number' = " << number << "." << endl;
+----
+
+=== Nápověda ke cvičení
+
+Následující kód ukazuje jednoduchý program v jazyce C++, který načte od uživatele číslo (_počet bodů na vstupu_), následně načte požadované 2D body (_ve formátu [x, y]_) a do souboru uloží binární reprezentaci tohoto vstupu takovou, že na prvních 4 bytech je počet prvků, na dalších 4 bytech je ověřovací hash footnote:[Nemusíte se trápit tím, co to hash je. Berte to jako funkci, která vezme libovolně dlouhý vstup a převede ho na nějaké 4 bytové číslo. V ukázce je schválně použit, aby bylo potřeba nejprve zapsat body a teprve až hash.] a zbytek je vyhrazen pro samotné body. Všimněte si, že většina parametrů se předává pomocí reference (`&`) a častokrát uvádíme klíčové slovo `const`, které říká, že strukturu nebo objekt footnote:[Co jsou to objekty si řekneme příště.] nebudeme měnit. Obsah souboru `points.bin` si můžeme zobrazit pomocí nástroje `xxd points.bin`.footnote:[Všimněte si pořadí bytů, pro datový typ float si můžete ověřit výsledek pomocí https://www.h-schmidt.net/FloatConverter/IEEE754.html[kovertoru].]
+
+Celý zdrojový kód najdete v přiloženém archivu link:{filedir}/t01.zip[t01.zip] v souboru `example.cpp`.
+
+.example.cpp
+[source,cpp]
+----
+include::example.cpp[]
+----

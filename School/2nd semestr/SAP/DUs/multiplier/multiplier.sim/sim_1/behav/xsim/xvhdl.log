@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ajung/Desktop/Alaskan-Obsidian/School/2nd semestr/SAP/DUs/multiplier/multiplier.srcs/sources_1/imports/DUs/l2_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'multiplier'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/ajung/Desktop/Alaskan-Obsidian/School/2nd semestr/SAP/DUs/multiplier/multiplier.srcs/sim_1/imports/DUs/l3_multiplier_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'multiplier_test'
