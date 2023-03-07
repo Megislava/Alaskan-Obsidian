@@ -4,29 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "86ed40113ea4b2e8",
+        "id": "5648911065a1751b",
         "type": "tabs",
         "children": [
           {
-            "id": "82720b51655d77a6",
+            "id": "35903e989d9d94a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/2nd semestr/DBS/Notes/3. SQL.md",
+                "file": "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
-              }
-            }
-          },
-          {
-            "id": "39125fd776f75862",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "School/2nd semestr/DBS/Lectures/hand-les06-sql-select-2.pdf"
               }
             }
           }
@@ -72,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -88,17 +77,24 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "82720b51655d77a6",
+  "active": "737d055bac789dfd",
   "lastOpenFiles": [
-    "School/2nd semestr/DBS/Lectures/hand-les06-sql-select-2.pdf",
+    "School/2nd semestr/PSI/Pictures",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230307164055.png",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230307164014.png",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230307162520.png",
+    "School/2nd semestr/PSI/Notes/1. Uvod.md",
+    "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230307123021.png",
     "School/2nd semestr/DBS/Notes/3. SQL.md",
+    "School/2nd semestr/DBS/Notes/2. Relacni model, relacni algebra.md",
+    "School/2nd semestr/DBS/Notes/1. Konceptualni modelovani.md",
+    "Untitled.canvas",
+    "School/2nd semestr/DBS/Lectures/hand-les06-sql-select-2.pdf",
     "School/2nd semestr/DBS/Lectures/hand-les04-sql-select-1.pdf",
     "School/2nd semestr/DBS/Lectures/hand-les05-transformace.pdf",
     "School/2nd semestr/DBS/Notes/4. Transformace konceptualniho modelu na relacni.md",
-    "School/2nd semestr/DBS/Notes/2. Relacni model, relacni algebra.md",
     "School/2nd semestr/DBS/Lectures/hand-les03-relacni-model-a-ra.pdf",
-    "School/2nd semestr/DBS/Notes/1. Konceptualni modelovani.md",
-    "School/2nd semestr/DBS/2. Relacni model, relacni algebra.md",
-    "School/2nd semestr/DBS/1. Konceptualni modelovani.md"
+    "School/2nd semestr/DBS/2. Relacni model, relacni algebra.md"
   ]
 }
