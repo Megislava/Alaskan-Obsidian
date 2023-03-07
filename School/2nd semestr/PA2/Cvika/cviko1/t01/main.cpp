@@ -1,7 +1,11 @@
 #include <iostream>
+#include <fstream>
 #include <algorithm>
-#define N_MIN 5
+#include <string>
+
 using namespace std;
+
+const int N_MIN = 5;
 
 struct arrayCpp {
     size_t val;
@@ -29,10 +33,6 @@ bool array_fill (arrayCpp &arr) {
     return true;
 }
 
-void arr_sort(const arrayCpp &arr) {
-  std::sort(arr.data, arr.data+arr.val);
-}
-
 void array_print ( const arrayCpp &arr ) {
     for(size_t i = 0; i < arr.val; i++) {
         if(i != 0) cout << " ";
@@ -41,16 +41,116 @@ void array_print ( const arrayCpp &arr ) {
     cout << endl;
 }
 
+bool array_save(const arrayCpp &arr, string const filename) {
+    ofstream fout(filename, ios::app);
+
+    if(!fout.is_open()){
+        cout << "Nepodarilo se otevrit " << endl;
+        return false;
+    }
+
+    if(fout.fail()) {
+        cout << "Nevalidni prace s dokumentem " << endl;
+        return false;
+    }
+
+    fout << arr.val << endl;
+    for(size_t i = 0; i < arr.val; i++) {
+        fout << arr.data[i] << " ";
+    }
+    fout << endl;
+    return true;
+}
+
+bool array_write(arrayCpp &arr, string const filename) {
+    ofstream fout(filename, ios::binary);
+
+    if(!fout.is_open()){
+        cout << "Nepodarilo se otevrit " << endl;
+        return false;
+    }
+
+    if(fout.fail()) {
+        cout << "Nevalidni prace s dokumentem " << endl;
+        return false;
+    }
+
+    fout.write((const char *)&arr.val, sizeof(arr.val));
+
+    for(size_t i = 0; i < arr.val; i++) {
+        fout.write((const char *)(arr.data + i), sizeof(arr.data[i]));
+    }
+    fout << endl;
+    return true;
+}
+
+bool array_load(arrayCpp &arr, string const filename) {
+    int i = 0, j = 0;
+    double num;
+
+    ifstream in(filename, ios::in);
+
+    while(in >> num) {
+        if(i == 0) {
+            arr.val = num;
+            arr.data = new double[arr.val];
+        } else {
+            arr.data[j] = num;
+            j++;
+        }
+        i++;
+    }
+
+    getchar();
+
+    return true;
+}
+
+bool array_read(arrayCpp &arr, string const filename) {
+    int i = 0, j = 0;
+    double num;
+
+    ifstream in(filename, ios::in);
+
+    while(in >> num) {
+        if(i == 0) {
+            arr.val = num;
+            arr.data = new double[arr.val];
+        } else {
+            arr.data[j] = num;
+            j++;
+        }
+        i++;
+    }
+
+    getchar();
+
+    return true;
+}
+
 int main ()
 {
-	arrayCpp arrCpp;
-    if(! (array_fill(arrCpp))){
+    arrayCpp arrCpp;
+    /*if(! (array_fill(arrCpp))){
         cout << "Nespravny vstup." << endl;
         return 0;
+    }*/
+    //array_load(arrCpp, "input.txt");
+
+    array_read(arrCpp, "inputBin.txt");
+
+    array_print(arrCpp);
+    std::sort(arrCpp.data, arrCpp.data+arrCpp.val);
+    array_print(arrCpp);
+
+    /*if(!array_save(arrCpp, "outputApp.txt")){
+        cout << "Nepodarilo se zapsat do souboru " << endl;
+    }*/
+
+    array_write(arrCpp, "outputBin.txt")){
+        cout << "Nepodarilo se zapsat do souboru " << endl;
     }
-    array_print(arrCpp);
-    arr_sort(arrCpp);
-    array_print(arrCpp);
+
     array_free(arrCpp);
-	return 1;
+    return 1;
 }

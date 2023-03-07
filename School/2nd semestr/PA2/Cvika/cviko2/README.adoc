@@ -1,0 +1,144 @@
+= 2. cvičení
+:basedir: https://courses.fit.cvut.cz/BI-PA2
+:filedir: {basedir}/media/teacher/bernhdav/tutorials
+:toc:
+
+V tomto cvičení probereme základy tříd a objektů. Na cvičení můžete pracovat dle této osnovy nebo si sami programujte, dle svého uvážení.
+
+1. Pokud jste *začátečníci*, začněte od 1. úkolu a pokračujte postupně dále.
+2. Pokud jste *pokročilí*, můžete se vrhnout rovnou na bonusovou úlohu.
+
+== Opakovací otázky
+
+1. Co je to třída _(class)_?
+2. Co je to objekt _(object)_?
+3. Jaký je rozdíl mezi funkcí _(function)_ a metodou _(method, member-function)_?
+4. Co je to signatura metody?
+5. Co je to atribut _(attribute, member-variable)_?
+6. Co je to rozhraní _(interface)_?
+7. Proč předáváme objekty pomocí referencí?
+
+== Úkoly na cvičení
+
+1. Stáhněte si zdrojový kód z archivu link:{filedir}/t02.zip[t02.zip]. V souboru `task01.cpp` je funkce `main` a pár dalších, ty jsou již implementovány (tedy je neměňte). Implementujte ostatní funkce a konstanty tak, aby program správně fungoval. Ověřte na testovacích datech v adresáři `data01`.
++
+NOTE: Pro účely tohoto úkolu nemusíte ošetřovat validitu data, předpokládejte že datum je vždy správné, validujte pouze formát `YYYY-MM-DD` (tedy, že mezi čísly jsou pomlčky). Pro formáty se mohou hodit _manipulátory_ se streamy z knihovny `<iomanip>`, jejich přehled najdete například v https://en.cppreference.com/w/cpp/io/manip[`C++ referenci`].
+
+2. Upravte metodu `datelist_scan`, aby načítala data do konce vstupu. V testovacích datech tak již nenajdete na prvním řádku počet prvků. Ověřte na testovacích datech v adresáři `data02`.
++
+NOTE: V C++ již nenajdeme ekvivalent k funkci `realloc`, ten je nutný implementovat ručně.
+
+3. Všimněte si, že většina funkcí má název, kde první část odpovídá názvu datového typu (např. `date_` nebo `datelist_`) a druhá část popisuje funkci. Stejně tak prvním parametrem je struktura samotná. Implementujte tedy funkce jako metody třídy. Funkčnost ověřte na funkci `main`, ze souboru `task03.cpp`.
++
+NOTE: Funkce `date_compare` se nevolá nikdy nad objektem, ale nad dvěma objekty. Proto tuto třídu nemůže zatím převést na standardní metodu. (Příště si ukážeme, jak na to.)
+
+4. Implementujte metody `date_t::write ( ostream & out ) const` a `datelist_t::write ( ostream & out ) const`. Které do předaného výstupního streamu `out` binárně uloží strukturu. Do souboru nejprve uložte na 4 byty počet položek ve struktuře `datelist_t` a následně postupně položky zapište ve formátu 2 byty na rok, 1 byte na měsíc a 1 byte na den (celkem na jeden datum jsou 4 byty).
++
+NOTE: Využijte knihovnu `<cstdint>`, která obsahuje datové typy se zaručenou velikostí `uint8_t`, `uint16_t` nebo `uint32_t`.
+
+5. Implementujte metody `date_t::read ( istream & in )` a `datelist_t::read ( istream & in )`, které naopak z binárního souboru (dle výše popsaných pravidel) načtou obsah daných objektů.
+
+6. Máte hotovo? Zkuste bonusovou úlohu nebo příklady z xref:{basedir}/tutorials/02/index#[2. cvičení].
+
+NOTE: Jako procvičení si můžete vyzkoušet implementovat řádné ošetření data. Nezapomeňte, že jednotlivé měsíce mají různý počet dní a je potřeba rozlišovat přestupné a nepřestupné roky.
+
+=== Bonusová úloha
+
+Rozšiřte předchozí program evidující datumyfootnote:[https://prirucka.ujc.cas.cz/?slovo=datum] o strukturu `interval_t` reprezentující interval mezi daty.
+
+- Implementujte metodu `date_t::sub`, která jako parametr přijímá jiné datum a spočítá rozdíl mezi daty a vrátí správný `dateinterval_t`.
+- Implementujte metodu `date_t::add` (resp. `interval_t`), která jako parametr přijímá `interval_t` (resp. `date_t`) a vrátí nový `date_t` posunutý o tento interval.
+- Implementujte metodu `interval_t::save`, která na zadaný `ostream` vypíše jak vypadá modifikace ve formátu `[+|-] 0 weeks 0 days` (př. `+ 1 weeks 4 days`).
+
+Demonstrujte tyto úpravy vhodně ve funkci `main` pro ověření funkčnosti.
+
+Pro získání bonusových bodů, program:
+
+- musí fungovat (mít ošetřené vstupy),
+- musí být členěn na třídy a metody,
+- musí využívat konstruktů jazyka C++ _(reference, streamy)_,
+- musí řádně uvolňovat paměť,
+- musí být rozumně formátovaný,
+- musí být řádně dokumentovaný,
+- musí být odevzdán na svém cvičení.
+
+== Co dělat, když si nevím rady?
+
+1. Zachovej klid.
+2. Projdi si materiály:
+    - xref:{basedir}/lectures/index#[2. přednáška],
+    - xref:{basedir}/seminars/index#[2. proseminář],
+    - Praktický přehled xref:{basedir}/tutorials/texts/class_1#[Třídy a struktury],
+    - C++ reference https://en.cppreference.com/w/cpp/io/manip[IO manipulátory].
+3. Zformuluj dotaz, co tě trápí.
+4. Zvedni ruku (přijdeme).
+
+=== Často kladené dotazy
+
+Jak realokovat paměť v C++?:: Realokace paměti v C++ bez možnosti funkce `realloc` implikuje jedinou možnou cestu, tedy implementovat realokaci ručně. Nejprve vytvoříme dostatečně velké místo, následně překopírujeme data a staré místo uvolníme. Jak asi funguje `realloc` v C? To ukazuje následující kód.
++
+[source,c]
+----
+double * realloc_array ( double * old_array, size_t old_size, size_t new_size )
+{
+	double * new_array = (double *) malloc( new_size * sizeof( double ) );
+	// Předpokládejme, že nemůže nastat nedostatek paměti
+	for ( size_t i = 0; i < min( old_size, new_size ); ++i )
+		new_array[ i ] = old_array[ i ];
+	free( old_array );
+	return new_array;
+}
+----
+
+Jak detekovat EOF nebo chybu na vstupu?:: V C++ jsou streamy objekty a mají k dispozici metody pro získávání informací o stavu streamu. Metodou `cin.eof()` zjistíme, zda jsme na vstupu detekovali EOF nebo ne. Stejně tak metodou `cin.fail()` zjistíme zda je na vstupu chyba nebo ne. Pokud bychom chtěli můžeme i tyto stavy nastavit, například `cin.setstate( ios::failbit )` nastaví streamu `cin` _(standardní vstup)_ stav na chybový. Naopak `cin.clear()` vyčistí všechny stavy.
+
+Chyba `error: extra qualification ‘complex_t::’ on member ‘print’`:: To se stává v případě, kdy rozdělujeme metodu na hlavičku a její implementaci. V implementaci se již prefix nenachází.
++
+[source,cpp]
+----
+struct complex_t {
+	double re, im;
+
+	ostream & print ( ostream & out ) const;
+
+	// error: extra qualification ‘complex_t::’ on member ‘print’
+	// ostream & complex_t::print ( ostream & out ) const;
+};
+
+ostream & complex_t::print ( ostream & out ) const
+{
+	return out << re << " + " << im << "i";
+}
+----
+
+Chyba `no matching function for call to ‘list::sort(___)‘`:: Pravděpodobně chcete zavolat funkci `sort`, ale vaše metoda se jmenuje také `sort`. Tady přichází na řadu _namespace_ (virtuální složky) v rámci C++. Pokud chci zavolat funkci `std::sort`, pak musím uvést i prefix `std::`.
++
+[source,cpp]
+----
+struct list_t {
+	size_t n;
+	complex_t * data;
+
+	void sort ()
+	{
+		std::sort( data, data + n );
+
+		// sort( data, data + n );
+		// error: no matching function for call to ‘list::sort(___)‘
+	}
+};
+----
+
+=== Nápověda ke cvičení
+
+Následující kód ukazuje implementaci třídy `complex_t` pro reprezentaci komplexních čísel a třídy `stack_t` (z přednášky) pro reprezentaci zásobníku. Program implementuje zásobníkovou kalkulačku. Čísla jsou vkládána na zásobník a operace (`C`, `P`, `+`, `-`, `*`) vybírají ze zásobníku čísla a provádí s nimi operace. Jedná se o tzv. postfixovou (suffix) notaci (př. `5 2 -` je `3`, `7 3 * 1 -` je `( 7 * 3 ) - 1 = 20`, `7 3 1 * -` je `7 - ( 3 * 1 ) = 4`).
+
+- Všimnout si můžete inline zápisu metod (členských funkcí) oproti implementaci mimo, která vyžaduje uvedení _namespace_ (př. `complex_t::scan`).
+- Všimněte si také signatury metod `load` (resp. `save`), které jako parametr přijímají _referenci_ na ˙istream˙ (resp. `ostream`) a stejnou referenci vrací. To umožňuje implementovat tzv. _fluent interface_, kde můžeme jednotlivá volání řetězit. To je vidět i v `main` samotném.
+- Switch pro rozlišení operací je poměrně dlouhý, časem si ukážeme jak se takového switch elegantně zbavit pomocí polymorfismu.
+
+.example.cpp
+[source,cpp]
+----
+include::example.cpp[]
+----
