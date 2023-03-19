@@ -4,7 +4,7 @@
 #include <iomanip>
 
 using namespace std;
-const string MESSAGE_INVALID_INPUT = "Invalid input";
+const string MESSAGE_INVALID_INPUT = "Nespravny vstup.";
 
 struct date_t
 {
@@ -15,7 +15,9 @@ struct date_t
 
 // TASK function date_scan
 bool date_scan(date_t &date) {
-    return (bool) (!(cin >> date.year >> "-" >> date.month >> "-" >> date.day));
+    string divider = "-";
+    if(!(cin >> date.year >> divider >> date.month >> divider >> date.day)) return false;
+    return true;
 }
 
 // DONE? TASK function date_print
@@ -28,7 +30,18 @@ void date_print(date_t &date) {
 bool date_compare ( const date_t & d1, const date_t & d2 )
 {
 	// DONE? TASK body of function date_compare
-    return (d1.year > d2.year) - (d2.year > d1.year) || (d1.month > d2.month) - (d2.month > d1.month) || (d1.day > d2.day) - (d2.day > d1.day);
+    if(d1.year > d2.year) {
+        return true;
+    }
+    else if (d1.month > d2.month) {
+        return true;
+    }
+    else if (d1.day > d2.day) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 struct datelist_t
@@ -54,7 +67,8 @@ bool datelist_scan ( datelist_t & dl )
     dl.data = new date_t [dl.n];
 	for ( size_t i = 0; i < dl.n; ++i ) {
 		if ( !date_scan( dl.data[ i ] ) ) {
-			datelist_free( dl );
+			cout << "what is the issue: " << dl.data[i].year << "-" << dl.data[i].month << "-" << dl.data[i].day << endl;
+            datelist_free( dl );
 			return false;
 		}
 	}
@@ -79,13 +93,16 @@ int main ()
 {
 	datelist_t dl { 0, nullptr };
 
-	if ( !datelist_scan( dl ) ) {
-		// TASK constant MESSAGE_INVALID_INPUT
+    datelist_scan(dl);
+
+	/*if ( !datelist_scan( dl ) ) {
+		// DONE? TASK constant MESSAGE_INVALID_INPUT
 		cout << MESSAGE_INVALID_INPUT << endl;
 		return 1;
-	}
+	}*/
 
 	datelist_print( dl );
+    cout << "after 1. print" << endl;
 
 	datelist_sort( dl );
 	datelist_print( dl );
