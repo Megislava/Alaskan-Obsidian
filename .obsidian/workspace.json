@@ -19,8 +19,22 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "069129bde5456df2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "School/2nd semestr/PA2/Notes/1. Intro.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,24 +91,17 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "737d055bac789dfd",
+  "active": "069129bde5456df2",
   "lastOpenFiles": [
+    "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
     "School/2nd semestr/PSI/Pictures",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307164055.png",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307164014.png",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307162520.png",
     "School/2nd semestr/PSI/Notes/1. Uvod.md",
-    "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307123021.png",
     "School/2nd semestr/DBS/Notes/3. SQL.md",
     "School/2nd semestr/DBS/Notes/2. Relacni model, relacni algebra.md",
-    "School/2nd semestr/DBS/Notes/1. Konceptualni modelovani.md",
-    "Untitled.canvas",
-    "School/2nd semestr/DBS/Lectures/hand-les06-sql-select-2.pdf",
-    "School/2nd semestr/DBS/Lectures/hand-les04-sql-select-1.pdf",
-    "School/2nd semestr/DBS/Lectures/hand-les05-transformace.pdf",
-    "School/2nd semestr/DBS/Notes/4. Transformace konceptualniho modelu na relacni.md",
-    "School/2nd semestr/DBS/Lectures/hand-les03-relacni-model-a-ra.pdf",
-    "School/2nd semestr/DBS/2. Relacni model, relacni algebra.md"
+    "School/2nd semestr/DBS/Notes/1. Konceptualni modelovani.md"
   ]
 }
