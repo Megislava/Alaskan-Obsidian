@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "5648911065a1751b",
+        "id": "54748da7ab529f9c",
         "type": "tabs",
         "children": [
           {
-            "id": "35903e989d9d94a7",
+            "id": "dffc38a1aebb5e74",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "069129bde5456df2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "School/2nd semestr/PA2/Notes/1. Intro.md",
+                "file": "School/2nd semestr/SAP/Notes/8. Architektura souboru instrukci, cinnost procesoru.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -91,10 +77,41 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "069129bde5456df2",
+  "active": "737d055bac789dfd",
   "lastOpenFiles": [
+    "School/2nd semestr/SAP/Photos/Pasted image 20230411170259.png",
+    "School/2nd semestr/SAP/Photos/Pasted image 20230411164655.png",
+    "School/2nd semestr/SAP/Photos/Pasted image 20230411164437.png",
+    "School/2nd semestr/SAP/Notes/7. Aritmeticke operace, posuvy, pohybliva radova carka.md",
+    "School/2nd semestr/SAP/Notes/6. Aritmeticke operace a jejich realizace, pohybliva radova carka.md",
+    "School/2nd semestr/SAP/Notes/5. Zobrazeni dat v cislicovem pocitaci.md",
+    "School/2nd semestr/SAP/Photos/Pasted image 20230411115849.png",
+    "School/2nd semestr/SAP/Photos",
+    "School/2nd semestr/SAP/Notes/4. Typicke obvody v cislicovem pocitaci.md",
+    "School/2nd semestr/SAP/Notes/3. Sekvencni obvody.md",
+    "School/2nd semestr/SAP/Notes/13. Radic, pipelining.md",
+    "School/2nd semestr/SAP/Prezentace/sap-13-radic-risc.pdf",
+    "School/2nd semestr/SAP/Prezentace/SAP-12-cache.pdf",
+    "School/2nd semestr/SAP/Notes/12. Pametova hierarchie, princip cache pameti.md",
+    "School/2nd semestr/SAP/Prezentace/SAP-11-pameti.pdf",
+    "School/2nd semestr/SAP/Notes/11. Pameti.md",
+    "School/2nd semestr/SAP/Notes/10. Linearni kody.md",
+    "School/2nd semestr/SAP/Prezentace/SAP-11-kody.pdf",
+    "School/2nd semestr/SAP/Prezentace/sap-10-bus-hazardy.pdf",
+    "School/2nd semestr/SAP/Notes/9. Vstup, vystup, hazardy v kombinacnich obvodech, sbernice.md",
+    "School/2nd semestr/SAP/Prezentace/sap-8-isa.pdf",
+    "School/2nd semestr/SAP/Notes/8. Architektura souboru instrukci, cinnost procesoru.md",
+    "School/2nd semestr/SAP/Prezentace/sap-7-arit.pdf",
+    "School/2nd semestr/SAP/Prezentace/sap-6-oper.pdf",
+    "School/2nd semestr/SAP/Prezentace/sap-5-data.pdf",
+    "School/2nd semestr/SAP/Photos/Pasted image 20230406141714.png",
+    "School/2nd semestr/SAP/Photos/Pasted image 20230406141440.png",
+    "School/2nd semestr/SAP/Notes/2. Kombinacni obvody, logicka synteza.md",
+    "School/2nd semestr/SAP/Notes/1. Uvod.md",
+    "School/2nd semestr/SAP/Photos/Pasted image 20230405102317.png",
+    "School/2nd semestr/PA2/Notes/1. Intro.md",
+    "School/2nd semestr/SAP/DUs/DU2.md",
     "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
-    "School/2nd semestr/PSI/Pictures",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307164055.png",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307164014.png",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307162520.png",
