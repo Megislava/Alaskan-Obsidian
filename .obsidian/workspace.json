@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "5648911065a1751b",
+        "id": "54748da7ab529f9c",
         "type": "tabs",
         "children": [
           {
-            "id": "35903e989d9d94a7",
+            "id": "dffc38a1aebb5e74",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "069129bde5456df2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CyberSec/Theory/Security/Vulnerabilities/Cross-side scripting (XSS).md",
+                "file": "School/2nd semestr/SAP/Notes/8. Architektura souboru instrukci, cinnost procesoru.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +94,6 @@
     "CyberSec/Theory/Security/Exploitation/HTTP,HTTPS.md",
     "School/2nd semestr/PA2/Notes/1. Intro.md",
     "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
-    "School/2nd semestr/PSI/Pictures",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307164055.png",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307164014.png",
     "School/2nd semestr/PSI/Pictures/Pasted image 20230307162520.png",
