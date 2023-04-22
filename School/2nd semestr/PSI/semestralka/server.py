@@ -21,116 +21,273 @@ SERVER_KEY_OUT_OF_RANGE_ERROR = b"303 KEY OUT OF RANGE\a\b"
 serverKeys = [23019,32037,18789,16443,18189]
 clientKeys = [32037,29295,13603,29533,21952]
 
-def compareId(conn, serverConfirmHash, clientConfirmHash):
-    conn.send(b"" + serverConfirmHash + b"\a\b")
-    print(f"[SERVER_CONFIRMATION w/ key {serverConfirmHash}]")
-    clientKeyId = conn.recv(1024)[:-2].decode()    
-    print("[CLIENT_CONFIRMATION got: {clientKeyId} want: {clientConfirmHash}]")
-    if clientKeyId == clientConfirmHash:
-        print("[SECRETS MATCHED; SERVER_OK]")
-        conn.send(SERVER_OK)
-    elif any(char.isalpha() for char in clientKeyId):
-        conn.send(SERVER_SYNTAX_ERROR)
-        conn.close()
-    else:
-        conn.send(SERVER_LOGIN_FAILED)
-        conn.close()
-
-def auth(conn, usernameHash):
-    conn.send(SERVER_KEY_REQUEST)
-    keyId = int(conn.recv(1024)[:-2].decode())
-    print(f"[KEY ID IS: {keyId}]")
-    # parse keyId to get only
-    if keyId >= 0 and keyId <= 4:
-        serverConfirmHash = (usernameHash + serverKeys[keyId]) % 65536
-        clientConfirmHash = (usernameHash + clientConfirmHash[keyId]) % 65536
-        compareId(conn, serverConfirmHash, clientConfirmHash)
-        print("send-delivered-checked")
-    elif keyId > 4 or keyId < 0:
-        print(f"[KEY ID, that should not be 0, 1, 2, 3 or 4, IS: {keyId}]")
-        conn.send(SERVER_KEY_OUT_OF_RANGE_ERROR)
-        conn.close()
-    else:
-        print(f"[KEY ID, should be non-number, IS: {keyId}]")
-        conn.send(SERVER_LOGIN_ERROR)
-        conn.close()
-
-def handleObstacle(conn, currentCoords):
-    if currentCoords[0] > 0 and currentCoords[1] > 0:
-        conn.send(SERVER_TURN_LEFT)
-        conn.send(SERVER_MOVE)
-
-def getToCenter(conn):
-    coordsVisited = {}
-    conn.send(SERVER_TURN_LEFT)
-    resp = conn.recv(1024)[:-2].decode()
-    coordsVisited[0] = resp.split[2:](" ")
-    print(f"[FIRST COORDINATES: {coordsVisited[0][0]}:{coordsVisited[0][1]}]")
-    conn.send(SERVER_MOVE)
-    resp = conn.recv(1024)[:-2].decode()
-    coordsVisited[1] = resp.split[2:](" ")
-    print(f"[SECOND COORDINATES: {coordsVisited[1][0]}:{coordsVisited[1][1]}]")
-    # turn to center
-    if coordsVisited[0][0] < coordsVisited[0][1] and coordsVisited[0][1] > 0:
-        conn.send(SERVER_TURN_LEFT)
-        conn.send(SERVER_TURN_LEFT)
-    elif coordsVisited[0][0] > coordsVisited[0][1] and coordsVisited[0][0] < 0:
-        conn.send(SERVER_TURN_LEFT)
-        conn.send(SERVER_TURN_LEFT)
-    elif coordsVisited[1][0] < coordsVisited[1][1] and coordsVisited[1][1] > 0:
-        conn.send(SERVER_TURN_LEFT)
-        conn.send(SERVER_TURN_LEFT)
-    elif coordsVisited[1][0] > coordsVisited[1][1] and coordsVisited[1][0] < 0:
-        conn.send(SERVER_TURN_LEFT)
-        conn.send(SERVER_TURN_LEFT)
-    currentCoords = coordsVisited[1]
-    if currentCoords[0] == 0 or currentCoords[1] == 0:
-        while currentCoords != [0,0]:
-            # do I have the correct direction?
-            # handle obsacles
-            conn.send(SERVER_MOVE)
-    else:
-        while currentCoords != [0,0]:
-            print(f"[CURRENT COORDINATES: {currentCoords[0]}:{currentCoords[1]}]")
-            conn.send(SERVER_MOVE)
-            resp = conn.recv(1024)[:-2].decode()
-            if resp.split(" ") == currentCoords:
-                currentCoords = handleObstacle(conn, currentCoords)
-            else:
-                # handle 
-                conn.send(SERVER_MOVE)
-    # retrieve secret
-    conn.send(SERVER_PICK_UP)
-    resp = conn.recv(1024)[:-2].decode()
-    if resp != "RECHARCHING":
-        conn.send(SERVER_LOGOUT)
-
-def handleClient(conn, addr):
-    print(f"[CONNECTION FROM {addr}]")
-    while True:
-        # handle disconnect here
-        req = conn.recv(1024)
-        if not req:
-            print("[DISCONNECTING]")
-            threatLock.release()
-            break
-        print(f"[GOT MESSAGE: {req[:-2].decode()}]")
-        username = req[:-2].decode()
-        if len(username) <= 20 and username != "RECHARGING":            
-            usernameHash += (((ord(char) for char in username)) * 1000) % 65536
-            auth(conn, usernameHash)
-            print("[AUTH DONE]")
-        getToCenter(conn)
-            
+class Client(threading.Thread):
+    def __init__(self, conn, username, usernameHash, keyId, serverConfirm, clientConfirm, lastCoords, curentCoords, direction, secretMessage, timeout = 5):
+        threading.Thread.__init__(self)
+        self.conn = conn
+        self.username = username
+        self.usernameHash = usernameHash
+        self.keyId = keyId
+        self.serverConfirm = serverConfirm
+        self.clientConfirm = clientConfirm
+        self.lastCoords = lastCoords
+        self.currentCoords = curentCoords
+        self.direction = direction
+        self.secretMessage = secretMessage
+        self.timeout = timeout
+        self.response = None
+    def run(self):
+        print("[THREAD STARTED]")
+        self.handleResponse()
+        self.username = self.getResponse()
+        
+        self.validateUsername()        
+        auth(self)
+        getToCenter(self)
+    def handleResponse(self):
+        # Handle the HTTP request here
+        data = b""
+        while True:
+            # Set a timeout value for the recv method
+            self.conn.settimeout(self.timeout)
+            try:
+                chunk = self.conn.recv(1)
+                if not chunk:
+                    break
+                data += chunk
+                print(f"data is: {data}")
+                if b"\a\b" in data:
+                    parts = data.split(b"\a\b")
+                    self.response = [part.decode() for part in parts]
+                    print(f"response is {self.response}")
+                    if len(self.response) > 1:
+                        self.keyId = self.response[1]
+                    if len(self.response) > 2:
+                        self.clientConfirm = self.response[2]
+                    self.response = self.response[0]
+                    break
+            except socket.timeout:
+                # Handle the timeout here
+                print("timeouting")
+                self.conn.close()
                 
+            
+    def handleRequest(self, body, isError = False):
+        self.conn.send(body)
+        if isError:
+            self.conn.close()
+    def getResponse(self):
+        if type(self.response) == list:
+            return self.response[0]
+        return self.response
+    def handleMerging(self):
+        self.username = self.response[0]
+        self.getUsernameHash()
+        self.keyId = self.response[1]
+        if len(self.response) > 3:
+            self.clientConfirm = self.response[2]
+        if len(self.response) > 4:
+            self.currentCoords = self.response[3]
+            self.validateCoords()
+    def getUsernameHash(self):
+        usernameHash = 0
+        for char in self.username:
+            usernameHash += ord(char)
+        self.usernameHash = (usernameHash * 1000) % 65536
+    def validateUsername(self):
+        if len(self.username) > 18:
+            self.handleRequest(SERVER_SYNTAX_ERROR, True)
+    
+    def validateKeyId(self):
+        print(f"keyId is: {self.keyId}")
+        if int(self.keyId) < 0 or int(self.keyId) > 4:
+            print(f"KEY ID too bit or too small: {self.keyId}")
+            self.handleRequest(SERVER_KEY_OUT_OF_RANGE_ERROR, True)
+        if any(char.isalpha() for char in self.keyId) or len(self.keyId) > 1:
+            print(f"some weird shit in keyID: {self.keyId}")
+            self.handleRequest(SERVER_SYNTAX_ERROR, True)
+    
+    def validateClientConfirmation(self):
+        if len(self.clientConfirm) > 5:
+            print(f"clientConfirmation is: {self.clientConfirm}")
+            self.handleRequest(SERVER_SYNTAX_ERROR, True)
+    
+    def validateCoords(self, isMove = False):
+        print(f"response is {self.response}; currentCoords: {self.currentCoords}")
+        if "OK" not in self.currentCoords or len(self.currentCoords) > 12:
+            self.handleRequest(SERVER_SYNTAX_ERROR, True)
+        print(f" CURRENT COORDS IS: {self.currentCoords}")
+        self.currentCoords = [int(x) for x in self.currentCoords.split()[1:]]
+        if any(char.isalpha() for x in self.currentCoords for char in str(x)):
+            self.handleRequest(SERVER_SYNTAX_ERROR, True)
+        if isMove:
+            if self.lastCoords[0] == self.currentCoords[0] and self.lastCoords[1] == self.currentCoords[1]:
+                # TODO odecist od sebe tam kam jsem se chtela dostat a momentalni coods to get "minuly" a spravny smer
+                print(f"[SHOULD GO TO OBSTACLE HANDLING WITH: {self.lastCoords}:{self.currentCoords}]")
+                self.handleObstacle() 
+                print(f"[AFTER OBSTACLE HANDLING WITH: {self.lastCoords}:{self.currentCoords}]")   
+    def getDirection(self):
+        if self.lastCoords[0] == self.currentCoords[0] and self.lastCoords[1] > self.currentCoords[1]:
+            self.direction = "down"
+        elif self.lastCoords[0] == self.currentCoords[0] and self.lastCoords[1] < self.currentCoords[1]:
+            self.direction = "up"
+        elif self.lastCoords[1] == self.currentCoords[1] and self.lastCoords[0] > self.currentCoords[0]:
+            self.direction = "left"
+        elif self.lastCoords[1] == self.currentCoords[1] and self.lastCoords[0] < self.currentCoords[0]:
+            self.direction = "right"
+    def validateSecretMessage(self):
+        if self.secretMessage != "RECHARCHING":
+            self.handleRequest(SERVER_LOGOUT, True)
+        if len(self.secretMessage) > 100:
+            self.handleRequest(SERVER_SYNTAX_ERROR, True)
+    def turn90(self):
+        self.getDirection()
+        if self.direction == "left":
+            if self.currentCoords[1] < 0:
+                self.handleRequest(SERVER_TURN_RIGHT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                self.validateCoords()
+            elif self.currentCoords[1] > 0:
+                self.handleRequest(SERVER_TURN_LEFT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                self.validateCoords()
+        elif self.direction == "right":
+            if self.currentCoords[1] > 0:
+                self.handleRequest(SERVER_TURN_RIGHT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                self.validateCoords()
+            elif self.currentCoords[1] < 0:
+                self.handleRequest(SERVER_TURN_LEFT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                self.validateCoords()
+        elif self.direction == "up":
+            if self.currentCoords[0] > 0:
+                self.handleRequest(SERVER_TURN_LEFT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                self.validateCoords()
+            elif self.currentCoords[0] < 0:
+                self.handleRequest(SERVER_TURN_RIGHT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                self.validateCoords()
+        elif self.direction == "down":
+            if self.currentCoords[0] > 0:
+                self.handleRequest(SERVER_TURN_RIGHT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                self.validateCoords()
+            elif self.currentCoords[0] < 0:
+                self.handleRequest(SERVER_TURN_LEFT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                self.validateCoords()        
+        print(f"[IN TURNING: {self.lastCoords}=>{self.currentCoords}]")
 
-    conn.close()
+    def handleObstacle(self):
+            print(f"IN HANDLE OBSTACLE")
 
+            self.handleRequest(SERVER_MOVE)
+            self.handleResponse()
+            self.lastCoords = self.currentCoords
+            self.currentCoords = self.getResponse()
+            print(f"last coords: {self.lastCoords}; current coords: {self.currentCoords}")
+            self.validateCoords(True)
+
+            self.turn90()
+
+# --------- NEW CLIENT/THREAD ------------#
 def startNewThreats(server):
     while True:
         conn, addr = server.accept()
-        thread = threading.Thread(target=handleClient, args=(conn, addr))
-        thread.start()
+        print(f"[CONNECTION FROM {addr}]")    
+        
+        client = Client(conn, "", "", "", "", "", "", "", "", "")
+        client.start()
+        client.join()
+
+# ------------- AUTH ------------------#
+def auth(client):
+    # get usernameHash
+    client.getUsernameHash()
+
+    print("sending key id")
+    client.handleRequest(SERVER_KEY_REQUEST)
+    client.handleResponse()
+    print(f"response is: {client.response}")
+    if client.keyId == "":
+        client.keyId = client.getResponse()
+    client.validateKeyId() 
+    print(f"key id is: {client.keyId} ")
+
+    client.serverConfirm = (int(client.usernameHash) + serverKeys[int(client.keyId)]) % 65536
+    expectedClientConfirm = (int(client.usernameHash) + clientKeys[int(client.keyId)]) % 65536
+    
+    print("sending server confirm")
+    # send server confirmation
+    client.handleRequest(str(client.serverConfirm).encode() + b"\a\b")
+    # get client confirmation and validate
+    client.handleResponse()
+    if client.clientConfirm == "":
+        client.clientConfirm = client.getResponse()
+    client.validateClientConfirmation()
+    print(f"client conrim is: {client.clientConfirm} and expected is {expectedClientConfirm}")
+
+    # if all ok, continue
+    if int(client.clientConfirm) != expectedClientConfirm:
+        print("sending login failed")
+        client.handleRequest(SERVER_LOGIN_FAILED, True)
+    else:
+        client.handleRequest(SERVER_OK)
+    print(f"[CONTINUE AFTER AUTH with username {client.username}]")
+# ------------------ CREATE PATH ----------#
+def getToCenter(client):
+    print("sending turn left")
+    client.handleRequest(SERVER_TURN_LEFT)
+    client.handleResponse()
+    client.currentCoords = client.getResponse()
+    print(f"current response is {client.response} and currentCoords is {client.currentCoords}")
+    client.validateCoords()
+    
+    print("[---FORWARD MOVE---]")
+    client.handleRequest(SERVER_MOVE)
+    client.handleResponse()
+    client.lastCoords = client.currentCoords
+    client.currentCoords = client.getResponse()
+    client.validateCoords(True)
+
+    print(f"[BEFORE WHILE: {client.lastCoords}=>{client.currentCoords}]")
+
+    # turn to center if neccesary
+    client.turn90()
+    while client.currentCoords != [0,0]:
+        print(f"[CURRENT COORDINATES BEFORE FORWARD MOVE: {client.lastCoords}:{client.currentCoords}]")
+        if (client.currentCoords[0] == 0 and client.lastCoords[0] > client.currentCoords[0]) or (client.currentCoords[1] == 0 and client.lastCoords[1] > client.currentCoords[1]):
+            print(f"goes to turn")
+            client.turn90()
+
+        print("[---FORWARD MOVE---]")
+        client.handleRequest(SERVER_MOVE)
+        client.handleResponse()
+        print(f"[response to move was: {client.response}]")
+        print(f"[AFTER MOVE before COORDS SWITCHED: {client.lastCoords}=>{client.currentCoords}]")
+        client.lastCoords = client.currentCoords
+        client.currentCoords = client.getResponse()
+        print(f"[AFTER MOVE after COORDS SWITCHED: {client.lastCoords}=>{client.currentCoords}]")
+        
+        client.validateCoords(True)
+        
+        print(f"[CURRENT COORDINATES AFTER FORWARD MOVE/OBSACTLE HANDLE AND SWICHED COORDS: {client.lastCoords}:{client.currentCoords}]")
+        
+    # retrieve secret
+    client.handleRequest(SERVER_PICK_UP)
+    client.handleResponse()
+    client.secretMessage = client.getResponse()
+    client.validateSecretMessage()
 
 def main():
     host = socket.gethostbyname(socket.gethostname())
@@ -141,7 +298,6 @@ def main():
     server.listen()
     threatLock.acquire()
     print(f"[STARTED LISTENING on {host}:{port}]")
-
     startNewThreats(server)
 
 
