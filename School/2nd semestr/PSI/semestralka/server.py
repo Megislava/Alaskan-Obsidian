@@ -22,7 +22,7 @@ serverKeys = [23019,32037,18789,16443,18189]
 clientKeys = [32037,29295,13603,29533,21952]
 
 class Client(threading.Thread):
-    def __init__(self, conn, username, usernameHash, keyId, serverConfirm, clientConfirm, lastCoords, curentCoords, direction, secretMessage, timeout = 5):
+    def __init__(self, conn, username, usernameHash, keyId, serverConfirm, clientConfirm, lastCoords, curentCoords, direction, secretMessage, timeout = 4):
         threading.Thread.__init__(self)
         self.conn = conn
         self.username = username
@@ -57,6 +57,11 @@ class Client(threading.Thread):
                 data += chunk
                 print(f"data is: {data}")
                 if b"\a\b" in data:
+                    if b"RECHARGING" in data:
+                        data = b""
+                        self.timeout = 5
+                        self.conn.settimeout(self.timeout)
+                        continue
                     parts = data.split(b"\a\b")
                     self.response = [part.decode() for part in parts]
                     print(f"response is {self.response}")
@@ -70,25 +75,18 @@ class Client(threading.Thread):
                 # Handle the timeout here
                 print("timeouting")
                 self.conn.close()
+                exit(0)
                 
             
     def handleRequest(self, body, isError = False):
         self.conn.send(body)
         if isError:
             self.conn.close()
+            exit(0)
     def getResponse(self):
         if type(self.response) == list:
             return self.response[0]
         return self.response
-    def handleMerging(self):
-        self.username = self.response[0]
-        self.getUsernameHash()
-        self.keyId = self.response[1]
-        if len(self.response) > 3:
-            self.clientConfirm = self.response[2]
-        if len(self.response) > 4:
-            self.currentCoords = self.response[3]
-            self.validateCoords()
     def getUsernameHash(self):
         usernameHash = 0
         for char in self.username:
@@ -100,12 +98,12 @@ class Client(threading.Thread):
     
     def validateKeyId(self):
         print(f"keyId is: {self.keyId}")
-        if int(self.keyId) < 0 or int(self.keyId) > 4:
-            print(f"KEY ID too bit or too small: {self.keyId}")
-            self.handleRequest(SERVER_KEY_OUT_OF_RANGE_ERROR, True)
         if any(char.isalpha() for char in self.keyId) or len(self.keyId) > 1:
             print(f"some weird shit in keyID: {self.keyId}")
             self.handleRequest(SERVER_SYNTAX_ERROR, True)
+        if int(self.keyId) < 0 or int(self.keyId) > 4:
+            print(f"KEY ID too bit or too small: {self.keyId}")
+            self.handleRequest(SERVER_KEY_OUT_OF_RANGE_ERROR, True)
     
     def validateClientConfirmation(self):
         if len(self.clientConfirm) > 5:
@@ -185,20 +183,98 @@ class Client(threading.Thread):
                 self.handleRequest(SERVER_TURN_LEFT)
                 self.handleResponse()
                 self.currentCoords = self.getResponse()
-                self.validateCoords()        
+                self.validateCoords()
+        else:
+               print("----- NO DIRECTION -> TURNING")
+               self.handleRequest(SERVER_TURN_RIGHT)
+               self.handleResponse()
+               self.currentCoords = self.getResponse()   
         print(f"[IN TURNING: {self.lastCoords}=>{self.currentCoords}]")
-
+    def updateLastCoords(self):
+        print(f"get difference from CC:{self.currentCoords} and LC:{self.lastCoords}")
+        if self.currentCoords[0] == self.lastCoords[0]:
+            if self.currentCoords[1] > self.lastCoords[1]:
+                self.lastCoords[1] = self.currentCoords[1] - 1
+            elif self.currentCoords[1] < self.lastCoords[1]:
+                self.lastCoords[1] = self.currentCoords[1] + 1
+        if self.currentCoords[1] == self.lastCoords[1]:
+            if self.currentCoords[0] > self.lastCoords[0]:
+                self.lastCoords[0] = self.currentCoords[0] - 1
+            elif self.currentCoords[0] < self.lastCoords[0]:
+                self.lastCoords[0] = self.currentCoords[0] + 1
+        print(f"should be moved:{self.currentCoords} and LC:{self.lastCoords}")
     def handleObstacle(self):
             print(f"IN HANDLE OBSTACLE")
+            if self.currentCoords[0] == 0 or self.currentCoords[1] == 0:
+                print("sending turn right")
+                self.handleRequest(SERVER_TURN_LEFT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                print(f"current response is {self.response} and currentCoords is {self.currentCoords}")
+                self.validateCoords()
+                
+                print("[---FORWARD MOVE---]")
+                self.handleRequest(SERVER_MOVE)
+                self.handleResponse()
+                #self.lastCoords = self.currentCoords
+                self.currentCoords = self.getResponse()
+                self.validateCoords(True)
 
-            self.handleRequest(SERVER_MOVE)
-            self.handleResponse()
-            self.lastCoords = self.currentCoords
-            self.currentCoords = self.getResponse()
-            print(f"last coords: {self.lastCoords}; current coords: {self.currentCoords}")
-            self.validateCoords(True)
+                print("sending turn left")
+                self.handleRequest(SERVER_TURN_RIGHT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                print(f"current response is {self.response} and currentCoords is {self.currentCoords}")
+                self.validateCoords()
 
-            self.turn90()
+                print("[---FORWARD MOVE---]")
+                self.handleRequest(SERVER_MOVE)
+                self.handleResponse()
+                #self.lastCoords = self.currentCoords
+                self.currentCoords = self.getResponse()
+                self.validateCoords(True)
+
+                print("[---FORWARD MOVE---]")
+                self.handleRequest(SERVER_MOVE)
+                self.handleResponse()
+                #self.lastCoords = self.currentCoords
+                self.currentCoords = self.getResponse()
+                self.validateCoords(True)
+
+                print("sending turn left")
+                self.handleRequest(SERVER_TURN_RIGHT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                print(f"current response is {self.response} and currentCoords is {self.currentCoords}")
+                self.validateCoords()
+
+                print("[---FORWARD MOVE---]")
+                self.handleRequest(SERVER_MOVE)
+                self.handleResponse()
+                #self.lastCoords = self.currentCoords
+                self.currentCoords = self.getResponse()
+                self.validateCoords(True)
+
+                print("sending turn right")
+                self.handleRequest(SERVER_TURN_LEFT)
+                self.handleResponse()
+                self.currentCoords = self.getResponse()
+                print(f"current response is {self.response} and currentCoords is {self.currentCoords}")
+                self.validateCoords()
+
+                self.updateLastCoords()
+            
+            else:
+                self.turn90()
+                print("[---FORWARD MOVE---]")
+                self.handleRequest(SERVER_MOVE)
+                self.handleResponse()
+                self.lastCoords = self.currentCoords
+                self.currentCoords = self.getResponse()
+                print(f"last coords: {self.lastCoords}; current coords: {self.currentCoords}")
+                self.validateCoords(True)
+
+                self.turn90()
 
 # --------- NEW CLIENT/THREAD ------------#
 def startNewThreats(server):
@@ -246,8 +322,8 @@ def auth(client):
     print(f"[CONTINUE AFTER AUTH with username {client.username}]")
 # ------------------ CREATE PATH ----------#
 def getToCenter(client):
-    print("sending turn left")
-    client.handleRequest(SERVER_TURN_LEFT)
+    print("sending turn right")
+    client.handleRequest(SERVER_TURN_RIGHT)
     client.handleResponse()
     client.currentCoords = client.getResponse()
     print(f"current response is {client.response} and currentCoords is {client.currentCoords}")
@@ -266,7 +342,7 @@ def getToCenter(client):
     client.turn90()
     while client.currentCoords != [0,0]:
         print(f"[CURRENT COORDINATES BEFORE FORWARD MOVE: {client.lastCoords}:{client.currentCoords}]")
-        if (client.currentCoords[0] == 0 and client.lastCoords[0] > client.currentCoords[0]) or (client.currentCoords[1] == 0 and client.lastCoords[1] > client.currentCoords[1]):
+        if client.currentCoords[0] == 0 or client.currentCoords[1] == 0:
             print(f"goes to turn")
             client.turn90()
 

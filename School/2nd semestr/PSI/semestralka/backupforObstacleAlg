@@ -36,34 +36,18 @@ self.handleResponse()
 self.currentCoords = self.getResponse()
 self.validateCoords(True)
 
+if (self.quadrant == 0 and (self.direction != "down" or self.direction != "right")) or (self.quadrant == 1 and (self.direction != "down" or self.direction != "left")) or (self.quadrant == 1 and (self.direction != "up" or self.direction != "left")) or (self.quadrant == 3 and (self.direction != "up" or self.direction != "right")):
+    print("------ TURNING 180--------")
+    self.handleRequest(SERVER_TURN_RIGHT)
+    self.handleResponse()
+    self.currentCoords = self.getResponse()
+    self.validateCoords()
+    self.handleRequest(SERVER_TURN_RIGHT)
+    self.handleResponse()
+    self.currentCoords = self.getResponse()
+    self.validateCoords()
 
-def handleResponse(self):
-        # Set a timeout value for the recv method
-        self.conn.settimeout(self.timeout)
-        
-        # Handle the HTTP request here
-        try:
-            data = b""
-            while True:
-                chunk = self.conn.recv(1)
-                if not chunk:
-                    break
-                data += chunk
-                print(f"data is: {data}")
-                if b"\a\b" in data:
-                    parts = data.split(b"\a\b")
-                    self.response = [part.decode() for part in parts]
-                    print(f"response is {self.response}")
-                    if len(self.response) > 1:
-                        self.keyId = self.response[1]
-                    if len(self.response) > 2:
-                        self.clientConfirm = self.response[2]
-                    self.response = self.response[0]
-                    break
-        except socket.timeout:
-            # Handle the timeout here
-            print("timeouting")
-            self.conn.close()
+
 
  def handleResponse(self):
         # Initialize the timed_out flag
