@@ -2,7 +2,7 @@
 - program is always run as it is written/in the same flow
 
 - declaration
-	- specifiyng data type + name
+	- specifying data type + name
 - initialization
 	- giving a value to declared variable
 	- can be also `undefined`
@@ -22,7 +22,7 @@ long long x = 1234567890123456789LL;
 - integer = whole number
 - 32-bit (biggest number is: 4 294 967 296)
 	- `-2 147 483 648` → `+2 147 483 647` (`-2^31` → `2^31-1`)
-- `+`/`-`/no sign - interpreeted as `int`
+- `+`/`-`/no sign - interpreted as `int`
 - norm for sizes: `short int <= int <= long int`
 
 Type; Equivalent signature | Bytes | Bits | Range 
@@ -57,6 +57,12 @@ signed long long = **long long** (C99 only) | 8 | 64 | -9 223 372 036 854 775 80
 
 ### `float`, `double`
 - `double` - numbers with decimal point
+	- more precise then `float`
+		- `float` - 6 decimal places
+		- `double` - 15 decimal places
+		- => `float` takes less memory (4 vs 8 bytes)
+	- is faster then `float`
+	- MORE ACCURATE
 - `float` - has to be declared with `f`/`F` at the end (suffix)
 	- `205.F`
 	- `%f` - float
@@ -88,3 +94,30 @@ long double | 10 | 80
 ### Boolean values
 - `false` or `true`
 - can be reversed with `bool value = false; value = !value` → `true`
+
+
+### `const`
+- value in code is set once
+- best practise is to mark them UPPER CASE
+
+## Casting Types
+- changing type of outputted variable
+- two types of conversion
+	- implicit - wrong (dangereus)
+		- don't do it like this:
+		- ```c
+			int a;
+			double b = 3.0;
+			a = b;
+		- types do not mach but compiler will try to convert them
+	- explicit - correct way to change type
+		- but like this:
+			- ```c
+				double testScore = 95.7;
+				int displayScore = 0;
+				displayScore = (int)testScore;
+				printf("Great work, you got a %d%% on your test\n", displayScore);
+	- recasting `char` to any integer anf other way round
+		- chars are kept in memory as ASCII codes
+			- `a` lower case is 97, uppercase 65
+		- 

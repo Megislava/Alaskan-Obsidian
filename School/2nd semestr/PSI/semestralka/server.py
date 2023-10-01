@@ -27,7 +27,7 @@ LEFT = 3
 
 
 class Client(threading.Thread):
-    def __init__(self, conn, username, usernameHash, keyId, serverConfirm, clientConfirm, lastCoords, curentCoords, lastDirection, secretMessage, timeout = 4, direction = 0):
+    def __init__(self, conn, username, usernameHash, keyId, serverConfirm, clientConfirm, lastCoords, curentCoords, lastDirection, secretMessage, timeout = 2, direction = 0):
         threading.Thread.__init__(self)
         self.conn = conn
         self.username = username
@@ -43,6 +43,7 @@ class Client(threading.Thread):
         self.timeout = timeout
         self.response = None
     def run(self):
+        print("[THREAD STARTED]")
         self.handleResponse(20)
         self.username = self.getResponse()
         
@@ -61,8 +62,6 @@ class Client(threading.Thread):
                     break
                 data += chunk
                 if b"\a\b" in data:
-                    # TODO - handle RECHARGING?
-                    
                     parts = data.split(b"\a\b")
                     self.response = [part.decode() for part in parts]
                     if len(self.response) > 1:
@@ -75,7 +74,6 @@ class Client(threading.Thread):
                     if len(data) >= maxLength:
                         self.handleRequest(SERVER_SYNTAX_ERROR, True)
             except socket.timeout:
-                # Handle the timeout here
                 self.conn.close()
                 exit(0)                
             
@@ -98,6 +96,7 @@ class Client(threading.Thread):
             self.handleRequest(SERVER_SYNTAX_ERROR, True)
     
     def validateKeyId(self):
+        print(f"keyId is: {self.keyId}")
         if " " in self.keyId:
             self.handleRequest(SERVER_SYNTAX_ERROR, True)
         if any(char.isalpha() for char in self.keyId) or len(self.keyId) > 1:
@@ -112,6 +111,7 @@ class Client(threading.Thread):
             self.handleRequest(SERVER_SYNTAX_ERROR, True)
     
     def validateCoords(self):
+        print(f"response is {self.response}; currentCoords: {self.currentCoords}")
         if "." in self.currentCoords or "," in self.currentCoords:
             self.handleRequest(SERVER_SYNTAX_ERROR, True)
         if "OK" not in self.currentCoords:
@@ -121,6 +121,7 @@ class Client(threading.Thread):
         self.currentCoords = [int(x) for x in self.currentCoords.split()[1:]]
         if any(char.isalpha() for x in self.currentCoords for char in str(x)):
             self.handleRequest(SERVER_SYNTAX_ERROR, True) 
+    
     def getDirection(self):
         if self.lastCoords[1] > self.currentCoords[1]:
             self.direction = DOWN
@@ -134,6 +135,7 @@ class Client(threading.Thread):
         if self.secretMessage != "RECHARCHING":
             self.handleRequest(SERVER_LOGOUT, True)
     def turn90(self):
+        print(f"in TURN TO {self.lastDirection}")
         currentDirection = self.direction
         self.turnTo(self.lastDirection)
         self.lastDirection = currentDirection
@@ -156,6 +158,7 @@ class Client(threading.Thread):
                 self.direction = (self.direction + 1) % 4
         self.currentCoords = self.getResponse()
         self.validateCoords()
+        print(f"current coords are: {self.currentCoords}")
         if self.currentCoords[0] == 0 and self.currentCoords[1] == 0:
             self.getSecretMessage()
         
@@ -192,19 +195,13 @@ class Client(threading.Thread):
     def handleObstacle(self):
         if self.currentCoords[0] == 0 or self.currentCoords[1] == 0:
             self.move(SERVER_TURN_LEFT)
-            
             self.move(SERVER_MOVE)
             self.move(SERVER_TURN_RIGHT)
-
             self.move(SERVER_MOVE)
-
             self.move(SERVER_MOVE)
-
             self.move(SERVER_TURN_RIGHT)
-
             self.move(SERVER_MOVE)
             self.move(SERVER_TURN_LEFT)
-        
         else:
             self.turn90() # opacne ke stredu
             self.move(SERVER_MOVE)
@@ -214,6 +211,8 @@ class Client(threading.Thread):
 def startNewThreats(server):
     while True:
         conn, addr = server.accept()
+        print(f"[CONNECTION FROM {addr}]")    
+        
         client = Client(conn, "", "", "", "", "", "", "", "", "")
         thread = threading.Thread(target=client.run)
         thread.start()
@@ -222,16 +221,16 @@ def startNewThreats(server):
 def auth(client):
     # get usernameHash
     client.getUsernameHash()
-
     client.handleRequest(SERVER_KEY_REQUEST)
     client.handleResponse(5)
+    
     if client.keyId == "":
         client.keyId = client.getResponse()
     client.validateKeyId() 
-
+    
     client.serverConfirm = (int(client.usernameHash) + serverKeys[int(client.keyId)]) % 65536
     expectedClientConfirm = (int(client.usernameHash) + clientKeys[int(client.keyId)]) % 65536
-
+    
     # send server confirmation
     client.handleRequest(str(client.serverConfirm).encode() + b"\a\b")
     # get client confirmation and validate
@@ -239,20 +238,21 @@ def auth(client):
     if client.clientConfirm == "":
         client.clientConfirm = client.getResponse()
     client.validateClientConfirmation()
-
+    
     # if all ok, continue
     if int(client.clientConfirm) != expectedClientConfirm:
         client.handleRequest(SERVER_LOGIN_FAILED, True)
     else:
         client.handleRequest(SERVER_OK)
+    print(f"[CONTINUE AFTER AUTH with username {client.username}]")
 # ------------------ CREATE PATH ----------#
 def getToCenter(client):
     client.handleRequest(SERVER_TURN_RIGHT)
     client.handleResponse(12)
     client.currentCoords = client.getResponse()
     client.validateCoords()
-    
     client.move(SERVER_MOVE)
+    
     if client.currentCoords == client.lastCoords:
         client.move(SERVER_TURN_RIGHT)
         client.move(SERVER_MOVE)
@@ -270,7 +270,6 @@ def getToCenter(client):
         if client.currentCoords == client.lastCoords:
             client.handleObstacle()
         
-
 def main():
     host = socket.gethostbyname(socket.gethostname())
     port = 9999
@@ -280,6 +279,7 @@ def main():
     server.listen()
     print(f"[STARTED LISTENING on {host}:{port}]")
     startNewThreats(server)
+
 
 if __name__ == "__main__":
     main()
