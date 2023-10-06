@@ -1,0 +1,81 @@
+{
+  "main": {
+    "id": "3dd53b8250467576",
+    "type": "split",
+    "children": [
+      {
+        "id": "3532d9fff7d4eb0f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "CyberSec/Theory/Programming Languages/C/Data representation.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "faf2db552574aca6",
+    "type": "split",
+    "children": [
+      {
+        "id": "a95cd082976af948",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "737d055bac789dfd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "7b2d1357535fcfe0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "2's",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "01559e3f5c72e717",
+    "type": "split",
+    "children": [],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "3532d9fff7d4eb0f",
+  "lastOpenFiles": [
+    "CyberSec/Theory/Programming Languages/C/Data Type & Variables.md",
+    "CyberSec/Theory/Programming Languages/C/Data representation.md",
+    "CyberSec/Theory/Programming Languages/C/Intro.md",
+    "CyberSec/Theory/Programming Languages/C/Expressions.md",
+    "CyberSec/Theory/Linux/Linux Command Line.md",
+    "CyberSec/Tools/tmux.md",
+    "CyberSec/Theory/Good to know commands.md",
+    "CyberSec/Tools/git.md",
+    "CyberSec/Theory/Programming Languages/C/DeepC.md",
+    "CyberSec/Tools/gzip.md"
+  ]
+}

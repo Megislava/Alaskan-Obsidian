@@ -1,0 +1,46 @@
+- host discovery, scanning and enumerating services - ports that are open and what is running on them
+- `-sS`: SYN scan - sends SYN packets to port and sees how they responds (if it responds with SYN/ACK the port is open), default scan, stealthy
+- `-sT`: TCP scan - to make sure that you don't have any false positives
+- `-sU`: scan UDP
+- `--send-ip`: when running locally and checking in wireshark (wireshark would not show the correct IP if this is off)
+- `-sV`: what version of software is running on the port
+- `-sA`: ACK scan - whether the port is filtered - if port is not expecting ACK it will respond with RST
+- `-sX`, `-sN`, `-sF` (Xmas, Null, FIN scan) - exploit a loophole in the TCP RFC to differentiate between open and closed ports, often used as a firewall evadion
+	- Xmas scan: sends FIN, PSH and IRC flags (lightning the packets like Christmas tree)
+	- Null scan: doesn't send any bits (TCP flag head is 0)
+	- FIN scan: sends just TCP FIN bit, good for slipping through non-stable firewalls
+- `-sn`: ping sweep - use in conjustion with IP address range, eg: `nmap -sn 192.168.0.1.-254`
+- `-f`: fragmentation
+	- firewall or IDS evasion tactic
+- `--mtu <number>`: control the size of the packets
+- `--scan-delay <number>`: used to add a delay betwen packets sent, evasion of firewall/IDS
+- `--badsum`: used to generate invalid checksums for packets, can be use to determine the presence of firewall/IDS
+- `-D`: decoy - adds source of the traffic (but in logs of target it shows both - ours and the decoy)
+- `-e`: what adapter do you want to use
+- `-S`: spoofed IP of source (in target's logs it shows only the spoofed one)
+- `T0-5`: paranoid | sneaky | polite | normal | aggressive | insane
+- `-A`: aggressive scan
+- `-p`: looks for specific ports
+	- `-` : all ports (0-65535)
+	- `3, 42, 211`: these ports
+	- `233-532`: there ports - range
+- `--open`: returns only opens ports
+- `-O`: guesses operating system
+- `-v`: verbose
+- `--script=<script_name>`: goes and runs the script/script folder against target
+	- auth: attempt to bypass authentication for running services
+	- broadcast, default, dos, external, fuzzer, malvare, version
+	- brute (force): attempt to bruteforce credentials for running services
+	- discovery: attempt to query running services for futher information about the network (e query and SNMP server)
+	- exploit: attempt to exploit a vulnerability
+	- intrusive: not safe: likely to affent the target
+	- safe: won't affect the target
+	- vuln (vulnerable): scan for vulnerabilites
+	- Nmap Scripting Enginge (NSE) - powerful addition to Nmap
+	- searching for script: `grep "ftp" /usr/share/nmap/scripts/script.db`
+- `-o`: output params:
+	- `-oN`: normal; `-oX`: XML; `-oG`: grappable
+	- `-oA`: all
+- `-Pn`: disables ping (some targets can have forbidden ping/icmp)
+- `-n`: turn off name resolution (increase in speed)
+- `-iL <path>`: input files/tooks IP addresses and runs them as target

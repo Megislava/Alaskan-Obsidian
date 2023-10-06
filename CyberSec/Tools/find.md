@@ -1,0 +1,44 @@
+- powerfull search
+	- searched based on parameters
+		- more parameters are by default AND
+		- OR is handled as follows:
+			- `find /etc \( \( -type f -links +1 \) -o \( -type d -links +4 \) \)` - find files with one and more links OR directories with 4 and more links in /etc
+				- the `()` can be ecsaped with `\` or encosed in `""` or `''`
+	- can do things with result/s
+		- list directory, delete files, ... -> execute commands
+- path can be added → find /… *filename*
+
+- `-name` - name of file
+	- `find . -name src -type d` - find all directories named src
+- `-ls` - list more info about the file (like with `ls`)
+	- `find /etc -name '*.conf*' -ls 2>/dev/null`
+- `-print` - implicite action
+	- if other action is there print is by default not done -> use print to print also
+- `-size `- bitsize, ...
+	- `find . -size +500k -size -10M -name '*.tar.gz'` - find all zip files with size in range 500k to 10M
+	- without char it will be block
+		- `find /etc -size 1` - one block of memory
+	- can be used as empty: `find /etc -empty` - empty things in /etc
+- `-type` - file, folder, ...
+	- `f` (file), `d` (directory), `l` (symlink)
+- `-links` - number of symbolic links
+- `-user` - user owning it
+- `-perm` - permissions
+- `-path` - find in path
+	- `find . -path '*/test/*.py' -type f` - find all python files that have a folder named test in their path
+- `-mtime` - last modified time
+	- `n` (=), `-n` (<), `+n` (>)
+		- can be combined
+	- `find . -mtime -1` - find all files modified in the last day
+	- `find /etc -mtime +1000` - modified in more then 1000 days
+- `!` - used as not
+	- appliable to closest next parameter
+- `-exec` - execute a command
+	- run by find not by shell (different thread?)
+	- exitted by `;` (needs to be escaped, is run for each find result), or with `+` (typically runs only once)
+		- `find /etc -name '*.sample' -exec wc -l {} \;` - prints found files in /etc according to params and prints number of lines
+		- `find /etc -name '*.sample' -exec wc -l {} +` - prints found files in /etc according to params and prints number of lines PLUS number of lines of all results
+			- the `{}` is each result from find - can be used multiple times
+	- `find . -name '*.tmp' -exec rm {} \;` - deletes all files with .tmp extension
+	- `find . -name '*.png' -exec convert {} {}.jpg \;` - finds all PNG files and convert them to JPG.
+	- `find /etc -type f -exec grep -li '#!/bin/bash' {} +` - files containing `#!/bin/bash` in their "code"

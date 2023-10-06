@@ -1,0 +1,41 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.9</VERSION>
+ <DEVICE>ATmega169</DEVICE>
+ <WORKING_DIR>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m169def.inc</FILE>
+  <FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\print.inc</FILE>
+  <FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\znaky.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <init_disp><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\print.inc</FILE><LINE>3</LINE></init_disp>
+  <show_char><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\print.inc</FILE><LINE>18</LINE></show_char>
+  <mezera><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\print.inc</FILE><LINE>42</LINE></mezera>
+  <neznak><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\print.inc</FILE><LINE>39</LINE></neznak>
+  <nemezera><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\print.inc</FILE><LINE>44</LINE></nemezera>
+  <znaky><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\znaky.inc</FILE><LINE>8</LINE></znaky>
+  <zobzc><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\print.inc</FILE><LINE>64</LINE></zobzc>
+  <start><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>17</LINE></start>
+  <delka><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>13</LINE></delka>
+  <retez><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>14</LINE></retez>
+  <main_loop><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>26</LINE></main_loop>
+  <loop><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>42</LINE></loop>
+  <cek2><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>49</LINE></cek2>
+  <cek><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>50</LINE></cek>
+  <endloop><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>95</LINE></endloop>
+  <end><FILE>C:\Users\ajung\Desktop\Alaskan-Obsidian\School\2nd semestr\SAP\AVR\runningText\runningText.asm</FILE><LINE>105</LINE></end>
+ </LABELS>
+</ASSEMBLER_INFO>

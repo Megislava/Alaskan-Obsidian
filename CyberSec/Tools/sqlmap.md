@@ -1,0 +1,1 @@
+- `sqlmap -u='<URL>' --cookie="<COOKIE_inc_the_name>"`

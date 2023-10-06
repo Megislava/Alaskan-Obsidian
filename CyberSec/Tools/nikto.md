@@ -1,0 +1,5 @@
+- scannes for web applications vulnerabilities
+- `-h`: set up host
+- `-nossl / -ssl` - doesn't matter what type of transport / force secure transport
+- `-p`: set up specific port
+- `-list-plugins`: list all available plugins 

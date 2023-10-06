@@ -1,0 +1,800 @@
+--------------------------------------------------------------------------------
+--Michal Gerhát--------------BI-PS1 Survival Guide--------------------gerhamic--
+--------------------------------------------------------------------------------
+Proměnné
+  1. deklarace              A=5
+                            B="Ahoj"
+  3. proměnná prostředí     export C="Hello"
+     nepředávaná proměnná   export -n D=10
+  4. zrušení proměnné       unset D
+
+	Užitečné systémové proměnné (pro vypsání použít $, např $HOME, $@)
+	  1. domovský adresář             HOME
+	  2. akutální adresář             PWD
+	  3. předchozí aktuální adresář   OLDPWD
+	  4. jméno uživatele              USER
+	  5. jméno příkazu                0
+	  6. 1,...,9-tý parametr          1,...,9
+	  7. počet parametrů              #
+	  8. všechny parametry            @
+--------------------------------------------------------------------------------
+Selftest I: Proměnlivé proměnné
+- Zajistěte neprázdnou proměnnou prostředí VAR1.
+- Odnastavte (zrušte) proměnnou VAR2.
+- Zajistěte neprázdnou proměnnou VAR3. (Požadujeme pouze proměnnou, 
+  ne proměnnou prostředí, takže VAR3 nesmí být předávána 
+  do dceřinných procesů.)
+- Zajistěte, aby existovala prázdná proměnná VAR4, pokud existuje, 
+  neměňte její stav vzhledem k předávání do dceřinných procesů.
+- Zajistěte, aby proměnná VAR5 nebyla proměnnou prostředí, 
+  pokud ale existuje, její hodnota se nesmí změnit.
+
+  export VAR1="foo"
+  unset VAR2
+  export -n VAR3="bar"
+  VAR4=""
+  export -n VAR5
+--------------------------------------------------------------------------------
+Test I: Program v proměnné
+- Napište skript, který spustí program v proměnné $SOUBOR v adresáři 
+  v proměnné $CESTA. Víte jen, že CESTA neobsahuje na konci poslední 
+  lomítko, jinak proměnné mohou obsahovat cokoliv. 
+  Například když CESTA=„/bin“ a SOUBOR=„ls“, spustí skript program /bin/ls.
+
+  "$CESTA/$SOUBOR"
+--------------------------------------------------------------------------------
+Aritmetika
+  1. přičíst k/odečíst od z  ((z+=1))
+                             ((z-y))
+                             ((z++))
+                             ((z--))
+  2. výsledek uložit do x    x=$((z+y))
+
+  Pozn.aut.: ((z++)) a ((z--)) mi dělalo problémy. Jistější je např. z=$((z+1))
+--------------------------------------------------------------------------------
+Řetězení
+  1. sekvence - jeden po druhém                 příkaz1 ; příkaz2 (nebo \n)
+  2. sekvence - druhý pouze pokud první uspěje  příkaz1 && příkaz2
+  3. sekvence - druhý pouze pokud první selže   příkaz1 || příkaz2
+  4. roura    - navázány vstupy a výstupy       příkaz1 | příkaz2
+--------------------------------------------------------------------------------
+Přesměrování
+  1. soubor na vstup příkazu                příkaz < soubor
+  2. výstup příkazu do souboru - přepsán    příkaz > soubor
+  3. výstup příkazu do souboru - na konec   příkaz >> soubor
+  4. co kam - 1=stdin, 2=stdout, 3=stderr   příkaz m>&n
+  5. zahodit chybový výstup                 příkaz 2> /dev/null
+--------------------------------------------------------------------------------
+Příkazy pro výpisy
+  1. echo       - vypíše název souboru nebo jakýkoliv string
+                - -n pro potlačení newline, ne vždy podporováno
+  2. printf     - vypisuje bez newline, formátování jako v C
+  3. cat        - vypíše obsah souboru
+  4. more, less - vypíše obsah souboru po stránkách
+  5. od         - -c vypisuje obsah souboru po znacích,
+                  užitečné pro zkoumání bílých znaků
+  6. stat       - informace o souboru
+                - -c umožňuje vlastní formát, např. %s pro velikost v bajtech
+  7. du         - vypisuje, kolik místa zabírají soubory na disku
+                - defaultně používá jako jednotku blok o 512 nebo 1024 bajtech
+                - -b vypisuje v bajtech
+                - -h vypisuje velikosti v čitelné formě
+--------------------------------------------------------------------------------
+Selftest I: Výstupy
+- Na standardní výstup vypište aktuální datum a čas.
+- Na standardní chybový výstup vypište řádku s pozdravem pro ShellTest.
+
+  date
+  echo "Hello world!" >&2
+--------------------------------------------------------------------------------
+Speciální znaky
+  1. \          zrušit speciální význam následujícího znaku
+  2. #          komentář
+  3. $(...)     vykonat příkaz
+  4. {}, (), []
+  5. '...'      všechny znaky ztrácí speciální význam kromě ""
+  6. "..."      všechny znaky ztrácí speciální význam kromě '',\,$
+--------------------------------------------------------------------------------
+Náhrada jmen souborů - globbing
+  1. ?                jeden libovolný znak
+  2. *                libovolný řetězec
+  3. [abcDEF] [a-z]   jeden znak z uvedených
+  4. [^abc0-9]        jeden znak mimo uvedených
+  5. .                aktuální adresář
+  6. ..               nadadresář aktuálního adresáře
+--------------------------------------------------------------------------------
+Příkaz test
+  Testy souboru
+  1. soubor existuje      -e soubor
+  2. soubor je obyčejný   -f soubor
+  3. soubor je adresář    -d soubor
+  4. soubor je odkaz      -h soubor
+  5. soubor není prázdný  -s soubor
+  6. soubor můžu číst     -r soubor
+  7. soubor můžu přepsat  -w soubor
+  8. soubor můžu spustit  -x soubor
+
+  Testy stringu
+  1. string je prázdný      -z string
+  2. string není prázdný    -n string
+  3. stringy jsou stejné    string1 = string2
+  4. stringy nejsou stejné  string1 != string2
+  5. porovnání alfabeticky  string1 < string2
+
+  Aritmetické testy
+  1. rovnost            int1 -eq int2
+  2. nerovnost          int1 -ne int2
+  3. menší než          int1 -lt int2
+  4. menší nebo rovno   int1 -le int2
+  5. větší než          int1 -gt int2
+  6. větší nebo rovno   int1 -ge int2
+--------------------------------------------------------------------------------
+Podmínky a cykly
+  1. příkaz if      if  [ test1 ]
+                    then 
+                      echo "true1"
+                    elif [ test2 ]
+                    then 
+                      echo "true2"
+                    else 
+                      echo "false"
+                    fi
+
+  2. příkaz while   while [ test ]
+                    do 
+                      echo "true"
+                    done
+
+  3. příkaz for     for i in seznam
+                    do 
+                      echo $i
+                    done
+--------------------------------------------------------------------------------
+Selftest I: Rozhodování
+- Napište skript, který bude reagovat na své argumenty 
+  podle následujícího předpisu:
+- Má-li skript více než jeden argument, vypíše řádku:
+  Vero possumus.
+- Má-li právě jeden argument, který je neprázdný, 
+  vypíše řádku s nezměněným obsahem tohoto argumentu; 
+  je-li prázdný, nevypíše nic.
+- Nemá-li žádný argument, vypíše následující řádky:
+  ($\_/$)
+  (='.'=)
+  (")_(")
+
+  if [ $# -gt 1 ]
+  then echo "Vero possumus."
+  elif [ $# -eq 1 ]
+  then if [ "$1" != "" ]
+    then echo "$1"
+    else exit 
+    fi
+  elif [ $# -eq 0 ]
+  then 
+    echo '($\_/$)'
+    echo "(='.'=)"
+    echo '(")_(")'
+  fi
+--------------------------------------------------------------------------------
+Selftest I: Cyklení
+- Napište skript, který přijímá dva argumenty.
+- První argument představuje dolní mez, druhý horní mez. 
+  Pro jednoduchost předpokládáme, že tyto argumenty jsou vždy zadány 
+  a vždy jsou to celá dekadická čísla.
+- Skript na základě zadané dolní a horní meze vypíše všechna celá čísla 
+  ležící mezi nimi, včetně mezí. Vypisovaná čísla budou od sebe oddělena 
+  právě jednou mezerou. Za posledním číslem je pouze znak konce řádku.
+- Je-li dolní mez větší než horní, nevypisuje se nic.
+
+  if [ $1 -gt $2 ]
+    then exit
+  fi
+  PRVNI=$1
+  DRUHY=$2
+  while [ $PRVNI -lt $DRUHY ]
+  do
+    echo -n "$PRVNI "
+    PRVNI=$((PRVNI+1))
+  done
+  echo "$PRVNI"
+--------------------------------------------------------------------------------
+Test I: Výchozí editor
+- Napište skript, který zkontroluje správnost nastavení 
+  proměnné EDITOR v shellu a případně ji upraví.
+- Pokud proměnná EDITOR neobsahuje jméno použitelného programu 
+  (tedy neodkazuje na spustitelný obyčejný soubor), 
+  nastavte do ní hodnotu /usr/bin/vim.
+- Zajistěte, aby proměnná EDITOR byla viditelná v procesech 
+  spouštěných z aktuálního shellu.
+
+  if [ ! -f "$EDITOR" ] || [ ! -x "$EDITOR" ]
+  then
+    EDITOR='/usr/bin/vim'
+  fi
+  export EDITOR
+--------------------------------------------------------------------------------
+Test I: Fibonacciho posloupnost
+- Napište skript, který do řádku vypisuje Fibonacciho posloupnost 
+  do hodnoty vypsané v proměnné LIMIT.
+
+  A=1
+  B=1
+  printf 0
+  while [ $A -lt $LIMIT ]
+  do
+    printf " $A"
+    TMP=$((A+B))
+    A=$B
+    B=$TMP
+  done
+  printf "\n"
+--------------------------------------------------------------------------------
+Test I: Druhy souborů
+- Napište skript, který projde všechny své argumenty a spočítá, 
+  kolik z nich je obyčejných souborů, adresářů a ostatních.
+- Na výstup pak vypište zprávu následujícího formátu:
+  [Files;Dirs;Oth]
+  kde zástupné řetězce Files, Dirs a Oth znamenají po řadě 
+  počet obyčejných souborů, počet adresářů, počet ostatních 
+  (cokoliv jiného i neidentifikovaného).
+
+  A=0; B=0; C=0
+  for i in "$@"
+  do
+    if [ -f "$i" ]
+    then
+      A=$((A+1))
+    elif [ -d "$i" ]
+      then
+        B=$((B+1))
+      else
+        C=$((C+1))
+    fi
+  done
+  echo "[$A;$B;$C]"
+--------------------------------------------------------------------------------
+Test II: Počet přímých podadresářů
+- Pokud je počet přímých podadresářů aktuálního adresáře právě 18, vypište
+  Pocet souhlasi.
+- Pokud ne, vypište
+  Pocet neni 18, ale N.
+  kde N je počet podadresářů.
+
+  counter=0
+  for i in *
+  do
+    if [ -d "$i" ]
+    then
+      counter=$((counter+1))
+    fi
+  done
+  if [ $counter -eq 18 ]
+  then
+    echo "Pocet 18 souhlasi."
+  else
+    echo "Pocet neni 18, ale $counter."
+  fi
+--------------------------------------------------------------------------------
+Příkaz date
+  - komplikacím s časovou zónou se dá vyhnout pomocí -u
+  - dá se poskládat vlastní formát, psát do uvozovek, na začátku +:
+      1. Den slovně       %A
+      2. Měsíc slovně     %B
+      3. Den číselně      %d
+      4. Měsíc číselně    %m
+      5. Rok              %Y
+      6. Hodina (00-23)   %H
+      7. Minuta (00-59)   %M
+      8. Vteřina (00-59)  %S
+  - přebytečných nul se dá zbavit pomlčkou (např. date '+%-H:%-M:%-S' -u)
+    nebo zaměnit za mezeru podtržítkem     (např. date '+%_H:%_M:%_S' -u)
+  - pro počty s daty jako formát použít vteřiny od epochy +%s
+  - pro vypsání vlastního data místo současného použít -d"datum",
+    v případě vteřin od epochy použít -d@"vteřiny"
+  - systém lze nastavit do češtiny pomocí LC_ALL=cs_CZ(.utf8 nebo .UTF-8)
+--------------------------------------------------------------------------------
+Selftest I: Počty
+- Zaznamenejte dvakrát po sobě čas v systému s přesností na sekundy.
+- Na standardní výstup vypište (opět s přesností na sekundy) 
+  rozdíl těchto dvou časových okamžiků ve formátu:
+  HH:MM:SS
+  kde zástupné řetězce HH, MM a SS musí být nahrazeny 
+  podle skutečného rozdílu zaznamenaných okamžiků.
+
+  PRVNIC=$(date '+%s' -u)
+  DRUHYC=$(date '+%s' -u)
+  VYSLC=$((DRUHYC-PRVNIC))
+  echo $(date -d@"$VYSLC" -u +%H:%M:%S)
+--------------------------------------------------------------------------------
+Příkazy pro akce s adresáři a soubory
+  1. ls - výpis adresáře
+        - -a pro skryté soubory
+        - -l pro oprávnění, počet hardlinků, majitele, skupinu, 
+          velikost a datum
+  2. cd - změna pracovního adresáře
+          - jako argument napsat absolutní nebo relativní adresu
+          - bez argumentu - domovský adresář
+          - .. - o adresář výš
+  3. mkdir - vytvořit adresář
+           - -p pro tvorbu více vnořených adresářů a 
+             potlačení erroru, pokud adresář existuje 
+           - např. mkdir -p myProject/{src,doc/{api,system},tools,db}
+  4. rmdir - maže pouze prázdné adresáře
+           - -p umožňuje mazat více vnořených adresářů
+  5. rm - odstranit
+        - -f pro potlačení všech hlášení
+        - -r pro rekurzivní mazání nejen prázdných adresářů
+  6. cp - kopírovat co kam
+        - -f pro potlačení všech hlášení
+        - -r pro rekurzivní kopírování celého obsahu adresáře
+  7. mv - přesune/přejmenuje co kam/na co 
+          (za cílovou adresu lze napsat nové jméno)
+        - -f pro potlačení všech hlášení
+  8. ln - vytvořit hardlink čeho kam
+        - hardlink ukazuje na inode, při vymazání původního souboru se data
+          doopravdy smažou, až když na ně neukazuje žádný hardlink
+        - -s tvoří symbolický link ukazující na jméno souboru (jako zástupce),
+          při smazání původního souboru symlink nemá co otevřít
+--------------------------------------------------------------------------------
+Test II: Mazání adresáře
+- V nějaké proměnné (např. VARIABLE) je uložen název adresáře. 
+  Pokud tento adresář existuje a je prázdný, smažte ho. 
+- Je-li v proměnné VARIABLE uložena několikaúrovňová cesta k adresáři (např. 
+  dir1/dir2/dir3), smažte pouze adresář dir3, nikoli jeho nadřazené adresáře. 
+  Pokud adresář neexistuje, na standardní chybový výstup vypište
+  Adresar neexistuje.
+  Jinak nic nevypisujte.
+
+  if [ -d "$VARIABLE" ]
+  then
+    rmdir "$VARIABLE" 2>/dev/null
+  else
+    echo "Adresar neexistuje." 1>&2
+  fi
+--------------------------------------------------------------------------------
+Test II: Symbolický odkaz
+- V aktuálním adresáři existuje nějaká adresářová struktura (např. 
+  dir1/dir2/dir3). V adresáři dir3 vytvořte symbolický link na soubor 
+  .bash_aliases, který se nachází v domovském adresáři uživatele.
+- Vytvořený link se má jmenovat stejně jako originální soubor.
+
+  ln -s ~/.bash_aliases "dir1/dir2/dir3"
+--------------------------------------------------------------------------------
+Příkazy pro filtrování
+  1. tee - vstup předá jednak na výstup a jednak do souborů v argumentech
+  2. nl - očísluje řádky
+  3. head -k - vypíše prvních k řádek
+  4. tail -k - vypíše posledních k řádek
+     tail -n +k - vypíše od řádky k do konce
+  5. wc -c - spočítá znaky (a tedy velikost v bajtech)
+        -w - spočítá slova
+        -l - spočítá řádky    
+  6. cut - -d'znak' specifikuje oddělovač sloupců, defaultně tabulátor
+         - -c resp. -f vypíše znaky resp. sloupce na příslušných pozicích
+         - pozice lze zadat např. jako -f1, -f1,3,5, -f1-5,
+           -f3- (od 3), -f-3 (do 3)
+  7. sort - seřadí řádky alfabeticky
+          - -f ignoruje malá/velká písmena
+          - -n seřadí numericky
+          - -V řadí verze (int.int.int...) - použitelné na IP adresy
+          - -t'znak' určuje oddělovač sloupců,
+            -k2,2n -k9,9 pak např. seřadí nejdřív numericky druhý sloupec 
+            a pak alfabeticky třetí
+          - -r obrací pořadí
+          - -u vypíše identické řádky pouze jednou
+  8. uniq - slučuje sousední duplicitní řádky
+          - -c připisuje předešlý počet výskytů dané řádky
+          - -d vypíše jen řádky, které měly duplicity
+          - -u vypíše jen jedinečné řádky
+  9. tr - nahrazuje znaky prvního argumentu za znaky druhého argumentu
+        - -d z výstupu znaky v argumentu vymaže
+        - -s nahradí za sebou se opakující stejné znaky v argumentu pouze jedním
+        - např. odstranění přebytečných mezer: tr -s ' '
+ 10. rev - obrací pořadí znaků v řádkách
+--------------------------------------------------------------------------------
+Selftest II: Třídění filmů
+- V podadresáři video jsou video soubory s různou neprázdnou příponou 
+  (.přípona). Pro každou příponu vytvořte adresář
+  video-přípona
+  do kterého přesunete z adresáře video soubory s danou příponou.
+
+  for FILE in ./video/*
+  do
+    if [ -f "$FILE" ]
+    then
+      POSTFIX=$(echo "$FILE" | rev | cut -d. -f1 | rev)
+      mkdir -p "video-$POSTFIX"
+      mv "$FILE" "video-$POSTFIX"
+    fi
+  done
+--------------------------------------------------------------------------------
+Test II: Třídění souborů
+- Napište skript, který z aktuálního adresáře přesune soubory s 
+  koncovkou .c a .h do složky PA1 v domovském adresáři aktuálně 
+  přihlášeného uživatele.
+- Soubory s koncovkou .nb přesuňte do složky CAO v domovském adresáři 
+  aktuálně přihlášeného uživatele.
+- Soubory s koncovkou .sh bez milosti smažte.
+- Skryté soubory ignorujte.
+- Je-li výsledkem hledání např. adresář, přesun se ho také týká.
+
+  for i in *
+  do
+    koncovka=$(echo "$i" | rev | cut -d"." -f1 | rev)
+    if [ "$koncovka" == "c" ] || [ "$koncovka" == "h" ]
+    then
+      mkdir -p ~/PA1
+      mv -f "$i" ~/PA1
+    elif [ "$koncovka" == "nb" ]
+    then
+      mkdir -p ~/CAO
+      mv -f "$i" ~/CAO
+    elif [ "$koncovka" == "sh" ]
+    then
+      rm -rf "$i"
+    fi
+  done
+--------------------------------------------------------------------------------
+Test III: Nejdelší řádka
+- V proměnné Source je uložen název souboru. Spočítejte počet znaků na 
+  nejdelší řádce tohoto souboru (vypište pouze jedno číslo). 
+- Neexistuje-li tento soubor, nebo je-li prázdný, vypište 0.
+
+  if [ -s "$Source" ]
+  then
+    cat "$Source" | wc -L
+  else
+    echo 0
+  fi
+--------------------------------------------------------------------------------
+Příkaz grep
+  - globání vyhledávání regulárního výrazu
+  - -i nerozlišuje malá/velká písmena
+  - -v vypisuje jen řádky neobsahující vzor
+  - -o vypisuje jen řetězec odpovídající vzoru
+  - -c vypisuje jen počet odpovídajících řádek
+  - -f (fgrep) pro hledání obyčejným řetězcem
+  - -e (egrep) pro hledání rozšířeným regulárním výrazem
+
+  Regulární výrazy
+    1. \        zrušení specálního významu nacházejícího znaku
+    2. .        jeden libovolný znak
+    3. *        libovolný počet výskytů předchozího znaku (možno i žádný)
+    4. []       jeden znak z množiny/intervalu, např. [adf], [a-h]
+    5. [^]      jeden znak mimo těch v množině/intervalu
+    6. ^        začátek řádky
+    7. $        konec řádky
+    8. \<       začátek slova
+    9. \>       konec slova
+   10. \{m\}    právě m výskytů předchozího znaku
+   11. \{m,\}   nejméně m výskytů předchozího znaku
+   12. \{,m\}   nejvíce m výskytů předchozího znaku
+   13. \{m,n\}  m až n výskytů předchozího znaku
+--------------------------------------------------------------------------------
+Příkaz sed
+  - neinteraktivní editor
+  - -n neopakuje svůj vstup
+  - -f přečte příkaz ze souboru místo příkazové řádky
+  - d řádku maže
+  - p řádku vypisuje
+  - s/vzor1/vzor2/volba nahrazuje první vzor druhým
+  - g funguje na celé řádce, nejen první výskyt
+  - vypsat 2.-4. řádek:                     sed -n '2,4p' soubor
+  - vypsat řádky začínající J:              sed -n '/^J/p' soubor
+  - vypsat řádky nezačínající J:            sed '/^J/d' soubor
+  - odstranit bílé znaky na začátku řádky:  sed 's/^[ \t]*//' soubor
+--------------------------------------------------------------------------------
+Selftest II: Počítání klientů
+- V aktuálním adresáři je soubor apache.log se záznamem přístupů k serveru.
+- Na samostatný řádek vypište pouze počet výskytů nejčetnější IP adresy 
+  nebo adres platných požadavků na server.
+- Chybové zprávy v logu sice také mají IP adresu původce, 
+  ale řádka je v jiném formátu. Tyto řádky ignorujte.
+- Pozn.aut.: V PS1 stačí IP adresu vnímat jako čtyři trojčíslí bez omezení 0-255
+
+  cat apache.log | grep -v "\[error\]" | 
+  grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' |
+  sort -V | uniq -c | sort -nr | head -1 |
+  sed 's/^ *//' | cut -d' ' -f1
+--------------------------------------------------------------------------------
+Test III: SH.EXE
+- Vyberte prvních deset řádků souboru /etc/passwd a zaměňte v nich všechny 
+  výskyty řetězce "sh" za řetězec "SH.EXE".
+- Vzniklý text přidejte na začátek již existujícího neprázdného souboru 
+  konta v domovském adresáři uživatele vykonávajícího příkaz.
+
+  head -n 10 /etc/passwd 2>/dev/null | 
+  sed 's/sh/SH.EXE/g' > ~/konta.tmp 2>/dev/null
+  cat ~/konta >> ~/konta.tmp 2>/dev/null
+  rm ~/konta 2>/dev/null 1>&2
+  mv ~/konta.tmp ~/konta 2>/dev/null 1>&2
+--------------------------------------------------------------------------------
+Příkaz awk
+  - programovatelný filtr
+  - program se píše ve stylu C
+  - pokud není zadán vzor, program se provede nad každou řádkou
+  - vzor může být regulární výraz nebo podmínka typu $1 > 200, $1 ~ /string/
+  - -F'znak' určuje oddělovač polí
+  - -f přečte program ze souboru místo příkazové řádky
+  - řádka se dělí na položky $1, $2,..., $NF, celá řádka je $0,
+    $NR je číslo aktuální řádky
+  - proměnné se deklarují použitím
+  - program lze rozdělit na části 'BEGIN{před čtením} {čtení} END{po čtení}'
+  - zabudované funkce jako printf, length, sqrt, toupper atd.
+
+  - př.: výpis polí 3 až konec souborů začínajících na P
+    ls -l | awk '$NF ~ /^[Pp]/ {
+    { printf("%s",$3); 
+      for (i=4; i<=NF; i++) { printf("\t%s",$i) }
+      printf("\n") } }'
+--------------------------------------------------------------------------------
+Selftest III: Počítání klientů, 2. díl
+- V aktuálním adresáři je soubor apache.log se záznamem přístupů k 
+  webovému serveru.
+- Vypište nejčetnější IP adresu nebo adresy, pokud je jich více. 
+  Každou unikátní adresu vypište na samostatný řádek, seřazené vzestupně 
+  podle jednotlivých oktetů IP adresy zleva.
+- V logu mohou být i chybové zprávy, také mají IP adresu původce, 
+  ale řádka je v jiném formátu. Tyto IP adresy je nutné zpracovat také.
+
+  cat apache.log | awk '{print $6 $13}' | 
+  grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'|
+  sort -V | uniq -c | sort -nr | awk '{
+    if ( NR == 1 ) { max = $1 }
+    if ( $1 == max ) { print $2 }
+  }' | sort -V
+--------------------------------------------------------------------------------
+Test III: GIT II
+- V prvním argumentu je zadán název souboru. Tento soubor obsahuje záznam 
+  operací nad projektem verzovaným systémem git.
+- Vypište identifikaci programátora, který provedl nejvíce zaznamenaných 
+  operací. Pokud je takových programátorů více, vypište je všechny a výpis 
+  seřaďte podle abecedy.
+- Identifikace programátora je v hlavičce každého záznamu na řádce začínající
+  Author:
+- Jména, příjmení a e-mail jsou odděleny vždy právě jednou mezerou. Za e-mailem
+  žádné mezery nejsou, ani na výstupu být nesmí.
+
+  cat "$1" | grep "^Author: " | cut -d':' -f2 | sort | uniq -c | sort -nr | 
+  awk 'BEGIN { max=0; }
+       { if ( NR == 1 ) { max = $1; } 
+         if ( $1 == max ) { print $0 } }' | 
+  sed 's/^[ ]*[0-9]*[ ]*//g' | sort
+--------------------------------------------------------------------------------
+Test III: Group ID
+- Ke každému GID (Group ID) v souboru group nacházejícím se v aktuálním 
+  adresáři přičtěte 1. Pokud je GID rovno 0, nic nepřičítejte. 
+- Pokud soubor group v aktuálním adresáři neexistuje, upravte soubor 
+  /etc/group a výsledek uložte do aktuálního adresáře.
+
+  if [ -f group ]
+  then
+    awk -F: 'BEGIN { OFS = ":" }
+             { if ( $3 != 0 ) $3++; print $0 }' group > group1
+    rm group
+    mv group1 group
+  else
+    awk -F: 'BEGIN { OFS = ":" }
+             { if ( $3 != 0 ) $3++; print $0 }' /etc/group > group
+  fi 
+--------------------------------------------------------------------------------
+Příkaz chmod
+  - změna oprávnění
+  - -R aplikuje změnu na celý obsah adresáře
+
+  1. Symbolický mód
+      - kdo     - u (user)    g (group)   o (other)    a (all)
+      - operace - + (přidej)  - (odeber)  = (nastav)
+      - práva   - r (read)    w (write)   x (execute) 
+  2. Oktalový mód
+      - tři cifry pro vlastníka, skupinu a ostatní
+      - read = 4, write = 2, execute = 1 -> např. rwxrw-r-- = 764
+
+  Význam práv
+        Pro soubor        Pro adresář
+    r   číst obsah        vypsat obsah
+    w   měnit obsah       tvořit a mazat soubory
+    x   spustit program   měnit nastavení a procházet
+
+  Maska práv
+    - definuje přístupová práva nově zakládaných souborů
+    - výpis a změna příkazem umask
+    - umask -S vypíše oprávnění nových souborů
+      maska   soubor  adresář
+      000     666     777
+      022     644     755
+      027     640     750     neboli lze vypočítat jako
+      077     600     700     základ (soubor 666, adresář 777) 
+      066     600     711     minus maska.
+
+  - vlastnictví souboru může root měnit příkazy chown, chgrp
+--------------------------------------------------------------------------------
+Test IV: Práva podle masky
+- V aktuálním adresáři se nachází adresář VIDEO.
+- V tomto adresáři změňte práva u souborů s koncovkou .c a .h tak, aby 
+  odpovídala masce (tedy aby jejich práva byla taková, jako kdyby byly právě 
+  vytvořené).
+- Je zaručeno, že se v adresáři VIDEO nacházejí pouze obyčejné soubory.
+
+  chmod u+x VIDEO
+  cd VIDEO
+  for i in * ; do
+    koncovka=$( echo "$i" | rev | cut -d'.' -f1 | rev )
+    if [ "$koncovka" == "c" ] || [ "$koncovka" == "h" ]
+    then
+      chmod $( umask -S | sed 's/x//g' ) "$i"
+    fi
+  done
+--------------------------------------------------------------------------------
+Příkaz find
+  - podle podmínek rekurzivně hledá soubory ve složce
+  - -o udělá mezi podmínkami or místo and, podmínky lze ozávorkovat \( \)
+  - \! použít k negaci
+  
+  Podmínky
+   1. -name      název souboru - užívá globbing, ne regex
+   2. -type      typ souboru - f, d, l, b, c
+   3. -empty     prázdný soubor 
+   4. -inum      inode souboru - užitečné k hledání hardlinků
+   5. -size      velikost souboru - b (bloky), c (B), k (kB), M (MB) atd.,
+                 pro ostrou nerovnost lze použít + a -, např. -size -3M
+   6. -atime     čas přístupu k souboru, pro ostrou nerovnost lze použít + a -
+   7. -mtime     čas modifikace souboru
+   8. -ctime     čas modifikace nebo změny atributů (práva atd.)
+   9. -mindepth  minimální hloubka podadresářů
+  10. -maxdepth  maximální hloubka podadresářů
+  11. -regex     regulárním výrazem hledá shodu na celé cestě k souboru
+  12. -perm      číslo bez znaménka znamená přesně tyto práva
+                    - např. -perm 664 vrátí pouze 664
+                 -číslo znamená alespoň tyto práva
+                      - např. -perm -664 vrátí i 777
+                 /číslo znamená alespoň jedno z těchto práv
+                      - např. -perm /222 vrátí i 200
+  Akce
+   1. -delete   odstraní soubor
+   2. -exec \;  spustí příkaz pro každý nález, řádek jako parametr zastupuje {}
+                např. -exec mv -f "{}" slozka \;
+   3. -exec +;  nálezy předá jako množinu parametrů jedinému zavolání příkazu
+   3. -ok       jako -exec, ale před každým provedením se dotazuje
+   4. -printf   formátovatelný výpis
+                např. %s pro velikost v bajtech, %f pro název bez cesty
+--------------------------------------------------------------------------------
+Selftest III: Právní záležitosti
+- Souborům (položkám) v aktuálním adresáři a případných podadresářích se 
+  pokuste upravit přístupová práva podle následujících pravidel:
+- Obyčejným souborům s koncovkou .txt přidejte vlastníkovi právo ke čtení.
+- Ostatním obyčejným souborům nastavte plná práva vlastníkovi, 
+  všem ostatním nic.
+- Adresářům přidejte právo zápisu vlastníkem.
+- Jiná než stanovená práva neměňte.
+
+  find -name '*.txt' -exec chmod u+r {} \;
+  find \! -name '*.txt' -type f -exec chmod 700 {} \;
+  find -type d \! -name '.' -exec chmod u+w {} \;
+--------------------------------------------------------------------------------
+Test III: Hledání podle jména
+- V adresáři daném hodnotou proměnné DIR (rekursivně) najděte všechny 
+  obyčejné soubory, jejichž jméno splňuje některé z následujících kritérií:
+- začíná znakem ~
+- končí .bak
+- začíná tečkou a zároveň končí .swp 
+  (tečky se nesmí překrýt, jsou vždy aspoň dvě)
+- Výpis jednotlivých nalezených jmen musí obsahovat jméno adresáře 
+  z proměnné DIR.
+- Každý správně nalezený soubor bude vypsán právě jednou, i když splňuje 
+  zároveň více kritérií.
+
+  find "$DIR" -type f \( -name "~*" -o -name "*.bak" -o -name ".*.swp" \)
+--------------------------------------------------------------------------------
+Test III: Velikost nalezených souborů
+- V proměnné target je uložen název adresáře v aktuálním adresáři. Najděte
+  všechny obyčejné soubory v adresáři i jeho podadresářích (rekursivně) a
+  spočítejte velikost všech těchto souborů (v B, ne místo, které zabírají 
+  na disku).
+- Na výstup vypište pouze
+  Velikost souboru=N B.
+  kde N je daná velikost. Pokud takové soubory neexistují, dostaďte za N 0.
+- Pokud soubor nemůžete číst, ale dokážete zjistit velikost, počítejte ho.
+
+  find "$target" -type f -printf "%s" 2> /dev/null | 
+  awk 'BEGIN { cnt = 0 }
+       { cnt += $1 } 
+       END { printf("Velikost souboru=%d B.\n", cnt) } '
+--------------------------------------------------------------------------------
+Test IV: Hledání podle velikosti
+- Nalezněte soubory v adresáři v proměnné DIR, jejichž velikost je v intervalu
+  <481,502> bajtů.
+
+  find "$DIR" -size +480c -size -503c
+--------------------------------------------------------------------------------
+Příkaz tar
+  - archivace, koncovka archivu běžně .tar
+  - následující možnosti lze psát bez -:
+  1. f  uložení do souboru
+  2. c  vytvoření nového archivu
+  3. r  přidání do existujícího archivu, pokud neexistuje, tak je vytvořen
+  4. u  přidá jen soubory novější než archiv
+  5. x  rozbalení archivu
+  6. t  prohlížení archivu
+  7. v  výpis manipulovaných souborů
+  8. j  komprese bzip2, koncovka běžně .tar.bz2 nebo .tbz2
+  9. z  komprese gzip, koncovka běžně .tar.gz nebo .tgz
+ 10. Z  komprese compress, koncovka běžně .tar.Z nebo .tZ
+  - -C  umožní specifikovat adresář, odkud se berou soubory, čímž lze vytvořit
+        archiv bez adresářové struktury, když víme, jaké soubory archivovat; 
+        když je musíme hledat, bude nejlepší soubory nakopírovat do složky
+  - -T  seznam souborů k archivaci číst ze souboru
+
+  Komprimace a dekomprimace bez příkazu tar
+    1. gzip/gunzip soubor
+    2. bzip2/bunzip soubor
+    3. compress/uncompress soubor
+    4. zip/unzip archiv.zip soubor
+--------------------------------------------------------------------------------
+Selftest IV: Archivace per partes
+- V aktuálním adresáři vytvořte archiv pokus.tar a uložte do něj tyto soubory:
+  /usr/bin/bashbug
+  /usr/bin/perlbug
+  /usr/share/man/man1/perlbug.1.bz2
+  /usr/share/man/man1/bashbug.1.bz2
+- Archivace musí být provedena tak, aby po rozbalení archivu byly tyto soubory 
+  přímo dostupné v adresáři, kde rozbalení provedeme. Tento adresář pak musí 
+  obsahovat:
+  bashbug
+  bashbug.1.bz2
+  perlbug
+  perlbug.1.bz2
+
+  tar -cf pokus.tar -C /usr/bin bashbug perlbug 
+                    -C /usr/share/man/man1 perlbug.1.bz2 bashbug.1.bz2
+--------------------------------------------------------------------------------
+Test IV: Komprese
+- Zaarchivujte a zkoprimujte pomocí komprese gzip soubory 
+  v adresáři /etc/init.d.
+- Archiv pojmenujte scripts.tgz a uložte jej do domovského adresáře.
+- Soubory archivujte tak, aby se daly rozbalit kdekoliv (tj. aby v adresáři, 
+  kde archiv rozbalíme, byly soubory z adresáře /etc/init.d).
+
+  tar -czf ~/scripts.tgz -C /etc/init.d .
+--------------------------------------------------------------------------------
+Příkazy pro práci s procesy
+  1. ps
+    - informuje o spuštěných procesech v terminálu
+    - -e vypíše všechny spuštěné procesy systému
+    - -f a -l vypisují podrobněji
+    - -o umožňuje formátovat výstup - pid, ruid, rgid, ruser, rgroup, time atd.
+
+  2. pgrep
+    - vypisuje PID procesů odpovídajících vzoru, může být i regex
+    - -l připisuje název procesu
+    - -c počítá odpovídající procesy
+    - -u hledá podle UID
+
+  3. pstree
+    - vypisuje strom procesů
+    - ptree pro Solaris
+
+  4. nice
+    - úprava priority
+    - větší číslo = větší snížení
+    - zvyšovat může jen root
+--------------------------------------------------------------------------------
+Selftest IV: Identita procesů
+- Spočítejte, kolik různých reálných a efektivních uživatelských a 
+  skupinových identit používají aktuálně běžící procesy.
+- Informace vypisujte v tomto formátu:
+  reálné;efektivní
+  kde reálné bude nahrazeno číslem (počtem reálných identit),
+  efektivní bude nahrazeno číslem (počtem efektivních identit).
+- Počty uživatelů vypište na standardní výstup, počty skupin vypište 
+  na standardní chybový výstup.
+
+  a=$(ps -eo ruid,euid,rgid,egid | tail -n +2 | head -n -3)
+  NUID=$(echo "$a" | awk '{print $1}' | sort -n | uniq | wc -l)
+  NEUID=$(echo "$a" | awk '{print $2}' | sort -n | uniq | wc -l)
+  NGID=$(echo "$a" | awk '{print $3}' | sort -n | uniq | wc -l)
+  NEGID=$(echo "$a" | awk '{print $4}' | sort -n | uniq | wc -l)
+  echo "$NUID;$NEUID"
+  echo "$NGID;$NEGID" >&2
+--------------------------------------------------------------------------------

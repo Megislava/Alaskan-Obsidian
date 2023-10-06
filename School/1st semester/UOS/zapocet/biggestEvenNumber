@@ -1,0 +1,1 @@
+cat "$CISLA" | tr ':' '\n' | awk '$1%2==0 { print $1 } ' | sort -nr | head -1

@@ -1,0 +1,98 @@
+self.handleRequest(SERVER_TURN_RIGHT)
+self.handleResponse()
+self.currentCoords = self.getResponse()
+self.validateCoords()
+
+self.handleRequest(SERVER_TURN_LEFT)
+self.handleResponse()
+self.currentCoords = self.getResponse()
+self.validateCoords()
+
+self.handleRequest(SERVER_MOVE)
+self.handleResponse()
+self.lastCoords = self.currentCoords
+self.currentCoords = self.getResponse()
+self.validateCoords(True)
+
+self.handleRequest(SERVER_MOVE)
+self.handleResponse()
+self.lastCoords = self.currentCoords
+self.currentCoords = self.getResponse()
+self.validateCoords(True)
+
+self.handleRequest(SERVER_TURN_LEFT)
+self.handleResponse()
+self.currentCoords = self.getResponse()
+self.validateCoords()
+
+self.handleRequest(SERVER_MOVE)
+self.handleResponse()
+self.lastCoords = self.currentCoords
+self.currentCoords = self.getResponse()
+self.validateCoords()
+
+self.handleRequest(SERVER_TURN_RIGHT)
+self.handleResponse()
+self.currentCoords = self.getResponse()
+self.validateCoords(True)
+
+if (self.quadrant == 0 and (self.direction != "down" or self.direction != "right")) or (self.quadrant == 1 and (self.direction != "down" or self.direction != "left")) or (self.quadrant == 1 and (self.direction != "up" or self.direction != "left")) or (self.quadrant == 3 and (self.direction != "up" or self.direction != "right")):
+    print("------ TURNING 180--------")
+    self.handleRequest(SERVER_TURN_RIGHT)
+    self.handleResponse()
+    self.currentCoords = self.getResponse()
+    self.validateCoords()
+    self.handleRequest(SERVER_TURN_RIGHT)
+    self.handleResponse()
+    self.currentCoords = self.getResponse()
+    self.validateCoords()
+
+
+
+ def handleResponse(self):
+        # Initialize the timed_out flag
+        self.timed_out = False
+    
+        #  Handle the HTTP request here
+        try:
+            data = b""
+            while True:
+                # Set a timeout value for the recv method for each loop
+                self.conn.settimeout(self.timeout)
+                chunk = self.conn.recv(3)
+                if not chunk:
+                    break
+                data += chunk
+                print(f"data is: {data}")
+                if b"\a\b" in data:
+                    parts = data.split(b"\a\b")
+                    self.response = [part.decode() for part in parts]
+                    print(f"response is {self.response}")
+                    if len(self.response) > 1:
+                        self.keyId = self.response[1]
+                    if len(self.response) > 2:
+                        self.clientConfirm = self.response[2]
+                    self.response = self.response[0]
+                    break
+                
+                # Create a new timer with a timeout value for each loop
+                t = threading.Timer(self.timeout, lambda: setattr(self, "timed_out", True))
+                t.start()
+                # Wait for the timer to finish or the loop to exit
+                while not self.timed_out and t.is_alive():
+                    time.sleep(0.1)
+                # If the timer times out, set the flag and break out of the loop
+                if self.timed_out:
+                    break
+        except socket.timeout:
+            # Handle the timeout here
+            print("timeouting")
+            self.conn.close()
+
+
+Opening connection ... OK
+Sending data: "Oompa Loompa\a\b" ... OK
+Receiving packet: "107 KEY REQUEST\a\b" ... OK
+Checking packet ... OK
+Sending data: "4\a\b" ... OK
+Receiving packet: "60077\a\b" ... OK
