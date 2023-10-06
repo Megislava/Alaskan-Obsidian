@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/3rd semestr/PA1/PA1 (C)/Arrays, matrixes (inc. strings).md",
+                "file": "School/3rd semestr/UKB/Prednasky/1. Uvod.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -110,6 +111,8 @@
     "School/3rd semestr/UKB/Prednasky/1. Uvod.md",
     "School/3rd semestr/APS",
     "School/3rd semestr/AAG",
+    "School/3rd semestr/PA1/PA1 (C)/Data Type & Variables.md",
+    "School/3rd semestr/UKB/Prednasky/1. Uvod.md",
     "School/3rd semestr/UKB/Cvika",
     "School/3rd semestr/UKB/Prednasky",
     "School/3rd semestr/UKB",
@@ -119,6 +122,16 @@
     "School/2nd semestr/DBS/Notes/3. SQL.md",
     "School/2nd semestr/DBS/Notes/2. Relacni model, relacni algebra.md",
     "School/2nd semestr/DBS/Notes/4. Transformace konceptualniho modelu na relacni.md",
+    "School/3rd semestr/PA1/codeReview.PNG",
+    "School/2nd semestr/DBS/Lectures/hand-les03-relacni-model-a-ra.pdf",
+    "School/2nd semestr/DBS/Lectures/hand-les05-transformace.pdf",
+    "School/2nd semestr/DBS/Lectures/hand-les04-sql-select-1.pdf",
+    "School/2nd semestr/DBS/Lectures/hand-les02-konceptualni-modelovani.pdf",
+    "School/2nd semestr/DBS/Notes/3. SQL.md",
+    "School/2nd semestr/DBS/Lectures/hand-les01-uvod.pdf",
+    "School/2nd semestr/DBS/Notes/2. Relacni model, relacni algebra.md",
+    "School/2nd semestr/DBS/Notes/4. Transformace konceptualniho modelu na relacni.md",
+    "School/2nd semestr/DBS/Relacni algebra/01.jpg",
     "School/2nd semestr/DBS/Notes/1. Konceptualni modelovani.md",
     "School/2nd semestr/SAP/Notes/4. Typicke obvody v cislicovem pocitaci.md",
     "School/2nd semestr/SAP/Notes/5. Zobrazeni dat v cislicovem pocitaci.md",
@@ -126,10 +139,18 @@
     "School/2nd semestr/SAP/Notes/7. Aritmeticke operace, posuvy, pohybliva radova carka.md",
     "School/2nd semestr/SAP/Notes/9. Vstup, vystup, hazardy v kombinacnich obvodech, sbernice.md",
     "School/2nd semestr/SAP/Notes/8. Architektura souboru instrukci, cinnost procesoru.md",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230320151737.png",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230320150528.png",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230320141230.png",
     "School/2nd semestr/PSI/Notes/3. Sitova vrstva.md",
     "CyberSec/Theory/Security/Exploitation/HTTP,HTTPS.md",
     "School/2nd semestr/PA2/Notes/1. Intro.md",
     "School/2nd semestr/PSI/Notes/2. Linkova vrstva.md",
-    "School/2nd semestr/PSI/Notes/1. Uvod.md"
+    "School/2nd semestr/PSI/Notes/1. Uvod.md",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230307164055.png",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230307164014.png",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230307162520.png",
+    "School/2nd semestr/PSI/Notes/1. Uvod.md",
+    "School/2nd semestr/PSI/Pictures/Pasted image 20230307123021.png"
   ]
 }

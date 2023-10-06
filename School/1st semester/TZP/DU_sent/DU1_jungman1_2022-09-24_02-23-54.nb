@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (* Content-type: application/mathematica *)
 
 (*** Wolfram Notebook File ***)
@@ -839,3 +840,846 @@ Cell[23718, 668, 3285, 90, 174, "Input",ExpressionUUID->"96f903d1-76e4-444a-a753
 ]
 *)
 
+=======
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     31298,        833]
+NotebookOptionsPosition[     27031,        762]
+NotebookOutlinePosition[     28038,        796]
+CellTagsIndexPosition[     27960,        791]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"57a67f39-5259-470b-a5c8-b43bdf008f0c"],
+
+Cell["Prvn\[IAcute] dom\[AAcute]c\[IAcute] \[UAcute]kol - sada \[UAcute]loh \
+DU1(A a\[ZHacek] E)", "Section",ExpressionUUID->"a982c3fe-85a8-4ec3-937d-\
+353faa0d494b"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["\[CapitalUAcute]lohy m\[URing]\[ZHacek]ete \[RHacek]e\[SHacek]it p\
+\[RHacek]\[IAcute]mo do tohoto notebooku pod jednotliv\[AAcute] zad\[AAcute]n\
+\[IAcute] (co \[UAcute]loha to nov\[AAcute] bu\[NHacek]ka). \
+Nezapome\[NHacek]te jednotliv\[AAcute] \[RHacek]e\[SHacek]en\[IAcute] ODD\
+\[CapitalEHacek]LIT vyresetov\[AAcute]n\[IAcute]m pam\[EHacek]ti.\n\
+Ne\[ZHacek] vy\[RHacek]e\[SHacek]en\[YAcute] notebook odevzd\[AAcute]te bude \
+pot\[RHacek]eba vymazat vygenerovan\[EAcute] v\[YAcute]stupy, aby \
+v\[YAcute]sledn\[YAcute] soubor nebyl tak velk\[YAcute], to provedete naho\
+\[RHacek]e v menu: ", "Subsection"],
+ StyleBox["Cell->Delete All Outputs", "Subsection",
+  FontWeight->"Bold"],
+ StyleBox[".\nKa\[ZHacek]d\[AAcute] p\[RHacek]\[IAcute]klad je za 0,5 bodu, \
+\[CHacek]ili 2 \[UAcute]lohy 1 bod --> 1 polo\[ZHacek]ka v Grades.", 
+  "Subsection"]
+}], "Section",ExpressionUUID->"872fdd99-f21d-4840-9e8d-63e95acd417d"],
+
+Cell["\[CapitalUAcute]loha DU1A-1:", "Item",ExpressionUUID->"0b25f5f4-750e-41f0-b1a1-a7224283d572"],
+
+Cell[TextData[{
+ "Zobrazte pr\[URing]b\[EHacek]h funkce ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "790db8f1-f6ee-4e46-9446-c80a41553752"],
+ " a ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"cos", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "b44ceb23-f6ce-491a-b524-e1d20a98d87f"],
+ " v jednom grafu v intervalu ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x\[Epsilon]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}]}], TraditionalForm]],ExpressionUUID->
+  "957bef94-b777-4afd-9a8d-55d469d8e9ac"],
+ ". Popi\[SHacek]te jednotliv\[EAcute] osy. Pr\[URing]b\[EHacek]hy odli\
+\[SHacek]te barevn\[EHacek], tu\[CHacek]n\[EHacek] a \[CHacek]\[AAcute]rkovan\
+\[EHacek]. Pou\[ZHacek]ijte n\[AAcute]pov\[EHacek]du (",
+ StyleBox["AxesLabel",
+  FontFamily->"Courier New",
+  FontWeight->"Bold"],
+ " a ",
+ StyleBox["PlotStyle",
+  FontFamily->"Courier New",
+  FontWeight->"Bold"],
+ ")."
+}], "Text",
+ CellChangeTimes->{{3.873007544594531*^9, 3.8730075518611107`*^9}, {
+  3.873702409298239*^9, 
+  3.8737024110045652`*^9}},ExpressionUUID->"8a609754-a5d6-4bae-8ede-\
+474310e1bc98"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", " ", "0", ",", " ", 
+        RowBox[{"2", "Pi"}]}], "}"}], ",", " ", 
+      RowBox[{"PlotStyle", "->", 
+       RowBox[{"{", 
+        RowBox[{"Red", ",", "Thick"}], "}"}]}], ",", " ", 
+      RowBox[{"AxesLabel", "->", 
+       RowBox[{"{", 
+        RowBox[{"\"\<x\>\"", ",", " ", "\"\<y\>\""}], "}"}]}]}], "]"}], ",", 
+    " ", 
+    RowBox[{"Show", "[", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"Cos", "[", "x", "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", " ", "0", ",", " ", 
+         RowBox[{"2", "Pi"}]}], "}"}], ",", " ", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Gray", ",", " ", "Dashed"}], "}"}]}]}], "]"}], "]"}]}], 
+   "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.873007553246163*^9, 3.873007670098885*^9}, {
+  3.8730077065769157`*^9, 3.8730078328792057`*^9}, {3.8730078743352714`*^9, 
+  3.873007915302834*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"2ec104c1-0e61-42b6-b711-7f300da756bb"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.8730079532491302`*^9},
+ CellLabel->"In[27]:=",ExpressionUUID->"97ff9aeb-915c-4690-a990-e93748fd473e"],
+
+Cell["\[CapitalUAcute]loha DU1A-2:", "Item",ExpressionUUID->"c4680185-a552-472f-8d47-49fa779d43d1"],
+
+Cell[TextData[{
+ "S pomoc\[IAcute] n\[AAcute]pov\[EHacek]dy vy\[RHacek]e\[SHacek]te",
+ Cell[BoxData[
+  FormBox[" ", TraditionalForm]],ExpressionUUID->
+  "7f056d33-1160-4fd9-92e3-50e9598d3523"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["lim", 
+     RowBox[{"n", "\[Rule]", "\[Infinity]"}]], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       FractionBox["1", "n"]}], ")"}], "n"]}], TraditionalForm]],
+  ExpressionUUID->"199b669a-6401-41ab-a29d-b54f05cbd375"]
+}], "Text",ExpressionUUID->"2fa87a9b-3c1f-4220-9f60-6847d64978e6"],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"1", "/", "n"}]}], ")"}], "^", "n"}], ",", " ", 
+    RowBox[{"n", "->", "\[Infinity]"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.873007958132305*^9, 3.8730079643311157`*^9}, {
+  3.873008138239959*^9, 3.873008158129768*^9}, {3.873008221489203*^9, 
+  3.873008241548852*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"150fc03a-ecad-4f7b-95f3-548cdc0633ee"],
+
+Cell["\[CapitalUAcute]loha DU1B-1:", "Item",ExpressionUUID->"80b89294-e6bf-466a-ae10-ce368ada4759"],
+
+Cell[TextData[{
+ "Zobrazte pr\[URing]b\[EHacek]h grafu ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "=", 
+    RowBox[{"f", "(", "x", ")"}]}], TraditionalForm]],ExpressionUUID->
+  "73aca9a7-7256-4af2-8df7-a2319a7f51fa"],
+ ", kde ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "=", 
+    RowBox[{"tanh", "(", "y", ")"}]}], TraditionalForm]],ExpressionUUID->
+  "7de85952-1273-487b-aab2-05b40ea3fe6a"],
+ " a ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{"3", "*", 
+     RowBox[{"sin", "(", "x", ")"}]}]}], TraditionalForm]],ExpressionUUID->
+  "af1a579a-d8e1-433a-be72-315f699502aa"],
+ " v intervalu ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x\[Epsilon]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "2"}], "\[Pi]"}], ",", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}]}], TraditionalForm]],ExpressionUUID->
+  "88a0bb4f-c9ad-4a83-85ea-4486416b3f7a"],
+ ". Popi\[SHacek]te osy a graf obarv\[EHacek]te. Pro zobrazeni \
+pou\[ZHacek]ijte (",
+ StyleBox["PlotRange",
+  FontFamily->"Courier New",
+  FontWeight->"Bold"],
+ "\[RightArrow]",
+ StyleBox["All",
+  FontFamily->"Courier New",
+  FontWeight->"Bold"],
+ "). V jednom grafu v\[YAcute]sledek graficky porovnejte s funkc\[IAcute] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "b1198f98-e318-4781-9e7f-d71bb3e17cb0"],
+ "."
+}], "Text",ExpressionUUID->"ca3398b2-67f1-4f22-b2eb-32e6c797484d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fx", " ", "=", " ", 
+    RowBox[{"Tanh", "[", " ", 
+     RowBox[{"3", 
+      RowBox[{"Sin", "[", "x", "]"}]}], "]"}]}], ";"}], " ", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"fx", ",", 
+      RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{
+       RowBox[{"-", "2"}], "Pi"}], ",", " ", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", " ", 
+    RowBox[{"AxesLabel", "->", 
+     RowBox[{"{", 
+      RowBox[{"\"\<x\>\"", ",", " ", "\"\<y\>\""}], "}"}]}], ",", 
+    RowBox[{"PlotStyle", "->", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Red", ",", " ", "Thick"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"Gray", ",", " ", "Dashed"}], "}"}]}], "}"}]}], ",", " ", 
+    RowBox[{"PlotRange", "->", "All"}], ",", " ", 
+    RowBox[{"PlotLegends", "->", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f", "[", "x", "]"}], ",", " ", 
+       RowBox[{"Sin", "[", "x", "]"}]}], "}"}]}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8730082504452844`*^9, 3.873008260122876*^9}, {
+  3.8730082932085943`*^9, 3.873008475306084*^9}, {3.8730085145549746`*^9, 
+  3.8730085672288647`*^9}, {3.873011381340432*^9, 3.873011614919483*^9}, {
+  3.873011700432063*^9, 3.8730117126842937`*^9}, {3.87369966685334*^9, 
+  3.873699733536333*^9}, {3.873700190117028*^9, 3.873700370632264*^9}, {
+  3.8737004122086062`*^9, 3.873700500237873*^9}, {3.8737005789661303`*^9, 
+  3.873700707720539*^9}, {3.87370075606809*^9, 3.873700860010706*^9}, {
+  3.8737009923553*^9, 3.8737010832962847`*^9}, {3.8737023966977425`*^9, 
+  3.873702419760303*^9}},
+ CellLabel->
+  "In[226]:=",ExpressionUUID->"90f0ca5e-ec31-4e65-844e-762caec0b3fd"],
+
+Cell[BoxData["3"], "Input",
+ CellChangeTimes->{3.873700705080887*^9},
+ CellLabel->"In[34]:=",ExpressionUUID->"03791165-0621-4648-ace2-4d1299059829"],
+
+Cell["\[CapitalUAcute]loha DU1B-2:", "Item",ExpressionUUID->"65ea592b-d6d6-49a1-8807-67547838add9"],
+
+Cell[TextData[{
+ "Ur\[CHacek]ete absolutn\[IAcute] hodnotu sou\[CHacek]tu dvou komplexn\
+\[IAcute]ch \[CHacek]\[IAcute]sel: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["z", "1"], "=", 
+    RowBox[{"3", "+", 
+     RowBox[{"4", "\[ImaginaryI]"}]}]}], TraditionalForm]],ExpressionUUID->
+  "faf29e88-89ce-492b-8928-fd8bd0ddf543"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["z", "2"], "=", 
+    RowBox[{"4", "+", 
+     RowBox[{"5", "\[ImaginaryI]"}]}]}], TraditionalForm]],ExpressionUUID->
+  "119a52bb-f5d4-43a4-bfef-d06ff26a4936"],
+ "."
+}], "Text",ExpressionUUID->"940a2162-a7b4-48a9-94c6-ee408584f9bf"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"z1", " ", "=", " ", 
+    RowBox[{"3", " ", "+", " ", 
+     RowBox[{"4", "\[ImaginaryI]"}]}]}], ";", " ", 
+   RowBox[{"z2", " ", "=", " ", 
+    RowBox[{"4", " ", "+", 
+     RowBox[{"5", "\[ImaginaryI]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"z", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Re", "[", "z1", "]"}], "+", 
+     RowBox[{"Re", "[", "z2", "]"}]}], ")"}], " ", "+", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Im", "[", "z1", "]"}], "+", " ", 
+      RowBox[{"Im", "[", "z2", "]"}]}], ")"}], 
+    "\[ImaginaryI]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Abs", "[", "z", "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.87300886405748*^9, 3.8730089094290695`*^9}, {
+  3.8730092535653543`*^9, 3.8730093826592083`*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"1a0fbc7e-0167-49bc-956f-6295934e45a1"],
+
+Cell["\[CapitalUAcute]lohaDU1C-1:", "Item",ExpressionUUID->"1e679fe3-225a-4932-b869-d53e76c39bdc"],
+
+Cell[TextData[{
+ "Pomoc\[IAcute] funkce ",
+ StyleBox["ParametricPlot", "Program",
+  FontWeight->"Bold"],
+ " nakreslete graf kru\[ZHacek]nice se st\[RHacek]edem v bod\[EHacek] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", "[", 
+    RowBox[{"2", ",", 
+     RowBox[{"-", "1"}]}], "]"}], TraditionalForm]],ExpressionUUID->
+  "a256d3ae-a8b0-4e84-ba1c-6ea98bb68cab"],
+ " a polom\[EHacek]rem ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"r", "=", "5"}], TraditionalForm]],ExpressionUUID->
+  "572cec0b-80e8-4f7f-8ae1-b8a22d21782d"],
+ ". Parametrick\[EAcute] rovnice pro kru\[ZHacek]nici jsou ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", 
+    RowBox[{
+     SubscriptBox["x", "0"], "+", 
+     RowBox[{"r", "*", 
+      RowBox[{"cos", "(", "\[Phi]", ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"a785e190-e635-4b57-a0ef-50c4726f55d5"],
+ " a ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{
+     SubscriptBox["y", "0"], "+", 
+     RowBox[{"r", "*", 
+      RowBox[{"sin", "(", "\[Phi]", ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"b62fe8e0-cfd0-448e-8ec7-4f0ea3c9adb9"],
+ "."
+}], "Text",ExpressionUUID->"fcc8ccd3-8d0d-46f3-9007-7617f1debd7e"],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"r", "=", "5"}], ";", 
+   RowBox[{"x0", " ", "=", " ", "2"}], ";", " ", 
+   RowBox[{"y0", "=", " ", 
+    RowBox[{"-", "1"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fx", "[", "\[Phi]_", "]"}], " ", ":=", " ", 
+  RowBox[{"x0", "+", 
+   RowBox[{"r", "*", 
+    RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fy", "[", "\[Phi]_", "]"}], " ", ":=", " ", 
+   RowBox[{"y0", " ", "+", " ", 
+    RowBox[{"r", "*", " ", 
+     RowBox[{"Sin", "[", "\[Phi]", "]"}]}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"fx", "[", "\[Phi]", "]"}], ",", " ", 
+     RowBox[{"fy", "[", "\[Phi]", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Phi]", ",", " ", 
+     RowBox[{"-", "r"}], ",", " ", "r"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "->", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", "Thick"}], "}"}]}], ",", " ", 
+   RowBox[{"PlotLabel", "->", "\"\<k([2,-1];5)\>\""}], ",", " ", 
+   RowBox[{"AxesLabel", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<x\>\"", ",", " ", "\"\<y\>\""}], "}"}]}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQzbaS20rv9hvHF2/FwfStQ1ejQPTf277RIPrO6ReZ
+IHrflYQcEK3ge64ERF+MWlIKorf+lt4GoqesXLwbRGepv5fXB9I7rv9WBtEM
+JwwNQXSKwkQjEP3uk6oviF7QbhsCoh8s6kgF0X0HF6WD6N0+NTkg2qC+MBes
+/8u/ehC9/adFO4h+dORND4i+xuI9DURrHe1bBaJltqpsANF/p5c9A9GLtIu+
+gOhXyxyYDIB0jZgMH4iu1+LZXXfnjePMHS2HQbTC/sQTIFrcdM9ZEH09reg2
+iJ57QP0eiA6Y9e8hiBbyP/4YRBftENxYD6RPtGZdBtFr5km4NABpvrUfwDQA
+EXS7QQ==
+  "],
+ CellLabel->
+  "In[229]:=",ExpressionUUID->"cfd3e5c8-6d20-4ab9-a5c7-e529affe2527"],
+
+Cell["\[CapitalUAcute]loha DU1C-2:", "Item",ExpressionUUID->"0099c296-2c23-45fa-9eda-d5b6f0da54ff"],
+
+Cell[TextData[{
+ "Nakreslete graf funkce",
+ Cell[BoxData[
+  RowBox[{" ", 
+   RowBox[{
+    RowBox[{"f", 
+     RowBox[{"(", 
+      RowBox[{"x", ",", "y"}], ")"}]}], "=", 
+    RowBox[{
+     FormBox[
+      SuperscriptBox["x", "2"],
+      TraditionalForm], "+", 
+     RowBox[{"2", "xy"}], "+", 
+     FormBox[
+      RowBox[{"2", 
+       SuperscriptBox["y", "2"]}],
+      TraditionalForm]}]}]}]],
+  FontFamily->"Arial",ExpressionUUID->"ff9eda21-db23-4791-86a7-f596df0ca180"],
+ " pro ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", "4"}], "\[LessEqual]", "x", "\[LessEqual]", "4"}], 
+   TraditionalForm]],ExpressionUUID->"7f66edac-94b4-4934-8b5d-94fbf4c8eb3b"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", "6"}], "\[LessEqual]", "y", "\[LessEqual]", "4"}], 
+   TraditionalForm]],ExpressionUUID->"c3365df6-3bc5-4a1e-8aaa-7b69be8074bf"],
+ "."
+}], "Text",ExpressionUUID->"5e826210-f712-46d6-a039-1c28f11fc5b1"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "^", "2"}], " ", "+", 
+      RowBox[{"2", "x", "*", "y"}], " ", "+", " ", 
+      RowBox[{"2", 
+       RowBox[{"y", "^", "2"}]}]}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", 
+       RowBox[{"-", "4"}], ",", " ", "4"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", " ", 
+       RowBox[{"-", "6"}], ",", "4"}], "}"}], ",", " ", 
+     RowBox[{"PlotLabel", "->", "\"\<f[x,y]\>\""}], ",", " ", 
+     RowBox[{"ColorFunction", "->", " ", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y", ",", "z"}], "}"}], ",", 
+        RowBox[{"Hue", "[", 
+         RowBox[{"1", ",", "1", ",", "0.97"}], "]"}]}], "]"}]}], ",", " ", 
+     RowBox[{"AxesLabel", "->", "Automatic"}]}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.873014151326267*^9, 3.8730141531516113`*^9}, {
+  3.8730142110261993`*^9, 3.8730142892976885`*^9}, {3.8737015813263187`*^9, 
+  3.8737015831000175`*^9}, {3.8737016319093227`*^9, 3.873701672873193*^9}, {
+  3.8737017278204575`*^9, 3.873701794559868*^9}, {3.87370183628384*^9, 
+  3.873701900236294*^9}, {3.873701995067669*^9, 3.8737021014932866`*^9}, {
+  3.873702589450615*^9, 3.8737025942568874`*^9}},
+ CellLabel->
+  "In[264]:=",ExpressionUUID->"afebdaf1-695b-420d-8c94-80cec97a4557"],
+
+Cell["\[CapitalUAcute]loha DU1D-1:", "Item",ExpressionUUID->"6b23ac23-54a0-4ab2-bd64-f8daf3eff8a4"],
+
+Cell[TextData[{
+ "Ur\[CHacek]ete \[CHacek]\[IAcute]slo ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "a508d364-446d-45f5-9431-5f4b636f2775"],
+ " tak, aby determinant matice ",
+ Cell[BoxData[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"3", "12", "5"},
+     {"7", "x", "1"},
+     {"22", "11", "10"}
+    }], "\[NoBreak]", ")"}]],ExpressionUUID->
+  "24acd1b5-08ac-42d1-9d74-d89834daa41a"],
+ " vy\[SHacek]el 0."
+}], "Text",ExpressionUUID->"b4f7bd22-8b2b-4997-8213-90b0c00e67f6"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Det", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"3", ",", " ", "12", ",", " ", "5"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"7", ",", " ", "x", ",", " ", "1"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"22", ",", " ", "11", ",", " ", "10"}], "}"}]}], "}"}], "]"}],
+     "==", "0"}], ",", " ", "x"}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.873014471965355*^9, 3.873014509608543*^9}, {
+  3.873014785761592*^9, 3.8730148168758116`*^9}, {3.873014920472215*^9, 
+  3.8730149495881076`*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"cbc89d04-727d-4e8d-b01c-16279ae6359c"],
+
+Cell["\[CapitalUAcute]loha DU1D-2:", "Item",ExpressionUUID->"2fefa265-617d-43c4-ace6-30b0a1ddbdea"],
+
+Cell[TextData[{
+ "Vy\[RHacek]e\[SHacek]te soustavu rovnic. Pou\[ZHacek]ijte funkci Solve.\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "+", 
+     RowBox[{"3", "y"}]}], "=", "1"}], TraditionalForm]],ExpressionUUID->
+  "fe463809-1a8a-435c-8aeb-1bb80d92a40c"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", "x"}], "+", 
+     RowBox[{"4", "y"}]}], "=", "5"}], TraditionalForm]],ExpressionUUID->
+  "97c59b75-8380-443a-a702-fa119985eb94"],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.873014976956979*^9, 
+  3.87301498487436*^9}},ExpressionUUID->"612fa531-7421-4e71-8bd1-\
+6e0c1f22b0c5"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "+", 
+      RowBox[{"3", "y"}]}], "==", "1"}], " ", "&&", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", "x"}], "+", 
+      RowBox[{"4", "y"}]}], "==", "5"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "y"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8730149885203805`*^9, 3.8730150333447886`*^9}, {
+  3.8730150681965504`*^9, 3.8730150767454844`*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"7a03ddf2-774b-47d2-9e9e-e3fbb51d0787"],
+
+Cell["\[CapitalUAcute]loha DU1E-1:", "Item",ExpressionUUID->"86a3e292-545a-4a97-a148-6a580b53dc75"],
+
+Cell[TextData[{
+ "Vy\[RHacek]e\[SHacek]te kvadratickou rovnici: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", "*", 
+      SuperscriptBox["x", "2"]}], "+", 
+     RowBox[{"5", "x"}], "+", "2"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"34d7b2d9-1bcf-4356-9252-247e35c50cb6"],
+ ". Jedno ze dvou \[RHacek]e\[SHacek]en\[IAcute] dosa\[DHacek]te do \
+v\[YAcute]razu ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{"sin", "(", 
+     SuperscriptBox["x", "2"], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "30e229c3-ffb3-436c-89ac-87b38a758aba"],
+ ". Zobrazte graf v\[YAcute]sledn\[EAcute] funkce ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{"f", "(", "a", ")"}]}], TraditionalForm]],ExpressionUUID->
+  "eedd870e-513d-455e-a7a0-67889a53da14"],
+ ", v intervalu ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "\[LessEqual]", "a", "\[LessEqual]", "3"}], TraditionalForm]],
+  ExpressionUUID->"3db4d817-f748-4d48-a0d9-72db45a74332"],
+ ". Pro dosazen\[IAcute] pou\[ZHacek]ijte \[OpenCurlyDoubleQuote]/.\
+\[CloseCurlyDoubleQuote]."
+}], "Text",ExpressionUUID->"9eaaa75b-2dcb-4580-bc7f-befee89e5b90"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x1", ",", " ", "x2"}], "}"}], "=", " ", 
+   RowBox[{"x", " ", "/.", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"a", "*", 
+         RowBox[{"x", "^", "2"}]}], " ", "+", 
+        RowBox[{"5", "x"}], " ", "+", "2"}], " ", "==", "0"}], ",", " ", 
+      RowBox[{"{", "x", "}"}]}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "=", " ", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"x1", "^", "2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"f", "[", "a", "]"}], ",", "y"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", " ", "1", ",", " ", "3"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "->", " ", "Red"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.873015233659689*^9, 3.8730152454870434`*^9}, {
+   3.873015277427768*^9, 3.8730153442432013`*^9}, {3.8730154695947084`*^9, 
+   3.873015639379495*^9}, {3.8730159590373697`*^9, 3.8730160516920695`*^9}, {
+   3.873016148982775*^9, 3.8730161709008493`*^9}, 3.8737022165717044`*^9, {
+   3.8737022921785803`*^9, 3.8737023531739683`*^9}, {3.8737024469352245`*^9, 
+   3.873702450098689*^9}, {3.8737024896351213`*^9, 3.873702553496421*^9}, {
+   3.8737026002052755`*^9, 3.873702730013651*^9}, {3.8745781655504932`*^9, 
+   3.874578170470228*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"344e8f1a-40dc-47fa-b3ea-5414a95e5508"],
+
+Cell["\[CapitalUAcute]loha DU1E-2:", "Item",ExpressionUUID->"e4365cfb-55c2-4594-b925-cc7f8d9cf0bf"],
+
+Cell[TextData[{
+ "Vy\[RHacek]e\[SHacek]te soustavu difrovnic pro soustavu \
+po\[CHacek]\[AAcute]te\[CHacek]n\[IAcute]ch podm\[IAcute]nek, pro ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", "\[LessEqual]", "t", "\[LessEqual]", "40"}], 
+   TraditionalForm]],ExpressionUUID->"1fc04e99-582f-433b-a297-dcf776bbd018"],
+ "; vytiskn\[EHacek]te graf ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x1", "[", "t", "]"}], TraditionalForm]],ExpressionUUID->
+  "df2b5e9a-2908-47ee-b841-70b30dcfd94e"],
+ " a ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x2", "[", "t", "]"}], TraditionalForm]],ExpressionUUID->
+  "474616d2-cf4d-42ab-9e1d-368fbb74a76d"],
+ " a pomoc\[IAcute] p\[RHacek]\[IAcute]kazu ",
+ StyleBox["ParametricPlot", "Program",
+  FontWeight->"Bold"],
+ " tak\[EAcute] graf ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x2", "[", 
+    RowBox[{"x1", "[", "t", "]"}], "]"}], TraditionalForm]],ExpressionUUID->
+  "ccab01d7-c21a-45b3-abb9-73c59e2d5662"],
+ "."
+}], "Text",ExpressionUUID->"ee831ce9-7ae4-4509-ba47-9a06856ea7e7"],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"soustavaRovnic", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x1", "'"}], "[", "t", "]"}], "+", 
+       RowBox[{"x2", "[", "t", "]"}]}], "\[Equal]", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"-", "3"}], "10"], "*", 
+       RowBox[{"x1", "[", "t", "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x1", "[", "t", "]"}], "-", 
+       RowBox[{
+        RowBox[{"x2", "'"}], "[", "t", "]"}]}], "\[Equal]", "1"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"soustavaPodminek", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x1", "[", "0", "]"}], "\[Equal]", 
+       FractionBox["1", "2"]}], ",", 
+      RowBox[{
+       RowBox[{"x2", "[", "0", "]"}], "\[Equal]", "0"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"reseni", " ", "=", " ", 
+  RowBox[{"NDSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"soustavaRovnic", ",", " ", "soustavaPodminek"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x1", ",", " ", "x2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "40"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x1", "[", "t", "]"}], " ", "/.", " ", "reseni"}], ",", " ", 
+     RowBox[{
+      RowBox[{"x2", "[", "t", "]"}], " ", "/.", " ", "reseni"}]}], "}"}], ",",
+    " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", "40"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Red", ",", " ", "Thick"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"Gray", ",", " ", "Dashed"}], "}"}]}], "}"}]}], ",", " ", 
+   RowBox[{"AxesLabel", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<x\>\"", ",", " ", "\"\<y\>\""}], "}"}]}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ParametricPlot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x1", "[", "t", "]"}], ",", " ", 
+       RowBox[{"x2", "[", "t", "]"}]}], "}"}], " ", "/.", " ", "reseni"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "40"}], "}"}], ",", " ", 
+    RowBox[{"PlotRange", "->", "All"}], ",", " ", 
+    RowBox[{"PlotStyle", "->", 
+     RowBox[{"{", 
+      RowBox[{"Red", ",", " ", "Thick"}], "}"}]}], ",", " ", 
+    RowBox[{"AxesLabel", "->", 
+     RowBox[{"{", 
+      RowBox[{"\"\<x\>\"", ",", " ", "\"\<y\>\""}], "}"}]}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.873016177809278*^9, 3.8730161782580843`*^9}, {
+  3.8730172360738506`*^9, 3.8730172465355487`*^9}, {3.8745760746364913`*^9, 
+  3.8745761274193945`*^9}, {3.8745763874094586`*^9, 3.8745764577528496`*^9}, {
+  3.8745764967621536`*^9, 3.874576651857053*^9}, {3.8745767558353596`*^9, 
+  3.874576786514764*^9}, {3.8745776469424086`*^9, 3.874577687809041*^9}, {
+  3.874577969761074*^9, 3.874578093739086*^9}, {3.874578202206796*^9, 
+  3.874578208441167*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"96f903d1-76e4-444a-a753-173289867178"]
+}, Open  ]]
+}, Open  ]]
+},
+ScreenStyleEnvironment->"SlideShow",
+WindowSize->{960, 478},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"FacingPages"->False,
+"FirstPageHeader"->True,
+"PrintCellBrackets"->False,
+"PrintMultipleHorizontalPages"->False,
+"PrintRegistrationMarks"->False,
+"PrintingMargins"->{{72, 72}, {54, 54}}},
+ShowSelection->True,
+Magnification:>0.5 Inherited,
+TooltipBoxOptions->{TooltipDelay->Automatic},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"eb65b112-ac30-471c-bf64-61cbfcf94ab6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "SlideShowHeader"->{
+  Cell[567, 22, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"57a67f39-5259-470b-a5c8-b43bdf008f0c",
+   CellTags->"SlideShowHeader"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"SlideShowHeader", 27795, 785}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 122, 2, 1, "SlideShowNavigationBar",ExpressionUUID->"57a67f39-5259-470b-a5c8-b43bdf008f0c",
+ CellTags->"SlideShowHeader"],
+Cell[692, 26, 167, 2, 48, "Section",ExpressionUUID->"a982c3fe-85a8-4ec3-937d-353faa0d494b"],
+Cell[CellGroupData[{
+Cell[884, 32, 948, 15, 121, "Section",ExpressionUUID->"872fdd99-f21d-4840-9e8d-63e95acd417d"],
+Cell[1835, 49, 99, 0, 25, "Item",ExpressionUUID->"0b25f5f4-750e-41f0-b1a1-a7224283d572"],
+Cell[1937, 51, 1155, 34, 41, "Text",ExpressionUUID->"8a609754-a5d6-4bae-8ede-474310e1bc98"],
+Cell[3095, 87, 1205, 31, 53, "Input",ExpressionUUID->"2ec104c1-0e61-42b6-b711-7f300da756bb"],
+Cell[4303, 120, 149, 2, 23, "Input",ExpressionUUID->"97ff9aeb-915c-4690-a990-e93748fd473e"],
+Cell[4455, 124, 99, 0, 25, "Item",ExpressionUUID->"c4680185-a552-472f-8d47-49fa779d43d1"],
+Cell[4557, 126, 559, 15, 29, "Text",ExpressionUUID->"2fa87a9b-3c1f-4220-9f60-6847d64978e6"],
+Cell[5119, 143, 615, 14, 68, "Input",ExpressionUUID->"150fc03a-ecad-4f7b-95f3-548cdc0633ee"],
+Cell[5737, 159, 99, 0, 25, "Item",ExpressionUUID->"80b89294-e6bf-466a-ae10-ce368ada4759"],
+Cell[5839, 161, 1410, 45, 41, "Text",ExpressionUUID->"ca3398b2-67f1-4f22-b2eb-32e6c797484d"],
+Cell[7252, 208, 1993, 49, 112, "Input",ExpressionUUID->"90f0ca5e-ec31-4e65-844e-762caec0b3fd"],
+Cell[9248, 259, 148, 2, 23, "Input",ExpressionUUID->"03791165-0621-4648-ace2-4d1299059829"],
+Cell[9399, 263, 99, 0, 25, "Item",ExpressionUUID->"65ea592b-d6d6-49a1-8807-67547838add9"],
+Cell[9501, 265, 633, 19, 25, "Text",ExpressionUUID->"940a2162-a7b4-48a9-94c6-ee408584f9bf"],
+Cell[10137, 286, 1064, 28, 112, "Input",ExpressionUUID->"1a0fbc7e-0167-49bc-956f-6295934e45a1"],
+Cell[11204, 316, 98, 0, 25, "Item",ExpressionUUID->"1e679fe3-225a-4932-b869-d53e76c39bdc"],
+Cell[11305, 318, 1154, 35, 25, "Text",ExpressionUUID->"fcc8ccd3-8d0d-46f3-9007-7617f1debd7e"],
+Cell[12462, 355, 1853, 48, 127, "Input",ExpressionUUID->"cfd3e5c8-6d20-4ab9-a5c7-e529affe2527"],
+Cell[14318, 405, 99, 0, 25, "Item",ExpressionUUID->"0099c296-2c23-45fa-9eda-d5b6f0da54ff"],
+Cell[14420, 407, 927, 31, 25, "Text",ExpressionUUID->"5e826210-f712-46d6-a039-1c28f11fc5b1"],
+Cell[15350, 440, 1532, 35, 82, "Input",ExpressionUUID->"afebdaf1-695b-420d-8c94-80cec97a4557"],
+Cell[16885, 477, 99, 0, 25, "Item",ExpressionUUID->"6b23ac23-54a0-4ab2-bd64-f8daf3eff8a4"],
+Cell[16987, 479, 499, 14, 50, "Text",ExpressionUUID->"b4f7bd22-8b2b-4997-8213-90b0c00e67f6"],
+Cell[17489, 495, 844, 20, 68, "Input",ExpressionUUID->"cbc89d04-727d-4e8d-b01c-16279ae6359c"],
+Cell[18336, 517, 99, 0, 25, "Item",ExpressionUUID->"2fefa265-617d-43c4-ace6-30b0a1ddbdea"],
+Cell[18438, 519, 620, 20, 58, "Text",ExpressionUUID->"612fa531-7421-4e71-8bd1-6e0c1f22b0c5"],
+Cell[19061, 541, 691, 19, 68, "Input",ExpressionUUID->"7a03ddf2-774b-47d2-9e9e-e3fbb51d0787"],
+Cell[19755, 562, 99, 0, 25, "Item",ExpressionUUID->"86a3e292-545a-4a97-a148-6a580b53dc75"],
+Cell[19857, 564, 1148, 31, 25, "Text",ExpressionUUID->"9eaaa75b-2dcb-4580-bc7f-befee89e5b90"],
+Cell[21008, 597, 1603, 38, 97, "Input",ExpressionUUID->"344e8f1a-40dc-47fa-b3ea-5414a95e5508"],
+Cell[22614, 637, 99, 0, 25, "Item",ExpressionUUID->"e4365cfb-55c2-4594-b925-cc7f8d9cf0bf"],
+Cell[22716, 639, 999, 27, 25, "Text",ExpressionUUID->"ee831ce9-7ae4-4509-ba47-9a06856ea7e7"],
+Cell[23718, 668, 3285, 90, 174, "Input",ExpressionUUID->"96f903d1-76e4-444a-a753-173289867178"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+>>>>>>> ed86870e047cc27b656f2f20735dd248c5953b5d

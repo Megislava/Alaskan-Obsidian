@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - GNU Debugger
 - free, mostly on Linux
 - must-know for cracking and reverse engineering 
@@ -28,4 +29,36 @@
 		- n - repeat count, how much memory to display
 		- f - display format, what format to print (s - null-terminated string, i - machine instruction, x - hexadecimal - default)
 		- u - the unit size (b - bytes, h - halfwords, w - words - default, g - giant words)
+=======
+- GNU Debugger
+- free, mostly on Linux
+- must-know for cracking and reverse engineering 
+- command line debugger
+- scriptable
+- supports remote debugging
+
+- `gdb <executable>` - run
+- `(gdb) info files` - show different parts of the file
+	- (gdb) shows when you are "inside" of dbg 
+- `(gdb) set dissaembly-flavor intel` - intel syntax of dissambly
+- `disassemble` - disassemble from current IP
+- `disassemble 0z8048080` - disassemble address
+- `disassemble loop` - disassemble label
+- `disassemble main +50` - add + number to print number instructions
+- `disassemble loop` - disassemble loop
+- `run` - run program from the beginning
+- `continue` - continue running program
+- `break`
+	- address, label
+	- info breakpoints
+- `info register` - shows the current values in the x86 registers
+- `print` - printing individual registers
+- `stepi` - step 1 instruction at a time
+- `nexti` - stepi steps to the next instruction, nexti steps into the instruction
+- `x` - examine
+	- different params
+		- n - repeat count, how much memory to display
+		- f - display format, what format to print (s - null-terminated string, i - machine instruction, x - hexadecimal - default)
+		- u - the unit size (b - bytes, h - halfwords, w - words - default, g - giant words)
+>>>>>>> ed86870e047cc27b656f2f20735dd248c5953b5d
 	- 

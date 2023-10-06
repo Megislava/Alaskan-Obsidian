@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - fuzzing tool 
 - more information then gobuster
 - can fuzz between / /
@@ -10,4 +11,18 @@
 - `--hl`: don't show for a certain amount of lines in response
 - `--hh`: don't show for a certain amount of words
 
+=======
+- fuzzing tool 
+- more information then gobuster
+- can fuzz between / /
+- `wfuzz -c -z file,usr/share/wordlists/dirb/big.txt localhost:80/FUZZ/note.txt`
+	- fuzzing diffent usernames to get their note.txt
+- `-c`: shows output in color
+- `-d`: specify the params you want to fuzz with, where the data is encoded for a HTML form
+- `-z`: specifies what will replace FUZZ in the request
+- `--hc`: don't whow certain http response codes
+- `--hl`: don't show for a certain amount of lines in response
+- `--hh`: don't show for a certain amount of words
+
+>>>>>>> ed86870e047cc27b656f2f20735dd248c5953b5d
 → `wfuzz -c -z file,muwordlist.txt -d "username=FUZZ&password=FUZZ" -u http://shibes.thm/login.php`

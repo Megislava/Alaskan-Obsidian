@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"backtraceGraph" : 
 	{
@@ -12,3 +13,19 @@
 		"source" : "."
 	}
 }
+=======
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}
+>>>>>>> ed86870e047cc27b656f2f20735dd248c5953b5d

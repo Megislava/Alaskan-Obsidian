@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Domácí úkol 2
 
 zadání najdete na stránce: https://courses.fit.cvut.cz/BIK-TZP/seminars/cviceni2.html
@@ -18,4 +19,26 @@ pokuste se o øešení obou. To znamená, že si zadefinujete obì funkce pro napìtí u
 
 Souèástí odevzdání budou i obrázky viz body 1.
 
+=======
+Domácí úkol 2
+
+zadání najdete na stránce: https://courses.fit.cvut.cz/BIK-TZP/seminars/cviceni2.html
+jedná se o pøíklady 13 a 14
+
+Pøíklad 13
+DU2a - Oznaèení obrázku napìovými uzly a popsání obvodovými rovnicemi - 1b
+DU2b - Vyøešení soustavy rovnic a vykreslení požadavaných prùbìhù - 1b
+DU2c - Pøekreslení obvodu pro stejnosmìrný stav a vyøešení požadových napìtí/proudù - 1b
+
+Pøíklad 14
+DU2d - Oznaèení obrázku napìovými uzly a popsání obvodovými rovnicemi - 1b
+DU2e - Vyøešení soustavy rovnic a vykreslení požadavaných prùbìhù - 1b
+
+
+U pøíkladu 14, lze experimentovat s prùbìhem vstupního napìtí, proto tam jsou 2,
+pokuste se o øešení obou. To znamená, že si zadefinujete obì funkce pro napìtí uZ1[t] a uZ2[t]
+
+Souèástí odevzdání budou i obrázky viz body 1.
+
+>>>>>>> ed86870e047cc27b656f2f20735dd248c5953b5d
 Pro každý pøíklad použijte extra notebook.
