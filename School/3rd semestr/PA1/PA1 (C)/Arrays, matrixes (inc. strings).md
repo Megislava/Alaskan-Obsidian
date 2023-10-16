@@ -27,5 +27,5 @@
 - print character on index: `printf("%c", str[index]);`
 	- PRINTING C (char) not string!
 - length of string: `strlen(str);`
-- concatenation of string: `strcat(firstStr, secondStr);`
+- concatenation of string: `strcat(destinationStr, sourceStr);`
 - string copy: `strcpy(targetStr, sourceStr);`
