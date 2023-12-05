@@ -1,0 +1,58 @@
+$date
+	Sat Oct 21 14:10:00 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test $end
+$var wire 1 ! Zero $end
+$var wire 32 " ALUResult [31:0] $end
+$var reg 2 # ALUControl [1:0] $end
+$var reg 32 $ SrcA [31:0] $end
+$var reg 32 % SrcB [31:0] $end
+$scope module circuit $end
+$var wire 2 & ALUControl [1:0] $end
+$var wire 32 ' SrcA [31:0] $end
+$var wire 32 ( SrcB [31:0] $end
+$var reg 32 ) ALUResult [31:0] $end
+$var reg 1 ! Zero $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1111 )
+b101 (
+b1010 '
+b0 &
+b101 %
+b1010 $
+b0 #
+b1111 "
+0!
+$end
+#10
+b111 "
+b111 )
+b1 #
+b1 &
+b1000 %
+b1000 (
+b1111 $
+b1111 '
+#20
+b1 "
+b1 )
+b10 #
+b10 &
+b11 %
+b11 (
+b10 $
+b10 '
+#30
