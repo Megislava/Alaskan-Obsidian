@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 - bite - two states in a memory cell - `0` (off) or `1` (on)
 - 1 byte = 8 bites
 	- compromise between speed (performance) and waisting

@@ -9,6 +9,6 @@
 
 - often used with [[test]]
 
-1. [[Functions]]
+1. [[CyberSec/Theory/Programming Languages/Bash/Functions]]
 2. [[Conditions]]
 3. [[Loops]]

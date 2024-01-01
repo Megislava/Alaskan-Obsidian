@@ -1,0 +1,13 @@
+- initialization via *initialized array*:
+	- `char str[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '\0'};`
+	- has to end with `\0` = null terminating character
+- initialize via *string literal*:
+	- `char str[] = "Hello World";`
+	- null terminating character is added implicitly
+- print with `printf("%s", str);`
+- print character on index: `printf("%c", str[index]);`
+	- PRINTING C (char) not string!
+- length of string: `strlen(str);`
+- concatenation of string: `strcat(destinationStr, sourceStr);`
+- string copy: `strcpy(targetStr, sourceStr);`
+- strings functions: [[School/3rd semestr/PA1/PA1 (C)/Functions#Strings functions]]

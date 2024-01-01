@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "cf20f48edca09fc7",
+        "id": "afbeedd66102781b",
         "type": "tabs",
         "children": [
           {
-            "id": "3f6ca38a51effaf6",
+            "id": "69dc1d16a3a280d1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "School/3rd semestr/PA1/PA1 (C)/Abstract data types (ADT).md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
             }
           }
         ]
@@ -65,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -80,11 +86,38 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "3f6ca38a51effaf6",
+  "active": "69dc1d16a3a280d1",
   "lastOpenFiles": [
-    "Untitled.canvas",
+    "School/3rd semestr/PA1/PA1 (C)/Linked structures.md",
+    "School/3rd semestr/PA1/PA1 (C)/Abstract data types (ADT).md",
+    "School/3rd semestr/PA1/PA1 (C)/Searching algorithms.md",
+    "School/3rd semestr/PA1/PA1 (C)/Sorting Algorithms.md",
+    "School/3rd semestr/PA1/PA1 (C)/Complexity.md",
+    "School/3rd semestr/PA1/PA1 (C)/Files.md",
+    "School/3rd semestr/PA1/PA1 (C)/Structures.md",
     "School/3rd semestr/PA1/PA1 (C)/Pointers.md",
+    "School/3rd semestr/PA1/PA1 (C)/Arrays.md",
+    "School/3rd semestr/PA1/PA1 (C)/Strings.md",
+    "School/3rd semestr/PA1/PA1 (C)/Functions.md",
+    "School/3rd semestr/PA1/PA1 (C)/Intro.md",
+    "School/3rd semestr/PA1/PA1 (C)/Flow control.md",
+    "School/3rd semestr/PA1/PA1 (C)/Expressions.md",
+    "School/3rd semestr/PA1/PA1 (C)/Data representation.md",
+    "School/3rd semestr/PA1/PA1 (C)/Data Type & Variables.md",
+    "Untitled 2.canvas",
     "Untitled 1.canvas",
+    "Untitled.canvas",
+    "School/3rd semestr/AAG/quiz/23.png",
+    "School/3rd semestr/AAG/quiz/22.png",
+    "School/3rd semestr/AAG/quiz.zip",
+    "School/3rd semestr/AAG/quiz/21.PNG",
+    "School/3rd semestr/AAG/quiz/20.PNG",
+    "School/3rd semestr/AAG/quiz/19.PNG",
+    "School/3rd semestr/AAG/quiz/18.PNG",
+    "School/3rd semestr/AAG/quiz/17.PNG",
+    "School/3rd semestr/AAG/quiz/16.PNG",
+    "School/3rd semestr/AAG/quiz/15.PNG",
+    "School/3rd semestr/AAG/quiz/14.PNG",
     "CyberSec/Theory/Programming Languages/C/Data Type & Variables.md",
     "CyberSec/Theory/Programming Languages/C/Data representation.md",
     "CyberSec/Theory/Programming Languages/C/Intro.md",

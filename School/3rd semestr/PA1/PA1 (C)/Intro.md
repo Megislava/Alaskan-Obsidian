@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 - faucets:
 	- trust the programmer
 	- keep the language small and simple
