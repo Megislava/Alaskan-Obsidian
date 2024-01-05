@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/3rd semestr/PA1/PA1 (C)/Abstract data types (ADT).md",
+                "file": "School/3rd semestr/UKB/Prednasky/6. OS bezpecnost a virtualizace.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -88,8 +87,21 @@
   },
   "active": "69dc1d16a3a280d1",
   "lastOpenFiles": [
-    "School/3rd semestr/PA1/PA1 (C)/Linked structures.md",
+    "School/3rd semestr/UKB/Prednasky/5. Web a mobil bezpecnost.md",
+    "School/3rd semestr/UKB/Prednasky/4. Protokoly v kyberneticke bezpecnosti.md",
+    "School/3rd semestr/UKB/Prednasky/2. Rizeni risk.md",
+    "School/3rd semestr/UKB/Prednasky/11. IoT.md",
+    "School/3rd semestr/UKB/Prednasky/12. OT.md",
+    "School/3rd semestr/UKB/Prednasky/10. Proces bezpecneho vyvoje.md",
+    "School/3rd semestr/UKB/Prednasky/9. Kyber bezpecnost a soukromi.md",
+    "School/3rd semestr/UKB/Prednasky/8. Pravo a kyberprostor.md",
+    "School/3rd semestr/UKB/Prednasky/7. Sitova bezpecnost.md",
+    "School/3rd semestr/UKB/Prednasky/6. OS bezpecnost a virtualizace.md",
+    "School/3rd semestr/UKB/Prednasky/3. Threat Intelligence.md",
+    "School/3rd semestr/UKB/Prednasky/Pasted image 20240104142028.png",
+    "School/3rd semestr/UKB/Prednasky/1. Uvod.md",
     "School/3rd semestr/PA1/PA1 (C)/Abstract data types (ADT).md",
+    "School/3rd semestr/PA1/PA1 (C)/Linked structures.md",
     "School/3rd semestr/PA1/PA1 (C)/Searching algorithms.md",
     "School/3rd semestr/PA1/PA1 (C)/Sorting Algorithms.md",
     "School/3rd semestr/PA1/PA1 (C)/Complexity.md",
@@ -102,8 +114,6 @@
     "School/3rd semestr/PA1/PA1 (C)/Intro.md",
     "School/3rd semestr/PA1/PA1 (C)/Flow control.md",
     "School/3rd semestr/PA1/PA1 (C)/Expressions.md",
-    "School/3rd semestr/PA1/PA1 (C)/Data representation.md",
-    "School/3rd semestr/PA1/PA1 (C)/Data Type & Variables.md",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas",
@@ -116,17 +126,6 @@
     "School/3rd semestr/AAG/quiz/18.PNG",
     "School/3rd semestr/AAG/quiz/17.PNG",
     "School/3rd semestr/AAG/quiz/16.PNG",
-    "School/3rd semestr/AAG/quiz/15.PNG",
-    "School/3rd semestr/AAG/quiz/14.PNG",
-    "CyberSec/Theory/Programming Languages/C/Data Type & Variables.md",
-    "CyberSec/Theory/Programming Languages/C/Data representation.md",
-    "CyberSec/Theory/Programming Languages/C/Intro.md",
-    "CyberSec/Theory/Programming Languages/C/Expressions.md",
-    "CyberSec/Theory/Linux/Linux Command Line.md",
-    "CyberSec/Tools/tmux.md",
-    "CyberSec/Theory/Good to know commands.md",
-    "CyberSec/Tools/git.md",
-    "CyberSec/Theory/Programming Languages/C/DeepC.md",
-    "CyberSec/Tools/gzip.md"
+    "School/3rd semestr/AAG/quiz/15.PNG"
   ]
 }
