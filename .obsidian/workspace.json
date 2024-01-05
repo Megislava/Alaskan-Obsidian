@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/3rd semestr/UKB/Prednasky/6. OS bezpecnost a virtualizace.md",
+                "file": "School/3rd semestr/PA1/PA1 (C)/Abstract data types (ADT).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -87,21 +88,20 @@
   },
   "active": "69dc1d16a3a280d1",
   "lastOpenFiles": [
-    "School/3rd semestr/UKB/Prednasky/5. Web a mobil bezpecnost.md",
-    "School/3rd semestr/UKB/Prednasky/4. Protokoly v kyberneticke bezpecnosti.md",
-    "School/3rd semestr/UKB/Prednasky/2. Rizeni risk.md",
-    "School/3rd semestr/UKB/Prednasky/11. IoT.md",
-    "School/3rd semestr/UKB/Prednasky/12. OT.md",
-    "School/3rd semestr/UKB/Prednasky/10. Proces bezpecneho vyvoje.md",
+    "School/3rd semestr/UKB/Prednasky/Pasted image 20240104142028.png",
     "School/3rd semestr/UKB/Prednasky/9. Kyber bezpecnost a soukromi.md",
     "School/3rd semestr/UKB/Prednasky/8. Pravo a kyberprostor.md",
     "School/3rd semestr/UKB/Prednasky/7. Sitova bezpecnost.md",
     "School/3rd semestr/UKB/Prednasky/6. OS bezpecnost a virtualizace.md",
+    "School/3rd semestr/UKB/Prednasky/5. Web a mobil bezpecnost.md",
+    "School/3rd semestr/UKB/Prednasky/4. Protokoly v kyberneticke bezpecnosti.md",
     "School/3rd semestr/UKB/Prednasky/3. Threat Intelligence.md",
-    "School/3rd semestr/UKB/Prednasky/Pasted image 20240104142028.png",
-    "School/3rd semestr/UKB/Prednasky/1. Uvod.md",
-    "School/3rd semestr/PA1/PA1 (C)/Abstract data types (ADT).md",
+    "School/3rd semestr/UKB/Prednasky/2. Rizeni risk.md",
+    "School/3rd semestr/UKB/Prednasky/12. OT.md",
+    "School/3rd semestr/UKB/Prednasky/11. IoT.md",
+    "School/3rd semestr/UKB/Prednasky/10. Proces bezpecneho vyvoje.md",
     "School/3rd semestr/PA1/PA1 (C)/Linked structures.md",
+    "School/3rd semestr/PA1/PA1 (C)/Abstract data types (ADT).md",
     "School/3rd semestr/PA1/PA1 (C)/Searching algorithms.md",
     "School/3rd semestr/PA1/PA1 (C)/Sorting Algorithms.md",
     "School/3rd semestr/PA1/PA1 (C)/Complexity.md",
@@ -126,6 +126,7 @@
     "School/3rd semestr/AAG/quiz/18.PNG",
     "School/3rd semestr/AAG/quiz/17.PNG",
     "School/3rd semestr/AAG/quiz/16.PNG",
-    "School/3rd semestr/AAG/quiz/15.PNG"
+    "School/3rd semestr/AAG/quiz/15.PNG",
+    "School/3rd semestr/AAG/quiz/14.PNG"
   ]
 }
