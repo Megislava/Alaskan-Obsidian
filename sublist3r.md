@@ -1,0 +1,2 @@
+- just looks for subdomains
+- can bruteforce the subdomains

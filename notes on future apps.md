@@ -1,0 +1,2 @@
+- from FF to some Anki system
+- export flash cards with ChatGPT, make list of flashcards 

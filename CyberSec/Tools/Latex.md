@@ -1,1 +1,0 @@
-https://marast.fit.cvut.cz/cs/blog_posts/2

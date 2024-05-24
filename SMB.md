@@ -1,0 +1,9 @@
+- Server Message Block Protocol
+	- client-server communication protocol used for sharing access to files, printers, serial ports and other resources on a network
+	- response-request protocol
+	- by default runs on 139/445
+- Samba
+	- SMP support tool, runs on Unix
+- scan on which port is it running
+- enumerate
+- exploit with [[SMBClient]]

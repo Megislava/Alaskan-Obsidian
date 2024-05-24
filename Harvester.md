@@ -1,0 +1,5 @@
+- give it a domain to search/company name and it will 
+	- search Google, GoogleCSE, bing, bingapi, pgp, linkeid, google-profiles, jigsaw, twitter, googleplus,...
+	- DNS brute force, DNS TLD expansion discovery
+	- use SHODAN
+	- you will get IP addresses, email addresses, subdomains

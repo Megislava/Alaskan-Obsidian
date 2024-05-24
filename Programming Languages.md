@@ -1,0 +1,7 @@
+- declarative vs imperative
+1. Declarative
+	- eg. [[C]], [C#], [Java], ...
+2. Imperative
+	- eg. [Python], [Javascript],...
+
+[[Bash]]

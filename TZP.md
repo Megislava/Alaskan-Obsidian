@@ -1,0 +1,28 @@
+# Presentations
+![[1A_BIK-TZP_2021.pdf]]
+![[1B_BIK_TZP21_2021.pdf]]
+![[1C_BIK_TZP21_2021.pdf]]
+![[2A_BIK_TZP21_2021.pdf]]
+![[5_BIK_TZP21_2022.pdf]]
+![[6_BIK_TZP21_2022.pdf]]
+![[Delic-C4-8.png]]
+![[obvod-C3-7.png]]
+
+
+# HW
+![[DU2A.png]]
+![[DU2A_sketch.png]]
+![[DU2A_stejnosmerny.png]]
+![[DU2B.png]]
+![[DU2B_sketch.png]]
+![[du3a.png]]
+![[du3a_hus.png]]
+![[du3a_sketch.png]]
+![[du3a_ss.png]]
+![[du3b.PNG]]
+![[du3b_hus.PNG.jpg]]
+![[du3b_ss.PNG.jpg]]
+![[IMG_20230101_125400.jpg]]
+![[IMG_20230102_211207.jpg]]
+![[IMG_20230102_211309.jpg]]
+![[IMG_20230102_212331.jpg]]

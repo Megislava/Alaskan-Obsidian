@@ -1,0 +1,3 @@
+- motherboard
+	- central processing unit
+	- random-access memory
