@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ad262664bb87fe2b",
+        "id": "8334bbed8dd704c2",
         "type": "tabs",
         "children": [
           {
-            "id": "5bd3dd406165e1df",
+            "id": "6c66c2772ff6dd22",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -61,7 +61,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -101,21 +102,43 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "96b567c3ab62f6e7",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:Open graph view": false
+      "graph:Open graph view": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "5bd3dd406165e1df",
+  "active": "374077066e788e10",
   "lastOpenFiles": [
+    "Bash Conditions.md",
+    "Bash.md",
+    "Bash Loops.md",
+    "Intro to the Unix_Linux.md",
+    "notes on future apps.md",
+    "Thread and Vulnerability Management.md",
+    "Lynis.md",
+    "MA1.md",
+    "Exploitation.md",
+    "Uvod do kyberbezpecnosti.md",
+    "User Activity Analysis.md",
+    "Attachments/16.PNG",
+    "binwalk.md",
     "Vulnerabilities.md",
     "C Pointers.md",
     "Pointers.md",
@@ -130,18 +153,6 @@
     "C.md",
     "C Keywords.md",
     "C Flow control.md",
-    "C Functions.md",
-    "C Searching algorithms.md",
-    "C Sorting algorithms.md",
-    "C Strings.md",
-    "C Structures.md",
-    "C Expressions.md",
-    "C Working with Files.md",
-    "C Abstract data types.md",
-    "C Data Type & Variables.md",
-    "C Data representation.md",
-    "C Complexity.md",
-    "C Arrays.md",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
@@ -161,7 +172,6 @@
     "School/3rd semestr/AAG/quiz/22.png",
     "School/3rd semestr/AAG/quiz.zip",
     "School/3rd semestr/AAG/quiz/21.PNG",
-    "School/3rd semestr/AAG/quiz/20.PNG",
-    "School/3rd semestr/AAG/quiz/19.PNG"
+    "School/3rd semestr/AAG/quiz/20.PNG"
   ]
 }

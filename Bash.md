@@ -8,5 +8,5 @@
 	- `\n` - after first 10 numbers (9 commas), new line
 
 1. [[Bash Functions]]
-2. [[Conditions]]
-3. [[Loops]]
+2. [[Bash Conditions]]
+3. [[Bash Loops]]
