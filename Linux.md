@@ -1,4 +1,5 @@
-[[File System]]
-[[How does shell work]]
-[[Intro to the Unix_Linux]]
+[[Intro to the Unix&Linux]]
+
 [[Linux Command Line]]
+
+[[Linux File System]]

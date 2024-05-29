@@ -1,7 +1,7 @@
 #server-side
 
 - __authentication__
-	- = process of verifyng the identity of a given user/client ~ making sure that they are who they say they are
+	- = process of verifying the identity of a given user/client ~ making sure that they are who they say they are
 	- 3 authentication factors:
 		- something you __know__, something you __have__ and something you __are__
 	- __vs authorization__

@@ -3,8 +3,8 @@
 - initial before I have access to machine
 
 # Types
-[[Authentication (excluding OAuth)]]
-[[Business logic vulnerabilities]]
+[[Authentication vulnerabilities (excluding OAuth)]]
+[[Business Logic vulnerabilities]]
 [[Command Injection]]
 [[Cross-side scripting (XSS)]]
 [[Directory Traversal]]
@@ -19,5 +19,5 @@
 [[nikto]]
 [[Google Dorking]]
 [[snmp-check]]
-[[ping]]
-[[whois]]
+ping
+whois

@@ -17,4 +17,4 @@
 - `-u` - update
 	- adds to the end of file an update
 - `-z` - compress/decompress using [[gzip]]
-- `-j` - compress/decompress using [[bzip2]]
+- `-j` - compress/decompress using bzip2

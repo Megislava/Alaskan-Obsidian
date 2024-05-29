@@ -1,4 +1,4 @@
-13. ## Accumulate
+## 13. Accumulate
 
 ### RECON
 ###### Scanning
@@ -32,7 +32,7 @@
 
 
 
-14. ## Unknown Storage
+## 14. Unknown Storage
 
 ### RECON
 * I have name of S3 bucket and need to get some flags
@@ -40,7 +40,7 @@
 * or just visit the "site"
 
 
-15. ## LFI
+## 15. LFI
 
 ### RECON
 ###### Scanning
@@ -59,15 +59,15 @@
 * use ssh to log into the machine ~ exploit
 
 
-18. ## ELF JS
+## 18. ELF JS
 
 ### RECON
 ###### Go through the site
 * register and login
-* exploit with use od XSS
+* exploit with use of XSS
 
 
-19. ## Commands
+## 19. Commands
 
 ### RECON
 ###### Go through the site
@@ -77,7 +77,7 @@
 * remember that " " is replaced by %20 and "/" is %2f
 
 
-20. ## Cronjob Privilege Escalation
+## 20. Cronjob Privilege Escalation
 
 ### RECON
 ###### Scanning
@@ -100,19 +100,19 @@
 * change /clean_up.sh to run <code>cat /home/ubuntu/flag2.txt</code>
 
 
-16. ## File Confusion
+## 16. File Confusion
 * I should write a script but in the end I did everything by hand
 
-21. ## Reverse Elf-ineering
+## 21. Reverse Elf-ineering
 * I should work with the supporting materials but either I didn't understood well or didn't care enough. In the end I guessed
 
-22. ## If Santa, Then Christmas
+## 22. If Santa, Then Christmas
 * same as previous case
 
-23. ## LapLANd (SQL injection)
+## 23. LapLANd (SQL injection)
 * I didn't finish this one
 
-24. ## Elf Stalk
+## 24. Elf Stalk
 ### RECON
 ###### Scanning
  * <code> nmap -A X.X.X.X </code>

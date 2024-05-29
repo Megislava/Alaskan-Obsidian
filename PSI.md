@@ -15,4 +15,4 @@
 # Notes
 [[Linkova vrstva]]
 [[Sitova vrstva]]
-[[Uvod]]
+[[Network site Uvod]]

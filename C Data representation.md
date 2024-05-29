@@ -50,7 +50,7 @@
                               1 1 1 1 0 0 1 1 0
 	```
 - divination
-	- not sure how to write it [more here](courses.fit.cvut.cz/BI-PA1/elearning/data_representation/unsigned-mul-div.html)
+	- not sure how to write it
 
 
 ### Aritmetic operation on signed integers in 2's complement

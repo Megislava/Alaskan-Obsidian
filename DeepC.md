@@ -1,4 +1,3 @@
-### Deep C
 1. 
 	```c
 	int main() 

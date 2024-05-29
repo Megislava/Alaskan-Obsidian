@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "8334bbed8dd704c2",
+        "id": "6ac553e666798811",
         "type": "tabs",
         "children": [
           {
-            "id": "6c66c2772ff6dd22",
+            "id": "12fcf10ab5468f12",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_000__Home.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
             }
           }
         ]
@@ -60,9 +65,16 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "8ea4367d600c1a5a",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -82,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_000__Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,16 +111,17 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_000__Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "96b567c3ab62f6e7",
+            "id": "bc5fbab46f86f6e3",
             "type": "leaf",
             "state": {
-              "type": "calendar",
+              "type": "review-queue-list-view",
               "state": {}
             }
           }
@@ -116,43 +130,45 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
       "graph:Open graph view": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "374077066e788e10",
+  "active": "12fcf10ab5468f12",
   "lastOpenFiles": [
-    "Bash Conditions.md",
-    "Bash.md",
-    "Bash Loops.md",
-    "Intro to the Unix_Linux.md",
-    "notes on future apps.md",
-    "Thread and Vulnerability Management.md",
-    "Lynis.md",
-    "MA1.md",
-    "Exploitation.md",
-    "Uvod do kyberbezpecnosti.md",
-    "User Activity Analysis.md",
-    "Attachments/16.PNG",
-    "binwalk.md",
+    "Korean.md",
+    "Ethical Hacking.md",
+    "DFIR.md",
     "Vulnerabilities.md",
-    "C Pointers.md",
-    "Pointers.md",
-    "C Linked structures.md",
-    "Linux Command Line.md",
-    "gzip.md",
+    "Konceptualni modelovani.md",
+    "C Data representation.md",
     "tar.md",
-    "x86.md",
-    "Reverse Engineering.md",
     "Cyber Security.md",
-    "Flow control.md",
-    "C.md",
-    "C Keywords.md",
-    "C Flow control.md",
+    "Tools.md",
+    "Hex Workshop.md",
+    "x86.md",
+    "MA1.md",
+    "IoT.md",
+    "zip.md",
+    "xfreerdp.md",
+    "Wireshark.md",
+    "Windows Files.md",
+    "Windows Authentication.md",
+    "Windows.md",
+    "wfuzz.md",
+    "Web a mobil bezpecnost.md",
+    "Vulversity.md",
+    "Volatility.md",
+    "Vim.md",
+    "Vaccine.md",
+    "Utilities.md",
+    "Attachments/16.PNG",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled 2.canvas",

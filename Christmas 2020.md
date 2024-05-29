@@ -35,6 +35,4 @@
 5. Someone stole Santa's gift list
 	1. find login page
 	2. SQL injection the login page
-	3. SQL inject the search for DB with sqlmap
-
-6. 
+	3. SQL inject the search for DB with [[sqlmap]]

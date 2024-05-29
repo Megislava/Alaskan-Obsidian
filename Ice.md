@@ -1,7 +1,7 @@
 - hacking Windows server
 - https://tryhackme.com/room/ice
 
-- nmap scan `nmap -sS -sV -p- <IP>`
+- nmap scan: `nmap -sS -sV -p- <IP>`
 	- 135: msrpc
 	- 139: netbios-ssn
 	- 445: microsoft-ds (WORKGROUP)

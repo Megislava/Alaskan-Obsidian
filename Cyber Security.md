@@ -1,21 +1,22 @@
-[[Ethical Hacking]]
+## [[Ethical Hacking]]
 
-[[DFIR]]
+## [[DFIR]]
 
-[[CTF]]
+## [[CTF]]
 
-[[Tools]]
+## [[Hardware]]
 
-[[Hardware]]
+## [[Linux]]
 
-[[Linux]]
+## Networking
+[[OSI & TCPIP models]]
+[[Ports and Protocols]]
+[[Routing and Switching]]
 
-[[Networking]]
+## [[Programming Languages]]
 
-[[Programming Languages]]
+## [[Vulnerabilities]]
 
-[[Vulnerabilities]]
+## [[Windows]]
 
-[[Windows]]
-
-[[Google Dorking]]
+## [[Google Dorking]]

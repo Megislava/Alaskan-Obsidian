@@ -1,6 +1,10 @@
-[[BUSes]]
-[[Graphics]]
-[[Intro to HW]]
-[[Memory]]
-[[Power]]
-[[Processors]]
+- motherboard
+	- central processing unit
+	- random-access memory
+- [[BUS]]
+- [[Graphics]]
+- [[HW Memory]]
+- power
+	- converting alternating 120V/240V into direct current 3.3V/5V/12V
+	- also protect devices from surges
+- [[Processors]]

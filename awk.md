@@ -1,5 +1,5 @@
 - basically a programming language
-- programmable filtr 
+- programmable filter 
 - tool for processing data streams
 	- takes line according to a pattern and does action
 - similar to C
@@ -9,8 +9,8 @@
 
 ##### Workflow
 - input is stdin or file/s
-- input is splitted to RS and NR
-- records will be splitted to fields (FS, NF, $0, $1, $...)
+- input is split to RS and NR
+- records will be split to fields (FS, NF, $0, $1, $...)
 - result outputted (ORS, OFS)
 
 1. RS - record separator

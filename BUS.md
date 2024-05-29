@@ -1,7 +1,7 @@
 - bus = high-speed connection allowing communication between computers/components
 
-1. Periferal Devices
-	- `lspci` - prints periferal devices connected to particular machine (list PCI?)
+1. Peripheral Devices
+	- `lspci` - prints peripheral devices connected to particular machine (list PCI?)
 2. Universal Serial Bus (USB)
 	- `lsusb` - info about USB(s) connected (list USB)
 	- cold-plug vs hot-plug

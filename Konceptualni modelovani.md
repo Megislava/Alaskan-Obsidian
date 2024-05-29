@@ -1,4 +1,3 @@
-![[souvislosti-temat.png]]
 Linky na prednasky: [[hand-les01-uvod.pdf]] a [[hand-les02-konceptualni-modelovani.pdf]]
 
 ### Poznamky

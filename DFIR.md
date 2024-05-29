@@ -31,36 +31,36 @@
 	- mounting
 2. Acquiring data
 	- static acquisition
-		- [[dd]], [[dcfldd]], [[FTK Imager 1]] or [[Volatility]]
+		- [[dd]], [[dcfldd]], [[FTK Imager]] or [[Volatility]]
 	- live acquisitions
 		- encryption
 		- volatile data source - RAM
 	- remote acquisition
 		- network connection
 		- client-server architecture
-	3. Analysing data
+	3. Analyzing data
 		 - indexing, searching, reporting
-		 - [[Autopsy]], [[Hex Workshop 1]], [[OpenStego]]
+		 - Autopsy, [[Hex Workshop]] , OpenStego
 
 
 ## Incident Response
 1. Prepare for inevitable incident
-2. Incident detection and characterisation
+2. Incident detection and characterization
 3. Data collection
 4. Data analysis
 5. Remediation
-
-- checklists and forms on [ir3e.com](ir3e.com)
 
 
 ## Links
 
 1. [[Memory Analysis]]
 2. [[Malware]]
-3. [[Operating System Forensics]]
+3. Operating System Forensics
 4. [[User Activity Analysis]]
-5. [[Network Forensics]]
+5. Network Forensics
+	1. [[traceroute]]
+	2. [[Wireshark]]
 6. [[Thread and Vulnerability Management]]
 7. [[Reverse Engineering]]
-8. [[Autopsy]]
+8. Autopsy
 9. [[SIFT]]

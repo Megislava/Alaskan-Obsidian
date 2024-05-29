@@ -1,3 +1,3 @@
 - imaging software
-- commertial
+- commercial
 - with GUI

@@ -1,4 +1,3 @@
-# Chemical Plant
 ```
 const checkPassword = () → {
 
