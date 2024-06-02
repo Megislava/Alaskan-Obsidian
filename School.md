@@ -1,4 +1,4 @@
-## FIT CVUT
+# FIT CVUT
 1. 1. semester
 	1. [[DML]]
 	2. [[git]]
@@ -20,6 +20,12 @@
 	2. APS
 	3. [[C]] (PA1)
 	4. [[UKB]]
+
+
+# VSE FSI
+
+### Repetitorium (all in Czech)
+[[Administion Exam Prep]]
 
 # Extra
 ![[Computer Science Distilled.pdf]]

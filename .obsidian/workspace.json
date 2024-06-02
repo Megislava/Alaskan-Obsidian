@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_000__Home.md",
+                "file": "Administion Exam Prep.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_000__Home.md",
+                "file": "Administion Exam Prep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,17 +104,17 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_000__Home.md",
+                "file": "Administion Exam Prep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "96b567c3ab62f6e7",
+            "id": "9d9cff127b3419b6",
             "type": "leaf",
             "state": {
-              "type": "calendar",
+              "type": "review-queue-list-view",
               "state": {}
             }
           }
@@ -122,17 +123,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
       "graph:Open graph view": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
   "active": "6c66c2772ff6dd22",
   "lastOpenFiles": [
+    "Attachments/Repetitorium-pro-Informacni-management.pdf",
     "School.md",
+    "Administion Exam Prep.md",
+    "_000__Home.md",
     "Windows Authentication.md",
     "Network site Uvod.md",
     "Linux File System.md",
@@ -141,7 +148,6 @@
     "Google CTF - Chemical Plant.md",
     "BUS.md",
     "Authentication vulnerabilities (excluding OAuth).md",
-    "_000__Home.md",
     "Korean.md",
     "Bash Conditions.md",
     "Bash.md",
@@ -157,8 +163,6 @@
     "Attachments/16.PNG",
     "binwalk.md",
     "Vulnerabilities.md",
-    "C Pointers.md",
-    "Pointers.md",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled 2.canvas",

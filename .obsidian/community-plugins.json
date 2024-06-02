@@ -1,15 +1,8 @@
 [
-  "obsidian-git",
-  "calendar",
   "omnisearch",
   "better-word-count",
-  "obsidian-version-history-diff",
-<<<<<<< HEAD
-  "obsidian-icon-folder",
-  "recent-files-obsidian",
-  "editing-toolbar",
-  "obsidian-spaced-repetition"
-=======
-  "obsidian-languagetool-plugin"
->>>>>>> 24a11fb (updated notes)
+  "obsidian-languagetool-plugin",
+  "obsidian-spaced-repetition",
+  "obsidian-plugin-update-tracker",
+  "obsidian-statusbar-pomo"
 ]
