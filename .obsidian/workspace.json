@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6ac553e666798811",
+        "id": "8334bbed8dd704c2",
         "type": "tabs",
         "children": [
           {
-            "id": "12fcf10ab5468f12",
+            "id": "6c66c2772ff6dd22",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -65,14 +65,6 @@
               "type": "bookmarks",
               "state": {}
             }
-          },
-          {
-            "id": "8ea4367d600c1a5a",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
           }
         ]
       }
@@ -118,10 +110,10 @@
             }
           },
           {
-            "id": "bc5fbab46f86f6e3",
+            "id": "96b567c3ab62f6e7",
             "type": "leaf",
             "state": {
-              "type": "review-queue-list-view",
+              "type": "calendar",
               "state": {}
             }
           }
@@ -130,45 +122,43 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
       "graph:Open graph view": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-spaced-repetition:Review flashcards": false
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "12fcf10ab5468f12",
+  "active": "6c66c2772ff6dd22",
   "lastOpenFiles": [
-    "Korean.md",
-    "Ethical Hacking.md",
-    "DFIR.md",
-    "Vulnerabilities.md",
-    "Konceptualni modelovani.md",
-    "C Data representation.md",
-    "tar.md",
-    "Cyber Security.md",
-    "Tools.md",
-    "Hex Workshop.md",
-    "x86.md",
-    "MA1.md",
-    "IoT.md",
-    "zip.md",
-    "xfreerdp.md",
-    "Wireshark.md",
-    "Windows Files.md",
+    "School.md",
     "Windows Authentication.md",
-    "Windows.md",
-    "wfuzz.md",
-    "Web a mobil bezpecnost.md",
-    "Vulversity.md",
-    "Volatility.md",
-    "Vim.md",
-    "Vaccine.md",
-    "Utilities.md",
+    "Network site Uvod.md",
+    "Linux File System.md",
+    "Intro to the Unix&Linux.md",
+    "HW Memory.md",
+    "Google CTF - Chemical Plant.md",
+    "BUS.md",
+    "Authentication vulnerabilities (excluding OAuth).md",
+    "_000__Home.md",
+    "Korean.md",
+    "Bash Conditions.md",
+    "Bash.md",
+    "Bash Loops.md",
+    "Intro to the Unix_Linux.md",
+    "notes on future apps.md",
+    "Thread and Vulnerability Management.md",
+    "Lynis.md",
+    "MA1.md",
+    "Exploitation.md",
+    "Uvod do kyberbezpecnosti.md",
+    "User Activity Analysis.md",
     "Attachments/16.PNG",
+    "binwalk.md",
+    "Vulnerabilities.md",
+    "C Pointers.md",
+    "Pointers.md",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
