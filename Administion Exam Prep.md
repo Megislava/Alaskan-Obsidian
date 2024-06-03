@@ -305,10 +305,208 @@ overeni podpisu, automaticka konverze dokumentu z/do elektronicke podoby a zasla
 
 ### IT Governance
 
+IT Governance
+?
+nastaveni pravidel ve kterych muzou ostatni efektivne pracovat
+vs Management - pravidelna cinnost obsahujici provozni rozhodnuti v ramci danych pravidel
+soucasti je i merici a kontrolni system
+cil: vybavit firmu/organizaci jasne definovavymi pravidly pro efektivni plneni cilu
+
+role ve firme/organizaci
+?
+vlastnik - otazky a naslouchani
+manager - chain of command, carrot & stick
+Board of Directors - vybira je majitel (ne CEO), lidi s ruznymi zkusenostmi a transparetni minulosti, 
+
+co se ocekava od board of directors
+?
+challenging executive management, managing risk, steering on long term & strategic level
+
+corporate (enterprise) governance
+?
+system, kterym je vedena cela spolecnost - definuje distribuci prav a povinnosti mezi zainterestovanymi stranami spolecnosti (akcionari, vykonny management, statutarni organy, zamestnanci, zakaznici)
+soubor pravnich a exekutivnich metod a postupu zavazujici zejmena verejne obchodovatelne spolecnost udrzovat vyvazeny zvtah mezi spolecnosti a osobami kteri ji tvori
+IT governance je podmnozinou
+
+historie IT governance
+?
+do 1996 - audit IT, co ma IT delat
+do 1998 - rizeni IT, co ma mamangement ocekavat od IT
+kolem 2000 - vykonnost IT, jak to merit
+kolem 2005 - IT Governance, zavadeni pravidel pro IT
+kolem 2012 - tesne propojeni business a IT (~ EGIT)
+
+EGIT = Enterprise Governance IT
+?
+pokryva vsechny pozadovane procesy a IT zdroje tak aby IT vhodne podporovalo spolecnosti pri vytvareni hodnot a naplnovani ocekavani zaintersovanych stran
+oblasti: risk managemnt, performance management, IT strategic alighment, IT value delivery
+ocekavani: zvyseni transparentnosti, dosazeni souladu s relevantnimi zakony, regulacemi a politikami, nastaveni kontrolnich mechanizmu a reportovani, vcasna identifikace a elimikace rizika vyplivajici z IT, zlepseni rizeni IT v souladu s best practise
+
+propojeni businessu a IT
+?
+Enterprise Balance Source Card = metoda vytvarejini vazbu mezi strategii a operativnimi cinnostmi s durazem na mereni vykonu;; finance->procesy->uceni se a rust->zakaznim->financee->...
+IT BSC - tabulky s objectives a measures, cile, projekty a aktivity ktere tyto cile a jejich dozazeni zajitit
+
+system
+?
+celek slozeny z casti ktere na sebe vzajemne pusobi, mezi castmi mohou byt toky informaci a energie
+
+rozdeleni systemovych metod rizeni
+?
+otevrene vs uzavrene, deterministicke vs stochasticke, spojite vs diskretni, staticke vs dynamicke, mekke vs tvrde (dobre strukturovane vs nepresne definovane)
+fishbone diagram
+Occamova britva
+
+COBIT
+?
+uzivatele: manageri, auditori, vlastnici, IT a sec specialiste,...
+audit (1996) + control (1998) + management (2000) + IT governance (2005/2007) + governance of IT enterprise (2012)
+framework na enabling processes a implementace
+
+proces
+?
+ucelne neplanovani a relalizovana posloupnost cinnosti ve kterem za pomoci odpovidajicich zdroju probita transformace vstupu na pozadovane vystupy
+
+procesni rizeni
+?
+vs projektove rizeni = jednorazova zmena
+podnikove procesy: hlavni - vedlejsi - podpurne
+zralost a CMMI (= Capability Maturity Model Integration) - neexistujici -> nahodny -> formalizovany -> meritelny -> optimalizovatelny
+
+zlepsovani procesu
+?
+eliminace zbytecnych cinnosti, paralelizace cinnosti, centralizace ztroju, spojovani cinnosti, jedno kontaktni misto, delegace pravomoci, duvera mezi subjekty, zvyseni urovne znalosti pracovniku, automatizace
+
+Business Process Management = BPM
+?
+snaha o uchopeni struktury firmy, jeji architektury a rizeni prostrednictvim podnikoveho modelu zachycujici zakladni rozmery podnikani (cile, hodnotvorne procesu, informacni, organizacni a znalosti infrastruktura, podpurne technologie)
+rada nastroju a metod
+
+ITIL - v3 vs v4
+?
+v3 - lifecycle view - 26 procesu v 5 domenach (service strategy, service design, service transition, service operations, continual service improvement)
+v4 - comprehensive, reflects changing world of IT
+
+organizacni modely
+?
+zakladni fce a procesy management: planovani, organizovani, personalni zajistovani, vedeni a motivace, kontrolovani
+deleni: stabilni vs fleziboni struktura, alternativni (cloud)
+
+informacni model podniku
+?
+pyramida: technologie -> data -> applikace -> informace -> business
+data (fakta popisujici realitu nezaujate) -> informace (data v kontextu) -> znalost (informace s vyznamem, pro prakticke rozhodovani situace) -> moudrost (znalost + vhled)
+
+Data Security Life-cycle
+?
+Create -> Store -> Use -> Share -> Archive -> Destroy -> ...
+
+organizovani
+?
+kazdy system hleda rovnovahu
+-> omezeni rozmanitosti systemu, struktura, teorie chaosu a prechodove jevy. dynamicka rovnovaha
+
+projektove rizeni
+?
+WBS = Work Breakdown Structure
+OBS = Organization BS
+Agile vs Waterfall
+Gantt Chart - pruhovy diagram, graficke znazorneni naplanovani posloupnosti cinnosti v case
+
+rizeni lidi
+?
+management vs leadership
+
+rizeni tymu
+?
+typy tymu: diverzita, samotatnost, lokalizace, typologie clenu, pracovni role
+nastroje - startup, sociomapovani
+
+risk management
+?
+identification-assessment-mitigation plan-implementation & monitoring-review & update plans
+
+protection
+?
+perimetr, data & privacy, process, application
+security consulting - risk analysis, security audit, IT Governance,...
+
+etika
+?
+prakticka filozofie, hleda odpoved na otazku jak spravne zit
+individualni moralka, spolecensky mrav, hledani nejlepsiho
+aplikovana etika, podnikatelska etika
+
+firemni kultura
+?
+zmena: analyza situace -> tvorba vize -> projekt zmeny
+akteri: iniciatori, leafer, reprezentanti, podporovatele, odpurni, neutralni
+nastroje: vize, projekt zmen, personalni a organizacni zmeny, vzdelani s vycvik, zmeny v odmenovani a pridelovani zdroju, technicka zmena
+
+firemni dokumenty
+?
+smlouvy, zapisy z jednani, organizacni normy, prodejni a reklamni dokumentace, projetova dokumentace, ...
+rizena vs nerizena
+
+Enterprise Content Management (ECM)
+?
+podnikovy IS zabyvajici se spravou podnikovych informaci
+cile: zajistovani dostupnosti informaci, zvyseni informacni bezpecnosti, snicheni chybovosti, uspory
+elektronicke, papirove dokumenty, rizeni a sprava veskereho informacniho obsahu
+strkturovana vs nestruktorovana data, vsechny typy elektronickych dokumentu, proces digitalizace
+
+normy - kaskady vzniku
+?
+globalni kaskada impupzu pro vznik/zmenu norem: EU uroven -> CR uroven -> firemni uroven
+firemni kaskada: complience, best practise, quality management
+
+norma o norme
+?
+zakladni norma o tom jak psat normy (tvori se jako prvni)
+stanovi e struktura obsahu a forma
+
+normy - vyznam
+?
+tvorba normativniho modelu organizace (pravidla o tom jak ma stravne fungovat aby splnila sve cile)
+v souladu s normou se tvori a upravuje system rizeni organizace
+nastaveni normativniho chovani jje efektivni ale pozor na balanc formalnosti vs kreativity
+
+normy - druhy
+?
+smernice, narizeni, rozhodnuti reditele, opatreni, normativni smernice, rad,...
+kategorizace podnikovych norem: pravni, technicke, ekonomicko-provozni, organizacni, ridici,...
+
+
 ### Informacni bezpecnost a kryptografie
 
 ### Zaklady odborne prace
 
+analyticke mysleni
+?
+rozdeleni celku na samostatne casti a zabyvani se jimi zvlast
+
+synteticke mysleni
+?
+snaha o poskladani a potom pochopeni celku
+
+informacni etika
+?
+vytvareni hranic a definic
+nutno informacim porozumet, overit a pak pouzit v kontextu
+
+citace
+?
+norma APA (ISO 690) - povinne: autor, nazev dila, rok vydani, misto, nakladatelstvi
+nutno uvest vsechny pouzite zdroje, presne a uplne citace, odkazy v textu do seznamu literatury
+doslovna vs parafraze
+
+struktura odborne prace
+?
+uvod-metody-vysledky-diskuze
+uvod - proc bylo tema zvoleno, zasadit do kontextu, necisluje se
+abstrakt (anotace, teze), klicova slova
+text-zaver-seznam literatury a zdroju
+metodika - promysleny postup pri praci
 
 
 ## PDF
