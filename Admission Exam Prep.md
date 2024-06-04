@@ -14,15 +14,17 @@ informace = vyznam prisouzeny datum; interpretace individualni
 mira informace a entropie
 ?
 s rostouci informaci klesa entropie a naopak
+<!--SR:!2024-06-07,3,268-->
 
 kvalita informace
 ?
 obtizne kvantifikovatelna, kriteria: spolehlivost, duveryhodnost, solidnost, aktualnost,...
 
-kodovani vs sifrovani
+kodovani vs sifrovani - ucel
 ?
-kodovani = standardizace prenostu, ochrana informace, zmenseni velikosti, zabraneni chybam pri prenostu
+kodovani = standardizace prenosu, ochrana informace, zmenseni velikosti, zabraneni chybam pri prenostu
 sifrovani = uchranit info
+<!--SR:!2024-06-05,1,223-->
 
 databazovy system
 ?
@@ -47,9 +49,16 @@ kodovani v PC
 posun pres mechanicke->elektro->mechanicke->elektro
 elektronika zalozena na principu promenlive elektricke vodivosti (-> 0/1) -> nejvyhodnejsi je dvojkova soustava - jednotka bit
 
-spinace pocitacovych generaci
+spinace pocitacovych generaci (5)
 ?
-henerace: (0.) elektromagneticke rele -> (1.) elektronka (1945-1950) -> (2.) transistor (1950-1964) -> (3.) integrovany obvod (1965->1980) -> (4.) mikroprocesor (1981->...) -> ?? (kvantum?)
+generace: 
+(0.) elektromagneticke rele -> 
+(1.) elektronka (1945-1950) -> 
+(2.) transistor (1950-1964) -> 
+(3.) integrovany obvod (1965->1980) -> 
+(4.) mikroprocesor (1981->...) -> 
+?? (kvantum?)
+<!--SR:!2024-06-05,1,228-->
 
 zakladni deska
 ?
@@ -58,6 +67,7 @@ obsahuje napajeci obvody, konektory pro pripojeni procesoru, pameti, periferii, 
 procesor
 ?
 hlavni vypocetni cast PC, vykonava strojovy kod ulozeny v RAM, dnes vicejadrove
+<!--SR:!2024-06-07,3,268-->
 
 vnitrni pamet
 ?
@@ -75,14 +85,16 @@ SSHD - HDD + SSD
 
 rozhrani PC
 ?
-ke komunikaci s okolim - vnejsi (periferie) vs vnitrni (jednotlive casti PC) rozhrani 
+ke komunikaci s okolim - vnejsi (periferie) vs vnitrni (jednotlive casti PC) rozhrani
 vnitrni - SATA (disk), PCI+PCI express (rozsiruje karty)
-vnejsi - VGA, HDMI, DVI, RJ45, USB (Universal Serial Bus, limitovany odber ze smernice, zpetna kompatibilita, verze 1.1, 2.0, 3.1, C, 4.0), Bluetooth (parovani 2 zarizeni v 2.4GHz bezlicencnim pasmu), WiFi (nejtypictejsi pripojeni k internetu, v 2.4 a 5GHz bezlicencnim pasmu) 
+vnejsi - VGA, HDMI, DVI, RJ45, USB (Universal Serial Bus, limitovany odber ze smernice, zpetna kompatibilita, verze 1.1, 2.0, 3.1, C, 4.0), Bluetooth (parovani 2 zarizeni v 2.4GHz bezlicencnim pasmu), WiFi (nejtypictejsi pripojeni k internetu, v 2.4 a 5GHz bezlicencnim pasmu)
+<!--SR:!2024-06-06,2,248-->
 
 Mooruv zakon
 ?
 pocet transistoru ktere mohou byt umistene na integrovany obvod se pri zachovani stejne ceny zdvojnasobi kazdych 18 mesicu
 typek spoluzakladatel Intelu
+<!--SR:!2024-06-06,2,243-->
 
 ### Software
 
@@ -99,6 +111,7 @@ obvykle s GUI, ma zakladni systemove nastroje, poskytuje jednotle GUI pro uzivat
 3 fce OS
 ?
 ovladani PC, abstrakce HW, sprava prostredku
+<!--SR:!2024-06-06,2,248-->
 
 firmware
 ?
@@ -107,6 +120,7 @@ ovladaci kod pro nizkourovnove rizeni HW ~ uzce spjat s konkretnim HW
 aplikacni SW
 ?
 programove vybaveni PC, GUI/textove rozhrani, kancelarske aplikace, webove prohlizzece, postovni klienti,...
+<!--SR:!2024-06-06,2,243-->
 
 zakazkovy vs typovy SW
 ?
@@ -153,6 +167,7 @@ pixel uchovava informace o barve, rozliseni,...
 bitmapovy SW
 ?
 gimp (open-source, free), Adobe Photoshop (zakladni kresleni, vybery, tvorby, zmeny barvy, vrstvy,...), Malovani, InfraView (prohlizeni, lehke upravy, nakresleni jednoducheho obrazce, komprese)
+<!--SR:!2024-06-06,2,248-->
 
 bitmapove formaty
 ?
@@ -167,6 +182,7 @@ vektorova grafika
 obrazek z nekolika jasne definovanych objektu (bod, primka, krivna), reprezentace rozmery a umistenim
 :) libovolne skalovani, mozno pracovat s jednotlivymi objekty, mensi pametova narocnost
 :( nevhodny pro zapis slozitych barevnych ploch, slozitejsi na porizeni obrazku
+<!--SR:!2024-06-06,2,248-->
 
 vektorove SW
 ?
@@ -190,9 +206,10 @@ formaty vektorovych multumedialnich kontejneru
 .mpeg - Motion Picture Experts Group, vice formatu a kontejneru, bitmap 24bit/pixel, max 4096x4096 obrazovych bodu, max 30 snimku, kosinova ztratova komprese
 .heif, .heic, .hevc - foto v telefonech, F - titulky a zvuk, VC - video s pouzitim DVB-T2
 .mp3 - MPEG-1, MPEG-2, hlavne hudba na PC, princip casoveho a frekvencniho mapovani, ztratova komprese, nevhodny pro mluvenou rec
-.mp4 - MPEG-4 part 14, nastupce .avi, vice titulku/zvukovych stop/3D objektu, streamovane videa, mp3 komprese, vychazi z nej 3GPP na mobilech 
+.mp4 - MPEG-4 part 14, nastupce .avi, vice titulku/zvukovych stop/3D objektu, streamovane videa, mp3 komprese, vychazi z nej 3GPP na mobilech
 .vp9 - od Google, otevreny, podpora browseru, mobily, tablety, telefize, kamery,...
 .ogg - projekt pro tvorbu svobodneho SW -> .oflac, .ogg, .opus, .speex, .ogv
+<!--SR:!2024-06-05,1,228-->
 
 RBG, CMYK,...
 ?
@@ -203,6 +220,7 @@ taky: HSV (HueSaturationValue), HSB (Brightness), HSL (Lumination), HSI (Intensi
 barevny gamut
 ?
 barvy dosazitelne v prislusnem modelu, mimo model se barvy zobrazi pouze priblizne -> gamut zarizeni - barvy ktere je zarizeni schopno zobrazit
+<!--SR:!2024-06-05,1,228-->
 
 
 ### Podnikove informacni systemy
@@ -212,6 +230,7 @@ Podnikovy informacni sytem (EIS = Enterprise Information System) (definice, ucel
 = k podpore rizeni, koordinace disponibilnich podnikovych zdroju a aktivit, propojuje podnikove procesy
 ucel: sprava informaci a znalosti a integrace do podnikovych procesu, celistvy pohleld na financovani organizace, zisk a zpracovani informaci potrebnych k manazerskemu rozhodovani
 cil: zvyseni celkove efektivity a navaznosti pracovnich procesu, zlepseni pracovnich navyku a chovani useru
+<!--SR:!2024-06-05,1,228-->
 
 historie EIS
 ?
@@ -243,7 +262,8 @@ Infor, Microsoft, IBM, Asecco Solution, ABRA,...
 
 eGovernment
 ?
-vuuziti informaci a komunikacnich technologii s cilem zlepseni a nebo posileni ucinnosti a efektivity poskytovanych sluzeb ve verejnem sektoru
+vyuziti informaci a komunikacnich technologii s cilem zlepseni a nebo posileni ucinnosti a efektivity poskytovanych sluzeb ve verejnem sektoru
+<!--SR:!2024-06-05,1,223-->
 
 komunikacni kanaly eGovernmentu
 ?
@@ -264,22 +284,28 @@ zrizuje a spravuje MVCR, provozovatel je CeskaPosta
 webapp ~ SOAP+HTTPs, dalsi proprietarni SW pro komunikaci
 bezpecnost - ID+heslo (5 pokusu/hodina, potom deaktivace), po 30minutach neaktivity odhlaseni, OTP (mobilni klid ISDS, cip na obcance, auth cert)
 
-datova zprava datove schranky
+datova zprava datove schranky - obsah
 ?
 obsahuje elektronickou znacku (e-razitko) a casovou znacku (kvalifikovane casove razitko)
-telo obsahuje formu prilohy, pro vlozeni zpravy - avizo SMS (za penize), nebo email (zadarmo)
+telo obsahuje formu prilohy
+pro vlozeni zpravy - avizo SMS (za penize), nebo email (zadarmo)
+<!--SR:!2024-06-05,1,228-->
 
 vlastnosti datove schranky
 ?
-neomezena velikost, dorucenka (potvrzeni doruceni, precteni, fikce doruceni), od precteni se zprava uchovava 90 dnu (pro delsi platnost: datovy trezor, datove uloziste)
+neomezena velikost
+dorucenka (potvrzeni doruceni, precteni, fikce doruceni)
+od precteni se zprava uchovava 90 dnu (pro delsi platnost: datovy trezor, datove uloziste)
+<!--SR:!2024-06-06,2,248-->
 
-pravni uprava elektronicky ukonu eGovernmentu
+pravni uprava elektronicky ukonu eGovernmentu v Datove Schrance
 ?
 zavaznost - pravni vaha stejna jako u fyzickeho doruceni do vlastnich rukou
-garantovane doruceni - doruceni = adresat se prihlasi do sve datovky
+garantovane doruceni - kdyz adresat se prihlasi do sve datovky
 pravni fikce doruceni - pokud se adresat do 10 dnu neprihlasi, zprava je povazovana do dorucenou
 pomijivost - zpravy se po 90 dnech mazou
 pokuty - 10M za nevyzadany dokument, 20M za skodlivy SW
+<!--SR:!2024-06-05,1,223-->
 
 ISZR = Integrovany System Zakladnich Registru
 ?
@@ -322,6 +348,7 @@ Board of Directors - vybira je majitel (ne CEO), lidi s ruznymi zkusenostmi a tr
 co se ocekava od board of directors
 ?
 challenging executive management, managing risk, steering on long term & strategic level
+<!--SR:!2024-06-06,2,248-->
 
 corporate (enterprise) governance
 ?
@@ -348,9 +375,10 @@ propojeni businessu a IT
 Enterprise Balance Source Card = metoda vytvarejini vazbu mezi strategii a operativnimi cinnostmi s durazem na mereni vykonu;; finance->procesy->uceni se a rust->zakaznim->financee->...
 IT BSC - tabulky s objectives a measures, cile, projekty a aktivity ktere tyto cile a jejich dozazeni zajitit
 
-system
+system (vseobecna definice)
 ?
 celek slozeny z casti ktere na sebe vzajemne pusobi, mezi castmi mohou byt toky informaci a energie
+<!--SR:!2024-06-06,2,243-->
 
 rozdeleni systemovych metod rizeni
 ?
@@ -360,9 +388,10 @@ Occamova britva
 
 COBIT
 ?
-uzivatele: manageri, auditori, vlastnici, IT a sec specialiste,...
-audit (1996) + control (1998) + management (2000) + IT governance (2005/2007) + governance of IT enterprise (2012)
 framework na enabling processes a implementace
+audit (1996) + control (1998) + management (2000) + IT governance (2005/2007) + governance of IT enterprise (2012)
+uzivatele: manageri, auditori, vlastnici, IT a sec specialiste,...
+<!--SR:!2024-06-05,1,228-->
 
 proces
 ?
@@ -397,6 +426,7 @@ informacni model podniku
 ?
 pyramida: technologie -> data -> applikace -> informace -> business
 data (fakta popisujici realitu nezaujate) -> informace (data v kontextu) -> znalost (informace s vyznamem, pro prakticke rozhodovani situace) -> moudrost (znalost + vhled)
+<!--SR:!2024-06-05,1,228-->
 
 Data Security Life-cycle
 ?
@@ -413,6 +443,7 @@ WBS = Work Breakdown Structure
 OBS = Organization BS
 Agile vs Waterfall
 Gantt Chart - pruhovy diagram, graficke znazorneni naplanovani posloupnosti cinnosti v case
+<!--SR:!2024-06-05,1,228-->
 
 rizeni lidi
 ?
@@ -422,6 +453,7 @@ rizeni tymu
 ?
 typy tymu: diverzita, samotatnost, lokalizace, typologie clenu, pracovni role
 nastroje - startup, sociomapovani
+<!--SR:!2024-06-06,2,248-->
 
 risk management
 ?
@@ -431,6 +463,7 @@ protection
 ?
 perimetr, data & privacy, process, application
 security consulting - risk analysis, security audit, IT Governance,...
+<!--SR:!2024-06-05,1,228-->
 
 etika
 ?
@@ -448,13 +481,15 @@ firemni dokumenty
 ?
 smlouvy, zapisy z jednani, organizacni normy, prodejni a reklamni dokumentace, projetova dokumentace, ...
 rizena vs nerizena
+<!--SR:!2024-06-06,2,243-->
 
 Enterprise Content Management (ECM)
 ?
 podnikovy IS zabyvajici se spravou podnikovych informaci
-cile: zajistovani dostupnosti informaci, zvyseni informacni bezpecnosti, snicheni chybovosti, uspory
-elektronicke, papirove dokumenty, rizeni a sprava veskereho informacniho obsahu
-strkturovana vs nestruktorovana data, vsechny typy elektronickych dokumentu, proces digitalizace
+cile: zajistovani dostupnosti informaci, zvyseni info bezpecnosti, snizeni chybovosti, uspory
+vsechny typy elektronickych a papirovych dokumenty, rizeni a sprava veskereho informacniho obsahu, proces digitalizace
+strkturovana vs nestruktorovana data
+<!--SR:!2024-06-05,1,228-->
 
 normy - kaskady vzniku
 ?
@@ -480,6 +515,154 @@ kategorizace podnikovych norem: pravni, technicke, ekonomicko-provozni, organiza
 
 ### Informacni bezpecnost a kryptografie
 
+bezpecnost informaci
+?
+ochrana informaci ve sech jejich formach a po cely zivotni cyklus
+
+CIA
+?
+Confidentiality - ochrana pred neautorizovaym pristupem, uzitim, vyzrazenim; ochrana v systemu, pri transferu, pri zpracovani; fyzicka bezpecnost, sifrovani, autorizace, autentikace  
+Availability - zajisteni dostupnosti systemu/sluzeb/iformaci, akceptovatelna uroven vykonnosti, prevence ztraty a zniceni; redundance ulozeni/zpracovani/pristupu k datum, zalohovani a obnova dat, plany obnovy, aktualizace a patchovani 
+Integrity - detekce nezadoucich zmen pri vlozeni/prenosu/zpracovani; digitalni podpis, hashovani, audit operaci, odolnost vuci chybam uzivatele
+
+kyberneticka bezpecnost
+?
+sourhn pravnich, organizacnich, technickych a vzdelavacich prostredku smerujici k zajisteni ochrany kybernetickeho prostoru
+
+bezpecnost informaci vs kyberneticka bezpecnost
+?
+BI chrani i fyzicke informace pred jinymi nez kyber hrozbami (povodne), KB chrani i jina akrtiva nez jenom nformace (soukromi, identity)
+
+krypto-grafie/analyza/primitiva
+?
+kryptografie - matematicke metody ve vstahu s prvvky BI, cile: duvernost, integrita, autentizace, nepopiratelnost
+kryptoanalyza - analyza odolnosti kryptografickych systemu a jejich pentestovani
+kryptoprimitiva - algoritmy se zakladnimi krypto vlastnostmi - bez klicu, sdilene klice (symetric, asymetric), verejne klice
+
+hashovani
+?
+jednosmerna hashovaci funkce prevede libovolny retezec na otisk o pevne delce
+na overovani hesel, overeni integrity zprav a souboru, generovani a overerni digitalniho podpisu, identifikatory souboru,...
+
+utok na hash
+?
+nalezeni 1. vzoru -> nalezeni 2. vzoru -> nalezeni kolice
+<!--SR:!2024-06-06,2,248-->
+
+symetricka sifra
+?
+pro sifrovani i desifrovani se pouziva stejny klic
+pozadavky na bezpecny sifrovaci algoritmus a bezpecne predani klice
+typ: blokove (rozdeleni otevreneho textu na bloky), proudove (prubezne sifrovani)
+eg.: AEAE (Authentucated Encryption w/ Associated Data, sifrovani a spocitani MAC), GMC (blokova, v TLS1.3), CCM (blokova, v TLS1.2), POLY1305 (proudova, v TLS1.2 a TLS1.3)
+
+asymetricka sifra
+?
+kombinace public a private klice, matematicky narocnejsi
+3 skupiny: rozdeleni velkeho cisla na soucin prvocisel (RSA), diskretni logaritmus (Diffie-Hellman, DSA, Elgamal), elipticke krivky (ECDM, ECDSA, ECIES,...)
+na: sifrovani, podepisovani
+<!--SR:!2024-06-05,1,223-->
+
+certifikat - obsah
+?
+identifikacni udaje, platnost, verejny klic, rozsirujici info, digitalni podpis od cert autority (duvoeryhodna cert autorita - eIDAS)
+<!--SR:!2024-06-05,1,228-->
+
+eIDAS
+?
+cilem je uznavani autentizace mezi staty EU
+uroven zaruky (nizka, znacna, vysoka) je pro vydani elektronicke identity nebo pouzivani verifikatoru
+<!--SR:!2024-06-05,1,228-->
+
+elektricky podpis
+?
+kvalifikovany certifikat (vydany CA, musi byt pravdivy), kvalifikovany prostredek
+
+elektronicka pecet
+?
+technicky stejna jako elektricky podpis, ale ma jine certifikaty a jine pravni dusledky
+kvalifikovana, uznavana, eketronicka
+
+casova razitka/znacky
+?
+Time Stamp Authority k oticky prida casovou znacku, poradove cislo a celek digitalne podepise
+
+identifikace
+?
+akt/proces kdy entita predlozi systemu identifikator na jehoz zaklade muze rozeznat danou entitu
+
+autentizace
+?
+provedeni testu a rozpoznani a potvrzeni entity
+
+autorizace
+?
+udeleni prav podle pristupovych prav
+<!--SR:!2024-06-06,2,248-->
+
+odpovednost
+?
+odpovednost entity a jeji cinnost a rozhodovani - sledovani cinnosti a vytvrenu zaznamu (audit)
+<!--SR:!2024-06-05,1,228-->
+
+identita
+?
+fyzicka - jedna, ale muze mit vice elektronickych identit
+
+faktory autentizace
+?
+vim + mam + jsem
+<!--SR:!2024-06-07,3,263-->
+
+prihlasovani heslem
+?
+nejcastejsi, nejjednodussi na implementaci, jednoduchy a znamu pro uzivatele, nejmene bezpecny
+-> omezeni poctu pokusu, chranit hesla uzivatelu, pomahat s vytvarenim hesel, skolit uzivatele,...
+<!--SR:!2024-06-07,3,268-->
+
+single-sign on
+?
+oddeleni aplikace od autentizace uzivatele (uspesny utok na aplikaci nevede k prozrazeni hesel)
+uzivatel si nemusi pamatolik tolik hesel, uspora casu
+typy: webove (cookies), federovane authentizacni protokoly (SAML, OpenID Connect), Kerberos (na lokalni siti)
+
+NIA = Narodni bod pro identifikaci a autentizaci
+?
+muze pouzivat jenom statni sprava, eidentita.cz
+<!--SR:!2024-06-06,2,248-->
+
+penetracni testovani
+?
+planovani a priprava -> ohodnoceni (recon, mapping, vuln check, initial breach, privilege escalation, C&C, post exploitation) -> reportovani 
+
+firewall
+?
+blokuje/povoluje navazovani komunikace na zakladni preddefinovane/dynamicke pravidla a politiky, chrani zarizeni
+blokovani pomoct: drop, reject, TCP reset
+typy: nezstavove (1. generace, pouze filtrovani), stavove (2. generace), aplikacni FW (3. generace, na aplikacni vrstve OSI modelu), FW nove generace
+umisteni: na hranici site, mezi subnety, v OS, v aplikaci
+
+proxy
+?
+forward proxy - pri filtrovani pristupu a obsahu, urychleni odpovedi, prokazani souladu s ravidly, skryti interni site, anonymizace
+reverse proxy - pri LB, podpora TLS, SSL, offload, SSL acceleration, caching, taky zrychluje odpovedi, slouceni obsahu z vice aplikaci, podpora SSO
+
+IDS = Intrusion Detection System
+?
+detekce neobvykle aktity ktera by mohla vest k naruseni bezpecnosti
+analyza aktivit, detekce, alertovani pri detekovani
+casta kombinace s IPS
+
+IPS = Intrusion Prevention System
+?
+detekce skodlive sinnosti, zablokovani a alertovani
+casta kombinace s IDA
+
+VPN = Virtual Private Network
+?
+authentikace + sifrovani provozu pres otevrenou sit
+typy: public VPN, site-to-site, Remote Access
+<!--SR:!2024-06-06,2,248-->
 
 
 ### Zaklady odborne prace
@@ -502,6 +685,7 @@ citace
 norma APA (ISO 690) - povinne: autor, nazev dila, rok vydani, misto, nakladatelstvi
 nutno uvest vsechny pouzite zdroje, presne a uplne citace, odkazy v textu do seznamu literatury
 doslovna vs parafraze
+<!--SR:!2024-06-07,3,268-->
 
 struktura odborne prace
 ?

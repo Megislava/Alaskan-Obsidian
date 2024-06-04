@@ -130,12 +130,14 @@
     "hiddenItems": {
       "graph:Open graph view": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-spaced-repetition:Review flashcards": false
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
   "active": "6c66c2772ff6dd22",
   "lastOpenFiles": [
     "School.md",
+    "Administion Exam Prep.md",
     "Admission Exam Prep.md",
     "Attachments/Repetitorium-pro-Informacni-management.pdf",
     "_000__Home.md",
