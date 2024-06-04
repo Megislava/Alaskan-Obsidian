@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Administion Exam Prep.md",
+                "file": "Admission Exam Prep.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Administion Exam Prep.md",
+                "file": "Admission Exam Prep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Administion Exam Prep.md",
+                "file": "Admission Exam Prep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,15 +130,14 @@
     "hiddenItems": {
       "graph:Open graph view": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-spaced-repetition:Review flashcards": false,
-      "obsidian-statusbar-pomo:Start pomodoro": false
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
   "active": "6c66c2772ff6dd22",
   "lastOpenFiles": [
-    "Attachments/Repetitorium-pro-Informacni-management.pdf",
     "School.md",
-    "Administion Exam Prep.md",
+    "Admission Exam Prep.md",
+    "Attachments/Repetitorium-pro-Informacni-management.pdf",
     "_000__Home.md",
     "Windows Authentication.md",
     "Network site Uvod.md",

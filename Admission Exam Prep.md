@@ -311,6 +311,7 @@ nastaveni pravidel ve kterych muzou ostatni efektivne pracovat
 vs Management - pravidelna cinnost obsahujici provozni rozhodnuti v ramci danych pravidel
 soucasti je i merici a kontrolni system
 cil: vybavit firmu/organizaci jasne definovavymi pravidly pro efektivni plneni cilu
+<!--SR:!2024-06-05,1,230-->
 
 role ve firme/organizaci
 ?

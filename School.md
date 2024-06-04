@@ -25,7 +25,7 @@
 # VSE FSI
 
 ### Repetitorium (all in Czech)
-[[Administion Exam Prep]]
+[[Admission Exam Prep]]
 
 # Extra
 ![[Computer Science Distilled.pdf]]
