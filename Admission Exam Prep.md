@@ -480,6 +480,8 @@ kategorizace podnikovych norem: pravni, technicke, ekonomicko-provozni, organiza
 
 ### Informacni bezpecnost a kryptografie
 
+
+
 ### Zaklady odborne prace
 
 analyticke mysleni
