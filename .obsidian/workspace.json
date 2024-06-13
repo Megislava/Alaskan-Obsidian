@@ -129,9 +129,8 @@
   "left-ribbon": {
     "hiddenItems": {
       "graph:Open graph view": false,
-      "omnisearch:Omnisearch": false,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "obsidian-statusbar-pomo:Start pomodoro": false
+      "omnisearch:Omnisearch": false
     }
   },
   "active": "6c66c2772ff6dd22",

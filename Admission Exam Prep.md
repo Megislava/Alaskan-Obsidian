@@ -2,9 +2,11 @@
 
 ## Flashcards
 ### Data
+
 informace
 ?
 zprava o tom ze nastal nejaky jev z mnoziny moznych jevu a prijemce snizuje/odstranuje neznalost o tomto jevu
+<!--SR:!2024-06-16,3,261-->
 
 data vs informace
 ?
@@ -20,6 +22,7 @@ s rostouci informaci klesa entropie a naopak
 kvalita informace
 ?
 obtizne kvantifikovatelna, kriteria: spolehlivost, duveryhodnost, solidnost, aktualnost,...
+<!--SR:!2024-06-16,3,261-->
 
 kodovani vs sifrovani - ucel
 ?
@@ -31,18 +34,22 @@ databazovy system
 ?
 nastroj pro uchovavani dat, pro tvorbu DB aplikaci
 organizovany soubor dat a nastroju pro praci s daty ulozenymi na pametovem mediu
+<!--SR:!2024-06-15,2,241-->
 
 relacni DB (RDB)
 ?
 data v provazanych tabulkach
+<!--SR:!2024-06-16,3,261-->
 
 objektove orientovany RDB
 ?
 informace uchovavane ve forme objektu, kazdy objekt ma vlastnosti a pripustne hodnoty, objekty muzou mit funkce (reakce na chovani ostatnich)
+<!--SR:!2024-06-15,2,241-->
 
 informacni system
 ?
 sourhn lidi, ICT, dat, program zabezpecujici sber, prenos, zpracovani a uchovavani dat s cilem tvorby, prezentace a distribuce informaci pro koncove uzivatele
+<!--SR:!2024-06-14,1,221-->
 
 ### Hardware
 
@@ -66,6 +73,7 @@ generace:
 zakladni deska
 ?
 obsahuje napajeci obvody, konektory pro pripojeni procesoru, pameti, periferii, radicu, sbernic a dalsich obvodu, dnes i caste integrovane periferie
+<!--SR:!2024-06-16,3,261-->
 
 procesor
 ?
@@ -75,10 +83,12 @@ hlavni vypocetni cast PC, vykonava strojovy kod ulozeny v RAM, dnes vicejadrove
 vnitrni pamet
 ?
 misto k ukladani dat a programoveho kodu (= instrukci), RAM
+<!--SR:!2024-06-16,3,261-->
 
 graficka karta
 ?
 zajistuje zobrazuni dotazu na monitoru, integrovana vs dedikovana/externi
+<!--SR:!2024-06-14,2,221-->
 
 vnejsi pamet
 ?
@@ -112,6 +122,7 @@ operacni system
 ?
 zakladni programove vybaveni PC spustene pro zapnuti, zustava v cinnosti az do vypnuti
 obvykle s GUI, ma zakladni systemove nastroje, poskytuje jednotle GUI pro uzivatele
+<!--SR:!2024-06-16,3,261-->
 
 3 fce OS
 ?
@@ -121,6 +132,7 @@ ovladani PC, abstrakce HW, sprava prostredku
 firmware
 ?
 ovladaci kod pro nizkourovnove rizeni HW ~ uzce spjat s konkretnim HW
+<!--SR:!2024-06-16,3,261-->
 
 aplikacni SW
 ?
@@ -131,11 +143,13 @@ zakazkovy vs typovy SW
 ?
 zakazkovy (custom) = presne podle specifikace, zavislost na dodavateli, delsi doba vyvoje
 typovy = muze neco chybet nebo prebyvat, moznost customizace, lepsi cena a delka vyvoje
+<!--SR:!2024-06-16,3,261-->
 
 licencovani SW
 ?
 kazdy SW musi mit licenci (nejcasteji EULA)
 dle svobody uzivatele: svobodny, proprietarni
+<!--SR:!2024-06-16,3,261-->
 
 svobodny SW
 ?
@@ -153,7 +167,7 @@ proprietarni SW
 	- shareware - obvykle spojeni trial->nakup licence
 	- freeware - dobrovolne prispevky
 	- public domain - mozne sirit a upravovat, je i v jinych oborech
-<!--SR:!2024-06-13,1,199-->
+<!--SR:!2024-06-16,3,219-->
 
 SaaS
 ?
@@ -164,6 +178,7 @@ malware
 ?
 SW urceny k proniknuti do systemu nebo jeho poskozeni, malicious SW
 vir, spyware, keyloggers, adware,...
+<!--SR:!2024-06-16,3,261-->
 
 ### Pocitacova grafika
 
@@ -174,24 +189,50 @@ vektorova (z objektu) a bitmapovani (z bitu)
 
 bitmapova grafika
 ?
-obrazek rozlozen do malych bodu = pixel, usporadane do mrizky
-pixel uchovava informace o barve, rozliseni,...
+- obrazek rozlozen do malych bodu = pixel, usporadane do mrizky
+- pixel uchovava informace o barve, rozliseni,...
 :) lze robrazovat i slozite predlohy, snadne porizeni
 :( velky objem dat, ztrata informaci pri upravach
+<!--SR:!2024-06-15,2,241-->
 
 bitmapovy SW
 ?
 gimp (open-source, free), Adobe Photoshop (zakladni kresleni, vybery, tvorby, zmeny barvy, vrstvy,...), Malovani, InfraView (prohlizeni, lehke upravy, nakresleni jednoducheho obrazce, komprese)
 <!--SR:!2024-06-17,5,248-->
 
-bitmapove formaty
+bitmapove formaty (6)
 ?
-.jpg, .jpeg - rozdeli obrazek na ctverce 8x8, komprimace s kosinovou transformaci (ztrate detailu, kompresni artefakty kolem hran), vhodne na foto, nevhodne pro texty s ostrou hranou
-.gif - patent (od 1995 potreba licence), pouze 8bitu kodovani barev, nevhodne pro foto, vhodne ne obrazky s malym poctem barev, umi animace
-.png - patentove nechraneny format, 1-64 bitu/pixel, umi i pruhlednost, nevhodne pro foto, obvykle pro skenovani dokumentu
-.bmp - ulozeni nekomprimovanych dat, 1/4/8/24 bitu/pixel, uz se skoro nepouziva; .tiff - lepsi nez .bmp, umi i kompresi
-.xcf - format gimpu, podporuje vrstvy; .psd - Photoshop format
-<!--SR:!2024-06-13,1,220-->
+.jpg, .jpeg, .gif, .png, .bmp, .xcf (format gimpu, podporuje vrstvy), .tiff (lepsi nez .bmp, umi i kompresi), .psd (Photoshop format)
+<!--SR:!2024-06-16,3,240-->
+
+.jpg, .jpeg vlastnosti
+?
+- rozdeli obrazek na ctverce 8x8
+- komprimace s kosinovou transformaci (ztrata detailu, kompresni artefakty kolem hran)
+- vhodne na foto, nevhodne pro texty s ostrou hranou
+<!--SR:!2024-06-16,3,261-->
+
+.gif vlastnosti
+?
+- patent (od 1995 potreba licence)
+- pouze 8bitu kodovani barev, umi animace
+- nevhodne pro foto, vhodne na obrazky s malym poctem barev
+<!--SR:!2024-06-15,2,241-->
+
+.png vlastnosti
+?
+- patentove nechraneny format
+- 1-64 bitu/pixel
+-  umi i pruhlednost
+- nevhodne pro foto, obvykle pro skenovani dokumentu
+<!--SR:!2024-06-14,1,221-->
+
+.bmp vlastnosti
+?
+- ulozeni nekomprimovanych dat
+- 1/4/8/24 bitu/pixel
+- uz se skoro nepouziva
+<!--SR:!2024-06-14,1,221-->
 
 vektorova grafika
 ?
@@ -204,17 +245,20 @@ vektorove SW
 ?
 svobodny: Inkscape, OpenOfficeDraw
 proprietarni: Adobe Illustrator, Coredraw, Zoner, CAD,...
+<!--SR:!2024-06-15,2,241-->
 
 vektorove formaty (ne pro multimediove kontejnery)
 ?
-nativni: .ai (Adobe Illustrator), .cdr (Corel Draw), .zmt (Zoner callisto)
-aplikacne nezavisle formaty: .svg, .psa, .eps (postscrit, pro tiskarny), .odf
-jednotlive formaty maji ruzny pristup k objektum -> slozity prenos
+- nativni: .ai (Adobe Illustrator), .cdr (Corel Draw), .zmt (Zoner callisto)
+- aplikacne nezavisle formaty: .svg, .psa, .eps (postscript, pro tiskarny), .odf
+- jednotlive formaty maji ruzny pristup k objektum -> slozity prenos
+<!--SR:!2024-06-14,1,221-->
 
-vektorove multimedialni kontejnery
+vektorove multimedialni kontejnery - uvod
 ?
 jedna/vice stop (zvuk, video, text s titulky)
 do kontejneru lze ukladat data v ruznych formatech
+<!--SR:!2024-06-16,3,261-->
 
 formaty vektorovych multimedialnich kontejneru
 ?
@@ -255,11 +299,12 @@ Podnikovy informacni sytem (EIS = Enterprise Information System) (definice, cil)
 
 historie EIS
 ?
-1. MRP (= Material Resource Planning) - 60.leta 20. stoleti, vazano na konkretni HW, neinteraktivni, jeden system, pouze planovani materialu 
+1. MRP (= Material Resource Planning) - 60.leta 20. stoleti, vazano na konkretni HW, neinteraktivni, jeden system, pouze planovani materialu
 2. MRP II. - 80.l.20.stoleti, vazano na konkretni OS, klient-server, textovy modularni system, rizeni a optimalizace vyroby, HR
 3. ERP (= Enterprise Resource Planning) - 90.l.20.stoleti, prenositelnost mezi OS, DB-server-klient, GUI, rizeni i nevyrobnich podniku, optimalizace, systemy na miru
 4. ERP II. - zacatek 21.stoleti, real-time access, multimedia, webapps, dodavatelsko-odberatelske retezce, CRM, BI (Business Intelligence), propojene systemy
 5. postmodern ERP - dnes, vicevrstve, cloud, prozakaznicky orientovane, balikove systemy pro ruzne podniky
+<!--SR:!2024-06-14,1,221-->
 
 oblasti postmoder EPR
 ?
@@ -287,7 +332,7 @@ Infor, Microsoft, IBM, Asecco Solution, ABRA,...
 eGovernment
 ?
 vyuziti informaci a komunikacnich technologii s cilem zlepseni a nebo posileni ucinnosti a efektivity poskytovanych sluzeb ve verejnem sektoru
-<!--SR:!2024-06-13,1,203-->
+<!--SR:!2024-06-15,2,203-->
 
 komunikacni kanaly eGovernmentu (x2y)
 ?
@@ -297,6 +342,7 @@ G2B, G2C, C2G, G2E, G2G
 uskali eGovernmentu
 ?
 koexistence elektronicke a neelektonicke komunikace, rovny pristup vsech obyvetelu k eletro sluzbam, bezpecnost, ochrana pred zneuzitim
+<!--SR:!2024-06-16,3,261-->
 
 metody pristupu k informacim a komunikace v eGovernmentu
 ?
@@ -306,10 +352,13 @@ informativni webove stranky, verejna sprava, elektronicke podpisy
 
 datova schranka - uvod a technicne reseni
 ?
-ISDS = Integrovany System Datovych Schranek - informacni system verejne spravy, zrizene podle zakona c 300/2008, elektronicke uloziste zvlastniho typu, stavy: funcni, neexistuje, znepristupnena a zrusena
-zrizuje a spravuje MVCR, provozovatel je CeskaPosta
-webapp ~ SOAP+HTTPs, dalsi proprietarni SW pro komunikaci
-bezpecnost - ID+heslo (5 pokusu/hodina, potom deaktivace), po 30minutach neaktivity odhlaseni, OTP (mobilni klid ISDS, cip na obcance, auth cert)
+- ISDS = Integrovany System Datovych Schranek - informacni system verejne spravy, zrizene podle zakona c 300/2008
+- elektronicke uloziste zvlastniho typu
+- zrizuje a spravuje MVCR, provozovatel je CeskaPosta
+- mozne stavy schranky: funcni, neexistuje, znepristupnena a zrusena
+- webapp ~ SOAP+HTTPs, dalsi proprietarni SW pro komunikaci
+- bezpecnost - ID+heslo (5 pokusu/hodina, potom deaktivace), po 30minutach neaktivity odhlaseni, OTP (mobilni klid ISDS, cip na obcance, auth cert)
+<!--SR:!2024-06-15,2,241-->
 
 datova zprava datove schranky - obsah
 ?
@@ -340,22 +389,25 @@ spravce MVCT, provozovatel Spravce Zakladnich Registru, spravce Urad pro Ochranu
 ORG = prevodnik identifikatoru fyzickych osob - ochrana osobnich udaju v registrech - nepouziva se RC, v kazdem systemu je jiny identifikator, v ORG pouze ID
 <!--SR:!2024-06-14,2,218-->
 
-registry ISZD
+registry ISZR
 ?
 registr osob - spravuje Cesky Statisticky Urad, eviduje udaje o fyzickych a pravnich osobach a organech verejne moci
 registr obyvatel - spravuje MVCR, eviduje aktualni udaje o obcanech CR, cizincich s povolenim k pobytu a zahranicnich vlasnicich nemovitosti
 registr uzemni identifikace adres a nemovitosti - spravuje Cesky Urad Zememericsky a Katastralni, udaje o zakladnich uzemnich prvcich
 registr prav a povinnosti - spravce MVCR, evidence udaju o pusobnosti organu statni moci, pravech a povinnostech osob
+<!--SR:!2024-06-16,3,261-->
 
 CzechPoint
 ?
-cesky podaci, overovaci a informacni nerodni terminal
+cesky podaci, overovaci a informacni narodni terminal
 asistovane misto vykonu verejske moci - kdokoli muze ziskat informace o udajich ktere o nem stat vede, lze ucinit podani ke statu
+<!--SR:!2024-06-15,2,241-->
 
 Czech Point - vystupy
 ?
 overene vystupy z registru (zivnostensky, obchodni, katastr nemovitosti, trestu)
-overeni podpisu, automaticka konverze dokumentu z/do elektronicke podoby a zaslani do datovky (autorizovany, overuje se specialnim podpisem, presne specifikovane kdo to muze delat) 
+overeni podpisu, automaticka konverze dokumentu z/do elektronicke podoby a zaslani do datovky (autorizovany, overuje se specialnim podpisem, presne specifikovane kdo to muze delat)
+<!--SR:!2024-06-15,2,241--> 
 
 ### IT Governance
 
@@ -371,7 +423,8 @@ role ve firme/organizaci
 ?
 vlastnik - otazky a naslouchani
 manager - chain of command, carrot & stick
-Board of Directors - vybira je majitel (ne CEO), lidi s ruznymi zkusenostmi a transparetni minulosti, 
+Board of Directors - vybira je majitel (ne CEO), lidi s ruznymi zkusenostmi a transparetni minulosti,
+<!--SR:!2024-06-15,2,241--> 
 
 co se ocekava od board of directors
 ?
@@ -380,42 +433,38 @@ challenging executive management, managing risk, steering on long term & strateg
 
 corporate (enterprise) governance
 ?
-system, kterym je vedena cela spolecnost - definuje distribuci prav a povinnosti mezi zainterestovanymi stranami spolecnosti (akcionari, vykonny management, statutarni organy, zamestnanci, zakaznici)
-soubor pravnich a exekutivnich metod a postupu zavazujici zejmena verejne obchodovatelne spolecnost udrzovat vyvazeny zvtah mezi spolecnosti a osobami kteri ji tvori
-IT governance je podmnozinou
+- soubor pravnich a exekutivnich metod a postupu zavazujici zejmena verejne obchodovatelne spolecnost udrzovat vyvazeny zvtah mezi spolecnosti a osobami kteri ji tvori
+- system, kterym je vedena cela spolecnost - definuje distribuci prav a povinnosti mezi zainterestovanymi stranami spolecnosti (akcionari, vykonny management, statutarni organy, zamestnanci, zakaznici)
+- IT governance je podmnozinou
+<!--SR:!2024-06-14,1,221-->
 
 historie IT governance
 ?
 do 1996 - audit IT, co ma IT delat
-do 1998 - rizeni IT, co ma mamangement ocekavat od IT
+do 1998 - rizeni IT, co ma ma management ocekavat od IT
 kolem 2000 - vykonnost IT, jak to merit
 kolem 2005 - IT Governance, zavadeni pravidel pro IT
 kolem 2012 - tesne propojeni business a IT (~ EGIT)
+<!--SR:!2024-06-14,1,221-->
 
 EGIT = Enterprise Governance IT
 ?
-pokryva vsechny pozadovane procesy a IT zdroje tak aby IT vhodne podporovalo spolecnosti pri vytvareni hodnot a naplnovani ocekavani zaintersovanych stran
-oblasti: risk managemnt, performance management, IT strategic alighment, IT value delivery
-ocekavani: zvyseni transparentnosti, dosazeni souladu s relevantnimi zakony, regulacemi a politikami, nastaveni kontrolnich mechanizmu a reportovani, vcasna identifikace a elimikace rizika vyplivajici z IT, zlepseni rizeni IT v souladu s best practise
+- pokryva vsechny pozadovane procesy a IT zdroje tak aby IT vhodne podporovalo spolecnosti pri vytvareni hodnot a naplnovani ocekavani zaintersovanych stran
+- oblasti: risk managemnt, performance management, IT strategic alighment, IT value delivery
+- ocekavani: zvyseni transparentnosti, dosazeni souladu s relevantnimi zakony, regulacemi a politikami, nastaveni kontrolnich mechanizmu a reportovani, vcasna identifikace a elimikace rizika vyplivajici z IT, zlepseni rizeni IT v souladu s best practise
+<!--SR:!2024-06-14,1,221-->
 
 propojeni businessu a IT - Enterprise Balance Source Card
 ?
 metoda vytvarejini vazbu mezi strategii a operativnimi cinnostmi s durazem na mereni vykonu
 finance->procesy->uceni se a rust->zakaznim->financee->..
 IT BSC - tabulky s objectives a measures, cile, projekty a aktivity ktere tyto cile a jejich dozazeni zajitit
-<!--SR:!2024-06-13,1,200-->
+<!--SR:!2024-06-14,1,180-->
 
 system (vseobecna definice)
 ?
 celek slozeny z casti ktere na sebe vzajemne pusobi, mezi castmi mohou byt toky informaci a energie
 <!--SR:!2024-06-18,6,263-->
-
-rozdeleni systemovych metod rizeni
-?
-- otevrene vs uzavrene, deterministicke vs stochasticke, spojite vs diskretni, staticke vs dynamicke, mekke vs tvrde (dobre strukturovane vs nepresne definovane)
-- fishbone diagram
-- Occamova britva
-<!--SR:!2024-06-13,1,199-->
 
 COBIT
 ?
@@ -427,7 +476,7 @@ uzivatele: manageri, auditori, vlastnici, IT a sec specialiste,...
 proces
 ?
 - ucelne naplanovani a realizovana posloupnost cinnosti ve kterem za pomoci odpovidajicich zdroju probita transformace vstupu na pozadovane vystupy
-<!--SR:!2024-06-13,1,219-->
+<!--SR:!2024-06-16,3,239-->
 
 procesni rizeni vs projektove rizeni
 ?
@@ -435,22 +484,33 @@ projekt - jednorazova zmena
 proces - kontinualni
 <!--SR:!2024-06-20,8,260-->
 
-podnikove procesy - rozdeleni (podle dulezitosti)
+rozdeleni podnikovych procesu
 ?
 hlavni - vedlejsi - podpurne
+<!--SR:!2024-06-16,3,261-->
 
 proces - zralost a CMMI (= Capability Maturity Model Integration)
 ?
 neexistujici -> nahodny -> formalizovany -> meritelny -> optimalizovatelny
+<!--SR:!2024-06-14,1,221-->
 
-zlepsovani procesu
+jak zlepsit proces
 ?
-eliminace zbytecnych cinnosti, paralelizace cinnosti, centralizace ztroju, spojovani cinnosti, jedno kontaktni misto, delegace pravomoci, duvera mezi subjekty, zvyseni urovne znalosti pracovniku, automatizace
+- eliminace nebo spojovani zbytecnych cinnosti
+- paralelizace
+- centralizace zdroju
+- jedno kontaktni misto
+- delegace pravomoci
+- duvera mezi subjekty
+- zvyseni urovne znalosti pracovniku
+- automatizace
+<!--SR:!2024-06-14,1,221-->
 
 Business Process Management = BPM
 ?
-snaha o uchopeni struktury firmy, jeji architektury a rizeni prostrednictvim podnikoveho modelu zachycujici zakladni rozmery podnikani (cile, hodnotvorne procesu, informacni, organizacni a znalosti infrastruktura, podpurne technologie)
-rada nastroju a metod
+- snaha o uchopeni struktury firmy, jeji architektury a rizeni prostrednictvim podnikoveho modelu zachycujici zakladni rozmery podnikani (cile, hodnotvorne procesu, informacni, organizacni a znalosti infrastruktura, podpurne technologie)
+- rada nastroju a metod
+<!--SR:!2024-06-14,1,221-->
 
 ITIL - v3 vs v4
 ?
@@ -459,7 +519,7 @@ ITIL - v3 vs v4
 - v4 - comprehensive, reflects changing world of IT
 <!--SR:!2024-06-14,2,219-->
 
-zakladni fce, procesy a deleni managementu
+co dela management?
 ?
 - planovani
 - organizovani
@@ -467,22 +527,25 @@ zakladni fce, procesy a deleni managementu
 - vedeni a motivace
 - kontrolovani
 deleni: stabilni vs flexibilni struktura, alternativni
-<!--SR:!2024-06-13,1,198-->
+<!--SR:!2024-06-15,2,198-->
 
 informacni model podniku
 ?
 (1) technologie -> data -> aplikace -> informace -> business
 (2) data (fakta popisujici realitu nezaujate) -> informace (data v kontextu) -> znalost (informace s vyznamem, pro prakticke rozhodovani situace) -> moudrost (znalost + vhled)
-<!--SR:!2024-06-13,1,208-->
+<!--SR:!2024-06-16,3,228-->
 
 Data Security Life-cycle
 ?
 Create -> Store -> Use -> Share -> Archive -> Destroy -> ...
+<!--SR:!2024-06-14,1,221-->
 
 organizovani
 ?
 kazdy system hleda rovnovahu
--> omezeni rozmanitosti systemu, struktura, teorie chaosu a prechodove jevy. dynamicka rovnovaha
+-> omezeni rozmanitosti systemu, struktura, teorie chaosu a prechodove jevy
+dynamicka rovnovaha
+<!--SR:!2024-06-15,2,241-->
 
 projektove rizeni - styl prace
 ?
@@ -503,14 +566,14 @@ typy tymu: diverzita, samotatnost, lokalizace, typologie clenu, pracovni role
 nastroje - startup, sociomapovani
 <!--SR:!2024-06-16,4,248-->
 
-risk management
+risk management - process
 ?
 - identification ->
 - assessment ->
 - mitigation plan ->
 - implementation & monitoring ->
 - review & update plans
-<!--SR:!2024-06-13,1,220-->
+<!--SR:!2024-06-14,1,200-->
 
 typy ochrany (prevence)
 ?
@@ -525,11 +588,12 @@ etika
 - aplikovana etika, podnikatelska etika
 <!--SR:!2024-06-16,4,240-->
 
-firemni kultura
+zmena firemni kultury (proces, akteri, nastroje)
 ?
-zmena: analyza situace -> tvorba vize -> projekt zmeny
-akteri: iniciatori, leafer, reprezentanti, podporovatele, odpurni, neutralni
-nastroje: vize, projekt zmen, personalni a organizacni zmeny, vzdelani s vycvik, zmeny v odmenovani a pridelovani zdroju, technicka zmena
+- analyza situace -> tvorba vize -> projekt zmeny
+- akteri: iniciatori, leafer, reprezentanti, podporovatele, odpurni, neutralni
+- nastroje: vize, projekt zmen, personalni a organizacni zmeny, vzdelani a vycvik, zmeny v odmenovani a pridelovani zdroju, technicka zmena
+<!--SR:!2024-06-14,1,221-->
 
 firemni dokumenty
 ?
@@ -539,21 +603,22 @@ rizena vs nerizena
 
 Enterprise Content Management (ECM)
 ?
-podnikovy IS zabyvajici se spravou podnikovych informaci
-cile: zajistovani dostupnosti informaci, zvyseni info bezpecnosti, snizeni chybovosti, uspory
-vsechny typy elektronickych a papirovych dokumenty, rizeni a sprava veskereho informacniho obsahu, proces digitalizace
-strkturovana vs nestruktorovana data
-<!--SR:!2024-06-13,1,208-->
+- podnikovy IS zabyvajici se spravou podnikovych informaci
+- cile: zajistovani dostupnosti informaci, zvyseni info bezpecnosti, snizeni chybovosti, uspory
+- vsechny typy elektronickych a papirovych dokumenty, rizeni a sprava veskereho informacniho obsahu, proces digitalizace
+<!--SR:!2024-06-15,2,208-->
 
 normy - kaskady vzniku
 ?
 globalni kaskada impupzu pro vznik/zmenu norem: EU uroven -> CR uroven -> firemni uroven
 firemni kaskada: complience, best practise, quality management
+<!--SR:!2024-06-15,2,241-->
 
 norma o norme
 ?
 zakladni norma o tom jak psat normy (tvori se jako prvni)
 stanovi e struktura obsahu a forma
+<!--SR:!2024-06-15,2,241-->
 
 normy - vyznam
 ?
@@ -566,14 +631,15 @@ normy - druhy
 ?
 smernice, narizeni, rozhodnuti reditele, opatreni, normativni smernice, rad,...
 kategorizace podnikovych norem: pravni, technicke, ekonomicko-provozni, organizacni, ridici,...
-<!--SR:!2024-06-13,1,220-->
+<!--SR:!2024-06-15,2,220-->
 
 
 ### Informacni bezpecnost a kryptografie
 
 bezpecnost informaci
 ?
-ochrana informaci ve sech jejich formach a po cely zivotni cyklus
+ochrana informaci ve vsech jejich formach a po cely zivotni cyklus
+<!--SR:!2024-06-15,2,241-->
 
 CIA
 ?
@@ -585,6 +651,7 @@ Integrity - detekce nezadoucich zmen pri vlozeni/prenosu/zpracovani; digitalni p
 kyberneticka bezpecnost
 ?
 sourhn pravnich, organizacnich, technickych a vzdelavacich prostredku smerujici k zajisteni ochrany kybernetickeho prostoru
+<!--SR:!2024-06-15,2,241-->
 
 bezpecnost informaci vs kyberneticka bezpecnost
 ?
@@ -593,14 +660,16 @@ BI chrani i fyzicke informace pred jinymi nez kyber hrozbami (povodne), KB chran
 
 krypto-grafie/analyza/primitiva
 ?
-kryptografie - matematicke metody ve vstahu s prvvky BI, cile: duvernost, integrita, autentizace, nepopiratelnost
+kryptografie - matematicke metody ve vztahu s prvky BI, cile: duvernost, integrita, autentizace, nepopiratelnost
 kryptoanalyza - analyza odolnosti kryptografickych systemu a jejich pentestovani
 kryptoprimitiva - algoritmy se zakladnimi krypto vlastnostmi - bez klicu, sdilene klice (symetric, asymetric), verejne klice
+<!--SR:!2024-06-15,2,241-->
 
 hashovani
 ?
 jednosmerna hashovaci funkce prevede libovolny retezec na otisk o pevne delce
 na overovani hesel, overeni integrity zprav a souboru, generovani a overerni digitalniho podpisu, identifikatory souboru,...
+<!--SR:!2024-06-16,3,261-->
 
 utok na hash
 ?
@@ -622,7 +691,7 @@ asymetricka sifra
 	- rozdeleni velkeho cisla na soucin prvocisel (RSA)
 	- diskretni logaritmus (Diffie-Hellman, DSA, Elgamal)
 	- elipticke krivky (ECDM, ECDSA, ECIES,...)
-<!--SR:!2024-06-13,1,183-->
+<!--SR:!2024-06-15,2,183-->
 
 certifikat - obsah
 ?
@@ -644,14 +713,17 @@ elektronicka pecet
 ?
 technicky stejna jako elektricky podpis, ale ma jine certifikaty a jine pravni dusledky
 kvalifikovana, uznavana, eketronicka
+<!--SR:!2024-06-14,1,221-->
 
 casova razitka/znacky
 ?
 Time Stamp Authority k oticky prida casovou znacku, poradove cislo a celek digitalne podepise
+<!--SR:!2024-06-14,1,221-->
 
 identifikace
 ?
 akt/proces kdy entita predlozi systemu identifikator na jehoz zaklade muze rozeznat danou entitu
+<!--SR:!2024-06-15,2,241-->
 
 autentizace
 ?
@@ -689,7 +761,7 @@ single-sign on
 NIA = Narodni bod pro identifikaci a autentizaci
 ?
 muze pouzivat jenom statni sprava, eidentita.cz
-<!--SR:!2024-06-13,1,228-->
+<!--SR:!2024-06-15,2,228-->
 
 penetracni testovani
 ?
@@ -698,10 +770,11 @@ planovani a priprava -> ohodnoceni (recon, mapping, vuln check, initial breach, 
 
 firewall
 ?
-blokuje/povoluje navazovani komunikace na zakladni preddefinovane/dynamicke pravidla a politiky, chrani zarizeni
-blokovani pomoct: drop, reject, TCP reset
-typy: nezstavove (1. generace, pouze filtrovani), stavove (2. generace), aplikacni FW (3. generace, na aplikacni vrstve OSI modelu), FW nove generace
-umisteni: na hranici site, mezi subnety, v OS, v aplikaci
+- blokuje/povoluje navazovani komunikace na zakladni preddefinovane/dynamicke pravidla a politiky, chrani zarizeni
+- blokovani pomoci: drop, reject, TCP reset
+- typy: nezstavove (1. generace, pouze filtrovani), stavove (2. generace), aplikacni FW (3. generace, na aplikacni vrstve OSI modelu), FW nove generace
+- umisteni: na hranici site, mezi subnety, v OS, v aplikaci
+<!--SR:!2024-06-14,1,221-->
 
 proxy
 ?
@@ -726,7 +799,7 @@ VPN = Virtual Private Network
 ?
 authentikace + sifrovani provozu pres otevrenou sit
 typy: public VPN, site-to-site, Remote Access
-<!--SR:!2024-06-13,1,228-->
+<!--SR:!2024-06-15,2,228-->
 
 
 ### Zaklady odborne prace
@@ -743,8 +816,9 @@ snaha o poskladani a potom pochopeni celku
 
 informacni etika
 ?
-vytvareni hranic a definic
-nutno informacim porozumet, overit a pak pouzit v kontextu
+- vytvareni hranic a definic
+- nutno informacim porozumet, overit a pak pouzit v kontextu
+<!--SR:!2024-06-14,1,221-->
 
 citace
 ?
@@ -760,6 +834,7 @@ uvod - proc bylo tema zvoleno, zasadit do kontextu, necisluje se
 abstrakt (anotace, teze), klicova slova
 text-zaver-seznam literatury a zdroju
 metodika - promysleny postup pri praci
+<!--SR:!2024-06-16,3,261-->
 
 
 ## PDF
