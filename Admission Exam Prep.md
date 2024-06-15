@@ -49,7 +49,7 @@ informace uchovavane ve forme objektu, kazdy objekt ma vlastnosti a pripustne ho
 informacni system
 ?
 sourhn lidi, ICT, dat, program zabezpecujici sber, prenos, zpracovani a uchovavani dat s cilem tvorby, prezentace a distribuce informaci pro koncove uzivatele
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-16,2,221-->
 
 ### Hardware
 
@@ -88,7 +88,7 @@ misto k ukladani dat a programoveho kodu (= instrukci), RAM
 graficka karta
 ?
 zajistuje zobrazuni dotazu na monitoru, integrovana vs dedikovana/externi
-<!--SR:!2024-06-14,2,221-->
+<!--SR:!2024-06-19,5,241-->
 
 vnejsi pamet
 ?
@@ -225,14 +225,14 @@ bitmapove formaty (6)
 - 1-64 bitu/pixel
 -  umi i pruhlednost
 - nevhodne pro foto, obvykle pro skenovani dokumentu
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-17,3,241-->
 
 .bmp vlastnosti
 ?
 - ulozeni nekomprimovanych dat
 - 1/4/8/24 bitu/pixel
 - uz se skoro nepouziva
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-16,2,221-->
 
 vektorova grafika
 ?
@@ -252,7 +252,7 @@ vektorove formaty (ne pro multimediove kontejnery)
 - nativni: .ai (Adobe Illustrator), .cdr (Corel Draw), .zmt (Zoner callisto)
 - aplikacne nezavisle formaty: .svg, .psa, .eps (postscript, pro tiskarny), .odf
 - jednotlive formaty maji ruzny pristup k objektum -> slozity prenos
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-15,1,201-->
 
 vektorove multimedialni kontejnery - uvod
 ?
@@ -276,7 +276,7 @@ RBG, CMYK,...
 RBG - 3 barevne svetla - Red+Blue+Green, skladani, monitory
 CMYK - Cyan+Magenta+Yellow+Key, na barevne pigmenty svitime bilym svetlem, neco se obrazi neco se pohlti, na tisk
 taky: HSV (HueSaturationValue), HSB (Brightness), HSL (Lumination), HSI (Intensity),...
-<!--SR:!2024-06-14,2,240-->
+<!--SR:!2024-06-20,6,240-->
 
 barevny gamut
 ?
@@ -295,7 +295,7 @@ Podnikovy informacni sytem (EIS = Enterprise Information System) (definice, cil)
 	- propojeni a navaznost podnikovych a pracovnich procesu
 	- zvyseni celkove efektivity
 	- zlepseni pracovnich navyku a chovani useru
-<!--SR:!2024-06-14,2,208-->
+<!--SR:!2024-06-15,1,188-->
 
 historie EIS
 ?
@@ -304,7 +304,7 @@ historie EIS
 3. ERP (= Enterprise Resource Planning) - 90.l.20.stoleti, prenositelnost mezi OS, DB-server-klient, GUI, rizeni i nevyrobnich podniku, optimalizace, systemy na miru
 4. ERP II. - zacatek 21.stoleti, real-time access, multimedia, webapps, dodavatelsko-odberatelske retezce, CRM, BI (Business Intelligence), propojene systemy
 5. postmodern ERP - dnes, vicevrstve, cloud, prozakaznicky orientovane, balikove systemy pro ruzne podniky
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-15,1,201-->
 
 oblasti postmoder EPR
 ?
@@ -318,7 +318,7 @@ zakladni moduly postmoder EPR
 ?
 BI+CRM+SCM
 casta kombinace HRM+EAM (Enterprise Asset Mgmt)+ECM (Enterprise Content Mgmt)
-<!--SR:!2024-06-14,2,219-->
+<!--SR:!2024-06-18,4,219-->
 
 vyrobci EIS
 ?
@@ -348,7 +348,7 @@ metody pristupu k informacim a komunikace v eGovernmentu
 ?
 datova schranka, zakladni registry, CzechPoint
 informativni webove stranky, verejna sprava, elektronicke podpisy
-<!--SR:!2024-06-14,2,220-->
+<!--SR:!2024-06-20,6,240-->
 
 datova schranka - uvod a technicne reseni
 ?
@@ -386,8 +386,10 @@ pokuty - 10M za nevyzadany dokument, 20M za skodlivy SW
 ISZR = Integrovany System Zakladnich Registru
 ?
 spravce MVCT, provozovatel Spravce Zakladnich Registru, spravce Urad pro Ochranu Osobnich Udaju
-ORG = prevodnik identifikatoru fyzickych osob - ochrana osobnich udaju v registrech - nepouziva se RC, v kazdem systemu je jiny identifikator, v ORG pouze ID
-<!--SR:!2024-06-14,2,218-->
+- ORG = prevodnik identifikatoru fyzickych osob ~ ochrana osobnich udaju v registrech 
+	- nepouziva se RC, v kazdem systemu je jiny identifikator
+	- v ORG pouze ID
+<!--SR:!2024-06-18,4,218-->
 
 registry ISZR
 ?
@@ -436,7 +438,7 @@ corporate (enterprise) governance
 - soubor pravnich a exekutivnich metod a postupu zavazujici zejmena verejne obchodovatelne spolecnost udrzovat vyvazeny zvtah mezi spolecnosti a osobami kteri ji tvori
 - system, kterym je vedena cela spolecnost - definuje distribuci prav a povinnosti mezi zainterestovanymi stranami spolecnosti (akcionari, vykonny management, statutarni organy, zamestnanci, zakaznici)
 - IT governance je podmnozinou
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-15,1,201-->
 
 historie IT governance
 ?
@@ -445,21 +447,21 @@ do 1998 - rizeni IT, co ma ma management ocekavat od IT
 kolem 2000 - vykonnost IT, jak to merit
 kolem 2005 - IT Governance, zavadeni pravidel pro IT
 kolem 2012 - tesne propojeni business a IT (~ EGIT)
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-15,1,201-->
 
 EGIT = Enterprise Governance IT
 ?
 - pokryva vsechny pozadovane procesy a IT zdroje tak aby IT vhodne podporovalo spolecnosti pri vytvareni hodnot a naplnovani ocekavani zaintersovanych stran
 - oblasti: risk managemnt, performance management, IT strategic alighment, IT value delivery
 - ocekavani: zvyseni transparentnosti, dosazeni souladu s relevantnimi zakony, regulacemi a politikami, nastaveni kontrolnich mechanizmu a reportovani, vcasna identifikace a elimikace rizika vyplivajici z IT, zlepseni rizeni IT v souladu s best practise
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-15,1,201-->
 
 propojeni businessu a IT - Enterprise Balance Source Card
 ?
 metoda vytvarejini vazbu mezi strategii a operativnimi cinnostmi s durazem na mereni vykonu
 finance->procesy->uceni se a rust->zakaznim->financee->..
 IT BSC - tabulky s objectives a measures, cile, projekty a aktivity ktere tyto cile a jejich dozazeni zajitit
-<!--SR:!2024-06-14,1,180-->
+<!--SR:!2024-06-15,1,160-->
 
 system (vseobecna definice)
 ?
@@ -471,7 +473,7 @@ COBIT
 framework na vytvareni procesu pro efektivni vyuziti zdroju a minimalizace IT rizik
 audit (1996) + control (1998) + management (2000) + IT governance (2005/2007) + governance of IT enterprise (2012)
 uzivatele: manageri, auditori, vlastnici, IT a sec specialiste,...
-<!--SR:!2024-06-14,2,208-->
+<!--SR:!2024-06-18,4,208-->
 
 proces
 ?
@@ -492,7 +494,7 @@ hlavni - vedlejsi - podpurne
 proces - zralost a CMMI (= Capability Maturity Model Integration)
 ?
 neexistujici -> nahodny -> formalizovany -> meritelny -> optimalizovatelny
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-17,3,241-->
 
 jak zlepsit proces
 ?
@@ -504,20 +506,20 @@ jak zlepsit proces
 - duvera mezi subjekty
 - zvyseni urovne znalosti pracovniku
 - automatizace
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-16,2,221-->
 
 Business Process Management = BPM
 ?
 - snaha o uchopeni struktury firmy, jeji architektury a rizeni prostrednictvim podnikoveho modelu zachycujici zakladni rozmery podnikani (cile, hodnotvorne procesu, informacni, organizacni a znalosti infrastruktura, podpurne technologie)
 - rada nastroju a metod
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-15,1,201-->
 
 ITIL - v3 vs v4
 ?
 - v3 - lifecycle view - 26 procesu v 5 domenach:
 	- service: strategy, design, transition, operations, continual service improvement
 - v4 - comprehensive, reflects changing world of IT
-<!--SR:!2024-06-14,2,219-->
+<!--SR:!2024-06-15,1,199-->
 
 co dela management?
 ?
@@ -538,7 +540,7 @@ informacni model podniku
 Data Security Life-cycle
 ?
 Create -> Store -> Use -> Share -> Archive -> Destroy -> ...
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-17,3,241-->
 
 organizovani
 ?
@@ -573,13 +575,13 @@ risk management - process
 - mitigation plan ->
 - implementation & monitoring ->
 - review & update plans
-<!--SR:!2024-06-14,1,200-->
+<!--SR:!2024-06-16,2,200-->
 
 typy ochrany (prevence)
 ?
 perimetr, data & privacy, process, application
 security consulting - risk analysis, security audit, IT Governance,...
-<!--SR:!2024-06-14,2,208-->
+<!--SR:!2024-06-20,6,228-->
 
 etika
 ?
@@ -593,7 +595,7 @@ zmena firemni kultury (proces, akteri, nastroje)
 - analyza situace -> tvorba vize -> projekt zmeny
 - akteri: iniciatori, leafer, reprezentanti, podporovatele, odpurni, neutralni
 - nastroje: vize, projekt zmen, personalni a organizacni zmeny, vzdelani a vycvik, zmeny v odmenovani a pridelovani zdroju, technicka zmena
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-16,2,221-->
 
 firemni dokumenty
 ?
@@ -625,7 +627,7 @@ normy - vyznam
 - tvorba normativniho modelu organizace (pravidla o tom jak ma stravne fungovat aby splnila sve cile)
 - v souladu s normou se tvori a upravuje system rizeni organizace
 - efektivni; pozor na balanc formalnosti vs kreativity
-<!--SR:!2024-06-14,2,219-->
+<!--SR:!2024-06-18,4,219-->
 
 normy - druhy
 ?
@@ -646,7 +648,7 @@ CIA
 Confidentiality - ochrana pred neautorizovaym pristupem, uzitim, vyzrazenim; ochrana v systemu, pri transferu, pri zpracovani; fyzicka bezpecnost, sifrovani, autorizace, autentikace
 Availability - zajisteni dostupnosti systemu/sluzeb/iformaci, akceptovatelna uroven vykonnosti, prevence ztraty a zniceni; redundance ulozeni/zpracovani/pristupu k datum, zalohovani a obnova dat, plany obnovy, aktualizace a patchovani
 Integrity - detekce nezadoucich zmen pri vlozeni/prenosu/zpracovani; digitalni podpis, hashovani, audit operaci, odolnost vuci chybam uzivatele
-<!--SR:!2024-06-14,2,240-->
+<!--SR:!2024-06-23,9,260-->
 
 kyberneticka bezpecnost
 ?
@@ -681,7 +683,7 @@ symetricka sifra
 - pro sifrovani i desifrovani se pouziva stejny klic -> pozadavky na bezpecny sifrovaci algoritmus a bezpecne predani klice
 - typ: blokove (rozdeleni otevreneho textu na bloky), proudove (prubezne sifrovani)
 - eg.: AEAE (Authenticated Encryption w/ Associated Data, sifrovani a pocitani MAC), GMC (blokova, v TLS1.3), CCM (blokova, v TLS1.2), POLY1305 (proudova, v TLS1.2 a TLS1.3)
-<!--SR:!2024-06-14,2,219-->
+<!--SR:!2024-06-18,4,219-->
 
 asymetricka sifra
 ?
@@ -696,13 +698,13 @@ asymetricka sifra
 certifikat - obsah
 ?
 identifikacni udaje, platnost, verejny klic, rozsirujici info, digitalni podpis od cert autority (duvoeryhodna cert autorita - eIDAS)
-<!--SR:!2024-06-14,2,228-->
+<!--SR:!2024-06-19,5,228-->
 
 eIDAS
 ?
 cilem je uznavani autentizace mezi staty EU
 uroven zaruky (nizka, znacna, vysoka) je pro vydani **elektronicke identity** nebo pouzivani **verifikatoru**
-<!--SR:!2024-06-14,2,208-->
+<!--SR:!2024-06-15,1,188-->
 
 elektonicky podpis
 ?
@@ -711,14 +713,14 @@ kvalifikovany certifikat (vydany CA, musi byt pravdivy), kvalifikovany prostrede
 
 elektronicka pecet
 ?
-technicky stejna jako elektricky podpis, ale ma jine certifikaty a jine pravni dusledky
-kvalifikovana, uznavana, eketronicka
-<!--SR:!2024-06-14,1,221-->
+technicky stejna jako elektricky **podpis**, ale ma jine certifikaty a jine pravni dusledky
+kvalifikovana, uznavana, elektronicka
+<!--SR:!2024-06-15,1,201-->
 
 casova razitka/znacky
 ?
-Time Stamp Authority k oticky prida casovou znacku, poradove cislo a celek digitalne podepise
-<!--SR:!2024-06-14,1,221-->
+Time Stamp Authority k otisku prida casovou znacku, poradove cislo a celek digitalne podepise
+<!--SR:!2024-06-15,1,201-->
 
 identifikace
 ?
@@ -774,13 +776,13 @@ firewall
 - blokovani pomoci: drop, reject, TCP reset
 - typy: nezstavove (1. generace, pouze filtrovani), stavove (2. generace), aplikacni FW (3. generace, na aplikacni vrstve OSI modelu), FW nove generace
 - umisteni: na hranici site, mezi subnety, v OS, v aplikaci
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-16,2,221-->
 
 proxy
 ?
 - forward proxy - pri filtrovani pristupu a obsahu, urychleni odpovedi, prokazani souladu s pravidly, skryti interni site, anonymizace
 - reverse proxy - pri LB, podpora TLS, SSL, offload, SSL acceleration, caching, taky zrychluje odpovedi, slouceni obsahu z vice aplikaci, podpora SSO
-<!--SR:!2024-06-14,2,218-->
+<!--SR:!2024-06-18,4,218-->
 
 IDS = Intrusion Detection System
 ?
@@ -818,7 +820,7 @@ informacni etika
 ?
 - vytvareni hranic a definic
 - nutno informacim porozumet, overit a pak pouzit v kontextu
-<!--SR:!2024-06-14,1,221-->
+<!--SR:!2024-06-16,2,221-->
 
 citace
 ?
