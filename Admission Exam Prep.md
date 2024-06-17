@@ -198,7 +198,7 @@ bitmapova grafika
 bitmapovy SW
 ?
 gimp (open-source, free), Adobe Photoshop (zakladni kresleni, vybery, tvorby, zmeny barvy, vrstvy,...), Malovani, InfraView (prohlizeni, lehke upravy, nakresleni jednoducheho obrazce, komprese)
-<!--SR:!2024-06-17,5,248-->
+<!--SR:!2024-06-28,11,248-->
 
 bitmapove formaty (6)
 ?
@@ -225,14 +225,14 @@ bitmapove formaty (6)
 - 1-64 bitu/pixel
 -  umi i pruhlednost
 - nevhodne pro foto, obvykle pro skenovani dokumentu
-<!--SR:!2024-06-17,3,241-->
+<!--SR:!2024-06-24,7,241-->
 
 .bmp vlastnosti
 ?
 - ulozeni nekomprimovanych dat
 - 1/4/8/24 bitu/pixel
 - uz se skoro nepouziva
-<!--SR:!2024-06-17,1,201-->
+<!--SR:!2024-06-19,2,201-->
 
 vektorova grafika
 ?
@@ -295,7 +295,7 @@ Podnikovy informacni sytem (EIS = Enterprise Information System) (definice, cil)
 	- propojeni a navaznost podnikovych a pracovnich procesu
 	- zvyseni celkove efektivity
 	- zlepseni pracovnich navyku a chovani useru
-<!--SR:!2024-06-17,2,188-->
+<!--SR:!2024-06-21,4,188-->
 
 historie EIS
 ?
@@ -419,7 +419,7 @@ nastaveni pravidel ve kterych muzou ostatni efektivne pracovat
 vs Management - pravidelna cinnost obsahujici provozni rozhodnuti v ramci danych pravidel
 soucasti je i merici a kontrolni system
 cil: vybavit firmu/organizaci jasne definovavymi pravidly pro efektivni plneni cilu
-<!--SR:!2024-06-17,5,230-->
+<!--SR:!2024-07-01,14,230-->
 
 role ve firme/organizaci
 ?
@@ -438,7 +438,7 @@ corporate (enterprise) governance
 - soubor pravnich a exekutivnich metod a postupu zavazujici zejmena verejne obchodovatelne spolecnosti
 - definuje distribuci prav a povinnosti mezi zainterestovanymi stranami spolecnosti (akcionari, vykonny management, statutarni organy, zamestnanci, zakaznici)
 - IT governance je podmnozinou
-<!--SR:!2024-06-17,1,161-->
+<!--SR:!2024-06-18,1,141-->
 
 historie IT governance
 ?
@@ -447,21 +447,21 @@ do 1998 - management IT, co se ma ocekavat od IT
 kolem 2000 - vykonnost a monitorin IT, jak IT merit
 kolem 2005 - IT Governance ~ zavadeni pravidel pro IT
 kolem 2012 - tesne propojeni business a IT (~ EGIT)
-<!--SR:!2024-06-17,1,161-->
+<!--SR:!2024-06-19,2,161-->
 
 EGIT = Enterprise Governance IT
 ?
 - pokryva vsechny pozadovane procesy a IT zdroje tak aby IT vhodne podporovalo spolecnosti pri vytvareni hodnot a naplnovani ocekavani zaintersovanych stran
 - oblasti: risk managemnt, performance management, IT strategic alighment, IT value delivery
 - ocekavani: zvyseni transparentnosti, dosazeni souladu s relevantnimi zakony, regulacemi a politikami, nastaveni kontrolnich mechanizmu a reportovani, vcasna identifikace a elimikace rizika vyplivajici z IT, zlepseni rizeni IT v souladu s best practise
-<!--SR:!2024-06-17,1,161-->
+<!--SR:!2024-06-19,2,161-->
 
 propojeni businessu a IT - Enterprise Balance Source Card
 ?
 metoda vytvarejini vazbu mezi strategii a operativnimi cinnostmi s durazem na mereni vykonu
 finance->procesy->uceni se a rust->zakaznim->financee->..
 IT BSC - tabulky s objectives a measures, cile, projekty a aktivity ktere tyto cile a jejich dozazeni zajitit
-<!--SR:!2024-06-17,1,130-->
+<!--SR:!2024-06-18,1,130-->
 
 system (vseobecna definice)
 ?
@@ -494,7 +494,7 @@ hlavni - vedlejsi - podpurne
 proces - zralost a CMMI (= Capability Maturity Model Integration)
 ?
 neexistujici -> nahodny -> formalizovany -> meritelny -> optimalizovatelny
-<!--SR:!2024-06-17,3,241-->
+<!--SR:!2024-06-24,7,241-->
 
 jak zlepsit proces (8)
 ?
@@ -502,24 +502,25 @@ jak zlepsit proces (8)
 - paralelizace
 - centralizace zdroju
 - jedno kontaktni misto
+- vzdelani - zvyseni urovne znalosti pracovniku
 - delegace pravomoci
 - duvera mezi subjekty
-- zvyseni urovne znalosti pracovniku
 - automatizace
-<!--SR:!2024-06-17,1,201-->
+<!--SR:!2024-06-19,2,201-->
 
 Business Process Management = BPM
 ?
-- snaha o uchopeni struktury firmy, jeji architektury a rizeni prostrednictvim podnikoveho modelu zachycujici zakladni rozmery podnikani (cile, hodnotvorne procesu, informacni, organizacni a znalosti infrastruktura, podpurne technologie)
+- design -> model -> execute -> monitor -> optimize -> ...
+- snaha o uchopeni struktury firmy, jeji architektury a rizeni prostrednictvim podnikoveho modelu zachycujici zakladni rozmery podnikani
 - rada nastroju a metod
-<!--SR:!2024-06-17,2,201-->
+<!--SR:!2024-06-18,1,181-->
 
 ITIL - v3 vs v4
 ?
 - v3 - lifecycle view - 26 procesu v 5 domenach:
-	- service: strategy, design, transition, operations, continual service improvement
+	- service strategy | service design, service transition, service operation | continual improvement
 - v4 - comprehensive, reflects changing world of IT
-<!--SR:!2024-06-17,2,199-->
+<!--SR:!2024-06-18,1,179-->
 
 co dela management?
 ?
@@ -540,7 +541,7 @@ informacni model podniku
 Data Security Life-cycle
 ?
 Create -> Store -> Use -> Share -> Archive -> Destroy -> ...
-<!--SR:!2024-06-17,3,241-->
+<!--SR:!2024-06-23,6,241-->
 
 organizovani
 ?
@@ -575,7 +576,7 @@ risk management - process
 - mitigation plan ->
 - implementation & monitoring ->
 - review & update plans
-<!--SR:!2024-06-17,1,180-->
+<!--SR:!2024-06-18,1,160-->
 
 typy ochrany (prevence)
 ?
@@ -601,7 +602,7 @@ firemni dokumenty
 ?
 smlouvy, zapisy z jednani, organizacni normy, prodejni a reklamni dokumentace, projetova dokumentace, ...
 rizena vs nerizena
-<!--SR:!2024-06-17,5,243-->
+<!--SR:!2024-06-28,11,243-->
 
 Enterprise Content Management (ECM)
 ?
@@ -710,13 +711,13 @@ eIDAS
 elektonicky podpis
 ?
 kvalifikovany certifikat (vydany CA, musi byt pravdivy), kvalifikovany prostredek
-<!--SR:!2024-06-17,5,242-->
+<!--SR:!2024-06-27,10,242-->
 
 elektronicka pecet
 ?
 technicky stejna jako elektricky **podpis**, ale ma jine certifikaty a jine pravni dusledky
 kvalifikovana, uznavana, elektronicka
-<!--SR:!2024-06-17,2,201-->
+<!--SR:!2024-06-21,4,201-->
 
 casova razitka/znacky
 ?
@@ -759,7 +760,7 @@ single-sign on
 - oddeleni aplikace od autentizace uzivatele (uspesny utok na aplikaci nevede k prozrazeni hesel)
 - uzivatel si nemusi pamatolik tolik hesel, uspora casu
 - typy: webove (cookies), federovane authentizacni protokoly (SAML, OpenID Connect), Kerberos (na lokalni siti)
-<!--SR:!2024-06-17,5,239-->
+<!--SR:!2024-06-29,12,239-->
 
 NIA = Narodni bod pro identifikaci a autentizaci
 ?

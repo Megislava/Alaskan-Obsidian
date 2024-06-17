@@ -110,7 +110,7 @@
             }
           },
           {
-            "id": "9d9cff127b3419b6",
+            "id": "fcf7aefea88e6b34",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -129,11 +129,10 @@
     "hiddenItems": {
       "graph:Open graph view": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-spaced-repetition:Review flashcards": false,
-      "obsidian-statusbar-pomo:Start pomodoro": false
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "6c66c2772ff6dd22",
+  "active": "fcf7aefea88e6b34",
   "lastOpenFiles": [
     "`.md",
     "Admission Exam Prep.md",
