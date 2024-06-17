@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01559e3f5c72e717",
@@ -129,15 +128,17 @@
   "left-ribbon": {
     "hiddenItems": {
       "graph:Open graph view": false,
+      "omnisearch:Omnisearch": false,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "omnisearch:Omnisearch": false
+      "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
   "active": "6c66c2772ff6dd22",
   "lastOpenFiles": [
+    "`.md",
+    "Admission Exam Prep.md",
     "School.md",
     "Administion Exam Prep.md",
-    "Admission Exam Prep.md",
     "Attachments/Repetitorium-pro-Informacni-management.pdf",
     "_000__Home.md",
     "Windows Authentication.md",
@@ -162,7 +163,6 @@
     "User Activity Analysis.md",
     "Attachments/16.PNG",
     "binwalk.md",
-    "Vulnerabilities.md",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
