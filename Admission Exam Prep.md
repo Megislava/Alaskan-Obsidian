@@ -167,7 +167,7 @@ proprietarni SW
 	- shareware - obvykle spojeni trial->nakup licence
 	- freeware - dobrovolne prispevky
 	- public domain - mozne sirit a upravovat, je i v jinych oborech
-<!--SR:!2024-06-18,2,199-->
+<!--SR:!2024-06-22,4,199-->
 
 SaaS
 ?
@@ -210,7 +210,7 @@ bitmapove formaty (6)
 - rozdeli obrazek na ctverce 8x8
 - komprimace s kosinovou transformaci (ztrata detailu, kompresni artefakty kolem hran)
 - vhodne na foto, nevhodne pro texty s ostrou hranou
-<!--SR:!2024-06-18,2,241-->
+<!--SR:!2024-06-19,1,221-->
 
 .gif vlastnosti
 ?
@@ -239,7 +239,7 @@ vektorova grafika
 obrazek z nekolika jasne definovanych objektu (bod, primka, krivna), reprezentace rozmery a umistenim
 :) libovolne skalovani, mozno pracovat s jednotlivymi objekty, mensi pametova narocnost
 :( nevhodny pro zapis slozitych barevnych ploch, slozitejsi na porizeni obrazku
-<!--SR:!2024-06-18,6,248-->
+<!--SR:!2024-07-02,14,248-->
 
 vektorove SW
 ?
@@ -252,7 +252,7 @@ vektorove formaty (ne pro multimediove kontejnery)
 - nativni: .ai (Adobe Illustrator), .cdr (Corel Draw), .zmt (Zoner callisto)
 - aplikacne nezavisle formaty: .svg, .psa, .eps (postscript, pro tiskarny), .odf
 - jednotlive formaty maji ruzny pristup k objektum -> slozity prenos
-<!--SR:!2024-06-18,3,221-->
+<!--SR:!2024-06-23,5,221-->
 
 vektorove multimedialni kontejnery - uvod
 ?
@@ -269,7 +269,7 @@ formaty vektorovych multimedialnich kontejneru
 .mp4 - MPEG-4 part 14, nastupce .avi, vice titulku/zvukovych stop/3D objektu, streamovane videa, mp3 komprese, vychazi z nej 3GPP na mobilech
 .vp9 - od Google, otevreny, podpora browseru, mobily, tablety, telefize, kamery,...
 .ogg - projekt pro tvorbu svobodneho SW -> .oflac, .ogg, .opus, .speex, .ogv
-<!--SR:!2024-06-18,2,208-->
+<!--SR:!2024-06-22,4,208-->
 
 RBG, CMYK,...
 ?
@@ -281,7 +281,7 @@ taky: HSV (HueSaturationValue), HSB (Brightness), HSL (Lumination), HSI (Intensi
 barevny gamut
 ?
 barvy dosazitelne v prislusnem modelu, mimo model se barvy zobrazi pouze priblizne -> gamut zarizeni - barvy ktere je zarizeni schopno zobrazit
-<!--SR:!2024-06-18,6,248-->
+<!--SR:!2024-07-02,14,248-->
 
 
 ### Podnikove informacni systemy
@@ -318,14 +318,14 @@ zakladni moduly postmoder EPR
 ?
 BI+CRM+SCM
 casta kombinace HRM+EAM (Enterprise Asset Mgmt)+ECM (Enterprise Content Mgmt)
-<!--SR:!2024-06-18,4,219-->
+<!--SR:!2024-06-26,8,219-->
 
 vyrobci EIS
 ?
 SAP - 1.verze v 60.l.20.stoleti, ruzne OS a DB, NetWeaver, BusinessOne, SAP R/3
 ORACLE - EPR - E-Business Suite, Cloud ERP
 Infor, Microsoft, IBM, Asecco Solution, ABRA,...
-<!--SR:!2024-06-18,6,239-->
+<!--SR:!2024-07-02,14,239-->
 
 ### eGovernment
 
@@ -365,14 +365,14 @@ datova zprava datove schranky - obsah
 obsahuje elektronickou a casovou znacku (kvalifikovane razitko)
 telo obsahuje formu prilohy
 pro vlozeni zpravy - avizo SMS (za penize), nebo email (zadarmo)
-<!--SR:!2024-06-18,2,208-->
+<!--SR:!2024-06-22,4,208-->
 
 vlastnosti datove schranky
 ?
 neomezena velikost
 dorucenka (potvrzeni doruceni, precteni, fikce doruceni)
 od precteni se zprava uchovava 90 dnu (pro delsi platnost: datovy trezor, datove uloziste)
-<!--SR:!2024-06-18,6,268-->
+<!--SR:!2024-07-05,17,268-->
 
 pravni uprava elektronicky ukonu eGovernmentu v Datove Schrance
 ?
@@ -386,10 +386,10 @@ pokuty - 10M za nevyzadany dokument, 20M za skodlivy SW
 ISZR = Integrovany System Zakladnich Registru
 ?
 spravce MVCT, provozovatel Spravce Zakladnich Registru, spravce Urad pro Ochranu Osobnich Udaju
-- ORG = prevodnik identifikatoru fyzickych osob ~ ochrana osobnich udaju v registrech 
+- ORG = prevodnik identifikatoru fyzickych osob ~ ochrana osobnich udaju v registrech
 	- nepouziva se RC, v kazdem systemu je jiny identifikator
 	- v ORG pouze ID
-<!--SR:!2024-06-18,4,218-->
+<!--SR:!2024-06-27,9,218-->
 
 registry ISZR
 ?
@@ -431,14 +431,14 @@ Board of Directors - vybira je majitel (ne CEO), lidi s ruznymi zkusenostmi a tr
 co se ocekava od board of directors
 ?
 challenging executive management, managing risk, steering on long term & strategic level
-<!--SR:!2024-06-18,6,248-->
+<!--SR:!2024-07-02,14,248-->
 
 corporate (enterprise) governance
 ?
 - soubor pravnich a exekutivnich metod a postupu zavazujici zejmena verejne obchodovatelne spolecnosti
 - definuje distribuci prav a povinnosti mezi zainterestovanymi stranami spolecnosti (akcionari, vykonny management, statutarni organy, zamestnanci, zakaznici)
 - IT governance je podmnozinou
-<!--SR:!2024-06-18,1,141-->
+<!--SR:!2024-06-19,1,130-->
 
 historie IT governance
 ?
@@ -461,19 +461,19 @@ propojeni businessu a IT - Enterprise Balance Source Card
 metoda vytvarejini vazbu mezi strategii a operativnimi cinnostmi s durazem na mereni vykonu
 finance->procesy->uceni se a rust->zakaznim->financee->..
 IT BSC - tabulky s objectives a measures, cile, projekty a aktivity ktere tyto cile a jejich dozazeni zajitit
-<!--SR:!2024-06-18,1,130-->
+<!--SR:!2024-06-19,1,130-->
 
 system (vseobecna definice)
 ?
 celek slozeny z casti ktere na sebe vzajemne pusobi, mezi castmi mohou byt toky informaci a energie
-<!--SR:!2024-06-18,6,263-->
+<!--SR:!2024-07-04,16,263-->
 
 COBIT
 ?
 framework na vytvareni procesu pro efektivni vyuziti zdroju a minimalizace IT rizik
 audit (1996) + control (1998) + management (2000) + IT governance (2005/2007) + governance of IT enterprise (2012)
 uzivatele: manageri, auditori, vlastnici, IT a sec specialiste,...
-<!--SR:!2024-06-18,4,208-->
+<!--SR:!2024-06-24,6,208-->
 
 proces
 ?
@@ -489,7 +489,7 @@ proces - kontinualni
 rozdeleni podnikovych procesu
 ?
 hlavni - vedlejsi - podpurne
-<!--SR:!2024-06-18,2,241-->
+<!--SR:!2024-06-24,6,261-->
 
 proces - zralost a CMMI (= Capability Maturity Model Integration)
 ?
@@ -513,14 +513,14 @@ Business Process Management = BPM
 - design -> model -> execute -> monitor -> optimize -> ...
 - snaha o uchopeni struktury firmy, jeji architektury a rizeni prostrednictvim podnikoveho modelu zachycujici zakladni rozmery podnikani
 - rada nastroju a metod
-<!--SR:!2024-06-18,1,181-->
+<!--SR:!2024-06-19,1,161-->
 
 ITIL - v3 vs v4
 ?
 - v3 - lifecycle view - 26 procesu v 5 domenach:
 	- service strategy | service design, service transition, service operation | continual improvement
 - v4 - comprehensive, reflects changing world of IT
-<!--SR:!2024-06-18,1,179-->
+<!--SR:!2024-06-19,1,159-->
 
 co dela management?
 ?
@@ -576,7 +576,7 @@ risk management - process
 - mitigation plan ->
 - implementation & monitoring ->
 - review & update plans
-<!--SR:!2024-06-18,1,160-->
+<!--SR:!2024-06-19,1,140-->
 
 typy ochrany (prevence)
 ?
@@ -628,7 +628,7 @@ normy - vyznam
 - tvorba normativniho modelu organizace (pravidla o tom jak ma stravne fungovat aby splnila sve cile)
 - v souladu s normou se tvori a upravuje system rizeni organizace
 - efektivni; pozor na balanc formalnosti vs kreativity
-<!--SR:!2024-06-18,4,219-->
+<!--SR:!2024-06-27,9,219-->
 
 normy - druhy
 ?
@@ -706,7 +706,7 @@ eIDAS
 - cilem je uznavani autentizace mezi staty EU
 - vytvoreni standartu pro elektronicke podpisy, kvalifikovane digitalni certifikaty, elektronicke peceti, casova razitka,...
 - ruzna uroven zaruky (nizka, znacna, vysoka)
-<!--SR:!2024-06-18,2,168-->
+<!--SR:!2024-06-21,3,168-->
 
 elektonicky podpis
 ?
@@ -784,7 +784,7 @@ proxy
 ?
 - forward proxy - pri filtrovani pristupu a obsahu, urychleni odpovedi, prokazani souladu s pravidly, skryti interni site, anonymizace
 - reverse proxy - pri LB, podpora TLS, SSL, offload, SSL acceleration, caching, taky zrychluje odpovedi, slouceni obsahu z vice aplikaci, podpora SSO
-<!--SR:!2024-06-18,4,218-->
+<!--SR:!2024-06-26,8,218-->
 
 IDS = Intrusion Detection System
 ?
