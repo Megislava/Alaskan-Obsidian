@@ -88,21 +88,21 @@ misto k ukladani dat a programoveho kodu (= instrukci), RAM
 graficka karta
 ?
 zajistuje zobrazuni dotazu na monitoru, integrovana vs dedikovana/externi
-<!--SR:!2024-06-19,5,241-->
+<!--SR:!2024-07-01,12,241-->
 
 vnejsi pamet
 ?
-pevny disk (HDD) - mechanicke disky z magneticky vodiveho materialu, cteni a zapis pomoci elektromagneticke indukce, data organizovana do stop, pomerne velka spotreba elektricke energie
-SSD - flash pamet, bez mechanickych casti, velka rychlost cteni, mala spotreba, malo hluku, mechanicky odolny, nizka zivotnost jednotlivych datovych bunek
-SSHD - HDD + SSD
-<!--SR:!2024-06-19,7,262-->
+- pevny disk (HDD) - mechanicke disky z magneticky vodiveho materialu, cteni a zapis pomoci elektromagneticke indukce, data organizovana do stop, pomerne velka spotreba elektricke energie
+- SSD - flash pamet, bez mechanickych casti, velka rychlost cteni, mala spotreba, malo hluku, mechanicky odolny, nizka zivotnost jednotlivych datovych bunek
+- SSHD - HDD + SSD
+<!--SR:!2024-07-06,17,262-->
 
 rozhrani PC
 ?
 ke komunikaci s okolim - vnejsi (periferie) vs vnitrni (jednotlive casti PC) rozhrani
 vnitrni - SATA (disk), PCI+PCI express (rozsiruje karty)
 vnejsi - VGA, HDMI, DVI, RJ45, USB (Universal Serial Bus, limitovany odber ze smernice, zpetna kompatibilita, verze 1.1, 2.0, 3.1, C, 4.0), Bluetooth (parovani 2 zarizeni v 2.4GHz bezlicencnim pasmu), WiFi (nejtypictejsi pripojeni k internetu, v 2.4 a 5GHz bezlicencnim pasmu)
-<!--SR:!2024-06-19,7,268-->
+<!--SR:!2024-07-07,18,268-->
 
 Mooruv zakon
 ?
@@ -207,32 +207,32 @@ bitmapove formaty (6)
 
 .jpg, .jpeg vlastnosti
 ?
-- rozdeli obrazek na ctverce 8x8
+- rozdeli obrazek na <span style="background:#d3f8b6">ctverce 8x8</span>
 - komprimace s kosinovou transformaci (ztrata detailu, kompresni artefakty kolem hran)
 - vhodne na foto, nevhodne pro texty s ostrou hranou
-<!--SR:!2024-06-19,1,221-->
+<!--SR:!2024-06-21,2,221-->
 
 .gif vlastnosti
 ?
-- patent (od 1995 potreba licence)
+- <span style="background:#d3f8b6">patent</span> (od 1995 potreba licence)
 - pouze 8bitu kodovani barev, umi animace
 - nevhodne pro foto, vhodne na obrazky s malym poctem barev
 <!--SR:!2024-06-21,6,241-->
 
 .png vlastnosti
 ?
-- patentove nechraneny format
-- 1-64 bitu/pixel
+- <span style="background:#d3f8b6">patentove nechraneny</span> format
+- <span style="background:#d3f8b6">1-64 bitu/pixel</span>
 -  umi i pruhlednost
 - nevhodne pro foto, obvykle pro skenovani dokumentu
 <!--SR:!2024-06-24,7,241-->
 
 .bmp vlastnosti
 ?
-- ulozeni nekomprimovanych dat
-- 1/4/8/24 bitu/pixel
+- <span style="background:#d3f8b6">ulozeni nekomprimovanych dat</span>
+- <span style="background:#d3f8b6">1/4/8/24 bitu/pixel</span>
 - uz se skoro nepouziva
-<!--SR:!2024-06-19,2,201-->
+<!--SR:!2024-06-23,4,201-->
 
 vektorova grafika
 ?
@@ -245,7 +245,7 @@ vektorove SW
 ?
 svobodny: Inkscape, OpenOfficeDraw
 proprietarni: Adobe Illustrator, Coredraw, Zoner, CAD,...
-<!--SR:!2024-06-19,4,241-->
+<!--SR:!2024-06-28,9,241-->
 
 vektorove formaty (ne pro multimediove kontejnery)
 ?
@@ -304,7 +304,7 @@ historie EIS
 3. ERP (= Enterprise Resource Planning) - 90.l.20.stoleti, prenositelnost mezi OS, DB-server-klient, GUI, rizeni i nevyrobnich podniku, optimalizace, systemy na miru
 4. ERP II. - zacatek 21.stoleti, real-time access, multimedia, webapps, dodavatelsko-odberatelske retezce, CRM, BI (Business Intelligence), propojene systemy
 5. postmodern ERP - dnes, vicevrstve, cloud, prozakaznicky orientovane, balikove systemy pro ruzne podniky
-<!--SR:!2024-06-19,4,201-->
+<!--SR:!2024-06-27,8,201-->
 
 oblasti postmoder EPR
 ?
@@ -332,7 +332,7 @@ Infor, Microsoft, IBM, Asecco Solution, ABRA,...
 eGovernment
 ?
 vyuziti informaci a komunikacnich technologii s cilem zlepseni a nebo posileni ucinnosti a efektivity poskytovanych sluzeb ve verejnem sektoru
-<!--SR:!2024-06-19,4,203-->
+<!--SR:!2024-06-26,7,203-->
 
 komunikacni kanaly eGovernmentu (x2y)
 ?
@@ -358,7 +358,7 @@ datova schranka - uvod a technicne reseni
 - mozne stavy schranky: funcni, neexistuje, znepristupnena a zrusena
 - webapp ~ SOAP+HTTPs, dalsi proprietarni SW pro komunikaci
 - bezpecnost - ID+heslo (5 pokusu/hodina, potom deaktivace), po 30minutach neaktivity odhlaseni, OTP (mobilni klid ISDS, cip na obcance, auth cert)
-<!--SR:!2024-06-19,4,241-->
+<!--SR:!2024-06-28,9,241-->
 
 datova zprava datove schranky - obsah
 ?
@@ -436,32 +436,32 @@ challenging executive management, managing risk, steering on long term & strateg
 corporate (enterprise) governance
 ?
 - soubor pravnich a exekutivnich metod a postupu zavazujici zejmena verejne obchodovatelne spolecnosti
-- definuje distribuci prav a povinnosti mezi zainterestovanymi stranami spolecnosti (akcionari, vykonny management, statutarni organy, zamestnanci, zakaznici)
+- definuje distribuci <span style="background:#d3f8b6">prav a povinnosti</span> mezi zainterestovanymi stranami spolecnosti (akcionari, vykonny management, statutarni organy, zamestnanci, zakaznici)
 - IT governance je podmnozinou
-<!--SR:!2024-06-19,1,130-->
+<!--SR:!2024-06-20,1,130-->
 
 historie IT governance
 ?
-do 1996 - audit IT
-do 1998 - management IT, co se ma ocekavat od IT
-kolem 2000 - vykonnost a monitorin IT, jak IT merit
-kolem 2005 - IT Governance ~ zavadeni pravidel pro IT
-kolem 2012 - tesne propojeni business a IT (~ EGIT)
-<!--SR:!2024-06-19,2,161-->
+<span style="background:#d3f8b6">do 1996 - audit IT</span>
+<span style="background:#d3f8b6">do 1998 - management IT, co se ma ocekavat od IT</span>
+<span style="background:#d3f8b6">kolem 2000 - vykonnost a monitorin IT, jak IT merit</span>
+<span style="background:#d3f8b6">kolem 2005 - IT Governance ~ zavadeni pravidel pro IT</span>
+<span style="background:#d3f8b6">kolem 2012 - tesne propojeni business a IT (~ EGIT)</span>
+<!--SR:!2024-06-22,3,161-->
 
 EGIT = Enterprise Governance IT
 ?
 - pokryva vsechny pozadovane procesy a IT zdroje tak aby IT vhodne podporovalo spolecnosti pri vytvareni hodnot a naplnovani ocekavani zaintersovanych stran
 - oblasti: risk managemnt, performance management, IT strategic alighment, IT value delivery
 - ocekavani: zvyseni transparentnosti, dosazeni souladu s relevantnimi zakony, regulacemi a politikami, nastaveni kontrolnich mechanizmu a reportovani, vcasna identifikace a elimikace rizika vyplivajici z IT, zlepseni rizeni IT v souladu s best practise
-<!--SR:!2024-06-19,2,161-->
+<!--SR:!2024-06-22,3,161-->
 
 propojeni businessu a IT - Enterprise Balance Source Card
 ?
 metoda vytvarejini vazbu mezi strategii a operativnimi cinnostmi s durazem na mereni vykonu
 finance->procesy->uceni se a rust->zakaznim->financee->..
 IT BSC - tabulky s objectives a measures, cile, projekty a aktivity ktere tyto cile a jejich dozazeni zajitit
-<!--SR:!2024-06-19,1,130-->
+<!--SR:!2024-06-20,1,130-->
 
 system (vseobecna definice)
 ?
@@ -506,21 +506,21 @@ jak zlepsit proces (8)
 - delegace pravomoci
 - duvera mezi subjekty
 - automatizace
-<!--SR:!2024-06-19,2,201-->
+<!--SR:!2024-06-23,4,201-->
 
 Business Process Management = BPM
 ?
 - design -> model -> execute -> monitor -> optimize -> ...
 - snaha o uchopeni struktury firmy, jeji architektury a rizeni prostrednictvim podnikoveho modelu zachycujici zakladni rozmery podnikani
 - rada nastroju a metod
-<!--SR:!2024-06-19,1,161-->
+<!--SR:!2024-06-21,2,161-->
 
 ITIL - v3 vs v4
 ?
 - v3 - lifecycle view - 26 procesu v 5 domenach:
 	- service strategy | service design, service transition, service operation | continual improvement
 - v4 - comprehensive, reflects changing world of IT
-<!--SR:!2024-06-19,1,159-->
+<!--SR:!2024-06-21,2,159-->
 
 co dela management?
 ?
@@ -576,7 +576,7 @@ risk management - process
 - mitigation plan ->
 - implementation & monitoring ->
 - review & update plans
-<!--SR:!2024-06-19,1,140-->
+<!--SR:!2024-06-20,1,130-->
 
 typy ochrany (prevence)
 ?
@@ -615,7 +615,7 @@ normy - kaskady vzniku
 ?
 globalni kaskada impupzu pro vznik/zmenu norem: EU uroven -> CR uroven -> firemni uroven
 firemni kaskada: complience, best practise, quality management
-<!--SR:!2024-06-19,4,241-->
+<!--SR:!2024-06-28,9,241-->
 
 norma o norme
 ?
@@ -634,7 +634,7 @@ normy - druhy
 ?
 smernice, narizeni, rozhodnuti reditele, opatreni, normativni smernice, rad,...
 kategorizace podnikovych norem: pravni, technicke, ekonomicko-provozni, organizacni, ridici,...
-<!--SR:!2024-06-19,4,220-->
+<!--SR:!2024-06-26,7,220-->
 
 
 ### Informacni bezpecnost a kryptografie
@@ -684,7 +684,7 @@ symetricka sifra
 - pro sifrovani i desifrovani se pouziva stejny klic -> pozadavky na bezpecny sifrovaci algoritmus a bezpecne predani klice
 - typ: blokove (rozdeleni otevreneho textu na bloky), proudove (prubezne sifrovani)
 - eg.: AEAE (Authenticated Encryption w/ Associated Data, sifrovani a pocitani MAC), GMC (blokova, v TLS1.3), CCM (blokova, v TLS1.2), POLY1305 (proudova, v TLS1.2 a TLS1.3)
-<!--SR:!2024-06-18,4,219-->
+<!--SR:!2024-06-27,8,219-->
 
 asymetricka sifra
 ?
@@ -694,12 +694,12 @@ asymetricka sifra
 	- rozdeleni velkeho cisla na soucin prvocisel (RSA)
 	- diskretni logaritmus (Diffie-Hellman, DSA, Elgamal)
 	- elipticke krivky (ECDM, ECDSA, ECIES,...)
-<!--SR:!2024-06-19,4,183-->
+<!--SR:!2024-06-28,9,183-->
 
 certifikat - obsah
 ?
 identifikacni udaje, platnost, verejny klic, rozsirujici info, digitalni podpis od cert autority (duvoeryhodna cert autorita - eIDAS)
-<!--SR:!2024-06-19,5,228-->
+<!--SR:!2024-07-01,12,228-->
 
 eIDAS
 ?
@@ -722,12 +722,12 @@ kvalifikovana, uznavana, elektronicka
 casova razitka/znacky
 ?
 Time Stamp Authority k otisku prida casovou znacku, poradove cislo a celek digitalne podepise
-<!--SR:!2024-06-18,3,221-->
+<!--SR:!2024-06-25,6,221-->
 
 identifikace
 ?
 akt/proces kdy entita predlozi systemu identifikator na jehoz zaklade muze rozeznat danou entitu
-<!--SR:!2024-06-19,3,241-->
+<!--SR:!2024-06-25,6,241-->
 
 autentizace
 ?
@@ -797,7 +797,7 @@ IPS = Intrusion Prevention System
 ?
 - detekce skodlive cinnosti, zablokovani a alertovani
 - casta kombinace s IDS
-<!--SR:!2024-06-18,6,259-->
+<!--SR:!2024-07-04,15,259-->
 
 VPN = Virtual Private Network
 ?
