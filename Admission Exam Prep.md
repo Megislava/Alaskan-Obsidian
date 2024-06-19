@@ -99,15 +99,15 @@ vnejsi pamet
 
 rozhrani PC
 ?
-ke komunikaci s okolim - vnejsi (periferie) vs vnitrni (jednotlive casti PC) rozhrani
-vnitrni - SATA (disk), PCI+PCI express (rozsiruje karty)
-vnejsi - VGA, HDMI, DVI, RJ45, USB (Universal Serial Bus, limitovany odber ze smernice, zpetna kompatibilita, verze 1.1, 2.0, 3.1, C, 4.0), Bluetooth (parovani 2 zarizeni v 2.4GHz bezlicencnim pasmu), WiFi (nejtypictejsi pripojeni k internetu, v 2.4 a 5GHz bezlicencnim pasmu)
+- ke komunikaci s okolim - vnejsi (periferie) vs vnitrni (jednotlive casti PC) rozhrani
+- vnitrni - SATA (disk), PCI+PCI express (rozsiruje karty)
+- vnejsi - VGA, HDMI, DVI, RJ45, USB (Universal Serial Bus, limitovany odber ze smernice, zpetna kompatibilita, verze 1.1, 2.0, 3.1, C, 4.0), Bluetooth (parovani 2 zarizeni v 2.4GHz bezlicencnim pasmu), WiFi (nejtypictejsi pripojeni k internetu, v 2.4 a 5GHz bezlicencnim pasmu)
 <!--SR:!2024-07-07,18,268-->
 
 Mooruv zakon
 ?
-pocet transistoru ktere mohou byt umistene na integrovany obvod se pri zachovani stejne ceny zdvojnasobi kazdych 18 mesicu
-typek spoluzakladatel Intelu
+- pocet transistoru ktere mohou byt umistene na integrovany obvod se pri zachovani stejne ceny zdvojnasobi kazdych 18 mesicu
+- typek spoluzakladatel Intelu
 <!--SR:!2024-06-26,10,243-->
 
 ### Software
@@ -197,7 +197,10 @@ bitmapova grafika
 
 bitmapovy SW
 ?
-gimp (open-source, free), Adobe Photoshop (zakladni kresleni, vybery, tvorby, zmeny barvy, vrstvy,...), Malovani, InfraView (prohlizeni, lehke upravy, nakresleni jednoducheho obrazce, komprese)
+- gimp (open-source, free)
+- Adobe Photoshop (zakladni kresleni, vybery, tvorby, zmeny barvy, vrstvy,...)
+- Malovani
+- InfraView (prohlizeni, lehke upravy, nakresleni jednoducheho obrazce, komprese)
 <!--SR:!2024-06-28,11,248-->
 
 bitmapove formaty (6)
