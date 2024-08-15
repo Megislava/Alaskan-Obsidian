@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Admission Exam Prep.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": true,
                 "source": true
               }
@@ -134,6 +134,8 @@
   },
   "active": "6c66c2772ff6dd22",
   "lastOpenFiles": [
+    "readme.md",
+    "New Text Document.txt",
     "`.md",
     "Admission Exam Prep.md",
     "School.md",
@@ -161,7 +163,6 @@
     "Uvod do kyberbezpecnosti.md",
     "User Activity Analysis.md",
     "Attachments/16.PNG",
-    "binwalk.md",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
